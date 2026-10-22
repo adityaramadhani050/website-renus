@@ -129,9 +129,10 @@
 
 .rn-stat-num {
   color: var(--rn-blue);
-  font-size: clamp(24px, 3vw, 34px);
+  font-size: clamp(22px, 2.4vw, 30px);
   font-weight: 800;
   line-height: 1.1;
+  white-space: nowrap;
   margin-bottom: 6px;
 }
 
@@ -139,6 +140,23 @@
   color: rgba(255, 255, 255, 0.8);
   font-size: 14px;
   margin-top: 0;
+}
+
+@media (max-width: 781px) {
+  .rn-stats-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 16px;
+  }
+
+  .rn-stat-num {
+    white-space: normal;
+    font-size: 20px;
+  }
+
+  .rn-stat-label {
+    font-size: 13px;
+  }
 }
 
 /* ---------- Kartu ---------- */
