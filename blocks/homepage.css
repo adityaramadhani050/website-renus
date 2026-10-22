@@ -1,0 +1,295 @@
+/* =========================================================
+   Renus — gaya homepage Gutenberg
+   Dipasang lewat Customizer → Additional CSS (wp_update_custom_css).
+   Semua selector diawali .rn- agar tidak mengganggu halaman lain.
+   ========================================================= */
+
+:root {
+  --rn-navy: #00384F;
+  --rn-navy-dark: #011B26;
+  --rn-blue: #039CFC;
+  --rn-green: #0FCC7C;
+  --rn-muted: #5B6B78;
+  --rn-alt-bg: #F4F8FB;
+  --rn-radius: 16px;
+}
+
+/* ---------- Section dasar ---------- */
+.rn-section {
+  padding-top: clamp(48px, 8vw, 96px);
+  padding-bottom: clamp(48px, 8vw, 96px);
+}
+
+.rn-section-alt {
+  background: var(--rn-alt-bg);
+}
+
+.rn-eyebrow {
+  color: var(--rn-blue);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.rn-section-title {
+  color: var(--rn-navy);
+  font-size: clamp(26px, 3.5vw, 38px);
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.rn-footnote {
+  color: var(--rn-muted);
+  font-size: 13px;
+  margin-top: 24px;
+}
+
+.rn-rounded img {
+  border-radius: var(--rn-radius);
+}
+
+.rn-cover-img img {
+  height: 100%;
+  max-height: 560px;
+  object-fit: cover;
+}
+
+/* ---------- Tombol ---------- */
+.rn-btn-primary .wp-block-button__link {
+  background: var(--rn-blue);
+  color: #fff;
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-weight: 700;
+}
+
+.rn-btn-primary .wp-block-button__link:hover {
+  background: var(--rn-navy);
+}
+
+.rn-btn-outline .wp-block-button__link {
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 999px;
+  padding: 10px 26px;
+  font-weight: 700;
+}
+
+.rn-btn-wa .wp-block-button__link {
+  background: #25D366;
+  color: #fff;
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-weight: 700;
+}
+
+/* ---------- Hero ---------- */
+.rn-hero {
+  text-align: center;
+}
+
+.rn-hero .rn-eyebrow {
+  color: #8FD3FF;
+}
+
+.rn-hero-title {
+  color: #fff;
+  font-size: clamp(34px, 6vw, 64px);
+  line-height: 1.1;
+  margin: 0 0 20px;
+}
+
+.rn-hero-sub {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(16px, 2vw, 19px);
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rn-hero-buttons {
+  justify-content: center;
+  margin-top: 32px;
+}
+
+/* ---------- Statistik ---------- */
+.rn-stats {
+  background: var(--rn-navy);
+  color: #fff;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.rn-stats-grid {
+  text-align: center;
+}
+
+.rn-stat-num {
+  color: var(--rn-blue);
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.rn-stat-label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  margin-top: 0;
+}
+
+/* ---------- Kartu ---------- */
+.rn-cards {
+  gap: 24px;
+}
+
+.rn-card {
+  background: #fff;
+  border-radius: var(--rn-radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rn-card h3 {
+  color: var(--rn-navy);
+  font-size: 22px;
+  margin-top: 8px;
+}
+
+.rn-card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.rn-card .wp-block-buttons {
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.rn-card-featured {
+  border: 2px solid var(--rn-blue);
+}
+
+.rn-card-badge {
+  align-self: flex-start;
+  background: var(--rn-green);
+  color: #fff;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.rn-card-price {
+  color: var(--rn-navy);
+  font-size: 15px;
+}
+
+.rn-card-image {
+  padding: 0 0 28px;
+  overflow: hidden;
+}
+
+.rn-card-image > *:not(.wp-block-image) {
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.rn-card-image .wp-block-image {
+  margin: 0;
+}
+
+.rn-card-image .wp-block-image img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* ---------- Checklist ---------- */
+.rn-checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+.rn-checklist li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+.rn-checklist li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--rn-green);
+  font-weight: 800;
+}
+
+/* ---------- Keunggulan ---------- */
+.rn-feature {
+  background: var(--rn-alt-bg);
+  border-radius: var(--rn-radius);
+  padding: 24px;
+}
+
+.rn-feature h3 {
+  color: var(--rn-navy);
+  font-size: 19px;
+  margin-top: 0;
+}
+
+/* ---------- Galeri ---------- */
+.rn-gallery .wp-block-image img {
+  border-radius: 10px;
+}
+
+.rn-logos {
+  align-items: center;
+}
+
+.rn-logos .wp-block-image img {
+  max-height: 72px;
+  width: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+@media (max-width: 781px) {
+  .rn-logos.columns-7 .wp-block-image {
+    width: calc(33.33% - var(--wp--style--unstable-gallery-gap, 16px) * 0.667) !important;
+  }
+}
+
+/* ---------- Artikel ---------- */
+.rn-post-grid .wp-block-post-title {
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+.rn-post-grid .wp-block-post-title a {
+  color: var(--rn-navy);
+  text-decoration: none;
+}
+
+.rn-post-grid .wp-block-post-featured-image img {
+  border-radius: 10px;
+}
+
+.rn-post-grid .wp-block-post-date {
+  color: var(--rn-muted);
+  font-size: 13px;
+}
+
+/* ---------- Kontak ---------- */
+.rn-kontak .rn-cards {
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}

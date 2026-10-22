@@ -1,0 +1,1301 @@
+<div class="rn-calc">
+  <style>
+    /* Token warna dibatasi ke .rn-calc agar tidak bocor ke halaman lain */
+    .rn-calc {
+      --rn-primary: #0096FF;
+      --rn-primary-hover: #007DDF;
+      --rn-navy: #042B3B;
+      --rn-bg-white: #FFFFFF;
+      --rn-bg-gray: #F8FAFC;
+      --rn-border: #E2E8F0;
+      --rn-border-focus: #93C5FD;
+      --rn-text-main: #0F172A;
+      --rn-text-muted: #64748B;
+      --radius: 12px;
+      --radius-pill: 999px;
+
+      font-family: inherit;
+      background: var(--rn-bg-white);
+      border-radius: 20px;
+      overflow: hidden;
+      max-width: 860px;
+      margin: 0 auto;
+      color: var(--rn-text-main);
+      box-shadow: 0 12px 40px rgba(4, 43, 59, 0.08);
+      border: 1px solid var(--rn-border);
+      line-height: 1.5;
+    }
+
+    .rn-calc * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header */
+    .rn-header {
+      background: var(--rn-navy);
+      padding: 32px 32px 28px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: #fff;
+    }
+
+    .rn-logo-mark {
+      width: 56px;
+      height: 56px;
+      flex-shrink: 0;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--rn-primary);
+    }
+
+    .rn-header-text .rn-header-title {
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 0 0 4px 0 !important;
+      color: #ffffff !important;
+    }
+
+    .rn-header-text p {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7) !important;
+      margin: 0 !important;
+    }
+
+    .rn-badge {
+      margin-left: auto;
+      flex-shrink: 0;
+      background: var(--rn-primary);
+      color: var(--rn-bg-white);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: var(--radius-pill);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+
+    /* Step Bar */
+    .rn-stepbar {
+      background: var(--rn-bg-white);
+      border-bottom: 1px solid var(--rn-border);
+      padding: 0 32px;
+      display: flex;
+      align-items: stretch;
+    }
+
+    .rn-step {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 0;
+      flex: 1;
+      border-bottom: 3px solid transparent;
+      transition: border-color .25s;
+    }
+
+    .rn-step.active {
+      border-bottom-color: var(--rn-primary);
+    }
+
+    .rn-step.done {
+      border-bottom-color: rgba(0, 150, 255, 0.3);
+    }
+
+    .rn-step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      transition: all .25s;
+    }
+
+    .rn-step .rn-step-num {
+      background: var(--rn-bg-gray);
+      color: var(--rn-text-muted);
+    }
+
+    .rn-step.active .rn-step-num {
+      background: var(--rn-primary);
+      color: var(--rn-bg-white);
+    }
+
+    .rn-step.done .rn-step-num {
+      background: rgba(0, 150, 255, 0.1);
+      color: var(--rn-primary);
+    }
+
+    .rn-step-txt {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--rn-text-muted);
+      transition: color .25s;
+    }
+
+    .rn-step.active .rn-step-txt {
+      color: var(--rn-text-main);
+    }
+
+    .rn-step.done .rn-step-txt {
+      color: var(--rn-primary);
+    }
+
+    .rn-step-div {
+      width: 1px;
+      background: var(--rn-border);
+      margin: 12px 0;
+    }
+
+    /* Panels */
+    .rn-panel {
+      display: none;
+      padding: 40px 32px;
+    }
+
+    .rn-panel.active {
+      display: block;
+      animation: rnFadeIn 0.4s ease-out;
+    }
+
+    @keyframes rnFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(5px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .rn-panel-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--rn-navy);
+      margin-top: 0 !important;
+      margin-bottom: 6px !important;
+      line-height: 1.3 !important;
+    }
+
+    .rn-panel-sub {
+      font-size: 14px;
+      color: var(--rn-text-muted);
+      margin-top: 0 !important;
+      margin-bottom: 28px !important;
+      line-height: 1.6 !important;
+    }
+
+    .rn-field-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--rn-navy);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin: 0 0 12px 0 !important;
+    }
+
+    /* Options */
+    .rn-opt-grid {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .rn-opt-grid.col3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .rn-opt-grid.col2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rn-opt-grid.col5 {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    .rn-opt {
+      background: var(--rn-bg-white);
+      border: 2px solid var(--rn-border);
+      border-radius: var(--radius);
+      padding: 20px 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: all .2s ease;
+      color: var(--rn-text-muted);
+    }
+
+    .rn-opt:hover {
+      border-color: var(--rn-border-focus);
+      background: var(--rn-bg-gray);
+      transform: translateY(-2px);
+      color: var(--rn-primary);
+    }
+
+    .rn-opt.sel {
+      background: rgba(0, 150, 255, 0.04);
+      border-color: var(--rn-primary);
+      box-shadow: 0 4px 12px rgba(0, 150, 255, 0.1);
+      color: var(--rn-primary);
+    }
+
+    .rn-opt .opt-icon {
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .rn-opt .opt-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--rn-text-main);
+      margin: 0 0 4px 0 !important;
+      line-height: 1.3;
+    }
+
+    .rn-opt .opt-sub {
+      font-size: 12px;
+      color: var(--rn-text-muted);
+      margin: 0 !important;
+    }
+
+    .rn-opt.sel .opt-title {
+      color: var(--rn-primary);
+    }
+
+    /* Form Elements */
+    .rn-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .rn-fg {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .rn-fg label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--rn-navy);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin-bottom: 8px !important;
+    }
+
+    /* Paksa tampilan input & select seragam, abaikan gaya bawaan tema */
+    .rn-fg input,
+    .rn-fg select {
+      background: var(--rn-bg-white) !important;
+      border: 1px solid var(--rn-border) !important;
+      border-radius: 8px !important;
+      padding: 12px 16px !important;
+      font-size: 14px !important;
+      font-family: inherit !important;
+      color: var(--rn-text-main) !important;
+      outline: none !important;
+      transition: all .2s !important;
+      height: 48px !important;
+      box-shadow: none !important;
+      width: 100% !important;
+      margin: 0 !important;
+    }
+
+    .rn-fg input::placeholder {
+      color: #94A3B8 !important;
+    }
+
+    .rn-fg input:focus,
+    .rn-fg select:focus {
+      border-color: var(--rn-primary) !important;
+      box-shadow: 0 0 0 3px rgba(0, 150, 255, 0.15) !important;
+    }
+
+    .rn-fg input.err {
+      border-color: #EF4444 !important;
+    }
+
+    .rn-err {
+      font-size: 12px;
+      color: #EF4444;
+      margin-top: 6px;
+      display: none;
+      font-weight: 600;
+    }
+
+    .rn-fg input.err + .rn-err {
+      display: block;
+    }
+
+    .rn-fg select {
+      -webkit-appearance: none !important;
+      -moz-appearance: none !important;
+      appearance: none !important;
+      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2364748B%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E") !important;
+      background-repeat: no-repeat !important;
+      background-position: right 16px center !important;
+      background-size: 16px !important;
+      padding-right: 40px !important;
+    }
+
+    .rn-note {
+      font-size: 13px;
+      color: var(--rn-text-muted);
+      margin: 12px 0 0 0 !important;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Buttons */
+    .rn-btn-next {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      background: var(--rn-primary) !important;
+      color: var(--rn-bg-white) !important;
+      padding: 16px 24px;
+      border-radius: var(--radius-pill) !important;
+      font-size: 15px;
+      font-weight: 700;
+      border: none !important;
+      cursor: pointer;
+      transition: all .2s;
+      margin-top: 24px;
+      font-family: inherit;
+    }
+
+    .rn-btn-next:hover {
+      background: var(--rn-primary-hover) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 150, 255, 0.25);
+    }
+
+    .rn-btn-back {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: transparent !important;
+      border: none !important;
+      cursor: pointer;
+      color: var(--rn-text-muted) !important;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 12px 0;
+      margin-top: 8px;
+      font-family: inherit;
+      transition: color .2s;
+    }
+
+    .rn-btn-back:hover {
+      color: var(--rn-navy) !important;
+    }
+
+    /* Results */
+    .rn-result-top {
+      background: var(--rn-bg-gray);
+      border-bottom: 1px solid var(--rn-border);
+      padding: 32px;
+      text-align: center;
+    }
+
+    .rn-result-top .rn-result-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--rn-navy);
+      margin: 0 0 8px 0 !important;
+    }
+
+    .rn-result-top p {
+      font-size: 14px;
+      color: var(--rn-text-muted);
+      margin: 0 !important;
+    }
+
+    .rn-result-top .rn-name {
+      color: var(--rn-primary);
+    }
+
+    .rn-metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid var(--rn-border);
+      background: var(--rn-bg-white);
+    }
+
+    .rn-metric {
+      padding: 24px 16px;
+      text-align: center;
+      border-right: 1px solid var(--rn-border);
+    }
+
+    .rn-metric:last-child {
+      border-right: none;
+    }
+
+    .rn-metric .m-icon {
+      margin-bottom: 12px;
+      color: var(--rn-primary);
+      display: flex;
+      justify-content: center;
+    }
+
+    .rn-metric .m-val {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--rn-navy);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .rn-metric .m-lbl {
+      font-size: 12px;
+      color: var(--rn-text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .rn-result-body {
+      padding: 32px;
+      background: var(--rn-bg-white);
+    }
+
+    .rn-breakdown {
+      background: var(--rn-bg-white);
+      border: 1px solid var(--rn-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+
+    .rn-bd-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--rn-navy);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 16px;
+      border-bottom: 1px solid var(--rn-border);
+      background: var(--rn-bg-gray);
+      margin: 0 !important;
+    }
+
+    .rn-bd-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--rn-border);
+      font-size: 14px;
+    }
+
+    .rn-bd-row:last-child {
+      border: none;
+    }
+
+    .rn-bd-label {
+      color: var(--rn-text-muted);
+    }
+
+    .rn-bd-val {
+      font-weight: 700;
+      color: var(--rn-text-main);
+      text-align: right;
+    }
+
+    .rn-bd-val.hl {
+      color: var(--rn-primary);
+      font-size: 16px;
+    }
+
+    .rn-bd-foot {
+      font-size: 12px;
+      color: var(--rn-text-muted);
+      padding: 12px 16px;
+      background: var(--rn-bg-gray);
+      border-top: 1px solid var(--rn-border);
+    }
+
+    /* CTA Box */
+    .rn-cta-box {
+      background: var(--rn-navy);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+    }
+
+    .rn-cta-box .rn-cta-title {
+      font-size: 18px;
+      font-weight: 800;
+      margin: 0 0 10px 0 !important;
+      color: #ffffff !important;
+      line-height: 1.4;
+    }
+
+    .rn-cta-box p {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.8) !important;
+      line-height: 1.6;
+      margin: 0 0 24px 0 !important;
+    }
+
+    .rn-cta-btns {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .rn-btn-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #25D366 !important;
+      color: #fff !important;
+      padding: 14px 28px;
+      border-radius: var(--radius-pill);
+      font-size: 15px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: inherit;
+      transition: all .2s;
+    }
+
+    .rn-btn-wa:hover {
+      background: #1fba58 !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
+    }
+
+    .rn-btn-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.1) !important;
+      color: #fff !important;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+      padding: 14px 28px;
+      border-radius: var(--radius-pill);
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: inherit;
+      transition: all .2s;
+    }
+
+    .rn-btn-email:hover {
+      background: rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .rn-trust {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .rn-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 600;
+    }
+
+    .rn-trust-item span.dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--rn-primary);
+      display: block;
+      flex-shrink: 0;
+    }
+
+    /* Footer */
+    .rn-footer {
+      background: var(--rn-bg-gray);
+      border-top: 1px solid var(--rn-border);
+      padding: 16px 32px;
+      font-size: 12px;
+      color: var(--rn-text-muted);
+      line-height: 1.6;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .rn-footer-logo {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--rn-navy);
+      white-space: nowrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .rn-header,
+      .rn-panel,
+      .rn-result-body,
+      .rn-result-top,
+      .rn-footer {
+        padding: 24px 20px;
+      }
+
+      .rn-stepbar {
+        padding: 0 20px;
+      }
+
+      .rn-opt-grid.col3,
+      .rn-opt-grid.col5 {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .rn-opt-grid.col5 .rn-opt:last-child {
+        grid-column: 1/-1;
+      }
+
+      .rn-form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .rn-metrics {
+        grid-template-columns: repeat(2, 1fr);
+        border-right: none;
+      }
+
+      .rn-metric {
+        border-bottom: 1px solid var(--rn-border);
+      }
+
+      .rn-metric:nth-child(even) {
+        border-right: none;
+      }
+
+      .rn-step-txt {
+        display: none;
+      }
+
+      .rn-badge {
+        display: none;
+      }
+
+      .rn-cta-btns {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .rn-cta-btns a {
+        justify-content: center;
+      }
+    }
+  </style>
+
+  <!-- HEADER -->
+  <div class="rn-header">
+    <div class="rn-logo-mark">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+    </div>
+    <div class="rn-header-text">
+      <p class="rn-header-title">Kalkulator PLTS Renus</p>
+      <p>Estimasi instan kapasitas, paket &amp; penghematan PLTS</p>
+    </div>
+    <div class="rn-badge">Gratis</div>
+  </div>
+
+  <!-- STEP BAR -->
+  <div class="rn-stepbar">
+    <div class="rn-step active" id="st1">
+      <div class="rn-step-num" id="sn1">1</div>
+      <span class="rn-step-txt">Tipe Properti</span>
+    </div>
+    <div class="rn-step-div"></div>
+    <div class="rn-step" id="st2">
+      <div class="rn-step-num" id="sn2">2</div>
+      <span class="rn-step-txt">Konsumsi Daya</span>
+    </div>
+    <div class="rn-step-div"></div>
+    <div class="rn-step" id="st3">
+      <div class="rn-step-num" id="sn3">3</div>
+      <span class="rn-step-txt">Data Kontak</span>
+    </div>
+    <div class="rn-step-div"></div>
+    <div class="rn-step" id="st4">
+      <div class="rn-step-num" id="sn4">4</div>
+      <span class="rn-step-txt">Hasil Estimasi</span>
+    </div>
+  </div>
+
+  <!-- STEP 1 -->
+  <div class="rn-panel active" id="p1">
+    <p class="rn-panel-title">Apa tipe propertimu?</p>
+    <p class="rn-panel-sub">Pilih kategori yang sesuai. Renus melayani residensial, komersial, hingga kawasan industri skala besar.</p>
+    <div class="rn-opt-grid col3" id="g-tipe">
+      <div class="rn-opt" onclick="rnPick('g-tipe',this,'residensial')">
+        <div class="opt-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </div>
+        <div class="opt-title">Residensial</div>
+        <div class="opt-sub">Rumah tinggal, villa</div>
+      </div>
+      <div class="rn-opt" onclick="rnPick('g-tipe',this,'komersial')">
+        <div class="opt-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+            <path d="M9 22v-4h6v4"></path>
+            <path d="M8 6h.01"></path>
+            <path d="M16 6h.01"></path>
+            <path d="M12 6h.01"></path>
+            <path d="M12 10h.01"></path>
+            <path d="M12 14h.01"></path>
+            <path d="M16 10h.01"></path>
+            <path d="M16 14h.01"></path>
+            <path d="M8 10h.01"></path>
+            <path d="M8 14h.01"></path>
+          </svg>
+        </div>
+        <div class="opt-title">Komersial</div>
+        <div class="opt-sub">Ruko, kantor, hotel, sekolah</div>
+      </div>
+      <div class="rn-opt" onclick="rnPick('g-tipe',this,'industrial')">
+        <div class="opt-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path>
+            <path d="M17 18h1"></path>
+            <path d="M12 18h1"></path>
+            <path d="M7 18h1"></path>
+          </svg>
+        </div>
+        <div class="opt-title">Industrial</div>
+        <div class="opt-sub">Pabrik, gudang, kawasan</div>
+      </div>
+    </div>
+
+    <p class="rn-panel-title">Sistem PLTS yang diminati?</p>
+    <p class="rn-panel-sub" style="margin-bottom:16px !important">Renus menyediakan solusi Hybrid, Off-Grid, dan On-Grid sesuai kebutuhan dan kondisi lokasimu.</p>
+    <div class="rn-opt-grid col3" id="g-sistem">
+      <div class="rn-opt" onclick="rnPick('g-sistem',this,'hybrid')">
+        <div class="opt-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+            <rect x="9" y="9" width="6" height="6"></rect>
+            <line x1="9" y1="1" x2="9" y2="4"></line>
+            <line x1="15" y1="1" x2="15" y2="4"></line>
+            <line x1="9" y1="20" x2="9" y2="23"></line>
+            <line x1="15" y1="20" x2="15" y2="23"></line>
+            <line x1="20" y1="9" x2="23" y2="9"></line>
+            <line x1="20" y1="14" x2="23" y2="14"></line>
+            <line x1="1" y1="9" x2="4" y2="9"></line>
+            <line x1="1" y1="14" x2="4" y2="14"></line>
+          </svg>
+        </div>
+        <div class="opt-title">PLTS Hybrid</div>
+        <div class="opt-sub">PLN + baterai, tetap menyala saat padam</div>
+      </div>
+      <div class="rn-opt" onclick="rnPick('g-sistem',this,'off-grid')">
+        <div class="opt-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="7" width="16" height="10" rx="2" ry="2"></rect>
+            <line x1="22" y1="11" x2="22" y2="13"></line>
+          </svg>
+        </div>
+        <div class="opt-title">PLTS Off-Grid</div>
+        <div class="opt-sub">Mandiri tanpa PLN, dengan baterai</div>
+      </div>
+      <div class="rn-opt" onclick="rnPick('g-sistem',this,'on-grid')">
+        <div class="opt-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+        </div>
+        <div class="opt-title">PLTS On-Grid</div>
+        <div class="opt-sub">Tanpa baterai, untuk beban siang hari</div>
+      </div>
+    </div>
+    <button type="button" class="rn-btn-next" onclick="rnGo(2)">
+      Konsumsi Daya
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </button>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="rn-panel" id="p2">
+    <p class="rn-panel-title">Berapa konsumsi listrikmu?</p>
+    <p class="rn-panel-sub">Data ini digunakan untuk menghitung kapasitas PLTS yang optimal sesuai kebutuhan energimu.</p>
+
+    <p class="rn-field-title">Rata-rata tagihan listrik per bulan</p>
+    <div class="rn-opt-grid col5" id="g-tagihan">
+      <div class="rn-opt" onclick="rnPick('g-tagihan',this,'500k')">
+        <div class="opt-title">&lt; Rp 500rb</div>
+        <div class="opt-sub">~900–1.300 VA</div>
+      </div>
+      <div class="rn-opt" onclick="rnPick('g-tagihan',this,'1jt')">
+        <div class="opt-title">Rp 500rb–1 jt</div>
+        <div class="opt-sub">~2.200 VA</div>
+      </div>
+      <div class="rn-opt" onclick="rnPick('g-tagihan',this,'3jt')">
+        <div class="opt-title">Rp 1–3 juta</div>
+        <div class="opt-sub">~3.500–6.600 VA</div>
+      </div>
+      <div class="rn-opt" onclick="rnPick('g-tagihan',this,'10jt')">
+        <div class="opt-title">Rp 3–10 juta</div>
+        <div class="opt-sub">~10–33 kVA</div>
+      </div>
+      <div class="rn-opt" onclick="rnPick('g-tagihan',this,'50jt')">
+        <div class="opt-title">&gt; Rp 10 juta</div>
+        <div class="opt-sub">Industrial</div>
+      </div>
+    </div>
+
+    <p class="rn-field-title">Daya PLN yang terpasang</p>
+    <div class="rn-opt-grid col2" id="g-daya">
+      <div class="rn-opt" onclick="rnPick('g-daya',this,'2200')">
+        <div class="opt-title">900 – 2.200 VA</div>
+        <div class="opt-sub">Rumah kecil–menengah</div>
+      </div>
+      <div class="rn-opt" onclick="rnPick('g-daya',this,'6600')">
+        <div class="opt-title">3.500 – 6.600 VA</div>
+        <div class="opt-sub">Rumah besar / ruko kecil</div>
+      </div>
+      <div class="rn-opt" onclick="rnPick('g-daya',this,'33000')">
+        <div class="opt-title">10.600 – 33.000 VA</div>
+        <div class="opt-sub">Komersial menengah</div>
+      </div>
+      <div class="rn-opt" onclick="rnPick('g-daya',this,'200kva')">
+        <div class="opt-title">&gt; 66.000 VA</div>
+        <div class="opt-sub">Industrial / skala besar</div>
+      </div>
+    </div>
+
+    <div class="rn-form-row">
+      <div class="rn-fg">
+        <label for="rn-luas">Luas Atap Tersedia (m²)</label>
+        <input type="number" id="rn-luas" placeholder="contoh: 30" min="0">
+      </div>
+      <div class="rn-fg">
+        <label for="rn-kota">Kota / Lokasi Instalasi</label>
+        <input type="text" id="rn-kota" placeholder="contoh: Surabaya, Bekasi...">
+      </div>
+    </div>
+    <button type="button" class="rn-btn-next" onclick="rnGo(3)">
+      Data Kontak
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </button>
+    <button type="button" class="rn-btn-back" onclick="rnGo(1)">← Kembali</button>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="rn-panel" id="p3">
+    <p class="rn-panel-title">Masukkan data kontak kamu</p>
+    <p class="rn-panel-sub">Tim ahli Renus akan menghubungi kamu dalam <strong>1×24 jam</strong> dengan analisis teknis dan proposal harga yang akurat.</p>
+    <div class="rn-form-row">
+      <div class="rn-fg">
+        <label for="rn-nama">Nama Lengkap *</label>
+        <input type="text" id="rn-nama" placeholder="Nama">
+        <span class="rn-err" id="e-nama">Nama wajib diisi</span>
+      </div>
+      <div class="rn-fg">
+        <label for="rn-wa">Nomor WhatsApp *</label>
+        <input type="tel" id="rn-wa" placeholder="+62 xxx xxxx xxxx">
+        <span class="rn-err" id="e-wa">Nomor WhatsApp wajib diisi</span>
+      </div>
+      <div class="rn-fg">
+        <label for="rn-email">Email *</label>
+        <input type="email" id="rn-email" placeholder="email@email.com">
+        <span class="rn-err" id="e-email">Email wajib diisi</span>
+      </div>
+      <div class="rn-fg">
+        <label for="rn-jabatan">Jabatan / Posisi</label>
+        <input type="text" id="rn-jabatan" placeholder="Owner, Manajer, dll">
+      </div>
+      <div class="rn-fg">
+        <label for="rn-perusahaan">Nama Perusahaan / Properti</label>
+        <input type="text" id="rn-perusahaan" placeholder="opsional">
+      </div>
+      <div class="rn-fg">
+        <label for="rn-waktu">Kapan bisa dihubungi?</label>
+        <select id="rn-waktu">
+          <option value="">Pilih waktu...</option>
+          <option>Pagi (08.00–12.00)</option>
+          <option>Siang (12.00–15.00)</option>
+          <option>Sore (15.00–18.00)</option>
+          <option>Kapan saja</option>
+        </select>
+      </div>
+    </div>
+    <p class="rn-note">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+      </svg>
+      Data kamu aman dan tidak akan dibagikan ke pihak ketiga.
+    </p>
+    <button type="button" class="rn-btn-next" onclick="rnSubmit()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="22" y1="2" x2="11" y2="13"></line>
+        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+      </svg>
+      Lihat Estimasi &amp; Dapatkan Proposal
+    </button>
+    <button type="button" class="rn-btn-back" onclick="rnGo(2)">← Kembali</button>
+  </div>
+
+  <!-- STEP 4 -->
+  <div class="rn-panel" id="p4">
+    <div id="rn-result-slot"></div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="rn-footer">
+    <span class="rn-footer-logo">RENUS</span>
+    <span>⚠️ Semua angka adalah estimasi indikatif (±15–20%). Angka aktual ditentukan setelah survei lokasi gratis oleh tim teknis kami.</span>
+  </div>
+
+  <script>
+    var rnS = {
+      tipe: '', sistem: '', tagihan: '', daya: '', luas: '', kota: '',
+      nama: '', wa: '', email: '', jabatan: '', perusahaan: '', waktu: ''
+    };
+
+    // Tarif dasar listrik PLN (Rp per kWh)
+    var TARIF_PLN = 1700;
+
+    // kWh per bulan = nilai tengah tagihan / tarif PLN
+    var rnTAG = {
+      '500k': { kwh: Math.round(350000 / TARIF_PLN), mid: 350000 },
+      '1jt': { kwh: Math.round(750000 / TARIF_PLN), mid: 750000 },
+      '3jt': { kwh: Math.round(2000000 / TARIF_PLN), mid: 2000000 },
+      '10jt': { kwh: Math.round(6500000 / TARIF_PLN), mid: 6500000 },
+      '50jt': { kwh: Math.round(30000000 / TARIF_PLN), mid: 30000000 }
+    };
+
+    var rnSF = {
+      'on-grid': 1.0,
+      'off-grid': 1.35,
+      'hybrid': 1.2
+    };
+
+    // Porsi pemakaian siang hari. On-grid tanpa baterai hanya bisa menggantikan
+    // pemakaian siang; kelebihan yang mengalir ke PLN tidak mengurangi tagihan.
+    var rnSIANG = {
+      residensial: 0.4,
+      komersial: 0.7,
+      industrial: 0.7
+    };
+
+    // Paket katalog Agustus 2026 — harga material, belum termasuk pemasangan (juta Rupiah)
+    var RN_PAKET = {
+      hybrid1: [
+        { nama: 'Hybrid 1 phase 5 kW', kw: 5, harga: 84 },
+        { nama: 'Hybrid 1 phase 6 kW', kw: 6, harga: 98 },
+        { nama: 'Hybrid 1 phase 8 kW', kw: 8, harga: 131 }
+      ],
+      hybrid3: [
+        { nama: 'Hybrid 3 phase 10 kW', kw: 10, harga: 159 },
+        { nama: 'Hybrid 3 phase 12 kW', kw: 12, harga: 174 },
+        { nama: 'Hybrid 3 phase 20 kW', kw: 20, harga: 287 }
+      ],
+      offVrla: [
+        { nama: 'Off-grid VRLA 1 kW', kw: 1, harga: 23 },
+        { nama: 'Off-grid VRLA 2 kW', kw: 2, harga: 36 },
+        { nama: 'Off-grid VRLA 3 kW', kw: 3, harga: 49 },
+        { nama: 'Off-grid VRLA 5 kW', kw: 5, harga: 65 }
+      ],
+      offLithium: [
+        { nama: 'Off-grid lithium 5 kW', kw: 5, harga: 77 },
+        { nama: 'Off-grid lithium 10 kW', kw: 10, harga: 138 }
+      ]
+    };
+
+    function rnEsc(s) {
+      return String(s).replace(/[&<>"']/g, function(c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+      });
+    }
+
+    function rnIdr(n) {
+      if (n >= 1000000000) return 'Rp ' + (n / 1000000000).toFixed(1).replace('.', ',') + ' miliar';
+      if (n >= 1000000) return 'Rp ' + Math.round(n / 1000000) + ' jt';
+      return 'Rp ' + new Intl.NumberFormat('id-ID').format(Math.round(n));
+    }
+
+    function rnNum(n) {
+      return new Intl.NumberFormat('id-ID').format(Math.round(n));
+    }
+
+    function rnFirstFit(list, kwp) {
+      for (var i = 0; i < list.length; i++) {
+        if (list[i].kw >= kwp) return list[i];
+      }
+      return null;
+    }
+
+    // Paket katalog terkecil yang kapasitasnya mencukupi; null = perlu desain custom
+    function rnPaket(kwp) {
+      if (rnS.sistem === 'hybrid') {
+        var tigaPhase = kwp > 8 || rnS.daya === '33000' || rnS.daya === '200kva';
+        return rnFirstFit(tigaPhase ? RN_PAKET.hybrid3 : RN_PAKET.hybrid1, kwp);
+      }
+      if (rnS.sistem === 'off-grid') {
+        return rnFirstFit(kwp <= 5 ? RN_PAKET.offVrla : RN_PAKET.offLithium, kwp);
+      }
+      return null;
+    }
+
+    function rnCalc() {
+      var t = rnTAG[rnS.tagihan] || rnTAG['3jt'];
+      var sf = rnSF[rnS.sistem] || 1.0;
+      // Pemakaian yang bisa digantikan PLTS: seluruhnya untuk hybrid/off-grid
+      // (ada baterai), hanya porsi siang untuk on-grid (Permen ESDM No. 2/2024)
+      var kwhTergantikan = rnS.sistem === 'on-grid'
+        ? t.kwh * (rnSIANG[rnS.tipe] || 0.4)
+        : t.kwh;
+      var kwp = Math.ceil(((kwhTergantikan / 30) / 4 * sf) * 4) / 4;
+      var pBulan = Math.round(kwp * 4 * 30);
+      var hem = Math.min(pBulan, kwhTergantikan) * TARIF_PLN;
+
+      return {
+        kwp: kwp,
+        panels: Math.ceil(kwp * 1000 / 500),
+        prodBulan: pBulan,
+        hemBulan: hem,
+        hem25: hem * 12 * 25,
+        co2: Math.round(kwp * 1200),
+        paket: rnPaket(kwp)
+      };
+    }
+
+    function rnPick(gridId, el, val) {
+      document.querySelectorAll('#' + gridId + ' .rn-opt').forEach(function(c) {
+        c.classList.remove('sel');
+      });
+      el.classList.add('sel');
+
+      if (gridId === 'g-tipe') rnS.tipe = val;
+      if (gridId === 'g-sistem') rnS.sistem = val;
+      if (gridId === 'g-tagihan') rnS.tagihan = val;
+      if (gridId === 'g-daya') rnS.daya = val;
+    }
+
+    function rnGo(n) {
+      for (var i = 1; i <= 4; i++) {
+        var p = document.getElementById('p' + i);
+        var s = document.getElementById('st' + i);
+        var sn = document.getElementById('sn' + i);
+
+        if (!p || !s || !sn) continue;
+
+        p.classList.remove('active');
+        s.classList.remove('active', 'done');
+
+        if (i < n) {
+          s.classList.add('done');
+          sn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+        } else if (i === n) {
+          s.classList.add('active');
+          sn.textContent = i;
+        } else {
+          sn.textContent = i;
+        }
+      }
+
+      document.getElementById('p' + n).classList.add('active');
+      document.querySelector('.rn-calc').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function rnVal() {
+      var ok = true;
+      ['nama', 'wa', 'email'].forEach(function(id) {
+        var el = document.getElementById('rn-' + id);
+        var er = document.getElementById('e-' + id);
+
+        if (!el.value.trim()) {
+          el.classList.add('err');
+          if (er) er.style.display = 'block';
+          ok = false;
+        } else {
+          el.classList.remove('err');
+          if (er) er.style.display = 'none';
+        }
+      });
+      return ok;
+    }
+
+    function rnSubmit() {
+      if (!rnVal()) return;
+
+      rnS.nama = document.getElementById('rn-nama').value.trim();
+      rnS.wa = document.getElementById('rn-wa').value;
+      rnS.email = document.getElementById('rn-email').value;
+      rnS.jabatan = document.getElementById('rn-jabatan').value;
+      rnS.perusahaan = document.getElementById('rn-perusahaan').value;
+      rnS.waktu = document.getElementById('rn-waktu').value;
+      rnS.kota = document.getElementById('rn-kota').value.trim();
+      rnS.luas = document.getElementById('rn-luas').value;
+
+      if (!rnS.tagihan) rnS.tagihan = '3jt';
+      if (!rnS.tipe) rnS.tipe = 'residensial';
+      if (!rnS.sistem) rnS.sistem = 'hybrid';
+
+      var r = rnCalc();
+      var tLbl = { residensial: 'Residensial', komersial: 'Komersial', industrial: 'Industrial' };
+      var sLbl = { 'on-grid': 'PLTS On-Grid', 'off-grid': 'PLTS Off-Grid', 'hybrid': 'PLTS Hybrid' };
+
+      var paketTxt, paketWa;
+      if (r.paket) {
+        paketTxt = rnEsc(r.paket.nama) + ' — Rp ' + r.paket.harga + ' jt*';
+        paketWa = r.paket.nama + ' (Rp ' + r.paket.harga + ' jt, harga material)';
+      } else if (rnS.sistem === 'on-grid') {
+        paketTxt = 'Harga on-grid disesuaikan hasil survei';
+        paketWa = 'On-grid, mohon penawaran';
+      } else {
+        paketTxt = 'Desain custom — proposal setelah survei';
+        paketWa = 'Kapasitas custom, mohon penawaran';
+      }
+
+      var waMsg = encodeURIComponent('Halo Renus! Saya ' + rnS.nama + ' ingin mendapatkan proposal PLTS.\n\nHasil Kalkulator:\n• Tipe: ' + tLbl[rnS.tipe] + '\n• Sistem: ' + sLbl[rnS.sistem] + '\n• Kapasitas estimasi: ' + r.kwp + ' kWp\n• Paket: ' + paketWa + '\n• Estimasi penghematan: ' + rnIdr(r.hemBulan) + '/bulan\n• Lokasi: ' + (rnS.kota || '—') + '\n\nMohon dihubungi. Terima kasih!');
+
+      var isJabo = ['jakarta', 'bekasi', 'depok', 'bogor', 'tangerang', 'cikarang', 'karawang', 'bandung'].some(function(c) {
+        return rnS.kota.toLowerCase().indexOf(c) !== -1;
+      });
+
+      var waNum = isJabo ? '6281412250644' : '6285385558025';
+
+      var iKwp = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>';
+      var iUang = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"></path><path d="M4 6v12c0 1.1.9 2 2 2h14v-4"></path><path d="M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z"></path></svg>';
+      var iSun = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>';
+      var iDaun = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>';
+      var iClip = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>';
+      var iWa = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>';
+      var iEmail = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>';
+
+      var paketFoot = r.paket
+        ? '<div class="rn-bd-foot">*Harga material paket katalog Agustus 2026, belum termasuk pemasangan.</div>'
+        : '';
+
+      document.getElementById('rn-result-slot').innerHTML = `
+        <div class="rn-result-top">
+          <p style="font-size:13px;color:var(--rn-primary);font-weight:800;text-transform:uppercase;letter-spacing:1px;margin: 0 0 8px 0 !important;">
+            Estimasi Selesai
+          </p>
+          <p class="rn-result-title">Halo, <span class="rn-name">${rnEsc(rnS.nama)}</span>! Berikut hasil estimasimu</p>
+          <p>Berdasarkan data yang kamu masukkan &nbsp;·&nbsp; Akurasi estimasi ±15–20%</p>
+        </div>
+
+        <div class="rn-metrics">
+          <div class="rn-metric">
+            <div class="m-icon">${iKwp}</div>
+            <div class="m-val">${r.kwp.toLocaleString('id-ID', { maximumFractionDigits: 2 })} kWp</div>
+            <div class="m-lbl">Kapasitas PLTS</div>
+          </div>
+          <div class="rn-metric">
+            <div class="m-icon">${iUang}</div>
+            <div class="m-val">${rnIdr(r.hemBulan)}</div>
+            <div class="m-lbl">Estimasi Hemat / Bulan</div>
+          </div>
+          <div class="rn-metric">
+            <div class="m-icon">${iSun}</div>
+            <div class="m-val">${rnNum(r.prodBulan)} kWh</div>
+            <div class="m-lbl">Produksi / Bulan</div>
+          </div>
+          <div class="rn-metric">
+            <div class="m-icon">${iDaun}</div>
+            <div class="m-val">${rnNum(r.co2)} kg</div>
+            <div class="m-lbl">CO₂ Dikurangi / Thn</div>
+          </div>
+        </div>
+
+        <div class="rn-result-body">
+          <div class="rn-breakdown">
+            <div class="rn-bd-title">${iClip} Rincian Teknis</div>
+            <div class="rn-bd-row">
+              <span class="rn-bd-label">Tipe Instalasi</span>
+              <span class="rn-bd-val">${tLbl[rnS.tipe]} — ${sLbl[rnS.sistem]}</span>
+            </div>
+            <div class="rn-bd-row">
+              <span class="rn-bd-label">Jumlah Panel Surya (500 Wp)</span>
+              <span class="rn-bd-val">${r.panels} unit</span>
+            </div>
+            <div class="rn-bd-row">
+              <span class="rn-bd-label">Paket katalog yang sesuai</span>
+              <span class="rn-bd-val hl">${paketTxt}</span>
+            </div>
+            <div class="rn-bd-row">
+              <span class="rn-bd-label">Estimasi Penghematan 25 Tahun</span>
+              <span class="rn-bd-val">${rnIdr(r.hem25)}</span>
+            </div>
+            <div class="rn-bd-row">
+              <span class="rn-bd-label">Lokasi Instalasi</span>
+              <span class="rn-bd-val">${rnEsc(rnS.kota || '—')}</span>
+            </div>
+            ${paketFoot}
+          </div>
+
+          <div class="rn-cta-box">
+            <p class="rn-cta-title">Tertarik melanjutkan? Tim Renus siap membantu kamu!</p>
+            <p>Dapatkan proposal teknis lengkap, simulasi produksi energi, dan penawaran harga terbaik.<br>Survei lokasi <strong>GRATIS</strong>, tanpa syarat apa pun.</p>
+            <div class="rn-cta-btns">
+              <a class="rn-btn-wa" href="https://wa.me/${waNum}?text=${waMsg}" target="_blank" rel="noopener">
+                ${iWa} Chat WhatsApp Renus
+              </a>
+              <a class="rn-btn-email" href="mailto:sales@renergynusantara.com?subject=${encodeURIComponent('Konsultasi PLTS — ' + rnS.nama)}&body=${waMsg}">
+                ${iEmail} Email Proposal
+              </a>
+            </div>
+            <div class="rn-trust">
+              <span class="rn-trust-item"><span class="dot"></span>ISO 9001:2015</span>
+              <span class="rn-trust-item"><span class="dot"></span>Badan Usaha ESDM DJK</span>
+              <span class="rn-trust-item"><span class="dot"></span>Survei Gratis</span>
+              <span class="rn-trust-item"><span class="dot"></span>Komponen Premium Tier-1</span>
+            </div>
+          </div>
+        </div>
+      `;
+
+      rnGo(4);
+    }
+  </script>
+</div>
