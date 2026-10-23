@@ -239,11 +239,8 @@ section{padding-block:var(--section)}
 .sys > p{color:var(--color-text-muted)}
 .sys .sys-fit{margin-top:auto;padding-top:12px;border-top:1px solid #e3edf1;font-size:.9rem;font-weight:600;color:var(--navy-900)}
 @media (max-width:960px){.systems{grid-template-columns:1fr}}
-.compare-toggle{margin-top:20px}
-.compare-toggle summary{display:inline-flex;align-items:center;gap:8px;min-height:44px;cursor:pointer;font-weight:600;color:var(--navy-900);list-style:none}
-.compare-toggle summary::-webkit-details-marker{display:none}
-.compare-toggle summary::after{content:"+";font-size:1.25rem;line-height:1;color:var(--blue-700)}
-.compare-toggle[open] summary::after{content:"–"}
+.compare-block{margin-top:40px}
+.compare-title{font-size:1.125rem;color:var(--navy-900)}
 .compare-wrap{margin-top:12px;overflow-x:auto;border:1px solid #d5e4ea;border-radius:20px;background:#fff}
 .compare{width:100%;min-width:560px;border-collapse:collapse;font-size:.95rem}
 .compare th,.compare td{padding:14px 20px;text-align:left;border-top:1px solid #e3edf1;vertical-align:top}
@@ -534,8 +531,8 @@ section{padding-block:var(--section)}
         <p class="sys-fit">Cocok untuk rumah dan usaha</p>
       </a>
     </div>
-    <details class="compare-toggle">
-      <summary>Bandingkan ketiga sistem</summary>
+    <div class="compare-block">
+      <h3 class="compare-title">Perbandingan ketiga sistem</h3>
       <div class="compare-wrap">
         <table class="compare">
           <thead><tr><th scope="col"></th><th scope="col">On-grid</th><th scope="col">Off-grid</th><th scope="col">Hybrid</th></tr></thead>
@@ -549,7 +546,7 @@ section{padding-block:var(--section)}
         </table>
       </div>
       <p class="fineprint">Sejak Permen ESDM No. 2/2024, kelebihan listrik yang mengalir ke PLN tidak lagi mengurangi tagihan. Karena itu kapasitas on-grid kami sesuaikan dengan pemakaian siang hari, dan hybrid kami rekomendasikan agar kelebihan energi tersimpan di baterai.</p>
-    </details>
+    </div>
   </div>
 </section>
 
