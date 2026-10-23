@@ -81,7 +81,7 @@ Komposisi foto: rumah di 45–90% lebar (tengah-kanan), sisi kiri pepohonan → 
 
 ## Aturan konten (dari CLAUDE.md)
 - H1 hero: kata "PLTS" diberi warna biru brand (`--blue-500`).
-- Tepat satu H1: "Kontraktor PLTS Hybrid di Seluruh Indonesia" (layanan nasional; kantor Surabaya & Jabodetabek disebut di baris bukti); subjudul "Listrik tetap menyala siang, malam, bahkan saat PLN padam."
+- Tepat satu H1: "Kontraktor PLTS Rumah, Bisnis & Industri"; subjudul "Pemasangan PLTS on-grid, off-grid, dan hybrid di seluruh Indonesia." (kantor Surabaya & Jabodetabek disebut di baris bukti)
 - Tidak ada aliran/klaim ekspor listrik ke PLN.
 - CTA utama: WhatsApp Jabodetabek 0814-1225-0644.
 - Harga paket hybrid & off-grid boleh tampil (tab per sistem); on-grid tanpa harga, tombol "Minta penawaran" (harga material, belum termasuk pemasangan). Jangan tampilkan kisaran biaya pemasangan.
