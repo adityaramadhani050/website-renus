@@ -36,6 +36,8 @@ Komposisi foto: rumah di 45–90% lebar (tengah-kanan), sisi kiri pepohonan → 
 --sun-400:  #ffc83d;   /* HANYA energi surya: aliran panel, ikon matahari */
 --grid-400: #9aa7b0;   /* titik/komponen tidak aktif */
 --pln-500:  #ff4d4d;   /* aliran PLN (permintaan pengguna: merah, abu-abu terlalu samar) */
+--save-bg:  #e6f6ec;   /* sorotan estimasi penghematan (permintaan pengguna) */
+--save-ink: #11723f;   /* teks penghematan, 5,4:1 di atas --save-bg */
 ```
 
 ### Semantic
