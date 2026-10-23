@@ -228,23 +228,23 @@ section{padding-block:var(--section)}
 @media (max-width:860px){.why{grid-template-columns:1fr}}
 
 /* ===== Sistem PLTS ===== */
-.systems{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
-.sys{display:flex;flex-direction:column;gap:12px;border-radius:20px;background:#fff;border:1px solid #d5e4ea;padding:clamp(24px,3vw,32px)}
+.systems{margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sys{position:relative;display:flex;flex-direction:column;gap:8px;border-radius:20px;background:#fff;border:1px solid #d5e4ea;padding:24px;color:inherit;text-decoration:none;transition:border-color .2s,transform .3s var(--ease)}
+.sys:hover{border-color:var(--blue-500);transform:translateY(-3px)}
 .sys.rec{border-color:var(--blue-500);box-shadow:0 0 0 1px var(--blue-500)}
 .sys-tag{align-self:flex-start;font-size:.8rem;font-weight:600;color:var(--navy-900);background:var(--blue-50);padding:4px 10px;border-radius:999px}
-.sys.rec{position:relative}
 .sys-rec{position:absolute;top:24px;right:24px;font-size:.78rem;font-weight:700;color:#fff;background:var(--navy-900);padding:4px 10px;border-radius:999px}
-.sys h3{font-size:1.375rem;letter-spacing:-.015em}
+.sys h3{margin-top:6px;font-size:1.3rem;letter-spacing:-.015em}
 .sys > p{color:var(--color-text-muted)}
-.sys-facts{margin:4px 0 0;display:grid;gap:10px;padding-top:14px;border-top:1px solid #e3edf1}
-.sys-facts dt{font-size:.82rem;font-weight:600;color:var(--navy-900)}
-.sys-facts dd{margin:2px 0 0;font-size:.95rem}
-.sys-why{font-size:.875rem;color:var(--color-text-muted);background:var(--blue-50);border-radius:12px;padding:12px 14px}
-.sys .link-arrow{margin-top:auto;padding-top:8px}
+.sys .sys-fit{margin-top:auto;padding-top:12px;border-top:1px solid #e3edf1;font-size:.9rem;font-weight:600;color:var(--navy-900)}
 @media (max-width:960px){.systems{grid-template-columns:1fr}}
-.compare-wrap{margin-top:40px;overflow-x:auto;border:1px solid #d5e4ea;border-radius:20px;background:#fff}
+.compare-toggle{margin-top:20px}
+.compare-toggle summary{display:inline-flex;align-items:center;gap:8px;min-height:44px;cursor:pointer;font-weight:600;color:var(--navy-900);list-style:none}
+.compare-toggle summary::-webkit-details-marker{display:none}
+.compare-toggle summary::after{content:"+";font-size:1.25rem;line-height:1;color:var(--blue-700)}
+.compare-toggle[open] summary::after{content:"–"}
+.compare-wrap{margin-top:12px;overflow-x:auto;border:1px solid #d5e4ea;border-radius:20px;background:#fff}
 .compare{width:100%;min-width:560px;border-collapse:collapse;font-size:.95rem}
-.compare caption{text-align:left;padding:18px 20px 6px;font-weight:600;color:var(--navy-900)}
 .compare th,.compare td{padding:14px 20px;text-align:left;border-top:1px solid #e3edf1;vertical-align:top}
 .compare thead th{font-size:.85rem;color:var(--color-text-muted);font-weight:600;border-top:0}
 .compare tbody th{font-weight:600;color:var(--navy-900);width:22%}
@@ -470,57 +470,45 @@ section{padding-block:var(--section)}
 <section id="sistem">
   <div class="container">
     <div class="sec-head">
-      <div><p class="eyebrow">Sistem PLTS</p><h2 class="h2">Tiga sistem, dipilih sesuai kebutuhan listrik Anda.</h2></div>
+      <div><p class="eyebrow">Sistem PLTS</p><h2 class="h2">Pilih sistem sesuai kebutuhan listrik Anda.</h2></div>
+      <a class="link-arrow" href="/sistem-plts-terbaik-2026/">Panduan memilih sistem →</a>
     </div>
-    <p class="lede">Kami merancang dan memasang ketiganya. Sistem yang tepat kami rekomendasikan setelah melihat tagihan listrik, kondisi atap, dan seberapa sering listrik di lokasi Anda padam.</p>
     <div class="systems">
-      <article class="sys">
+      <a class="sys" href="/biaya-plts-on-grid/">
         <span class="sys-tag">Terhubung PLN</span>
         <h3>PLTS On-Grid</h3>
-        <p>Panel memasok listrik langsung ke bangunan pada siang hari. Malam hari listrik kembali diambil dari PLN. Biaya awal paling rendah karena tanpa baterai.</p>
-        <dl class="sys-facts">
-          <div><dt>Cocok untuk</dt><dd>Kantor, pabrik, dan sekolah yang banyak memakai listrik di siang hari</dd></div>
-          <div><dt>Saat PLN padam</dt><dd>Ikut berhenti demi keamanan jaringan</dd></div>
-        </dl>
-        <a class="link-arrow" href="/biaya-plts-on-grid/">Pelajari PLTS on-grid →</a>
-      </article>
-      <article class="sys">
+        <p>Hemat tagihan di siang hari dengan biaya awal paling rendah.</p>
+        <p class="sys-fit">Cocok untuk kantor, pabrik, sekolah</p>
+      </a>
+      <a class="sys" href="/plts-off-grid/">
         <span class="sys-tag">Tanpa PLN</span>
         <h3>PLTS Off-Grid</h3>
-        <p>Panel mengisi baterai, lalu baterai memasok seluruh kebutuhan listrik. Sistem berdiri sendiri tanpa sambungan PLN.</p>
-        <dl class="sys-facts">
-          <div><dt>Cocok untuk</dt><dd>Lokasi yang belum terjangkau PLN: kebun, villa, pos jaga, menara</dd></div>
-          <div><dt>Saat PLN padam</dt><dd>Tidak terpengaruh</dd></div>
-        </dl>
-        <a class="link-arrow" href="/plts-off-grid/">Pelajari PLTS off-grid →</a>
-      </article>
-      <article class="sys rec">
+        <p>Listrik mandiri dari panel dan baterai, tanpa sambungan PLN.</p>
+        <p class="sys-fit">Cocok untuk kebun, villa, lokasi terpencil</p>
+      </a>
+      <a class="sys rec" href="/plts-hybrid/">
         <span class="sys-tag">PLN + baterai</span><span class="sys-rec">Direkomendasikan</span>
         <h3>PLTS Hybrid</h3>
-        <p>Siang hari panel memasok bangunan dan mengisi baterai. Malam hari baterai dipakai lebih dulu dan PLN menjadi cadangan.</p>
-        <dl class="sys-facts">
-          <div><dt>Cocok untuk</dt><dd>Rumah dan usaha yang ingin tagihan turun sekaligus punya listrik cadangan</dd></div>
-          <div><dt>Saat PLN padam</dt><dd>Tetap menyala dari baterai</dd></div>
-        </dl>
-        <p class="sys-why">Kenapa direkomendasikan: sejak Permen ESDM No. 2/2024, kelebihan listrik yang mengalir ke PLN tidak lagi mengurangi tagihan, jadi energi berlebih lebih baik disimpan di baterai untuk dipakai sendiri.</p>
-        <a class="link-arrow" href="/plts-hybrid/">Pelajari PLTS hybrid →</a>
-      </article>
+        <p>Hemat tagihan dan tetap menyala saat PLN padam.</p>
+        <p class="sys-fit">Cocok untuk rumah dan usaha</p>
+      </a>
     </div>
-
-    <div class="compare-wrap">
-      <table class="compare">
-        <caption>Perbandingan singkat tiga sistem PLTS</caption>
-        <thead><tr><th scope="col"></th><th scope="col">On-grid</th><th scope="col">Off-grid</th><th scope="col">Hybrid</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Sambungan PLN</th><td>Perlu</td><td>Tidak perlu</td><td>Perlu</td></tr>
-          <tr><th scope="row">Baterai</th><td>Tidak ada</td><td>Ada</td><td>Ada</td></tr>
-          <tr><th scope="row">Malam hari</th><td>Listrik PLN</td><td>Baterai</td><td>Baterai, lalu PLN</td></tr>
-          <tr><th scope="row">Saat PLN padam</th><td>Ikut berhenti</td><td>Tidak terpengaruh</td><td>Tetap menyala</td></tr>
-          <tr><th scope="row">Biaya awal</th><td>Paling rendah</td><td>Lebih tinggi (baterai)</td><td>Lebih tinggi (baterai + inverter hybrid)</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="fineprint">Kelebihan listrik on-grid yang mengalir ke PLN tidak mengurangi tagihan (Permen ESDM No. 2/2024), jadi kapasitas on-grid kami sesuaikan dengan pemakaian siang hari Anda. <a href="/sistem-plts-terbaik-2026/">Baca perbandingan lengkapnya</a>.</p>
+    <details class="compare-toggle">
+      <summary>Bandingkan ketiga sistem</summary>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead><tr><th scope="col"></th><th scope="col">On-grid</th><th scope="col">Off-grid</th><th scope="col">Hybrid</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Sambungan PLN</th><td>Perlu</td><td>Tidak perlu</td><td>Perlu</td></tr>
+            <tr><th scope="row">Baterai</th><td>Tidak ada</td><td>Ada</td><td>Ada</td></tr>
+            <tr><th scope="row">Malam hari</th><td>Listrik PLN</td><td>Baterai</td><td>Baterai, lalu PLN</td></tr>
+            <tr><th scope="row">Saat PLN padam</th><td>Ikut berhenti</td><td>Tidak terpengaruh</td><td>Tetap menyala</td></tr>
+            <tr><th scope="row">Biaya awal</th><td>Paling rendah</td><td>Lebih tinggi (baterai)</td><td>Lebih tinggi (baterai + inverter hybrid)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fineprint">Sejak Permen ESDM No. 2/2024, kelebihan listrik yang mengalir ke PLN tidak lagi mengurangi tagihan. Karena itu kapasitas on-grid kami sesuaikan dengan pemakaian siang hari, dan hybrid kami rekomendasikan agar kelebihan energi tersimpan di baterai.</p>
+    </details>
   </div>
 </section>
 
