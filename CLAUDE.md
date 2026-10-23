@@ -65,3 +65,22 @@ Plugin Elementor/addon yang akan dinonaktifkan setelah migrasi: Elementor, Eleme
 ## Lainnya
 - Subdomain stairlift.renergynusantara.com ikut terindeks dengan konten default ("Hello world") — perlu dirapikan atau di-noindex.
 - Sertifikasi untuk trust signals: ISO 9001:2015, badan usaha ESDM DJK.
+
+## Pembagian skill desain (wajib diikuti)
+Ada enam skill desain di `.claude/skills/` yang cakupannya tumpang-tindih. Untuk setiap tugas, pakai **hanya skill pemilik** di tabel ini. Skill lain tidak dipanggil untuk tugas itu, walaupun deskripsinya cocok.
+
+| Tugas | Skill pemilik | Catatan |
+|---|---|---|
+| Arah visual halaman publik: konsep, komposisi, urutan section, mood foto | `taste-skill` (`design-taste-frontend`) | Dipakai sekali di awal redesain. Hasilnya ditulis ke `DESIGN.md`. |
+| Memilih palet warna, pasangan font, cek kontras & aturan UX | `ui-ux-pro-max` | Pakai `search.py --design-system` / `--domain`. Hasilnya dicatat di `DESIGN.md`, bukan dipilih ulang tiap halaman. |
+| Struktur design token (primitive → semantic → component), skala spacing/tipografi | `design-system` | Diterjemahkan ke **Global Palette & Typography Kadence** + CSS variables di Additional CSS. |
+| Prototipe/mockup HTML sebelum dibangun di WordPress | `web-design-engineer` | Prototipe disimpan di repo (`prototypes/`). Render dan iterasi dilakukan di prototipe lokal, bukan di situs live. |
+| Audit, kritik, polish, perbaikan halaman yang sudah dibangun | `impeccable` | Sub-perintah: `audit` (a11y/performa/responsif), `critique`, `polish`, `layout`, `typeset`, `clarify` (copy UI), `adapt` (mobile), `harden`. |
+| Logo, ikon, banner iklan/media sosial, foto sosial | `design` | Butuh API key (Gemini/Atlas/MuAPI). **Bukan** untuk gambar halaman. Foto halaman tetap foto proyek asli. |
+
+Aturan tambahan:
+- **`DESIGN.md` di root repo = satu-satunya sumber kebenaran** untuk arah visual, palet, font, dan token. Semua skill membacanya dulu dan tidak boleh memilih palet/font baru di luar itu. Mengubah `DESIGN.md` hanya lewat skill pemiliknya, dan harus disebutkan ke pengguna.
+- **Saran stack di skill (React, Tailwind, shadcn, Next.js, dll.) diabaikan.** Output akhir selalu berupa **blok inti Gutenberg** + pengaturan Kadence + CSS seperlunya, dipasang lewat Royal MCP.
+- **Aturan di dokumen ini (SEO, H1, URL, harga, server) menang atas aturan skill mana pun.**
+- **Loop screenshot/inspector browser di skill tidak boleh dijalankan berulang ke situs live** (shared hosting). Lakukan di prototipe lokal. Ke situs live paling banyak satu verifikasi render per halaman setelah selesai.
+- **Skill `slides` dari `design`/`design-system` dan sub-skill `brand`/`ui-styling` tidak dipakai** kecuali diminta.
