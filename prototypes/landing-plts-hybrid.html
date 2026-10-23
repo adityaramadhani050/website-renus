@@ -144,7 +144,7 @@ p{margin:0;text-wrap:pretty}
 .trust-wrap{background:var(--navy-950)}
 /* Desktop: foto berhenti di atas baris bukti, supaya jalur PLN di dasar foto tidak tertutup. */
 @media (min-width:721px){.hero-media{bottom:var(--foot-h,96px)}}
-.mode-bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 20px;padding-bottom:24px}
+.mode-bar{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding-bottom:24px}
 .mode-label{font-size:.9rem;color:rgb(255 255 255 / .75)}
 .mode-switch{display:inline-flex;padding:3px;border-radius:var(--radius-pill);background:rgb(4 33 46 / .55);border:1px solid rgb(255 255 255 / .18);backdrop-filter:blur(8px)}
 .mode-switch button{position:relative;display:inline-flex;align-items:center;gap:6px;min-height:32px;padding:0 12px;border:0;border-radius:var(--radius-pill);background:transparent;color:rgb(255 255 255 / .85);font:600 .8rem var(--font);cursor:pointer;transition:background .25s,color .25s}
@@ -534,9 +534,8 @@ section{padding-block:var(--section)}
       </dl>
       <div class="mode-bar">
         <span class="sr-only" id="mode-label-hero">Pilih kondisi</span>
-        <div class="mode-switch" role="group" aria-labelledby="mode-label-hero" data-mode-switch></div>
         <p class="mode-caption" data-mode-caption></p>
-        <p class="mode-note">Ilustrasi sistem PLTS Hybrid 5 kW</p>
+        <div class="mode-switch" role="group" aria-labelledby="mode-label-hero" data-mode-switch></div>
       </div>
     </div>
     <div class="trust-wrap">
@@ -1111,7 +1110,7 @@ function rnSubmit(){
   const MODES = {
     siang: {
       label: 'Siang',
-      caption: 'Cerah: panel memasok rumah dan kelebihannya mengisi baterai.',
+      caption: 'Panel memasok rumah dan kelebihannya mengisi baterai.',
       alt: 'Siang cerah: panel surya menghasilkan 4,2 kW. Rumah memakai 1,5 kW dan 2,7 kW sisanya mengisi baterai. PLN siaga.',
       v: {pv:4.2, load:1.5, soc:65, batt:2.7, grid:0},
       lines: {surya:['on',C.solar], rumah:['on',C.solar], pln:['standby',C.grid]},
@@ -1120,7 +1119,7 @@ function rnSubmit(){
     },
     mendung: {
       label: 'Mendung',
-      caption: 'Mendung: panel tetap bekerja, kekurangannya otomatis ditutup dari PLN.',
+      caption: 'Panel tetap bekerja, kekurangannya otomatis ditutup dari PLN.',
       alt: 'Siang mendung: panel hanya menghasilkan 0,8 kW. Rumah memakai 1,5 kW, kekurangan 0,7 kW otomatis diambil dari PLN lewat kWh meter. Baterai tidak terisi.',
       v: {pv:0.8, load:1.5, soc:65, batt:0, grid:0.7},
       lines: {surya:['on',C.solar], rumah:['on',C.solar], pln:['on',C.grid]},
@@ -1129,7 +1128,7 @@ function rnSubmit(){
     },
     malam: {
       label: 'Malam',
-      caption: 'Malam: baterai yang terisi siang tadi memasok rumah.',
+      caption: 'Baterai yang terisi siang tadi memasok rumah.',
       captionLow: `Baterai di ${BATT_MIN}% rumah otomatis beralih ke PLN.`,
       alt: 'Malam: baterai memasok rumah 1,2 kW hingga kapasitasnya turun ke 20 persen, lalu inverter otomatis beralih ke PLN dan menyimpan sisa baterai untuk cadangan.',
       v: {pv:0, load:1.2, soc:80, batt:-1.2, grid:0},
@@ -1139,7 +1138,7 @@ function rnSubmit(){
     },
     padam: {
       label: 'PLN Padam',
-      caption: 'PLN padam: lingkungan gelap, rumah tetap menyala dari baterai.',
+      caption: 'Lingkungan gelap, rumah tetap menyala dari baterai.',
       alt: 'PLN padam: rumah-rumah sekitar gelap. Inverter memutus jalur dari kWh meter PLN dan baterai memasok rumah 1,2 kW sehingga tetap menyala.',
       v: {pv:0, load:1.2, soc:60, batt:-1.2, grid:0},
       lines: {surya:['off'], rumah:['on',C.battery], pln:['cut']},
