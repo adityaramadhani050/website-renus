@@ -445,7 +445,7 @@ section{padding-block:var(--section)}
         <span class="sr-only" id="mode-label-hero">Pilih kondisi</span>
         <div class="mode-switch" role="group" aria-labelledby="mode-label-hero" data-mode-switch></div>
         <p class="mode-caption" data-mode-caption></p>
-        <p class="mode-note">Contoh cara kerja PLTS hybrid · angka ilustrasi sistem 5 kW</p>
+        <p class="mode-note">Ilustrasi sistem PLTS Hybrid 5 kW</p>
       </div>
     </div>
     <div class="trust-wrap">
@@ -924,8 +924,8 @@ function rnSubmit(){
       <p class="rule">Rekam jejak</p>
       <p class="big">Sistem kami terpasang di atap rumah tinggal, gedung kantor, kampus, hingga pabrik.</p>
       <div class="stats">
-        <div class="stat"><b>14,3 juta+ kWh</b><span>energi bersih dihasilkan sistem Renus tiap tahun</span></div>
-        <div class="stat"><b>5+ tahun</b><span>pengalaman di bidang energi surya</span></div>
+        <div class="stat"><b>40.000+ kWh</b><span>estimasi energi bersih per hari dari 10 MWp+ terpasang</span></div>
+        <div class="stat"><b>6+ tahun</b><span>pengalaman di bidang energi surya</span></div>
       </div>
     </div>
   </div>
@@ -1029,7 +1029,7 @@ function rnSubmit(){
     malam: {
       label: 'Malam',
       caption: 'Malam: baterai yang terisi siang tadi memasok rumah.',
-      captionLow: `Baterai di ${BATT_MIN}%: rumah otomatis beralih ke PLN, sisanya disimpan untuk saat padam.`,
+      captionLow: `Baterai di ${BATT_MIN}% rumah otomatis beralih ke PLN.`,
       alt: 'Malam: baterai memasok rumah 1,2 kW hingga kapasitasnya turun ke 20 persen, lalu inverter otomatis beralih ke PLN dan menyimpan sisa baterai untuk cadangan.',
       v: {pv:0, load:1.2, soc:80, batt:-1.2, grid:0},
       lines: {surya:['off'], rumah:['on',C.battery], pln:['standby',C.grid]},
