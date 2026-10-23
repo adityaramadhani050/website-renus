@@ -64,7 +64,7 @@ Plugin Elementor/addon yang akan dinonaktifkan setelah migrasi: Elementor, Eleme
 
 ## Lainnya
 - Subdomain stairlift.renergynusantara.com ikut terindeks dengan konten default ("Hello world") — perlu dirapikan atau di-noindex.
-- Sertifikasi untuk trust signals: ISO 9001:2015, ISO 14001:2015, ISO 45001:2018, ISO 37001:2025, badan usaha ESDM DJK.
+- Sertifikasi untuk trust signals: ISO 9001:2015, ISO 14001:2015, ISO 45001:2018, ISO 37001:2025, badan usaha ESDM DJK, tenaga ahli bersertifikat ESDM.
 - Rekam jejak (dari pengguna, 23 Okt 2026): 500+ proyek terpasang, 10 MWp+ kapasitas terpasang, 6+ tahun pengalaman. Energi bersih ditampilkan sebagai estimasi 10 MWp × 4 kWh/kWp = 40.000+ kWh per hari (angka lama "14.375K+ kWh" tidak dipakai).
 
 ## Pembagian skill desain (wajib diikuti)
