@@ -46,7 +46,7 @@ Komposisi foto: rumah di 45–90% lebar (tengah-kanan), sisi kiri pepohonan → 
 --color-text-on-deep: var(--white);
 --color-link: var(--blue-700);
 --color-action: var(--blue-500);
---color-on-action: var(--ink-900);      /* putih di atas #039cfc cuma 2.9:1 → teks gelap 6.4:1 */
+--color-on-action: var(--white);        /* permintaan pengguna 23 Okt: teks putih di tombol biru (kontras 2.9:1, di bawah AA) */
 --energy-solar: var(--sun-400);
 --energy-battery: var(--blue-500);
 --energy-grid: var(--grid-400);
@@ -78,6 +78,7 @@ Komposisi foto: rumah di 45–90% lebar (tengah-kanan), sisi kiri pepohonan → 
 - `prefers-reduced-motion`: tanpa crossfade & aliran diam (panah statis).
 
 ## Aturan konten (dari CLAUDE.md)
+- H1 hero: frasa "PLTS Hybrid" diberi warna biru brand (`--blue-500`).
 - Tepat satu H1: "Kontraktor PLTS Hybrid di Seluruh Indonesia" (layanan nasional; kantor Surabaya & Jabodetabek disebut di baris bukti); subjudul "Listrik tetap menyala siang, malam, bahkan saat PLN padam."
 - Tidak ada aliran/klaim ekspor listrik ke PLN.
 - CTA utama: WhatsApp Jabodetabek 0814-1225-0644.

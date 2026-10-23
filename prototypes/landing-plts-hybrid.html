@@ -19,7 +19,7 @@
 
   --color-bg:var(--white); --color-bg-soft:var(--blue-50); --color-bg-deep:var(--navy-900);
   --color-text:var(--ink-900); --color-text-muted:var(--ink-600); --color-text-on-deep:var(--white);
-  --color-link:var(--blue-700); --color-action:var(--blue-500); --color-on-action:var(--ink-900);
+  --color-link:var(--blue-700); --color-action:var(--blue-500); --color-on-action:var(--white);
   --energy-solar:var(--sun-400); --energy-battery:var(--blue-500); --energy-grid:var(--grid-400); --energy-load:var(--white);
 
   --radius-pill:999px; --radius-card:16px; --radius-sm:8px;
@@ -121,6 +121,7 @@ p{margin:0;text-wrap:pretty}
 .hero-body{flex:1;display:flex;align-items:center;padding-top:112px;padding-bottom:32px}
 .hero-copy{max-width:520px}
 .hero h1{font-size:clamp(2.25rem,3.8vw,3.5rem);line-height:1.06;letter-spacing:-.03em}
+.hero h1 .hl{color:var(--blue-500)}
 .hero-sub{margin-top:16px;font-size:clamp(1.0625rem,1.4vw,1.25rem);font-weight:500;color:rgb(255 255 255 / .92)}
 .hero-actions{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
 .btn-ghost[aria-pressed="true"]{border-color:var(--white);background:rgb(255 255 255 / .14)}
@@ -373,11 +374,10 @@ section{padding-block:var(--section)}
   <div class="hero-body">
     <div class="container">
       <div class="hero-copy">
-        <h1 id="hero-title">Kontraktor PLTS Hybrid di Seluruh Indonesia</h1>
+        <h1 id="hero-title">Kontraktor <span class="hl">PLTS Hybrid</span> di Seluruh Indonesia</h1>
         <p class="hero-sub">Listrik tetap menyala siang, malam, bahkan saat PLN padam.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20ingin%20konsultasi%20PLTS%20hybrid." target="_blank" rel="noopener">Konsultasi via WhatsApp</a>
-          <button type="button" class="btn btn-ghost" data-demo aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span>Lihat cara kerjanya</span></button>
         </div>
       </div>
     </div>
@@ -501,7 +501,7 @@ section{padding-block:var(--section)}
      Dipakai apa adanya di blok Custom HTML Gutenberg. -->
 <div class="rn-calc">
 <style>
-.rn-calc{--rn-primary:#039cfc;--rn-primary-ink:#06131c;--rn-navy:#00384f;--rn-bg:#fff;--rn-bg-gray:#f4f9fb;--rn-border:#d5e4ea;--rn-focus:#5cc2ff;--rn-text:#06131c;--rn-muted:#44545e;--radius:12px;
+.rn-calc{--rn-primary:#039cfc;--rn-primary-ink:#fff;--rn-navy:#00384f;--rn-bg:#fff;--rn-bg-gray:#f4f9fb;--rn-border:#d5e4ea;--rn-focus:#5cc2ff;--rn-text:#06131c;--rn-muted:#44545e;--radius:12px;
   font-family:"Plus Jakarta Sans",system-ui,sans-serif;background:var(--rn-bg);border-radius:24px;overflow:hidden;max-width:880px;margin:0 auto;color:var(--rn-text);border:1px solid var(--rn-border);line-height:1.5}
 .rn-calc *{box-sizing:border-box;margin:0;padding:0}
 .rn-header{background:var(--rn-navy);padding:28px 32px;display:flex;align-items:center;gap:18px;color:#fff}
@@ -884,11 +884,10 @@ function rnSubmit(){
   const hero = document.getElementById('hero');
   const imgs = [...hero.querySelectorAll('.stage img')];
   const sw = hero.querySelector('[data-mode-switch]');
-  const demoBtn = hero.querySelector('[data-demo]');
-  let current, timer = null;
+  let current;
 
   sw.innerHTML = ORDER.map(k => `<button type="button" data-set-mode="${k}" aria-pressed="false">${ICON[k]}<span>${MODES[k].label}</span></button>`).join('');
-  sw.addEventListener('click', e => { const b = e.target.closest('[data-set-mode]'); if (b) { stopDemo(); setMode(b.dataset.setMode); } });
+  sw.addEventListener('click', e => { const b = e.target.closest('[data-set-mode]'); if (b) setMode(b.dataset.setMode); });
 
   function load(img){ if (!img.srcset && img.dataset.srcset){ img.sizes = '(max-width:720px) 200vw, 120vw'; img.srcset = img.dataset.srcset; } }
 
@@ -913,19 +912,6 @@ function rnSubmit(){
     });
   }
 
-  // "Lihat cara kerjanya": putar ketiga kondisi bergantian; berhenti saat pengunjung memilih sendiri.
-  function startDemo(){
-    demoBtn.setAttribute('aria-pressed','true'); demoBtn.querySelector('span').textContent = 'Hentikan demo';
-    imgs.forEach(load);
-    let i = ORDER.indexOf(current);
-    setMode(ORDER[i = (i + 1) % ORDER.length]);
-    timer = setInterval(() => setMode(ORDER[i = (i + 1) % ORDER.length]), 4500);
-  }
-  function stopDemo(){
-    clearInterval(timer); timer = null;
-    demoBtn.setAttribute('aria-pressed','false'); demoBtn.querySelector('span').textContent = 'Lihat cara kerjanya';
-  }
-  demoBtn.addEventListener('click', () => timer ? stopDemo() : startDemo());
 
   // Mode awal mengikuti jam pengunjung; gambar mode lain dimuat setelah halaman tampil.
   const hour = new Date().getHours();
