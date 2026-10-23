@@ -84,3 +84,36 @@ Aturan tambahan:
 - **Aturan di dokumen ini (SEO, H1, URL, harga, server) menang atas aturan skill mana pun.**
 - **Loop screenshot/inspector browser di skill tidak boleh dijalankan berulang ke situs live** (shared hosting). Lakukan di prototipe lokal. Ke situs live paling banyak satu verifikasi render per halaman setelah selesai.
 - **Skill `slides` dari `design`/`design-system` dan sub-skill `brand`/`ui-styling` tidak dipakai** kecuali diminta.
+
+## Pembagian skill marketing & SEO (wajib diikuti)
+Skill marketing dari `coreyhaines31/marketingskills` (di `.claude/skills/`) tumpang-tindih dengan plugin `marketing:*`, `searchfit-seo:*`, dan `design:ux-copy`. Untuk setiap tugas pakai **hanya skill pemilik** di bawah; skill lain tidak dipanggil walaupun deskripsinya cocok.
+
+| Tugas | Skill pemilik | Catatan |
+|---|---|---|
+| Audit SEO teknis & on-page (crawl, indeks, meta, heading, kecepatan) | `seo-audit` | Data peringkat/backlink/kata kunci diambil dari **Ahrefs MCP**, bukan ditebak. |
+| Riset & pengelompokan kata kunci | `searchfit-seo:keyword-clustering` | Volume dari Ahrefs (`keywords-explorer-*`). |
+| Rencana konten / kalender artikel | `content-strategy` | |
+| Brief & penulisan artikel blog SEO | `searchfit-seo:content-brief` → `searchfit-seo:create-content` | Fakta teknis & harga mengikuti CLAUDE.md. |
+| Tautan internal & struktur menu/URL | `site-architecture` | Jangan ubah URL/slug (keputusan SEO no. 1). |
+| Schema / data terstruktur (JSON-LD) | `schema` | |
+| Visibilitas di jawaban AI (ChatGPT, Gemini, AI Overviews) | `ai-seo` | |
+| Copy halaman baru (hero, section, CTA) | `copywriting` | |
+| Merapikan copy yang sudah ada | `copy-editing` | |
+| Microcopy UI (label tombol, error, empty state) | `impeccable clarify` | Sesuai tabel skill desain. |
+| Optimasi konversi homepage/landing page | `cro` | |
+| Pengganti popup "Alokasi Kuota Terbatas" | `popups` | |
+| Kalkulator PLTS sebagai alat penarik leads | `free-tools` | |
+| Pelacakan konversi (klik WA, isian kalkulator, GA4/GTM, pixel) | `conversion-tracking` | Rencana event & UTM: `analytics`. |
+| Iklan Google/Meta: strategi & anggaran | `ads` | Copy & variasi iklan: `ad-creative`. Gambar iklan: skill desain `design`. |
+| Analisis pesaing (kontraktor PLTS lain) | `competitor-profiling` | Halaman perbandingan: `competitors`. |
+| Rencana marketing menyeluruh | `marketing-plan` | |
+| Konten & jadwal media sosial | `social` | |
+| Urutan email (nurture, follow-up leads) | `emails` | |
+| Harga & penawaran paket | `pricing` / `offers` | Harga paket tetap dari CLAUDE.md, jangan diubah tanpa konfirmasi. |
+
+Aturan tambahan:
+- **Aturan di dokumen ini menang** atas saran skill mana pun (H1, URL, title Yoast, harga, larangan klaim ekspor ke PLN).
+- **Bahasa Indonesia** untuk semua output konten; contoh berbahasa Inggris di skill diterjemahkan dan disesuaikan konteks Indonesia.
+- **Klaim harus bisa dibuktikan** (sertifikasi, jumlah proyek, angka penghematan berlabel estimasi). Jangan mengarang testimoni, statistik, atau logo klien.
+- **Plugin yang tidak dipakai kecuali diminta**: `marketing:*` (seo-audit, content-creation, draft-content, campaign-plan, competitive-brief, email-sequence, performance-report, brand-review), `searchfit-seo:seo-audit`, `searchfit-seo:technical-seo`, `searchfit-seo:on-page-seo`, `searchfit-seo:content-strategy`, `searchfit-seo:schema-markup`, `searchfit-seo:generate-schema`, `searchfit-seo:ai-visibility`, `searchfit-seo:internal-linking`.
+- Dokumen integrasi pendamping marketingskills ada di `.claude/marketingskills/tools/` (rujukan `tools/...` di skill mengarah ke sana).
