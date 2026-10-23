@@ -35,6 +35,8 @@ a{color:var(--color-link)}
 h1,h2,h3{margin:0;font-weight:600;text-wrap:balance}
 p{margin:0;text-wrap:pretty}
 .container{width:100%;max-width:calc(var(--container) + 2*var(--gutter));margin-inline:auto;padding-inline:var(--gutter)}
+.skip{position:absolute;left:16px;top:-60px;z-index:100;padding:10px 16px;border-radius:999px;background:#fff;color:var(--navy-900);font-weight:600}
+.skip:focus{top:12px}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 :focus-visible{outline:3px solid var(--blue-300);outline-offset:3px;border-radius:6px}
 
@@ -80,7 +82,7 @@ p{margin:0;text-wrap:pretty}
   background:
     linear-gradient(90deg,rgb(4 33 46 / var(--scrim-l)) 0%,rgb(4 33 46 / calc(var(--scrim-l) * .7)) 32%,rgb(4 33 46 / 0) 58%),
     linear-gradient(0deg,rgb(4 33 46 / .75) 0%,rgb(4 33 46 / 0) 26%),
-    linear-gradient(180deg,rgb(4 33 46 / .55) 0%,rgb(4 33 46 / 0) 18%);
+    linear-gradient(180deg,rgb(4 33 46 / .78) 0%,rgb(4 33 46 / .35) 12%,rgb(4 33 46 / 0) 24%);
   transition:--scrim-l .8s}
 
 /* Garis aliran energi di atas foto */
@@ -108,7 +110,7 @@ p{margin:0;text-wrap:pretty}
 .batt-bar i.low{background:var(--sun-400)}
 .batt em{font-style:normal;font-weight:700;color:#fff;font-size:.85rem;font-variant-numeric:tabular-nums}
 .tag span{font-variant-numeric:tabular-nums}
-.mode-note{font-size:.75rem;color:rgb(255 255 255 / .6);margin-left:auto}
+.mode-note{font-size:.75rem;color:rgb(255 255 255 / .78);margin-left:auto}
 .energy-strip{display:none}
 /* Titik & label di foto */
 .spot{position:absolute;left:calc(var(--x) / 1920 * 100%);top:calc(var(--y) / 1072 * 100%);width:0;height:0;color:var(--c,#fff);transition:opacity .5s}
@@ -145,10 +147,11 @@ p{margin:0;text-wrap:pretty}
 .mode-bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 20px;padding-bottom:24px}
 .mode-label{font-size:.9rem;color:rgb(255 255 255 / .75)}
 .mode-switch{display:inline-flex;padding:3px;border-radius:var(--radius-pill);background:rgb(4 33 46 / .55);border:1px solid rgb(255 255 255 / .18);backdrop-filter:blur(8px)}
-.mode-switch button{display:inline-flex;align-items:center;gap:6px;min-height:32px;padding:0 12px;border:0;border-radius:var(--radius-pill);background:transparent;color:rgb(255 255 255 / .85);font:600 .8rem var(--font);cursor:pointer;transition:background .25s,color .25s}
+.mode-switch button{position:relative;display:inline-flex;align-items:center;gap:6px;min-height:32px;padding:0 12px;border:0;border-radius:var(--radius-pill);background:transparent;color:rgb(255 255 255 / .85);font:600 .8rem var(--font);cursor:pointer;transition:background .25s,color .25s}
 .mode-switch button:hover{color:#fff;background:rgb(255 255 255 / .08)}
 .mode-switch button[aria-pressed="true"]{background:var(--color-action);color:var(--color-on-action)}
 .mode-switch svg{width:14px;height:14px}
+.mode-switch button::before{content:"";position:absolute;inset:-6px -2px} /* area sentuh 44 px tanpa memperbesar pil */
 .mode-caption{font-size:.84rem;color:rgb(255 255 255 / .92);min-height:1.6em;text-shadow:0 1px 8px rgb(4 33 46 / .8)}
 .legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.8rem;color:rgb(255 255 255 / .7)}
 .legend span{display:inline-flex;align-items:center;gap:6px}
@@ -181,7 +184,7 @@ p{margin:0;text-wrap:pretty}
   .tag span,.tag .batt{display:none !important}
   .energy-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:0 0 14px;padding:0}
   .energy-strip div{border-radius:10px;background:rgb(255 255 255 / .06);border:1px solid rgb(255 255 255 / .12);padding:8px 6px;border-top:2px solid var(--c)}
-  .energy-strip dt{font-size:.62rem;line-height:1.2;color:rgb(255 255 255 / .7)}
+  .energy-strip dt{font-size:.7rem;line-height:1.2;color:rgb(255 255 255 / .7)}
   .energy-strip dd{margin:2px 0 0;font-size:.82rem;font-weight:700;color:#fff;font-variant-numeric:tabular-nums}
   .mode-note{margin-left:0}
   .spot[data-spot="rumah"] .tag{display:none} /* layar sempit: cukup titiknya */
@@ -202,9 +205,10 @@ section{padding-block:var(--section)}
 .deep .lede{color:rgb(255 255 255 / .78)}
 .soft{background:var(--color-bg-soft)}
 .sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 40px}
-.link-arrow{font-weight:600;color:var(--blue-700);text-decoration:none;white-space:nowrap}
+.link-arrow{display:inline-block;padding-block:10px;font-weight:600;color:var(--blue-700);text-decoration:none;white-space:nowrap}
 .link-arrow:hover{text-decoration:underline;text-underline-offset:4px}
 .deep .link-arrow{color:var(--blue-300)}
+.soft .eyebrow,.soft .link-arrow{color:var(--navy-900)}
 .btn-outline{color:var(--navy-900);border-color:#b9cdd6;background:#fff}
 .btn-outline:hover{border-color:var(--navy-900)}
 .photo{position:relative;overflow:hidden;background:#cfe0e7}
@@ -299,7 +303,7 @@ section{padding-block:var(--section)}
 .pkg-spec{margin-top:4px;font-size:.9rem;color:var(--color-text-muted)}
 .pkg-bot{margin-top:10px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
 .save{font-size:.85rem;font-weight:700;color:var(--save-ink);background:var(--save-bg);padding:4px 10px;border-radius:999px;font-variant-numeric:tabular-nums}
-.pkg-bot a{font-size:.9rem;font-weight:600;color:var(--blue-700);text-decoration:none}
+.pkg-bot a{display:inline-block;padding:10px 0;font-size:.9rem;font-weight:600;color:var(--blue-700);text-decoration:none}
 .pkg-bot a:hover{text-decoration:underline}
 .spec-foot{margin-top:16px;display:grid;gap:6px}
 .spec-note{font-size:.92rem;color:var(--color-text-muted)}
@@ -337,7 +341,7 @@ section{padding-block:var(--section)}
 .faq-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(32px,6vw,96px);align-items:start}
 .faq details{border-top:1px solid #d5e4ea;padding:20px 0}
 .faq details:last-child{border-bottom:1px solid #d5e4ea}
-.faq summary{cursor:pointer;font-weight:600;font-size:1.0625rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary{min-height:44px;align-items:center;cursor:pointer;font-weight:600;font-size:1.0625rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
 .faq summary::-webkit-details-marker{display:none}
 .faq summary::after{content:"+";font-weight:500;font-size:1.25rem;line-height:1;color:var(--blue-700)}
 .faq details[open] summary::after{content:"–"}
@@ -360,7 +364,7 @@ section{padding-block:var(--section)}
 .office{border-radius:20px;padding:28px;background:rgb(255 255 255 / .06);border:1px solid rgb(255 255 255 / .14)}
 .office h3{font-size:1.25rem}
 .office p{margin-top:6px;color:rgb(255 255 255 / .75);font-variant-numeric:tabular-nums}
-.office .btn{margin-top:20px;width:100%;justify-content:center}
+.office .btn{margin-top:20px;width:100%;justify-content:center;line-height:1.25;padding-block:12px;text-align:center}
 .contact-mail{margin-top:20px;color:rgb(255 255 255 / .75)}
 .contact-mail a{color:var(--blue-300)}
 @media (max-width:860px){.contact{grid-template-columns:1fr}}
@@ -375,10 +379,12 @@ section{padding-block:var(--section)}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .line .pulse{display:none}
+  .line.on .core{marker-mid:url(#arah);marker-end:url(#arah)} /* arah aliran tanpa animasi */
 }
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Lewati ke konten</a>
 
 <header class="site-header">
   <div class="container">
@@ -396,18 +402,19 @@ section{padding-block:var(--section)}
   </div>
 </header>
 
-<main>
+<main id="main">
 <!-- ========== 1. HERO (foto + animasi cara kerja) ========== -->
 <section class="hero" id="hero" data-mode="malam" style="padding:0" aria-labelledby="hero-title">
   <div class="hero-media">
     <div class="stage">
-      <img data-mode="siang" alt="" width="1920" height="1072" data-srcset="assets/hero-plts-hybrid-siang-1024.webp 1024w, assets/hero-plts-hybrid-siang-1920.webp 1920w">
+      <img data-mode="siang" class="is-active" alt="" width="1920" height="1072" fetchpriority="high" src="assets/hero-plts-hybrid-siang-1920.webp" srcset="assets/hero-plts-hybrid-siang-1024.webp 1024w, assets/hero-plts-hybrid-siang-1920.webp 1920w" sizes="(max-width:720px) 200vw, 120vw">
       <img data-mode="mendung" alt="" width="1920" height="1072" data-srcset="assets/hero-plts-hybrid-mendung-1024.webp 1024w, assets/hero-plts-hybrid-mendung-1920.webp 1920w">
       <img data-mode="malam" alt="" width="1920" height="1072" data-srcset="assets/hero-plts-hybrid-malam-1024.webp 1024w, assets/hero-plts-hybrid-malam-1920.webp 1920w">
       <img data-mode="padam" alt="" width="1920" height="1072" data-srcset="assets/hero-plts-hybrid-pln-padam-1024.webp 1024w, assets/hero-plts-hybrid-pln-padam-1920.webp 1920w">
 
       <!-- Koordinat mengikuti foto 1920×1072 -->
       <svg class="energy" viewBox="0 0 1920 1072" preserveAspectRatio="none" aria-hidden="true">
+        <defs><marker id="arah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M1 1 L9 5 L1 9 z" fill="#fff"/></marker></defs>
         <g class="line" data-line="surya">
           <path class="halo" d="M1072 354 L1147.8 475.2 Q1152 482 1160.0 481.2 L1538.0 441.8 Q1546 441 1552.1 446.2 L1571.9 462.8 Q1578 468 1578.0 476.0 L1578.0 602.0 Q1578 610 1585.8 611.7 L1686.2 634.3 Q1694 636 1693.8 644.0 L1693.2 661.0 Q1693 669 1685.0 669.5 L1684.0 669.5 Q1676 670 1676.0 678.0 L1676 712"/>
           <path class="core" d="M1072 354 L1147.8 475.2 Q1152 482 1160.0 481.2 L1538.0 441.8 Q1546 441 1552.1 446.2 L1571.9 462.8 Q1578 468 1578.0 476.0 L1578.0 602.0 Q1578 610 1585.8 611.7 L1686.2 634.3 Q1694 636 1693.8 644.0 L1693.2 661.0 Q1693 669 1685.0 669.5 L1684.0 669.5 Q1676 670 1676.0 678.0 L1676 712"/>
@@ -655,8 +662,6 @@ section{padding-block:var(--section)}
         <div class="price-group">
           <div class="price-head"><h3>Off-grid baterai VRLA</h3><span class="badge">Harga awal lebih rendah</span></div>
           <ul class="pkg-list">
-            <li><div class="pkg-top"><span class="kw">1.000 W</span><span class="rp">Rp 23 jt</span></div><p class="pkg-spec">Panel 1.240 Wp · Inverter 2 kW · Baterai VRLA 1,2 kWh</p><div class="pkg-bot"><span class="save">Hemat hingga Rp 212 rb/bln*</span><a href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20tertarik%20paket%20PLTS%20off-grid%20VRLA%201.000%20W." target="_blank" rel="noopener">Tanya paket</a></div></li>
-            <li><div class="pkg-top"><span class="kw">2.000 W</span><span class="rp">Rp 36 jt</span></div><p class="pkg-spec">Panel 2.480 Wp · Inverter 3 kW · Baterai VRLA 2,4 kWh</p><div class="pkg-bot"><span class="save">Hemat hingga Rp 424 rb/bln*</span><a href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20tertarik%20paket%20PLTS%20off-grid%20VRLA%202.000%20W." target="_blank" rel="noopener">Tanya paket</a></div></li>
             <li><div class="pkg-top"><span class="kw">3.000 W</span><span class="rp">Rp 49 jt</span></div><p class="pkg-spec">Panel 3.100 Wp · Inverter 5 kW · Baterai VRLA 4,8 kWh</p><div class="pkg-bot"><span class="save">Hemat hingga Rp 636 rb/bln*</span><a href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20tertarik%20paket%20PLTS%20off-grid%20VRLA%203.000%20W." target="_blank" rel="noopener">Tanya paket</a></div></li>
             <li><div class="pkg-top"><span class="kw">5.000 W</span><span class="rp">Rp 65 jt</span></div><p class="pkg-spec">Panel 5.580 Wp · Inverter 5 kW · Baterai VRLA 4,8 kWh</p><div class="pkg-bot"><span class="save">Hemat hingga Rp 973 rb/bln*</span><a href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20tertarik%20paket%20PLTS%20off-grid%20VRLA%205.000%20W." target="_blank" rel="noopener">Tanya paket</a></div></li>
           </ul>
@@ -1100,13 +1105,14 @@ function rnSubmit(){
       batt: m.battText(v),
       grid: m.meterText(v)
     };
-    $$h('[data-val]').forEach(el => { el.textContent = vals[el.dataset.val]; });
+    let changed = false;
+    $$h('[data-val]').forEach(el => { const t = vals[el.dataset.val]; if (el.textContent !== t) { el.textContent = t; changed = true; } });
     $$h('[data-num]').forEach(el => {
       const k = el.dataset.num;
       el.textContent = k === 'soc' ? `${Math.round(v.soc)}%` : k === 'batt' ? (v.batt > 0 ? kw(v.batt) : '0 kW') : kw(v[k]);
     });
     $$h('[data-soc]').forEach(el => { el.style.width = v.soc + '%'; el.classList.toggle('low', v.soc <= BATT_MIN); });
-    fitTags();
+    if (changed) fitTags();
   }
 
   function setMode(mode){
