@@ -15,12 +15,12 @@
   --blue-500:#039cfc; --blue-700:#0277c0; --blue-300:#5cc2ff;
   --navy-900:#00384f; --navy-950:#04212e; --blue-50:#e1f0f5;
   --ink-900:#06131c; --ink-600:#44545e; --white:#fff;
-  --sun-400:#ffc83d; --grid-400:#9aa7b0;
+  --sun-400:#ffc83d; --grid-400:#9aa7b0; --pln-500:#ff4d4d;
 
   --color-bg:var(--white); --color-bg-soft:var(--blue-50); --color-bg-deep:var(--navy-900);
   --color-text:var(--ink-900); --color-text-muted:var(--ink-600); --color-text-on-deep:var(--white);
   --color-link:var(--blue-700); --color-action:var(--blue-500); --color-on-action:var(--white);
-  --energy-solar:var(--sun-400); --energy-battery:var(--blue-500); --energy-grid:var(--grid-400); --energy-load:var(--white);
+  --energy-solar:var(--sun-400); --energy-battery:var(--blue-500); --energy-grid:var(--pln-500); --energy-load:var(--white);
 
   --radius-pill:999px; --radius-card:16px; --radius-sm:8px;
   --container:1240px; --gutter:clamp(16px,4vw,40px); --section:clamp(64px,10vw,128px);
@@ -96,7 +96,7 @@ p{margin:0;text-wrap:pretty}
 .line.rev .pulse{animation-direction:reverse}
 .line.standby{opacity:.35}
 .line.standby .pulse,.line.cut .pulse{display:none}
-.line.cut{opacity:.8;color:#ff8a7a}
+.line.cut{opacity:.6;color:var(--pln-500)}
 .line.cut .core{stroke-dasharray:6 10}
 .line.cut .halo{opacity:.15}
 @keyframes pulse{to{stroke-dashoffset:-60}}
@@ -108,7 +108,7 @@ p{margin:0;text-wrap:pretty}
 .batt-bar i.low{background:var(--sun-400)}
 .batt em{font-style:normal;font-weight:700;color:#fff;font-size:.85rem;font-variant-numeric:tabular-nums}
 .tag span{font-variant-numeric:tabular-nums}
-.mode-note{font-size:.8rem;color:rgb(255 255 255 / .6);margin-left:auto}
+.mode-note{font-size:.75rem;color:rgb(255 255 255 / .6);margin-left:auto}
 .energy-strip{display:none}
 /* Titik & label di foto */
 .spot{position:absolute;left:calc(var(--x) / 1920 * 100%);top:calc(var(--y) / 1072 * 100%);width:0;height:0;color:var(--c,#fff);transition:opacity .5s}
@@ -142,12 +142,12 @@ p{margin:0;text-wrap:pretty}
 @media (min-width:721px){.hero-media{bottom:var(--foot-h,96px)}}
 .mode-bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 20px;padding-bottom:24px}
 .mode-label{font-size:.9rem;color:rgb(255 255 255 / .75)}
-.mode-switch{display:inline-flex;padding:4px;border-radius:var(--radius-pill);background:rgb(4 33 46 / .55);border:1px solid rgb(255 255 255 / .18);backdrop-filter:blur(8px)}
-.mode-switch button{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;border:0;border-radius:var(--radius-pill);background:transparent;color:rgb(255 255 255 / .85);font:600 .925rem var(--font);cursor:pointer;transition:background .25s,color .25s}
+.mode-switch{display:inline-flex;padding:3px;border-radius:var(--radius-pill);background:rgb(4 33 46 / .55);border:1px solid rgb(255 255 255 / .18);backdrop-filter:blur(8px)}
+.mode-switch button{display:inline-flex;align-items:center;gap:6px;min-height:32px;padding:0 12px;border:0;border-radius:var(--radius-pill);background:transparent;color:rgb(255 255 255 / .85);font:600 .8rem var(--font);cursor:pointer;transition:background .25s,color .25s}
 .mode-switch button:hover{color:#fff;background:rgb(255 255 255 / .08)}
 .mode-switch button[aria-pressed="true"]{background:var(--color-action);color:var(--color-on-action)}
-.mode-switch svg{width:16px;height:16px}
-.mode-caption{font-size:.95rem;color:rgb(255 255 255 / .92);min-height:1.6em;text-shadow:0 1px 8px rgb(4 33 46 / .8)}
+.mode-switch svg{width:14px;height:14px}
+.mode-caption{font-size:.84rem;color:rgb(255 255 255 / .92);min-height:1.6em;text-shadow:0 1px 8px rgb(4 33 46 / .8)}
 .legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.8rem;color:rgb(255 255 255 / .7)}
 .legend span{display:inline-flex;align-items:center;gap:6px}
 .legend i{width:16px;height:4px;border-radius:2px;display:inline-block}
@@ -185,7 +185,7 @@ p{margin:0;text-wrap:pretty}
   .spot[data-spot="inverter"] .tag{bottom:auto;top:34px;right:-20px}
   .hero-foot{order:3;padding-top:12px}
   .mode-bar{flex-direction:column;align-items:flex-start;padding-bottom:20px}
-  .mode-switch button{padding:0 12px;font-size:.875rem}
+  .mode-switch button{padding:0 10px;font-size:.78rem}
   .trust-clients{display:none}
 }
 
@@ -874,7 +874,7 @@ function rnSubmit(){
 (() => {
   // Warna aliran: surya = kuning, baterai = biru brand, PLN = abu-abu. Tidak ada aliran ke PLN.
   // Angka = ilustrasi sistem hybrid 5 kW (kW, persen baterai).
-  const C = {solar:'var(--energy-solar)', battery:'var(--energy-battery)', grid:'var(--energy-grid)', off:'#ff8a7a'};
+  const C = {solar:'var(--energy-solar)', battery:'var(--energy-battery)', grid:'var(--energy-grid)', off:'var(--pln-500)'};
   const BATT_MIN = 20; // batas minimum: di bawah ini inverter beralih ke PLN, sisa disimpan untuk saat padam
   const MODES = {
     siang: {

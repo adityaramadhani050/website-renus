@@ -34,7 +34,8 @@ Komposisi foto: rumah di 45–90% lebar (tengah-kanan), sisi kiri pepohonan → 
 --ink-600:  #44545e;   /* teks sekunder di atas putih */
 --white:    #ffffff;
 --sun-400:  #ffc83d;   /* HANYA energi surya: aliran panel, ikon matahari */
---grid-400: #9aa7b0;   /* aliran PLN */
+--grid-400: #9aa7b0;   /* titik/komponen tidak aktif */
+--pln-500:  #ff4d4d;   /* aliran PLN (permintaan pengguna: merah, abu-abu terlalu samar) */
 ```
 
 ### Semantic
@@ -50,7 +51,7 @@ Komposisi foto: rumah di 45–90% lebar (tengah-kanan), sisi kiri pepohonan → 
 --color-on-action: var(--white);        /* permintaan pengguna 23 Okt: teks putih di tombol biru (kontras 2.9:1, di bawah AA) */
 --energy-solar: var(--sun-400);
 --energy-battery: var(--blue-500);
---energy-grid: var(--grid-400);
+--energy-grid: var(--pln-500);
 --energy-load: var(--white);
 ```
 
