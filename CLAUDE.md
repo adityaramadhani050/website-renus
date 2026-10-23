@@ -43,9 +43,9 @@ Plugin Elementor/addon yang akan dinonaktifkan setelah migrasi: Elementor, Eleme
 ## Keputusan SEO yang TIDAK boleh dirusak oleh redesain
 1. **Jangan ubah URL/slug** halaman mana pun.
 2. **Title & meta description Yoast** sudah diperbarui (jangan ditimpa):
-   - Homepage: "Kontraktor PLTS Surabaya & Jabodetabek - Renus Global Indonesia"
+   - Homepage: "Kontraktor PLTS Surabaya & Jabodetabek - Renus Global Indonesia" → **diputuskan 23 Okt 2026 diganti** jadi "Kontraktor PLTS Hybrid Seluruh Indonesia - Renus Global Indonesia" (layanan nasional). Diterapkan ke Yoast saat migrasi homepage, bukan sebelumnya.
    - /pasang-plts/, /biaya-pasang-plts-5000-watt-2026/, /biaya-pasang-plts-2200-watt/, /biaya-pasang-plts-di-surabaya/, /mengenal-pembangkit-listrik-tenaga-surya-plts/, /biaya-plts-on-grid/, /tentang-kami/, /plts-hybrid/, /plts-off-grid/
-3. **Homepage harus punya tepat satu H1** berisi kata kunci, mis. "Kontraktor PLTS Surabaya & Jabodetabek" (H1 lama "Renewable Energy Solutions" belum diganti).
+3. **Homepage harus punya tepat satu H1** berisi kata kunci: "Kontraktor PLTS Hybrid di Seluruh Indonesia" (H1 lama "Renewable Energy Solutions" belum diganti).
 4. Angka counter kWh harus tertulis di HTML (bukan hanya animasi JS yang terbaca "0").
 5. Kartu Residensial / Komersial / Industrial harus menautkan ke: `/plts-hybrid/`, `/pasang-plts-untuk-bisnis/`, `/plts-industri-manufaktur/`. Tombol "Artikel" → `/artikel/` (bukan Instagram).
 6. Deskripsi PLTS On-Grid **tidak boleh** menjanjikan ekspor/kompensasi kelebihan listrik ke PLN.
