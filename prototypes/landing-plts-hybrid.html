@@ -73,7 +73,7 @@ p{margin:0;text-wrap:pretty}
 /* Panggung foto: meniru object-fit:cover + object-position, supaya garis SVG & label
    menempel tepat di koordinat foto (1920×1072) di ukuran layar mana pun. */
 .hero-media{position:absolute;inset:0;z-index:-2;container-type:size;overflow:hidden}
-.stage{--pos:.62;--w:max(100cqw,calc(100cqh * 1.791));--h:max(100cqh,calc(100cqw / 1.791));position:absolute;width:var(--w);height:var(--h);left:calc((100cqw - var(--w)) * var(--pos));top:calc((100cqh - var(--h)) * .5)}
+.stage{--pos:.9;--w:max(100cqw,calc(100cqh * 1.791));--h:max(100cqh,calc(100cqw / 1.791));position:absolute;width:var(--w);height:var(--h);left:calc((100cqw - var(--w)) * var(--pos));top:calc((100cqh - var(--h)) * .5)}
 .stage img{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .8s var(--ease)}
 .stage img.is-active{opacity:1}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
@@ -93,6 +93,7 @@ p{margin:0;text-wrap:pretty}
 .line .halo,.line .core{stroke:currentColor}
 .line.on{opacity:1}
 .line.on .pulse{animation:pulse 1.6s linear infinite}
+.line.rev .pulse{animation-direction:reverse}
 .line.standby{opacity:.35}
 .line.standby .pulse,.line.cut .pulse{display:none}
 .line.cut{opacity:.8;color:#ff8a7a}
@@ -155,12 +156,13 @@ p{margin:0;text-wrap:pretty}
   .hero-lead{display:none}
   .hero-media{position:relative;order:1;inset:auto;height:clamp(300px,92vw,440px);z-index:0}
   .hero-media::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,var(--navy-950) 0%,rgb(4 33 46 / 0) 18%,rgb(4 33 46 / 0) 80%,var(--navy-950) 100%)}
-  .stage{--pos:.88}
+  .stage{--pos:.95}
   .line .halo{stroke-width:30}.line .core{stroke-width:8}.line .pulse{stroke-width:8;stroke-dasharray:28 92}
   @keyframes pulse{to{stroke-dashoffset:-120}}
   .tag{padding:5px 9px 6px;border-radius:9px}
   .tag b{font-size:.75rem}
-  .tag span{font-size:.7rem}
+  .tag span{display:none}
+  .spot[data-spot="pln"] .tag{right:-6px;bottom:auto;top:14px}
   .hero-foot{order:2;padding-top:16px}
   .mode-bar{flex-direction:column;align-items:flex-start}
   .mode-switch button{padding:0 12px;font-size:.875rem}
@@ -280,26 +282,27 @@ section{padding-block:var(--section)}
       <!-- Koordinat mengikuti foto 1920×1072 -->
       <svg class="energy" viewBox="0 0 1920 1072" preserveAspectRatio="none" aria-hidden="true">
         <g class="line" data-line="surya">
-          <path class="halo"  d="M1490 424 L1588 446 L1588 640 L1628 690"/>
-          <path class="core"  d="M1490 424 L1588 446 L1588 640 L1628 690"/>
-          <path class="pulse" d="M1490 424 L1588 446 L1588 640 L1628 690"/>
+          <path class="halo" d="M1500 430 L1534.4 439.0 Q1546 442 1557.6 445.2 L1570.4 448.8 Q1582 452 1582.0 464.0 L1582.0 650.0 Q1582 662 1594.0 662.0 L1626.0 662.0 Q1638 662 1638.0 674.0 L1638 686"/>
+          <path class="core" d="M1500 430 L1534.4 439.0 Q1546 442 1557.6 445.2 L1570.4 448.8 Q1582 452 1582.0 464.0 L1582.0 650.0 Q1582 662 1594.0 662.0 L1626.0 662.0 Q1638 662 1638.0 674.0 L1638 686"/>
+          <path class="pulse" d="M1500 430 L1534.4 439.0 Q1546 442 1557.6 445.2 L1570.4 448.8 Q1582 452 1582.0 464.0 L1582.0 650.0 Q1582 662 1594.0 662.0 L1626.0 662.0 Q1638 662 1638.0 674.0 L1638 686"/>
         </g>
         <g class="line" data-line="rumah">
-          <path class="halo"  d="M1622 712 L1505 712 L1460 676 L1330 676 L1330 600"/>
-          <path class="core"  d="M1622 712 L1505 712 L1460 676 L1330 676 L1330 600"/>
-          <path class="pulse" d="M1622 712 L1505 712 L1460 676 L1330 676 L1330 600"/>
+          <path class="halo" d="M1622 696 L1560.0 696.0 Q1548 696 1548.0 684.0 L1548.0 670.0 Q1548 658 1536.0 658.0 L1380 658"/>
+          <path class="core" d="M1622 696 L1560.0 696.0 Q1548 696 1548.0 684.0 L1548.0 670.0 Q1548 658 1536.0 658.0 L1380 658"/>
+          <path class="pulse" d="M1622 696 L1560.0 696.0 Q1548 696 1548.0 684.0 L1548.0 670.0 Q1548 658 1536.0 658.0 L1380 658"/>
         </g>
         <g class="line" data-line="pln">
-          <path class="halo"  d="M1920 668 L1735 708 L1662 716"/>
-          <path class="core"  d="M1920 668 L1735 708 L1662 716"/>
-          <path class="pulse" d="M1920 668 L1735 708 L1662 716"/>
+          <path class="halo" d="M1825 548 L1704.4 618.0 Q1694 624 1694.0 636.0 L1694.0 692.0 Q1694 704 1682.0 704.0 L1656 704"/>
+          <path class="core" d="M1825 548 L1704.4 618.0 Q1694 624 1694.0 636.0 L1694.0 692.0 Q1694 704 1682.0 704.0 L1656 704"/>
+          <path class="pulse" d="M1825 548 L1704.4 618.0 Q1694 624 1694.0 636.0 L1694.0 692.0 Q1694 704 1682.0 704.0 L1656 704"/>
         </g>
       </svg>
 
-      <div class="spot" data-spot="panel"   style="--x:1490;--y:424"><div class="tag l"><b>Panel surya</b><span data-state="panel"></span></div></div>
-      <div class="spot" data-spot="baterai" style="--x:1638;--y:718"><div class="tag b"><b>Inverter &amp; baterai</b><span data-state="baterai"></span></div></div>
-      <div class="spot" data-spot="rumah"   style="--x:1330;--y:600"><div class="tag l"><b>Rumah</b><span data-state="rumah"></span></div></div>
-      <div class="spot" data-spot="pln"     style="--x:1760;--y:702"><div class="tag tl"><b>PLN</b><span data-state="pln"></span></div></div>
+      <div class="spot" data-spot="panel"    style="--x:1500;--y:430"><div class="tag l"><b>Panel surya</b><span data-state="panel"></span></div></div>
+      <div class="spot" data-spot="inverter" style="--x:1638;--y:705"></div>
+      <div class="spot" data-spot="baterai"  style="--x:1634;--y:768"><div class="tag b"><b>Inverter &amp; baterai</b><span data-state="baterai"></span></div></div>
+      <div class="spot" data-spot="rumah"    style="--x:1380;--y:658"><div class="tag l"><b>Rumah</b><span data-state="rumah"></span></div></div>
+      <div class="spot" data-spot="pln"      style="--x:1825;--y:540"><div class="tag tl"><b>Tiang PLN</b><span data-state="pln"></span></div></div>
     </div>
   </div>
   <p class="sr-only" data-hero-alt aria-live="polite"></p>
@@ -496,23 +499,23 @@ section{padding-block:var(--section)}
     siang: {
       label: 'Siang',
       caption: 'Panel memasok rumah sekaligus mengisi baterai.',
-      alt: 'Siang hari: listrik dari panel surya di atap mengalir ke inverter dan baterai di carport, lalu ke rumah. PLN siaga.',
+      alt: 'Siang hari: listrik dari panel surya di atap turun lewat pipa kabel ke inverter di carport, lalu ke rumah; kelebihannya mengisi baterai. PLN siaga.',
       lines: {surya:['on',C.solar], rumah:['on',C.solar], pln:['standby',C.grid]},
-      spots: {panel:[C.solar,'Menghasilkan listrik'], baterai:[C.solar,'Mengisi baterai'], rumah:[C.solar,'Pakai energi surya'], pln:[C.grid,'Siaga',1]}
+      spots: {panel:[C.solar,'Menghasilkan listrik'], inverter:[C.solar], baterai:[C.solar,'Mengisi baterai'], rumah:[C.solar,'Pakai energi surya'], pln:[C.grid,'Siaga',1]}
     },
     malam: {
       label: 'Malam',
       caption: 'Baterai memasok rumah. PLN hanya cadangan.',
-      alt: 'Malam hari: baterai yang terisi siang tadi memasok rumah. Panel tidak aktif, PLN hanya cadangan.',
+      alt: 'Malam hari: baterai yang terisi siang tadi memasok rumah lewat inverter. Panel tidak aktif, PLN hanya cadangan.',
       lines: {surya:['off'], rumah:['on',C.battery], pln:['standby',C.grid]},
-      spots: {panel:[C.grid,'Tidak aktif',1], baterai:[C.battery,'Memasok rumah'], rumah:[C.battery,'Pakai energi baterai'], pln:[C.grid,'Cadangan',1]}
+      spots: {panel:[C.grid,'Tidak aktif',1], inverter:[C.battery], baterai:[C.battery,'Baterai memasok rumah'], rumah:[C.battery,'Pakai energi baterai'], pln:[C.grid,'Cadangan',1]}
     },
     padam: {
       label: 'PLN Padam',
       caption: 'Lingkungan gelap, rumah Anda tetap menyala dari baterai.',
-      alt: 'PLN padam: rumah-rumah sekitar gelap. Inverter memutus sambungan PLN dan baterai memasok rumah sehingga tetap menyala.',
+      alt: 'PLN padam: rumah-rumah sekitar gelap. Inverter memutus sambungan ke tiang PLN dan baterai memasok rumah sehingga tetap menyala.',
       lines: {surya:['off'], rumah:['on',C.battery], pln:['cut']},
-      spots: {panel:[C.grid,'Tidak aktif',1], baterai:[C.battery,'Mode cadangan'], rumah:[C.battery,'Tetap menyala'], pln:[C.off,'Padam · diputus otomatis']}
+      spots: {panel:[C.grid,'Tidak aktif',1], inverter:[C.battery], baterai:[C.battery,'Mode cadangan otomatis'], rumah:[C.battery,'Tetap menyala'], pln:[C.off,'Padam · diputus otomatis']}
     }
   };
   const ICON = {
@@ -541,15 +544,15 @@ section{padding-block:var(--section)}
     hero.querySelector('[data-hero-alt]').textContent = m.alt;
     Object.entries(m.lines).forEach(([k, [state, color]]) => {
       const g = hero.querySelector(`[data-line="${k}"]`);
-      g.classList.remove('on','standby','cut');
-      if (state !== 'off') g.classList.add(state);
+      g.classList.remove('on','standby','cut','rev');
+      if (state !== 'off') g.classList.add(...state.split(' '));
       if (color) g.style.setProperty('--c', color);
     });
     Object.entries(m.spots).forEach(([k, [color, text, dim]]) => {
       const s = hero.querySelector(`[data-spot="${k}"]`);
       s.style.setProperty('--c', color);
       s.classList.toggle('dim', !!dim);
-      s.querySelector(`[data-state="${k}"]`).textContent = text;
+      const st = s.querySelector(`[data-state="${k}"]`); if (st) st.textContent = text;
     });
   }
 
