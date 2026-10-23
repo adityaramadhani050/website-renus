@@ -79,7 +79,7 @@ p{margin:0;text-wrap:pretty}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
   background:
     linear-gradient(90deg,rgb(4 33 46 / var(--scrim-l)) 0%,rgb(4 33 46 / calc(var(--scrim-l) * .7)) 32%,rgb(4 33 46 / 0) 58%),
-    linear-gradient(0deg,rgb(4 33 46 / .6) 0%,rgb(4 33 46 / 0) 12%),
+    linear-gradient(0deg,rgb(4 33 46 / .75) 0%,rgb(4 33 46 / 0) 26%),
     linear-gradient(180deg,rgb(4 33 46 / .55) 0%,rgb(4 33 46 / 0) 18%);
   transition:--scrim-l .8s}
 
@@ -126,17 +126,18 @@ p{margin:0;text-wrap:pretty}
 .btn-ghost[aria-pressed="true"]{border-color:var(--white);background:rgb(255 255 255 / .14)}
 .btn svg{width:18px;height:18px;flex:none}
 
-.hero-foot{position:relative;background:var(--navy-950)}
+.hero-foot{position:relative}
+.trust-wrap{background:var(--navy-950)}
 /* Desktop: foto berhenti di atas baris bukti, supaya jalur PLN di dasar foto tidak tertutup. */
 @media (min-width:721px){.hero-media{bottom:var(--foot-h,96px)}}
-.mode-bar{margin-top:32px;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.mode-bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 20px;padding-bottom:24px}
 .mode-label{font-size:.9rem;color:rgb(255 255 255 / .75)}
 .mode-switch{display:inline-flex;padding:4px;border-radius:var(--radius-pill);background:rgb(4 33 46 / .55);border:1px solid rgb(255 255 255 / .18);backdrop-filter:blur(8px)}
 .mode-switch button{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;border:0;border-radius:var(--radius-pill);background:transparent;color:rgb(255 255 255 / .85);font:600 .925rem var(--font);cursor:pointer;transition:background .25s,color .25s}
 .mode-switch button:hover{color:#fff;background:rgb(255 255 255 / .08)}
 .mode-switch button[aria-pressed="true"]{background:var(--color-action);color:var(--color-on-action)}
 .mode-switch svg{width:16px;height:16px}
-.mode-caption{font-size:.95rem;color:rgb(255 255 255 / .92);min-height:1.6em}
+.mode-caption{font-size:.95rem;color:rgb(255 255 255 / .92);min-height:1.6em;text-shadow:0 1px 8px rgb(4 33 46 / .8)}
 .legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.8rem;color:rgb(255 255 255 / .7)}
 .legend span{display:inline-flex;align-items:center;gap:6px}
 .legend i{width:16px;height:4px;border-radius:2px;display:inline-block}
@@ -157,7 +158,6 @@ p{margin:0;text-wrap:pretty}
   .hero-copy>*{padding-inline:var(--gutter)}
   .hero h1{padding-top:112px}
   .hero-actions{margin-bottom:28px}
-  .mode-bar{order:2;margin-top:12px}
   .hero-media{position:relative;order:1;inset:auto;height:clamp(300px,92vw,440px);z-index:0}
   .hero-media::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,var(--navy-950) 0%,rgb(4 33 46 / 0) 18%,rgb(4 33 46 / 0) 80%,var(--navy-950) 100%)}
   .stage{--pos:.95}
@@ -168,7 +168,8 @@ p{margin:0;text-wrap:pretty}
   .tag span{display:none}
   .spot[data-spot="pln"] .tag,.spot[data-spot="rumah"] .tag{display:none} /* layar sempit: cukup titiknya */
   .spot[data-spot="inverter"] .tag{bottom:auto;top:34px;right:-20px}
-  .hero-foot{order:3;padding-top:8px}
+  .hero-foot{order:3;padding-top:12px}
+  .mode-bar{flex-direction:column;align-items:flex-start;padding-bottom:20px}
   .mode-switch button{padding:0 12px;font-size:.875rem}
   .trust-clients{display:none}
 }
@@ -321,26 +322,30 @@ section{padding-block:var(--section)}
           <a class="btn btn-primary" href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20ingin%20konsultasi%20PLTS%20hybrid." target="_blank" rel="noopener">Konsultasi via WhatsApp</a>
           <button type="button" class="btn btn-ghost" data-demo aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span>Lihat cara kerjanya</span></button>
         </div>
-          <div class="mode-bar">
-            <span class="sr-only" id="mode-label-hero">Pilih kondisi</span>
-            <div class="mode-switch" role="group" aria-labelledby="mode-label-hero" data-mode-switch></div>
-            <p class="mode-caption" data-mode-caption></p>
-          </div>
       </div>
     </div>
   </div>
 
   <div class="hero-foot">
     <div class="container">
-      <div class="trust">
-        <div class="trust-certs">
-          <div><strong>ISO 9001:2015</strong>Sistem manajemen mutu</div>
-          <div><strong>Badan Usaha ESDM</strong>Terdaftar di DJK</div>
-          <div><strong>Seluruh Indonesia</strong>Kantor di Surabaya &amp; Jabodetabek</div>
-        </div>
-        <div class="trust-clients" aria-label="Klien kami">
-          <span class="lbl">Dipercaya oleh</span>
-          <span class="ph-logo">WIKA</span><span class="ph-logo">Medco</span><span class="ph-logo">PUPR</span><span class="ph-logo">ITS</span>
+      <div class="mode-bar">
+        <span class="sr-only" id="mode-label-hero">Pilih kondisi</span>
+        <div class="mode-switch" role="group" aria-labelledby="mode-label-hero" data-mode-switch></div>
+        <p class="mode-caption" data-mode-caption></p>
+      </div>
+    </div>
+    <div class="trust-wrap">
+      <div class="container">
+        <div class="trust">
+          <div class="trust-certs">
+            <div><strong>ISO 9001:2015</strong>Sistem manajemen mutu</div>
+            <div><strong>Badan Usaha ESDM</strong>Terdaftar di DJK</div>
+            <div><strong>Seluruh Indonesia</strong>Kantor di Surabaya &amp; Jabodetabek</div>
+          </div>
+          <div class="trust-clients" aria-label="Klien kami">
+            <span class="lbl">Dipercaya oleh</span>
+            <span class="ph-logo">WIKA</span><span class="ph-logo">Medco</span><span class="ph-logo">PUPR</span><span class="ph-logo">ITS</span>
+          </div>
         </div>
       </div>
     </div>
@@ -574,7 +579,7 @@ section{padding-block:var(--section)}
   setMode(hour >= 6 && hour < 18 ? 'siang' : 'malam');
   addEventListener('load', () => setTimeout(() => imgs.forEach(load), 600));
 
-  const foot = hero.querySelector('.hero-foot');
+  const foot = hero.querySelector('.trust-wrap');
   const syncFoot = () => hero.style.setProperty('--foot-h', foot.offsetHeight + 'px');
   syncFoot(); addEventListener('resize', syncFoot);
 
