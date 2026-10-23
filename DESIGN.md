@@ -49,8 +49,8 @@ Komposisi foto: rumah di 45–90% lebar (tengah-kanan), sisi kiri pepohonan → 
 --color-text-muted: var(--ink-600);
 --color-text-on-deep: var(--white);
 --color-link: var(--blue-700);
---color-action: var(--blue-500);
---color-on-action: var(--white);        /* permintaan pengguna 23 Okt: teks putih di tombol biru (kontras 2.9:1, di bawah AA) */
+--color-action: var(--blue-700);          /* 23 Okt: digelapkan dari blue-500 agar teks putih lolos AA (4,8:1) */
+--color-on-action: var(--white);
 --energy-solar: var(--sun-400);
 --energy-battery: var(--blue-500);
 --energy-grid: var(--pln-500);
@@ -88,3 +88,9 @@ Komposisi foto: rumah di 45–90% lebar (tengah-kanan), sisi kiri pepohonan → 
 - CTA utama: WhatsApp Jabodetabek 0814-1225-0644.
 - Harga paket hybrid & off-grid boleh tampil (tab per sistem); on-grid tanpa harga, tombol "Minta penawaran" (harga material, belum termasuk pemasangan). Jangan tampilkan kisaran biaya pemasangan.
 - Implementasi akhir: blok inti Gutenberg + Kadence Global Palette (palette1 = blue-500, palette2 = navy-900, palette3 = ink-900, palette7 = blue-50, palette9 = white).
+
+## Komposisi halaman (hasil critique 23 Okt 2026)
+- Ritme sengaja tidak seragam: galeri proyek full-bleed setelah hero, band navy (`.band`) untuk angka besar & sertifikasi, section Proses dengan foto tim.
+- Angka rekam jejak tampil besar (4–4,25rem) di band navy; satuan berwarna `--sun-400`.
+- Kartu sistem memuat diagram jalur energi mini memakai warna energi yang sama dengan hero.
+- Kurangi kotak: artikel tanpa kartu (garis atas navy), kotak hanya untuk elemen yang perlu dipisahkan (paket, kalkulator, sistem).
