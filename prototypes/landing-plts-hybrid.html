@@ -478,7 +478,7 @@ section{padding-block:var(--section)}
 
 <main id="main">
 <!-- ========== 1. HERO (foto + animasi cara kerja) ========== -->
-<section class="hero" id="hero" data-mode="malam" style="padding:0" aria-labelledby="hero-title">
+<section class="hero" id="hero" data-mode="siang" style="padding:0" aria-labelledby="hero-title">
   <div class="hero-media">
     <div class="stage">
       <img data-mode="siang" class="is-active" alt="" width="1920" height="1072" fetchpriority="high" src="assets/hero-plts-hybrid-siang-1920.webp" srcset="assets/hero-plts-hybrid-siang-1024.webp 1024w, assets/hero-plts-hybrid-siang-1920.webp 1920w" sizes="(max-width:720px) 200vw, 120vw">
@@ -1259,9 +1259,8 @@ function rnSubmit(){
     raf = requestAnimationFrame(step);
   }
 
-  // Mode awal mengikuti jam pengunjung; gambar mode lain dimuat setelah halaman tampil.
-  const hour = new Date().getHours();
-  setMode(hour >= 6 && hour < 18 ? 'siang' : 'malam');
+  // Mode awal selalu Siang (fotonya sudah dimuat langsung oleh HTML); gambar mode lain dimuat setelah halaman tampil.
+  setMode('siang');
   addEventListener('load', () => setTimeout(() => imgs.forEach(load), 600));
 
   const foot = hero.querySelector('.trust-wrap');
