@@ -15,6 +15,7 @@ Status: **disetujui pengguna 23 Okt 2026** (warna brand biru muda, aksen kuning 
 | Logo putih + tagline | `assets/source/logo-renus-tagline-putih.png` | `prototypes/assets/logo-renus-putih.png` (tinggi 96px, tampil 40–48px) |
 | Hero siang | `assets/source/hero-plts-hybrid-siang.jpg` | `hero-plts-hybrid-siang-{1024,1920}.webp` |
 | Hero malam | `assets/source/hero-plts-hybrid-malam.jpg` | `hero-plts-hybrid-malam-{1024,1920}.webp` |
+| Hero mendung | `assets/source/hero-plts-hybrid-mendung.jpg` | `hero-plts-hybrid-mendung-{1024,1920}.webp` |
 | Hero PLN padam | `assets/source/hero-plts-hybrid-pln-padam.jpg` | `hero-plts-hybrid-pln-padam-{1024,1920}.webp` |
 
 Komposisi foto: rumah di 45–90% lebar (tengah-kanan), sisi kiri pepohonan → area teks. Di HP: `object-position: 68% center`.
