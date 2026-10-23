@@ -119,18 +119,17 @@ p{margin:0;text-wrap:pretty}
 .tag.tl{right:-6px;bottom:16px}
 
 .hero-body{flex:1;display:flex;align-items:center;padding-top:112px;padding-bottom:32px}
-.hero-copy{max-width:600px}
-.hero h1{font-size:clamp(2.6rem,5vw,4.5rem);line-height:1.02;letter-spacing:-.035em}
-.hero-sub{margin-top:20px;font-size:clamp(1.125rem,1.6vw,1.375rem);font-weight:500;color:rgb(255 255 255 / .92)}
-.hero-lead{margin-top:12px;max-width:48ch;color:rgb(255 255 255 / .8)}
-.hero-actions{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px}
+.hero-copy{max-width:520px}
+.hero h1{font-size:clamp(2.25rem,3.8vw,3.5rem);line-height:1.06;letter-spacing:-.03em}
+.hero-sub{margin-top:16px;font-size:clamp(1.0625rem,1.4vw,1.25rem);font-weight:500;color:rgb(255 255 255 / .92)}
+.hero-actions{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
 .btn-ghost[aria-pressed="true"]{border-color:var(--white);background:rgb(255 255 255 / .14)}
 .btn svg{width:18px;height:18px;flex:none}
 
 .hero-foot{position:relative;background:var(--navy-950)}
 /* Desktop: foto berhenti di atas baris bukti, supaya jalur PLN di dasar foto tidak tertutup. */
 @media (min-width:721px){.hero-media{bottom:var(--foot-h,96px)}}
-.mode-bar{margin-top:28px;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.mode-bar{margin-top:32px;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
 .mode-label{font-size:.9rem;color:rgb(255 255 255 / .75)}
 .mode-switch{display:inline-flex;padding:4px;border-radius:var(--radius-pill);background:rgb(4 33 46 / .55);border:1px solid rgb(255 255 255 / .18);backdrop-filter:blur(8px)}
 .mode-switch button{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;border:0;border-radius:var(--radius-pill);background:transparent;color:rgb(255 255 255 / .85);font:600 .925rem var(--font);cursor:pointer;transition:background .25s,color .25s}
@@ -159,7 +158,6 @@ p{margin:0;text-wrap:pretty}
   .hero h1{padding-top:112px}
   .hero-actions{margin-bottom:28px}
   .mode-bar{order:2;margin-top:12px}
-  .hero-lead{display:none}
   .hero-media{position:relative;order:1;inset:auto;height:clamp(300px,92vw,440px);z-index:0}
   .hero-media::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,var(--navy-950) 0%,rgb(4 33 46 / 0) 18%,rgb(4 33 46 / 0) 80%,var(--navy-950) 100%)}
   .stage{--pos:.95}
@@ -317,22 +315,16 @@ section{padding-block:var(--section)}
   <div class="hero-body">
     <div class="container">
       <div class="hero-copy">
-        <h1 id="hero-title">Kontraktor PLTS Hybrid Surabaya &amp; Jabodetabek</h1>
-        <p class="hero-sub">Listrik tetap menyala, siang maupun malam.</p>
-        <p class="hero-lead">Panel surya dan baterai yang dirancang, dipasang, dan dirawat oleh tim Renus — untuk rumah, bisnis, dan industri.</p>
+        <h1 id="hero-title">Kontraktor PLTS Hybrid di Seluruh Indonesia</h1>
+        <p class="hero-sub">Listrik tetap menyala siang, malam, bahkan saat PLN padam.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20ingin%20konsultasi%20PLTS%20hybrid." target="_blank" rel="noopener">Konsultasi via WhatsApp</a>
           <button type="button" class="btn btn-ghost" data-demo aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span>Lihat cara kerjanya</span></button>
         </div>
           <div class="mode-bar">
-            <span class="mode-label" id="mode-label-hero">Lihat kondisinya:</span>
+            <span class="sr-only" id="mode-label-hero">Pilih kondisi</span>
             <div class="mode-switch" role="group" aria-labelledby="mode-label-hero" data-mode-switch></div>
             <p class="mode-caption" data-mode-caption></p>
-            <div class="legend" aria-hidden="true">
-              <span><i style="background:var(--energy-solar)"></i>Energi surya</span>
-              <span><i style="background:var(--energy-battery)"></i>Energi baterai</span>
-              <span><i style="background:var(--energy-grid)"></i>PLN</span>
-            </div>
           </div>
       </div>
     </div>
@@ -344,7 +336,7 @@ section{padding-block:var(--section)}
         <div class="trust-certs">
           <div><strong>ISO 9001:2015</strong>Sistem manajemen mutu</div>
           <div><strong>Badan Usaha ESDM</strong>Terdaftar di DJK</div>
-          <div><strong>Surabaya &amp; Jabodetabek</strong>Dua kantor layanan</div>
+          <div><strong>Seluruh Indonesia</strong>Kantor di Surabaya &amp; Jabodetabek</div>
         </div>
         <div class="trust-clients" aria-label="Klien kami">
           <span class="lbl">Dipercaya oleh</span>

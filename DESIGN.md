@@ -66,7 +66,7 @@ Komposisi foto: rumah di 45–90% lebar (tengah-kanan), sisi kiri pepohonan → 
 
 ### Tipografi
 - Keluarga tunggal: **Plus Jakarta Sans** (Google Fonts, 400/500/600/700) — dipilih via `ui-ux-pro-max` (pairing "Friendly SaaS"), buatan desainer Indonesia, dekat dengan grotesk referensi.
-- Skala: H1 `clamp(2.6rem, 6vw, 5.25rem)` / 600 / line-height 1.02 / tracking -0.035em · H2 `clamp(2rem, 4vw, 3.25rem)` / 600 / -0.03em · H3 1.25–1.5rem / 600 · body 1.0625rem / 1.6 · kecil 0.875rem.
+- Skala: H1 hero `clamp(2.25rem, 3.8vw, 3.5rem)` / 600 / line-height 1.06 / tracking -0.03em · H2 `clamp(2rem, 4vw, 3.25rem)` / 600 / -0.03em · H3 1.25–1.5rem / 600 · body 1.0625rem / 1.6 · kecil 0.875rem.
 - Panjang baris teks isi ≤ 68ch. Tanpa label ALL CAPS.
 
 ### Spacing & layout
@@ -78,7 +78,7 @@ Komposisi foto: rumah di 45–90% lebar (tengah-kanan), sisi kiri pepohonan → 
 - `prefers-reduced-motion`: tanpa crossfade & aliran diam (panah statis).
 
 ## Aturan konten (dari CLAUDE.md)
-- Tepat satu H1: "Kontraktor PLTS Hybrid Surabaya & Jabodetabek"; subjudul "Listrik tetap menyala, siang maupun malam."
+- Tepat satu H1: "Kontraktor PLTS Hybrid di Seluruh Indonesia" (layanan nasional; kantor Surabaya & Jabodetabek disebut di baris bukti); subjudul "Listrik tetap menyala siang, malam, bahkan saat PLN padam."
 - Tidak ada aliran/klaim ekspor listrik ke PLN.
 - CTA utama: WhatsApp Jabodetabek 0814-1225-0644.
 - Harga paket hybrid boleh tampil (harga material, belum termasuk pemasangan). Jangan tampilkan kisaran biaya pemasangan.
