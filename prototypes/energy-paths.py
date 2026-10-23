@@ -10,14 +10,14 @@ def rounded(pts, r=10):
         a=toward(x1,y1,x0,y0,r); b=toward(x1,y1,x2,y2,r)
         d+=f" L{a[0]} {a[1]} Q{x1} {y1} {b[0]} {b[1]}"
     return d+f" L{pts[-1][0]} {pts[-1][1]}"
-# Semua titik = koordinat foto 1920x1072, ditempel ke pipa/tepi yang terlihat di foto.
-SURYA = [(1077,353),(1157,470),(1581,451),(1581,610),(1680,631),(1679,708),(1658,712)]
-RUMAH = [(1622,704),(1541,716),(1541,694),(1476,662),(1290,735),(1284,632)]
-PLN_CURVE = "M1838 552 C1800 730 1625 902 1372 886"
-PLN_FENCE = [(1372,886),(1358,880),(1357,856),(1570,785),(1612,771)]
+# Semua titik = koordinat foto 1920x1072, mengikuti coretan pengguna (sketsa 2000px x 0.96),
+# lalu ditepatkan ke pipa/tepi bangunan terdekat.
+SURYA = [(1072,354),(1152,482),(1546,441),(1578,468),(1578,610),(1694,636),(1693,669),(1676,670),(1676,712)]
+RUMAH = [(1614,742),(1501,710),(1292,757),(1292,576)]
+PLN   = [(1843,560),(1818,926),(1536,1056),(1360,956),(1360,856),(1614,771)]
 d = {
- 'surya': rounded(SURYA, 10),
- 'rumah': rounded(RUMAH, 14),
- 'pln':   PLN_CURVE + rounded(PLN_FENCE, 8)[len("M1372 886"):],
+ 'surya': rounded(SURYA, 8),
+ 'rumah': rounded(RUMAH, 10),
+ 'pln':   rounded(PLN, 10),
 }
 json.dump(d, open(__import__('sys').argv[1],'w'), indent=1)

@@ -79,7 +79,7 @@ p{margin:0;text-wrap:pretty}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
   background:
     linear-gradient(90deg,rgb(4 33 46 / var(--scrim-l)) 0%,rgb(4 33 46 / calc(var(--scrim-l) * .7)) 32%,rgb(4 33 46 / 0) 58%),
-    linear-gradient(0deg,rgb(4 33 46 / .85) 0%,rgb(4 33 46 / 0) 16%),
+    linear-gradient(0deg,rgb(4 33 46 / .6) 0%,rgb(4 33 46 / 0) 12%),
     linear-gradient(180deg,rgb(4 33 46 / .55) 0%,rgb(4 33 46 / 0) 18%);
   transition:--scrim-l .8s}
 
@@ -127,7 +127,9 @@ p{margin:0;text-wrap:pretty}
 .btn-ghost[aria-pressed="true"]{border-color:var(--white);background:rgb(255 255 255 / .14)}
 .btn svg{width:18px;height:18px;flex:none}
 
-.hero-foot{position:relative}
+.hero-foot{position:relative;background:var(--navy-950)}
+/* Desktop: foto berhenti di atas baris bukti, supaya jalur PLN di dasar foto tidak tertutup. */
+@media (min-width:721px){.hero-media{bottom:var(--foot-h,96px)}}
 .mode-bar{margin-top:28px;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
 .mode-label{font-size:.9rem;color:rgb(255 255 255 / .75)}
 .mode-switch{display:inline-flex;padding:4px;border-radius:var(--radius-pill);background:rgb(4 33 46 / .55);border:1px solid rgb(255 255 255 / .18);backdrop-filter:blur(8px)}
@@ -167,6 +169,7 @@ p{margin:0;text-wrap:pretty}
   .tag b{font-size:.75rem}
   .tag span{display:none}
   .spot[data-spot="pln"] .tag,.spot[data-spot="rumah"] .tag{display:none} /* layar sempit: cukup titiknya */
+  .spot[data-spot="inverter"] .tag{bottom:auto;top:34px;right:-20px}
   .hero-foot{order:3;padding-top:8px}
   .mode-switch button{padding:0 12px;font-size:.875rem}
   .trust-clients{display:none}
@@ -285,28 +288,28 @@ section{padding-block:var(--section)}
       <!-- Koordinat mengikuti foto 1920×1072 -->
       <svg class="energy" viewBox="0 0 1920 1072" preserveAspectRatio="none" aria-hidden="true">
         <g class="line" data-line="surya">
-          <path class="halo" d="M1077 353 L1151.4 461.7 Q1157 470 1167.0 469.6 L1571.0 451.4 Q1581 451 1581.0 461.0 L1581.0 600.0 Q1581 610 1590.8 612.1 L1670.2 628.9 Q1680 631 1679.9 641.0 L1679.1 698.0 Q1679 708 1669.2 709.9 L1658 712"/>
-          <path class="core" d="M1077 353 L1151.4 461.7 Q1157 470 1167.0 469.6 L1571.0 451.4 Q1581 451 1581.0 461.0 L1581.0 600.0 Q1581 610 1590.8 612.1 L1670.2 628.9 Q1680 631 1679.9 641.0 L1679.1 698.0 Q1679 708 1669.2 709.9 L1658 712"/>
-          <path class="pulse" d="M1077 353 L1151.4 461.7 Q1157 470 1167.0 469.6 L1571.0 451.4 Q1581 451 1581.0 461.0 L1581.0 600.0 Q1581 610 1590.8 612.1 L1670.2 628.9 Q1680 631 1679.9 641.0 L1679.1 698.0 Q1679 708 1669.2 709.9 L1658 712"/>
+          <path class="halo" d="M1072 354 L1147.8 475.2 Q1152 482 1160.0 481.2 L1538.0 441.8 Q1546 441 1552.1 446.2 L1571.9 462.8 Q1578 468 1578.0 476.0 L1578.0 602.0 Q1578 610 1585.8 611.7 L1686.2 634.3 Q1694 636 1693.8 644.0 L1693.2 661.0 Q1693 669 1685.0 669.5 L1684.0 669.5 Q1676 670 1676.0 678.0 L1676 712"/>
+          <path class="core" d="M1072 354 L1147.8 475.2 Q1152 482 1160.0 481.2 L1538.0 441.8 Q1546 441 1552.1 446.2 L1571.9 462.8 Q1578 468 1578.0 476.0 L1578.0 602.0 Q1578 610 1585.8 611.7 L1686.2 634.3 Q1694 636 1693.8 644.0 L1693.2 661.0 Q1693 669 1685.0 669.5 L1684.0 669.5 Q1676 670 1676.0 678.0 L1676 712"/>
+          <path class="pulse" d="M1072 354 L1147.8 475.2 Q1152 482 1160.0 481.2 L1538.0 441.8 Q1546 441 1552.1 446.2 L1571.9 462.8 Q1578 468 1578.0 476.0 L1578.0 602.0 Q1578 610 1585.8 611.7 L1686.2 634.3 Q1694 636 1693.8 644.0 L1693.2 661.0 Q1693 669 1685.0 669.5 L1684.0 669.5 Q1676 670 1676.0 678.0 L1676 712"/>
         </g>
         <g class="line" data-line="rumah">
-          <path class="halo" d="M1622 704 L1554.8 713.9 Q1541 716 1541.0 705.0 L1541.0 705.0 Q1541 694 1528.4 687.8 L1488.6 668.2 Q1476 662 1463.0 667.1 L1303.0 729.9 Q1290 735 1289.2 721.0 L1284 632"/>
-          <path class="core" d="M1622 704 L1554.8 713.9 Q1541 716 1541.0 705.0 L1541.0 705.0 Q1541 694 1528.4 687.8 L1488.6 668.2 Q1476 662 1463.0 667.1 L1303.0 729.9 Q1290 735 1289.2 721.0 L1284 632"/>
-          <path class="pulse" d="M1622 704 L1554.8 713.9 Q1541 716 1541.0 705.0 L1541.0 705.0 Q1541 694 1528.4 687.8 L1488.6 668.2 Q1476 662 1463.0 667.1 L1303.0 729.9 Q1290 735 1289.2 721.0 L1284 632"/>
+          <path class="halo" d="M1614 742 L1510.6 712.7 Q1501 710 1491.2 712.2 L1301.8 754.8 Q1292 757 1292.0 747.0 L1292 576"/>
+          <path class="core" d="M1614 742 L1510.6 712.7 Q1501 710 1491.2 712.2 L1301.8 754.8 Q1292 757 1292.0 747.0 L1292 576"/>
+          <path class="pulse" d="M1614 742 L1510.6 712.7 Q1501 710 1491.2 712.2 L1301.8 754.8 Q1292 757 1292.0 747.0 L1292 576"/>
         </g>
         <g class="line" data-line="pln">
-          <path class="halo" d="M1838 552 C1800 730 1625 902 1372 886 L1365.0 883.0 Q1358 880 1357.7 872.0 L1357.3 864.0 Q1357 856 1364.6 853.5 L1562.4 787.5 Q1570 785 1577.6 782.5 L1612 771"/>
-          <path class="core" d="M1838 552 C1800 730 1625 902 1372 886 L1365.0 883.0 Q1358 880 1357.7 872.0 L1357.3 864.0 Q1357 856 1364.6 853.5 L1562.4 787.5 Q1570 785 1577.6 782.5 L1612 771"/>
-          <path class="pulse" d="M1838 552 C1800 730 1625 902 1372 886 L1365.0 883.0 Q1358 880 1357.7 872.0 L1357.3 864.0 Q1357 856 1364.6 853.5 L1562.4 787.5 Q1570 785 1577.6 782.5 L1612 771"/>
+          <path class="halo" d="M1843 560 L1818.7 916.0 Q1818 926 1808.9 930.2 L1545.1 1051.8 Q1536 1056 1527.3 1051.1 L1368.7 960.9 Q1360 956 1360.0 946.0 L1360.0 866.0 Q1360 856 1369.5 852.8 L1614 771"/>
+          <path class="core" d="M1843 560 L1818.7 916.0 Q1818 926 1808.9 930.2 L1545.1 1051.8 Q1536 1056 1527.3 1051.1 L1368.7 960.9 Q1360 956 1360.0 946.0 L1360.0 866.0 Q1360 856 1369.5 852.8 L1614 771"/>
+          <path class="pulse" d="M1843 560 L1818.7 916.0 Q1818 926 1808.9 930.2 L1545.1 1051.8 Q1536 1056 1527.3 1051.1 L1368.7 960.9 Q1360 956 1360.0 946.0 L1360.0 866.0 Q1360 856 1369.5 852.8 L1614 771"/>
         </g>
       </svg>
 
-      <div class="spot" data-spot="panel"    style="--x:1077;--y:353"><div class="tag r"><b>Panel surya</b><span data-state="panel"></span></div></div>
+      <div class="spot" data-spot="panel"    style="--x:1072;--y:354"><div class="tag r"><b>Panel surya</b><span data-state="panel"></span></div></div>
       <div class="spot" data-spot="inverter" style="--x:1640;--y:703"><div class="tag tl"><b>Inverter &amp; baterai</b><span data-state="baterai"></span></div></div>
       <div class="spot" data-spot="baterai"  style="--x:1634;--y:766"></div>
-      <div class="spot" data-spot="rumah"    style="--x:1284;--y:632"><div class="tag l"><b>Rumah</b><span data-state="rumah"></span></div></div>
-      <div class="spot" data-spot="meter"    style="--x:1358;--y:884"><div class="tag l"><b>kWh meter PLN</b><span data-state="meter"></span></div></div>
-      <div class="spot" data-spot="pln"      style="--x:1838;--y:552"><div class="tag tl"><b>Tiang PLN</b><span data-state="pln"></span></div></div>
+      <div class="spot" data-spot="rumah"    style="--x:1292;--y:576"><div class="tag l"><b>Rumah</b><span data-state="rumah"></span></div></div>
+      <div class="spot" data-spot="meter"    style="--x:1360;--y:884"><div class="tag l"><b>kWh meter PLN</b><span data-state="meter"></span></div></div>
+      <div class="spot" data-spot="pln"      style="--x:1843;--y:560"><div class="tag tl"><b>Tiang PLN</b><span data-state="pln"></span></div></div>
     </div>
   </div>
   <p class="sr-only" data-hero-alt aria-live="polite"></p>
@@ -578,6 +581,10 @@ section{padding-block:var(--section)}
   const hour = new Date().getHours();
   setMode(hour >= 6 && hour < 18 ? 'siang' : 'malam');
   addEventListener('load', () => setTimeout(() => imgs.forEach(load), 600));
+
+  const foot = hero.querySelector('.hero-foot');
+  const syncFoot = () => hero.style.setProperty('--foot-h', foot.offsetHeight + 'px');
+  syncFoot(); addEventListener('resize', syncFoot);
 
   // Tombol WA mengambang baru muncul setelah hero terlewati (hero sudah punya CTA sendiri).
   const wa = document.querySelector('.wa-float');
