@@ -517,7 +517,8 @@ section{padding-block:var(--section)}
         <h1 id="hero-title">Kontraktor <span class="hl">PLTS</span> Rumah, Bisnis &amp; Industri</h1>
         <p class="hero-sub">Pemasangan PLTS on-grid, off-grid, dan hybrid di seluruh Indonesia.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20ingin%20konsultasi%20PLTS." target="_blank" rel="noopener">Konsultasi via WhatsApp</a>
+          <a class="btn btn-primary" href="#kalkulator">Hitung kebutuhan PLTS Anda</a>
+          <a class="btn btn-ghost" href="#paket">Lihat paket &amp; harga</a>
         </div>
       </div>
     </div>
@@ -1265,7 +1266,13 @@ function rnSubmit(){
 
   // Tombol WA mengambang baru muncul setelah hero terlewati (hero sudah punya CTA sendiri).
   const wa = document.querySelector('.wa-float');
-  new IntersectionObserver(([e]) => wa.classList.toggle('hidden', e.isIntersecting), {threshold:.15}).observe(hero);
+  // Desktop: tombol WA di header sudah terlihat, jadi tombol mengambang muncul setelah hero.
+  // HP/tablet: tombol header tersembunyi di menu, jadi tombol mengambang selalu tampil.
+  const wide = matchMedia('(min-width:1021px)');
+  let heroInView = true;
+  const syncWa = () => wa.classList.toggle('hidden', wide.matches && heroInView);
+  new IntersectionObserver(([e]) => { heroInView = e.isIntersecting; syncWa(); }, {threshold:.15}).observe(hero);
+  wide.addEventListener('change', syncWa); syncWa();
 
   // Tab paket harga (pola tablist WAI-ARIA, panah kiri/kanan berpindah tab).
   const tabs = [...document.querySelectorAll('#paket [role="tab"]')];
