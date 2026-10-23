@@ -126,7 +126,8 @@ p{margin:0;text-wrap:pretty}
 .tag.l{right:18px;top:-20px}
 .tag.b{left:50%;top:16px;transform:translateX(-50%)}
 .tag.tl{right:-6px;bottom:16px}
-.tag.inv{left:calc(var(--w) * 80 / 1920);top:4px} /* kanan titik, melewati jalur surya yang turun di sisi kanan inverter */
+.tag.inv{left:calc(var(--w) * 80 / 1920);top:4px}
+.tag.inv.shift{top:calc(var(--w) * 92 / 1920)} /* layar lebar: label turun ke bawah baterai lalu digeser masuk, tetap tidak menutupi jalur surya */ /* kanan titik, melewati jalur surya yang turun di sisi kanan inverter */
 
 .hero-body{flex:1;display:flex;align-items:center;padding-top:112px;padding-bottom:32px}
 .hero-copy{max-width:520px}
@@ -965,6 +966,7 @@ function rnSubmit(){
       el.textContent = k === 'soc' ? `${Math.round(v.soc)}%` : k === 'batt' ? (v.batt > 0 ? kw(v.batt) : '0 kW') : kw(v[k]);
     });
     $$h('[data-soc]').forEach(el => { el.style.width = v.soc + '%'; el.classList.toggle('low', v.soc <= BATT_MIN); });
+    fitTags();
   }
 
   function setMode(mode){
@@ -980,6 +982,18 @@ function rnSubmit(){
     render(m, {...m.v});
     if (mode === 'malam') runNight(m);
   }
+
+  // Label yang keluar dari tepi kanan hero digeser masuk (terjadi di layar yang sangat lebar).
+  function fitTags(){
+    const edge = hero.getBoundingClientRect().right - 16;
+    $$h('.tag.inv').forEach(t => {
+      t.classList.remove('shift'); t.style.translate = '';
+      const over = t.getBoundingClientRect().right - edge;
+      if (over > 0) { t.classList.add('shift'); t.style.translate = `${-Math.ceil(over)}px 0`; }
+    });
+  }
+  addEventListener('resize', fitTags);
+  document.fonts?.ready.then(fitTags);
 
   // Malam: baterai turun dari 80% ke batas minimum, lalu inverter beralih otomatis ke PLN.
   function runNight(m){
