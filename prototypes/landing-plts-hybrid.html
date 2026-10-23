@@ -96,7 +96,7 @@ p{margin:0;text-wrap:pretty}
 .line.rev .pulse{animation-direction:reverse}
 .line.standby{opacity:.35}
 .line.standby .pulse,.line.cut .pulse{display:none}
-.line.cut{opacity:.6;color:var(--pln-500)}
+.line.cut{opacity:.7;color:var(--grid-400)}
 .line.cut .core{stroke-dasharray:6 10}
 .line.cut .halo{opacity:.15}
 @keyframes pulse{to{stroke-dashoffset:-60}}
@@ -126,6 +126,7 @@ p{margin:0;text-wrap:pretty}
 .tag.l{right:18px;top:-20px}
 .tag.b{left:50%;top:16px;transform:translateX(-50%)}
 .tag.tl{right:-6px;bottom:16px}
+.tag.inv{left:calc(var(--w) * 80 / 1920);top:4px} /* kanan titik, melewati jalur surya yang turun di sisi kanan inverter */
 
 .hero-body{flex:1;display:flex;align-items:center;padding-top:112px;padding-bottom:32px}
 .hero-copy{max-width:520px}
@@ -182,7 +183,7 @@ p{margin:0;text-wrap:pretty}
   .energy-strip dd{margin:2px 0 0;font-size:.82rem;font-weight:700;color:#fff;font-variant-numeric:tabular-nums}
   .mode-note{margin-left:0}
   .spot[data-spot="rumah"] .tag{display:none} /* layar sempit: cukup titiknya */
-  .spot[data-spot="inverter"] .tag{bottom:auto;top:34px;right:-20px}
+  .spot[data-spot="inverter"] .tag{left:auto;bottom:auto;top:34px;right:-20px}
   .hero-foot{order:3;padding-top:12px}
   .mode-bar{flex-direction:column;align-items:flex-start;padding-bottom:20px}
   .mode-switch button{padding:0 10px;font-size:.78rem}
@@ -377,7 +378,7 @@ section{padding-block:var(--section)}
       </svg>
 
       <div class="spot" data-spot="panel"    style="--x:1072;--y:354"><div class="tag r"><b>Panel surya</b><span data-val="pv"></span></div></div>
-      <div class="spot" data-spot="inverter" style="--x:1640;--y:703"><div class="tag tl"><b>Inverter &amp; baterai</b><div class="batt"><i class="batt-bar"><i data-soc></i></i><em data-val="soc"></em></div><span data-val="batt"></span></div></div>
+      <div class="spot" data-spot="inverter" style="--x:1640;--y:703"><div class="tag inv"><b>Inverter &amp; baterai</b><div class="batt"><i class="batt-bar"><i data-soc></i></i><em data-val="soc"></em></div><span data-val="batt"></span></div></div>
       <div class="spot" data-spot="baterai"  style="--x:1634;--y:766"></div>
       <div class="spot" data-spot="rumah"    style="--x:1292;--y:576"><div class="tag l"><b>Rumah</b><span data-val="load"></span></div></div>
       <div class="spot" data-spot="meter"    style="--x:1360;--y:884"><div class="tag l"><b>kWh meter PLN</b><span data-val="grid"></span></div></div>
@@ -874,7 +875,7 @@ function rnSubmit(){
 (() => {
   // Warna aliran: surya = kuning, baterai = biru brand, PLN = abu-abu. Tidak ada aliran ke PLN.
   // Angka = ilustrasi sistem hybrid 5 kW (kW, persen baterai).
-  const C = {solar:'var(--energy-solar)', battery:'var(--energy-battery)', grid:'var(--energy-grid)', off:'var(--pln-500)'};
+  const C = {solar:'var(--energy-solar)', battery:'var(--energy-battery)', grid:'var(--energy-grid)', off:'var(--grid-400)'};
   const BATT_MIN = 20; // batas minimum: di bawah ini inverter beralih ke PLN, sisa disimpan untuk saat padam
   const MODES = {
     siang: {
