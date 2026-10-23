@@ -14,7 +14,7 @@ def rounded(pts, r=10):
 # lalu ditepatkan ke pipa/tepi bangunan terdekat.
 SURYA = [(1072,354),(1152,482),(1546,441),(1578,468),(1578,610),(1694,636),(1693,669),(1676,670),(1676,712)]
 RUMAH = [(1614,742),(1501,710),(1292,757),(1292,576)]
-PLN   = [(1843,560),(1818,926),(1536,1056),(1360,956),(1360,856),(1614,771)]
+PLN   = [(1360,884),(1360,856),(1614,771)]  # mulai dari kWh meter di pagar; tiang PLN tidak dipakai
 d = {
  'surya': rounded(SURYA, 8),
  'rumah': rounded(RUMAH, 10),

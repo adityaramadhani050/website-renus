@@ -101,6 +101,16 @@ p{margin:0;text-wrap:pretty}
 .line.cut .halo{opacity:.15}
 @keyframes pulse{to{stroke-dashoffset:-60}}
 
+.stage img.tmp-overcast{filter:grayscale(.6) brightness(.72) contrast(.88)} /* sementara, sampai foto mendung tersedia */
+.batt{display:flex;align-items:center;gap:8px;margin:3px 0 1px}
+.batt-bar{display:block;position:relative;width:46px;height:10px;border-radius:3px;border:1.5px solid rgb(255 255 255 / .7);padding:1px}
+.batt-bar::after{content:"";position:absolute;right:-4px;top:2px;width:2px;height:4px;border-radius:0 1px 1px 0;background:rgb(255 255 255 / .7)}
+.batt-bar i{display:block;height:100%;border-radius:1px;background:var(--energy-battery);transition:width .3s linear}
+.batt-bar i.low{background:var(--sun-400)}
+.batt em{font-style:normal;font-weight:700;color:#fff;font-size:.85rem;font-variant-numeric:tabular-nums}
+.tag span{font-variant-numeric:tabular-nums}
+.mode-note{font-size:.8rem;color:rgb(255 255 255 / .6);margin-left:auto}
+.energy-strip{display:none}
 /* Titik & label di foto */
 .spot{position:absolute;left:calc(var(--x) / 1920 * 100%);top:calc(var(--y) / 1072 * 100%);width:0;height:0;color:var(--c,#fff);transition:opacity .5s}
 .spot::before{content:"";position:absolute;left:-7px;top:-7px;width:14px;height:14px;border-radius:50%;background:currentColor;box-shadow:0 0 0 4px rgb(4 33 46 / .55)}
@@ -166,8 +176,13 @@ p{margin:0;text-wrap:pretty}
   @keyframes pulse{to{stroke-dashoffset:-120}}
   .tag{padding:5px 9px 6px;border-radius:9px}
   .tag b{font-size:.75rem}
-  .tag span{display:none}
-  .spot[data-spot="pln"] .tag,.spot[data-spot="rumah"] .tag{display:none} /* layar sempit: cukup titiknya */
+  .tag span,.tag .batt{display:none !important}
+  .energy-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:0 0 14px;padding:0}
+  .energy-strip div{border-radius:10px;background:rgb(255 255 255 / .06);border:1px solid rgb(255 255 255 / .12);padding:8px 6px;border-top:2px solid var(--c)}
+  .energy-strip dt{font-size:.62rem;line-height:1.2;color:rgb(255 255 255 / .7)}
+  .energy-strip dd{margin:2px 0 0;font-size:.82rem;font-weight:700;color:#fff;font-variant-numeric:tabular-nums}
+  .mode-note{margin-left:0}
+  .spot[data-spot="rumah"] .tag{display:none} /* layar sempit: cukup titiknya */
   .spot[data-spot="inverter"] .tag{bottom:auto;top:34px;right:-20px}
   .hero-foot{order:3;padding-top:12px}
   .mode-bar{flex-direction:column;align-items:flex-start;padding-bottom:20px}
@@ -339,6 +354,7 @@ section{padding-block:var(--section)}
   <div class="hero-media">
     <div class="stage">
       <img data-mode="siang" alt="" width="1920" height="1072" data-srcset="assets/hero-plts-hybrid-siang-1024.webp 1024w, assets/hero-plts-hybrid-siang-1920.webp 1920w">
+      <img data-mode="mendung" class="tmp-overcast" alt="" width="1920" height="1072" data-srcset="assets/hero-plts-hybrid-siang-1024.webp 1024w, assets/hero-plts-hybrid-siang-1920.webp 1920w">
       <img data-mode="malam" alt="" width="1920" height="1072" data-srcset="assets/hero-plts-hybrid-malam-1024.webp 1024w, assets/hero-plts-hybrid-malam-1920.webp 1920w">
       <img data-mode="padam" alt="" width="1920" height="1072" data-srcset="assets/hero-plts-hybrid-pln-padam-1024.webp 1024w, assets/hero-plts-hybrid-pln-padam-1920.webp 1920w">
 
@@ -355,18 +371,17 @@ section{padding-block:var(--section)}
           <path class="pulse" d="M1614 742 L1510.6 712.7 Q1501 710 1491.2 712.2 L1301.8 754.8 Q1292 757 1292.0 747.0 L1292 576"/>
         </g>
         <g class="line" data-line="pln">
-          <path class="halo" d="M1843 560 L1818.7 916.0 Q1818 926 1808.9 930.2 L1545.1 1051.8 Q1536 1056 1527.3 1051.1 L1368.7 960.9 Q1360 956 1360.0 946.0 L1360.0 866.0 Q1360 856 1369.5 852.8 L1614 771"/>
-          <path class="core" d="M1843 560 L1818.7 916.0 Q1818 926 1808.9 930.2 L1545.1 1051.8 Q1536 1056 1527.3 1051.1 L1368.7 960.9 Q1360 956 1360.0 946.0 L1360.0 866.0 Q1360 856 1369.5 852.8 L1614 771"/>
-          <path class="pulse" d="M1843 560 L1818.7 916.0 Q1818 926 1808.9 930.2 L1545.1 1051.8 Q1536 1056 1527.3 1051.1 L1368.7 960.9 Q1360 956 1360.0 946.0 L1360.0 866.0 Q1360 856 1369.5 852.8 L1614 771"/>
+          <path class="halo" d="M1360 884 L1360.0 866.0 Q1360 856 1369.5 852.8 L1614 771"/>
+          <path class="core" d="M1360 884 L1360.0 866.0 Q1360 856 1369.5 852.8 L1614 771"/>
+          <path class="pulse" d="M1360 884 L1360.0 866.0 Q1360 856 1369.5 852.8 L1614 771"/>
         </g>
       </svg>
 
-      <div class="spot" data-spot="panel"    style="--x:1072;--y:354"><div class="tag r"><b>Panel surya</b><span data-state="panel"></span></div></div>
-      <div class="spot" data-spot="inverter" style="--x:1640;--y:703"><div class="tag tl"><b>Inverter &amp; baterai</b><span data-state="baterai"></span></div></div>
+      <div class="spot" data-spot="panel"    style="--x:1072;--y:354"><div class="tag r"><b>Panel surya</b><span data-val="pv"></span></div></div>
+      <div class="spot" data-spot="inverter" style="--x:1640;--y:703"><div class="tag tl"><b>Inverter &amp; baterai</b><div class="batt"><i class="batt-bar"><i data-soc></i></i><em data-val="soc"></em></div><span data-val="batt"></span></div></div>
       <div class="spot" data-spot="baterai"  style="--x:1634;--y:766"></div>
-      <div class="spot" data-spot="rumah"    style="--x:1292;--y:576"><div class="tag l"><b>Rumah</b><span data-state="rumah"></span></div></div>
-      <div class="spot" data-spot="meter"    style="--x:1360;--y:884"><div class="tag l"><b>kWh meter PLN</b><span data-state="meter"></span></div></div>
-      <div class="spot" data-spot="pln"      style="--x:1843;--y:560"><div class="tag tl"><b>Tiang PLN</b><span data-state="pln"></span></div></div>
+      <div class="spot" data-spot="rumah"    style="--x:1292;--y:576"><div class="tag l"><b>Rumah</b><span data-val="load"></span></div></div>
+      <div class="spot" data-spot="meter"    style="--x:1360;--y:884"><div class="tag l"><b>kWh meter PLN</b><span data-val="grid"></span></div></div>
     </div>
   </div>
   <p class="sr-only" data-hero-alt aria-live="polite"></p>
@@ -385,10 +400,18 @@ section{padding-block:var(--section)}
 
   <div class="hero-foot">
     <div class="container">
+      <dl class="energy-strip" aria-label="Angka energi (ilustrasi sistem 5 kW)">
+        <div style="--c:var(--energy-solar)"><dt>Panel surya</dt><dd data-num="pv"></dd></div>
+        <div style="--c:#fff"><dt>Dipakai rumah</dt><dd data-num="load"></dd></div>
+        <div style="--c:var(--energy-battery)"><dt>Baterai</dt><dd data-num="soc"></dd></div>
+        <div style="--c:var(--energy-battery)"><dt>Mengisi baterai</dt><dd data-num="batt"></dd></div>
+        <div style="--c:var(--energy-grid)"><dt>Dari PLN</dt><dd data-num="grid"></dd></div>
+      </dl>
       <div class="mode-bar">
         <span class="sr-only" id="mode-label-hero">Pilih kondisi</span>
         <div class="mode-switch" role="group" aria-labelledby="mode-label-hero" data-mode-switch></div>
         <p class="mode-caption" data-mode-caption></p>
+        <p class="mode-note">Angka ilustrasi sistem hybrid 5 kW.</p>
       </div>
     </div>
     <div class="trust-wrap">
@@ -851,32 +874,51 @@ function rnSubmit(){
 <script>
 (() => {
   // Warna aliran: surya = kuning, baterai = biru brand, PLN = abu-abu. Tidak ada aliran ke PLN.
+  // Angka = ilustrasi sistem hybrid 5 kW (kW, persen baterai).
   const C = {solar:'var(--energy-solar)', battery:'var(--energy-battery)', grid:'var(--energy-grid)', off:'#ff8a7a'};
+  const BATT_MIN = 20; // batas minimum: di bawah ini inverter beralih ke PLN, sisa disimpan untuk saat padam
   const MODES = {
     siang: {
       label: 'Siang',
-      caption: 'Panel memasok rumah sekaligus mengisi baterai.',
-      alt: 'Siang hari: listrik dari panel surya mengalir menyusuri lis atap ke inverter di carport, lalu ke rumah; kelebihannya mengisi baterai. Jalur PLN dari tiang ke kWh meter di pagar dalam posisi siaga.',
+      caption: 'Cerah: panel memasok rumah dan kelebihannya mengisi baterai.',
+      alt: 'Siang cerah: panel surya menghasilkan 4,2 kW. Rumah memakai 1,5 kW dan 2,7 kW sisanya mengisi baterai. PLN siaga.',
+      v: {pv:4.2, load:1.5, soc:65, batt:2.7, grid:0},
       lines: {surya:['on',C.solar], rumah:['on',C.solar], pln:['standby',C.grid]},
-      spots: {panel:[C.solar,'Menghasilkan listrik'], inverter:[C.solar,'Mengisi baterai'], baterai:[C.solar], rumah:[C.solar,'Pakai energi surya'], meter:[C.grid,'Siaga',1], pln:[C.grid,'Siaga',1]}
+      spots: {panel:C.solar, inverter:C.solar, baterai:C.solar, rumah:C.solar, meter:[C.grid,1]},
+      battText: v => `Mengisi ${kw(v.batt)}`, meterText: () => 'Siaga'
+    },
+    mendung: {
+      label: 'Mendung',
+      caption: 'Mendung: panel tetap bekerja, kekurangannya otomatis ditutup dari PLN.',
+      alt: 'Siang mendung: panel hanya menghasilkan 0,8 kW. Rumah memakai 1,5 kW, kekurangan 0,7 kW otomatis diambil dari PLN lewat kWh meter. Baterai tidak terisi.',
+      v: {pv:0.8, load:1.5, soc:65, batt:0, grid:0.7},
+      lines: {surya:['on',C.solar], rumah:['on',C.solar], pln:['on',C.grid]},
+      spots: {panel:C.solar, inverter:C.solar, baterai:[C.grid,1], rumah:C.solar, meter:C.grid},
+      battText: () => 'Tidak mengisi', meterText: v => `${kw(v.grid)} dari PLN`
     },
     malam: {
       label: 'Malam',
-      caption: 'Baterai memasok rumah. PLN hanya cadangan.',
-      alt: 'Malam hari: baterai yang terisi siang tadi memasok rumah lewat inverter. Panel tidak aktif, PLN hanya cadangan.',
+      caption: 'Malam: baterai yang terisi siang tadi memasok rumah.',
+      captionLow: `Baterai di ${BATT_MIN}%: rumah otomatis beralih ke PLN, sisanya disimpan untuk saat padam.`,
+      alt: 'Malam: baterai memasok rumah 1,2 kW hingga kapasitasnya turun ke 20 persen, lalu inverter otomatis beralih ke PLN dan menyimpan sisa baterai untuk cadangan.',
+      v: {pv:0, load:1.2, soc:80, batt:-1.2, grid:0},
       lines: {surya:['off'], rumah:['on',C.battery], pln:['standby',C.grid]},
-      spots: {panel:[C.grid,'Tidak aktif',1], inverter:[C.battery,'Baterai memasok rumah'], baterai:[C.battery], rumah:[C.battery,'Pakai energi baterai'], meter:[C.grid,'Cadangan',1], pln:[C.grid,'Cadangan',1]}
+      spots: {panel:[C.grid,1], inverter:C.battery, baterai:C.battery, rumah:C.battery, meter:[C.grid,1]},
+      battText: v => `Memasok ${kw(-v.batt)}`, meterText: () => 'Cadangan'
     },
     padam: {
       label: 'PLN Padam',
-      caption: 'Lingkungan gelap, rumah Anda tetap menyala dari baterai.',
-      alt: 'PLN padam: rumah-rumah sekitar gelap. Inverter memutus jalur dari kWh meter PLN dan baterai memasok rumah sehingga tetap menyala.',
+      caption: 'PLN padam: lingkungan gelap, rumah tetap menyala dari baterai.',
+      alt: 'PLN padam: rumah-rumah sekitar gelap. Inverter memutus jalur dari kWh meter PLN dan baterai memasok rumah 1,2 kW sehingga tetap menyala.',
+      v: {pv:0, load:1.2, soc:60, batt:-1.2, grid:0},
       lines: {surya:['off'], rumah:['on',C.battery], pln:['cut']},
-      spots: {panel:[C.grid,'Tidak aktif',1], inverter:[C.battery,'Mode cadangan otomatis'], baterai:[C.battery], rumah:[C.battery,'Tetap menyala'], meter:[C.off,'Diputus otomatis'], pln:[C.off,'Padam']}
+      spots: {panel:[C.grid,1], inverter:C.battery, baterai:C.battery, rumah:C.battery, meter:C.off},
+      battText: v => `Memasok ${kw(-v.batt)}`, meterText: () => 'Padam · diputus otomatis'
     }
   };
   const ICON = {
     siang:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>',
+    mendung:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H7a5 5 0 1 1 .9-9.9A6 6 0 0 1 19 10a4.5 4.5 0 0 1-1.5 9z"/></svg>',
     malam:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>',
     padam:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/><path d="M3 3l18 18"/></svg>'
   };
@@ -884,34 +926,89 @@ function rnSubmit(){
   const hero = document.getElementById('hero');
   const imgs = [...hero.querySelectorAll('.stage img')];
   const sw = hero.querySelector('[data-mode-switch]');
-  let current;
+  const $h = s => hero.querySelector(s);
+  const $$h = s => hero.querySelectorAll(s);
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let current, raf = 0;
+
+  function kw(n){ return n.toLocaleString('id-ID', {minimumFractionDigits:1, maximumFractionDigits:1}) + ' kW'; }
 
   sw.innerHTML = ORDER.map(k => `<button type="button" data-set-mode="${k}" aria-pressed="false">${ICON[k]}<span>${MODES[k].label}</span></button>`).join('');
   sw.addEventListener('click', e => { const b = e.target.closest('[data-set-mode]'); if (b) setMode(b.dataset.setMode); });
 
   function load(img){ if (!img.srcset && img.dataset.srcset){ img.sizes = '(max-width:720px) 200vw, 120vw'; img.srcset = img.dataset.srcset; } }
 
+  function setLine(k, state, color){
+    const g = $h(`[data-line="${k}"]`);
+    g.classList.remove('on','standby','cut');
+    if (state !== 'off') g.classList.add(state);
+    if (color) g.style.setProperty('--c', color);
+  }
+  function setSpot(k, spec){
+    const [color, dim] = Array.isArray(spec) ? spec : [spec, 0];
+    const s = $h(`[data-spot="${k}"]`);
+    s.style.setProperty('--c', color);
+    s.classList.toggle('dim', !!dim);
+  }
+  // Tulis angka ke label di foto dan ke strip angka (HP).
+  function render(m, v){
+    const vals = {
+      pv: v.pv ? `${kw(v.pv)} dihasilkan` : 'Tidak aktif',
+      load: `${kw(v.load)} dipakai`,
+      soc: `${Math.round(v.soc)}%`,
+      batt: m.battText(v),
+      grid: m.meterText(v)
+    };
+    $$h('[data-val]').forEach(el => { el.textContent = vals[el.dataset.val]; });
+    $$h('[data-num]').forEach(el => {
+      const k = el.dataset.num;
+      el.textContent = k === 'soc' ? `${Math.round(v.soc)}%` : k === 'batt' ? (v.batt > 0 ? kw(v.batt) : '0 kW') : kw(v[k]);
+    });
+    $$h('[data-soc]').forEach(el => { el.style.width = v.soc + '%'; el.classList.toggle('low', v.soc <= BATT_MIN); });
+  }
+
   function setMode(mode){
+    cancelAnimationFrame(raf);
     const m = MODES[mode]; current = mode;
     hero.dataset.mode = mode;
     imgs.forEach(img => { const on = img.dataset.mode === mode; if (on) load(img); img.classList.toggle('is-active', on); });
     sw.querySelectorAll('[data-set-mode]').forEach(b => b.setAttribute('aria-pressed', b.dataset.setMode === mode));
-    hero.querySelector('[data-mode-caption]').textContent = m.caption;
-    hero.querySelector('[data-hero-alt]').textContent = m.alt;
-    Object.entries(m.lines).forEach(([k, [state, color]]) => {
-      const g = hero.querySelector(`[data-line="${k}"]`);
-      g.classList.remove('on','standby','cut','rev');
-      if (state !== 'off') g.classList.add(...state.split(' '));
-      if (color) g.style.setProperty('--c', color);
-    });
-    Object.entries(m.spots).forEach(([k, [color, text, dim]]) => {
-      const s = hero.querySelector(`[data-spot="${k}"]`);
-      s.style.setProperty('--c', color);
-      s.classList.toggle('dim', !!dim);
-      const st = s.querySelector(`[data-state="${k === 'inverter' ? 'baterai' : k}"]`); if (st && text) st.textContent = text;
-    });
+    $h('[data-mode-caption]').textContent = m.caption;
+    $h('[data-hero-alt]').textContent = m.alt;
+    Object.entries(m.lines).forEach(([k, [state, color]]) => setLine(k, state, color));
+    Object.entries(m.spots).forEach(([k, spec]) => setSpot(k, spec));
+    render(m, {...m.v});
+    if (mode === 'malam') runNight(m);
   }
 
+  // Malam: baterai turun dari 80% ke batas minimum, lalu inverter beralih otomatis ke PLN.
+  function runNight(m){
+    const v = {...m.v}, from = v.soc, dur = reduce ? 0 : 7000;
+    let t0;
+    const switchToGrid = () => {
+      if (current !== 'malam') return;
+      v.soc = BATT_MIN; v.batt = 0; v.grid = v.load;
+      m.battText = () => `Cadangan ${BATT_MIN}% disimpan`;
+      m.meterText = vv => `${kw(vv.grid)} dari PLN`;
+      setLine('rumah', 'on', C.grid);
+      setLine('pln', 'on', C.grid);
+      setSpot('inverter', C.grid); setSpot('baterai', [C.battery, 1]); setSpot('rumah', C.grid); setSpot('meter', C.grid);
+      $h('[data-mode-caption]').textContent = m.captionLow;
+      render(m, v);
+      // kembalikan teks bawaan agar klik ulang "Malam" memutar dari awal
+      m.battText = vv => `Memasok ${kw(-vv.batt)}`; m.meterText = () => 'Cadangan';
+    };
+    if (!dur) { raf = requestAnimationFrame(() => setTimeout(switchToGrid, 2500)); return; }
+    const step = t => {
+      if (current !== 'malam') return;
+      t0 ??= t;
+      const p = Math.min(1, (t - t0) / dur);
+      v.soc = from - (from - BATT_MIN) * p;
+      render(m, v);
+      if (p < 1) raf = requestAnimationFrame(step); else switchToGrid();
+    };
+    raf = requestAnimationFrame(step);
+  }
 
   // Mode awal mengikuti jam pengunjung; gambar mode lain dimuat setelah halaman tampil.
   const hour = new Date().getHours();
