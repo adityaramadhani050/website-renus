@@ -17,6 +17,7 @@ Status: **disetujui pengguna 23 Okt 2026** (warna brand biru muda, aksen kuning 
 | Hero malam | `assets/source/hero-plts-hybrid-malam.jpg` | `hero-plts-hybrid-malam-{1024,1920}.webp` |
 | Hero mendung | `assets/source/hero-plts-hybrid-mendung.jpg` | `hero-plts-hybrid-mendung-{1024,1920}.webp` |
 | Hero PLN padam | `assets/source/hero-plts-hybrid-pln-padam.jpg` | `hero-plts-hybrid-pln-padam-{1024,1920}.webp` |
+| Isometrik on-grid / off-grid / hybrid | `assets/source/isometrik-plts-{ongrid,offgrid,hybrid}.jpg` (Gemini) | `isometrik-plts-*-{480,800}.webp` (16–63 KB), kartu Sistem PLTS |
 
 Komposisi foto: rumah di 45–90% lebar (tengah-kanan), sisi kiri pepohonan → area teks. Di HP: `object-position: 68% center`.
 
@@ -92,5 +93,5 @@ Komposisi foto: rumah di 45–90% lebar (tengah-kanan), sisi kiri pepohonan → 
 ## Komposisi halaman (hasil critique 23 Okt 2026)
 - Ritme sengaja tidak seragam: galeri proyek full-bleed setelah hero, band navy (`.band`) untuk angka besar & sertifikasi, section Proses dengan foto tim.
 - Angka rekam jejak tampil besar (4–4,25rem) di band navy; satuan berwarna `--sun-400`.
-- Kartu sistem memuat diagram jalur energi mini memakai warna energi yang sama dengan hero.
+- Kartu sistem memuat ilustrasi isometrik rumah (panel, inverter, baterai, PLN sesuai sistem).
 - Kurangi kotak: artikel tanpa kartu (garis atas navy), kotak hanya untuk elemen yang perlu dipisahkan (paket, kalkulator, sistem).

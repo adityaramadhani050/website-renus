@@ -238,7 +238,7 @@ section{padding-block:var(--section)}
 .sys:hover{border-color:var(--blue-500);transform:translateY(-3px)}
 .sys.rec{border-color:var(--blue-500);box-shadow:0 0 0 1px var(--blue-500)}
 .sys-tag{align-self:flex-start;font-size:.8rem;font-weight:600;color:var(--navy-900);background:var(--blue-50);padding:4px 10px;border-radius:999px}
-.sys-rec{position:absolute;top:24px;right:24px;font-size:.78rem;font-weight:700;color:#fff;background:var(--navy-900);padding:4px 10px;border-radius:999px}
+.sys-rec{position:absolute;top:16px;right:16px;font-size:.78rem;font-weight:700;color:#fff;background:var(--navy-900);padding:4px 10px;border-radius:999px}
 .sys h3{margin-top:6px;font-size:1.3rem;letter-spacing:-.015em}
 .sys > p{color:var(--color-text-muted)}
 .sys .sys-fit{margin-top:auto;padding-top:12px;border-top:1px solid #e3edf1;font-size:.9rem;font-weight:600;color:var(--navy-900)}
@@ -397,7 +397,11 @@ section{padding-block:var(--section)}
 .cred-list b{display:block;color:#fff;font-weight:600;margin-bottom:2px}
 @media (max-width:860px){.creds{grid-template-columns:1fr}}
 
-/* ===== Diagram mini sistem ===== */
+/* ===== Ilustrasi isometrik sistem ===== */
+.sys-img{display:block;width:calc(100% + 48px);max-width:none;height:auto;margin:-24px -24px 4px;aspect-ratio:800/661;object-fit:contain;background:#eaedf1;border-radius:19px 19px 0 0}
+.sys .sys-tag,.sys .sys-rec{position:absolute;top:16px;z-index:1}
+.sys .sys-tag{left:16px}
+/* (diagram mini lama) */
 .sys-diagram{width:100%;height:auto;margin:6px 0 2px;overflow:visible}
 .sd-line{stroke:var(--c);stroke-width:3;stroke-linecap:round;stroke-dasharray:6 7;fill:none;animation:sd 1.4s linear infinite}
 @keyframes sd{to{stroke-dashoffset:-26}}
@@ -612,22 +616,22 @@ section{padding-block:var(--section)}
     </div>
     <div class="systems">
       <a class="sys" href="/biaya-plts-on-grid/">
+        <img class="sys-img" loading="lazy" width="800" height="661" src="assets/isometrik-plts-ongrid-800.webp" srcset="assets/isometrik-plts-ongrid-480.webp 480w, assets/isometrik-plts-ongrid-800.webp 800w" sizes="(max-width:960px) 90vw, 30vw" alt="Ilustrasi isometrik rumah dengan PLTS on-grid: panel surya di atap, inverter di carport, dan sambungan ke tiang PLN">
         <span class="sys-tag">Terhubung PLN</span>
-        <svg class="sys-diagram" viewBox="0 0 300 92" aria-hidden="true"><path class="sd-line" d="M40 34 L150 34" style="--c:var(--energy-solar)"/><path class="sd-line" d="M260 34 L150 34" style="--c:var(--energy-grid)"/><g transform="translate(40 34)" class="sd-node" style="--c:var(--energy-solar)"><circle r="20"/><g class="sd-ico"><circle cx="0" cy="0" r="6"/><path d="M0-11v3M0 8v3M-11 0h3M8 0h3M-8-8l2 2M6 6l2 2M-8 8l2-2M6-6l2-2"/></g></g><text x="40" y="70" class="sd-lbl">Panel</text><g transform="translate(150 34)" class="sd-node" style="--c:#fff"><circle r="20"/><g class="sd-ico"><path d="M-9 1 0-8 9 1M-6-1v9h12v-9"/></g></g><text x="150" y="70" class="sd-lbl">Rumah</text><g transform="translate(260 34)" class="sd-node" style="--c:var(--energy-grid)"><circle r="20"/><g class="sd-ico"><path d="M0-10-6 10M0-10 6 10M-8-4h16M-6 3h12"/></g></g><text x="260" y="70" class="sd-lbl">PLN</text></svg>
         <h3>PLTS On-Grid</h3>
         <p>Hemat tagihan di siang hari dengan biaya awal paling rendah.</p>
         <p class="sys-fit">Cocok untuk kantor, pabrik, sekolah</p>
       </a>
       <a class="sys" href="/plts-off-grid/">
+        <img class="sys-img" loading="lazy" width="800" height="661" src="assets/isometrik-plts-offgrid-800.webp" srcset="assets/isometrik-plts-offgrid-480.webp 480w, assets/isometrik-plts-offgrid-800.webp 800w" sizes="(max-width:960px) 90vw, 30vw" alt="Ilustrasi isometrik rumah dengan PLTS off-grid: panel surya di atap, inverter dan baterai di carport, tanpa sambungan PLN">
         <span class="sys-tag">Tanpa PLN</span>
-        <svg class="sys-diagram" viewBox="0 0 300 92" aria-hidden="true"><path class="sd-line" d="M40 34 L150 34" style="--c:var(--energy-solar)"/><path class="sd-line" d="M150 34 L260 34" style="--c:var(--energy-battery)"/><g transform="translate(40 34)" class="sd-node" style="--c:var(--energy-solar)"><circle r="20"/><g class="sd-ico"><circle cx="0" cy="0" r="6"/><path d="M0-11v3M0 8v3M-11 0h3M8 0h3M-8-8l2 2M6 6l2 2M-8 8l2-2M6-6l2-2"/></g></g><text x="40" y="70" class="sd-lbl">Panel</text><g transform="translate(150 34)" class="sd-node" style="--c:var(--energy-battery)"><circle r="20"/><g class="sd-ico"><rect x="-9" y="-6" width="16" height="12" rx="2"/><path d="M9-2v4M-5-2v4M-1-2v4"/></g></g><text x="150" y="70" class="sd-lbl">Baterai</text><g transform="translate(260 34)" class="sd-node" style="--c:#fff"><circle r="20"/><g class="sd-ico"><path d="M-9 1 0-8 9 1M-6-1v9h12v-9"/></g></g><text x="260" y="70" class="sd-lbl">Rumah</text></svg>
         <h3>PLTS Off-Grid</h3>
         <p>Listrik mandiri dari panel dan baterai, tanpa sambungan PLN.</p>
         <p class="sys-fit">Cocok untuk kebun, villa, lokasi terpencil</p>
       </a>
       <a class="sys rec" href="/plts-hybrid/">
+        <img class="sys-img" loading="lazy" width="800" height="661" src="assets/isometrik-plts-hybrid-800.webp" srcset="assets/isometrik-plts-hybrid-480.webp 480w, assets/isometrik-plts-hybrid-800.webp 800w" sizes="(max-width:960px) 90vw, 30vw" alt="Ilustrasi isometrik rumah dengan PLTS hybrid: panel surya di atap, inverter dan baterai di carport, serta sambungan ke tiang PLN">
         <span class="sys-tag">PLN + baterai</span><span class="sys-rec">Direkomendasikan</span>
-        <svg class="sys-diagram" viewBox="0 0 300 92" aria-hidden="true"><path class="sd-line" d="M32 34 L112 34" style="--c:var(--energy-solar)"/><path class="sd-line" d="M112 34 L192 34" style="--c:var(--energy-battery)"/><path class="sd-line" d="M272 34 L192 34" style="--c:var(--energy-grid)"/><g transform="translate(32 34)" class="sd-node" style="--c:var(--energy-solar)"><circle r="20"/><g class="sd-ico"><circle cx="0" cy="0" r="6"/><path d="M0-11v3M0 8v3M-11 0h3M8 0h3M-8-8l2 2M6 6l2 2M-8 8l2-2M6-6l2-2"/></g></g><text x="32" y="70" class="sd-lbl">Panel</text><g transform="translate(112 34)" class="sd-node" style="--c:var(--energy-battery)"><circle r="20"/><g class="sd-ico"><rect x="-9" y="-6" width="16" height="12" rx="2"/><path d="M9-2v4M-5-2v4M-1-2v4"/></g></g><text x="112" y="70" class="sd-lbl">Baterai</text><g transform="translate(192 34)" class="sd-node" style="--c:#fff"><circle r="20"/><g class="sd-ico"><path d="M-9 1 0-8 9 1M-6-1v9h12v-9"/></g></g><text x="192" y="70" class="sd-lbl">Rumah</text><g transform="translate(272 34)" class="sd-node" style="--c:var(--energy-grid)"><circle r="20"/><g class="sd-ico"><path d="M0-10-6 10M0-10 6 10M-8-4h16M-6 3h12"/></g></g><text x="272" y="70" class="sd-lbl">PLN</text></svg>
         <h3>PLTS Hybrid</h3>
         <p>Hemat tagihan dan tetap menyala saat PLN padam.</p>
         <p class="sys-fit">Cocok untuk rumah dan usaha</p>
