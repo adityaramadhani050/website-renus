@@ -5,7 +5,7 @@ Status: **disetujui pengguna 23 Okt 2026** (warna brand biru muda, aksen kuning 
 
 ## Arah visual
 - Acuan: landing page Mersol (hero foto rumah full-bleed, judul sans besar rata kiri, tombol kapsul, baris bukti di dasar hero).
-- Cerita utama: **PLTS hybrid + baterai** — listrik tetap menyala siang, malam, dan saat PLN padam.
+- Cerita utama: **kontraktor PLTS umum** (on-grid, off-grid, hybrid). Hero memakai animasi PLTS hybrid sebagai contoh cara kerja (diberi keterangan), hybrid diberi label "Direkomendasikan".
 - Hero punya 3 kondisi foto (siang / malam / PLN padam). Animasi aliran energi digambar langsung di atas foto (SVG terkunci ke koordinat foto 1920×1072); tidak ada section diagram terpisah.
 - Foto hero = render AI (disetujui pengguna). Galeri proyek wajib memakai foto proyek asli.
 
@@ -80,9 +80,9 @@ Komposisi foto: rumah di 45–90% lebar (tengah-kanan), sisi kiri pepohonan → 
 - `prefers-reduced-motion`: tanpa crossfade & aliran diam (panah statis).
 
 ## Aturan konten (dari CLAUDE.md)
-- H1 hero: frasa "PLTS Hybrid" diberi warna biru brand (`--blue-500`).
+- H1 hero: kata "PLTS" diberi warna biru brand (`--blue-500`).
 - Tepat satu H1: "Kontraktor PLTS Hybrid di Seluruh Indonesia" (layanan nasional; kantor Surabaya & Jabodetabek disebut di baris bukti); subjudul "Listrik tetap menyala siang, malam, bahkan saat PLN padam."
 - Tidak ada aliran/klaim ekspor listrik ke PLN.
 - CTA utama: WhatsApp Jabodetabek 0814-1225-0644.
-- Harga paket hybrid boleh tampil (harga material, belum termasuk pemasangan). Jangan tampilkan kisaran biaya pemasangan.
+- Harga paket hybrid & off-grid boleh tampil (tab per sistem); on-grid tanpa harga, tombol "Minta penawaran" (harga material, belum termasuk pemasangan). Jangan tampilkan kisaran biaya pemasangan.
 - Implementasi akhir: blok inti Gutenberg + Kadence Global Palette (palette1 = blue-500, palette2 = navy-900, palette3 = ink-900, palette7 = blue-50, palette9 = white).

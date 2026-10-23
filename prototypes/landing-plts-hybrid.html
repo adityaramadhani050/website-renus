@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kontraktor PLTS Hybrid Seluruh Indonesia - Renus Global Indonesia</title>
-<meta name="description" content="Jasa pemasangan PLTS hybrid + baterai untuk rumah, bisnis, dan industri di seluruh Indonesia. Bersertifikat ESDM DJK dan ISO 9001:2015. Konsultasi dan survei atap gratis.">
+<title>Kontraktor PLTS Rumah, Bisnis &amp; Industri - Renus Global Indonesia</title>
+<meta name="description" content="Pemasangan PLTS on-grid, off-grid, dan hybrid untuk rumah, bisnis, dan industri di seluruh Indonesia. Bersertifikat ESDM DJK &amp; ISO 9001:2015. Survei atap gratis.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -209,7 +209,7 @@ section{padding-block:var(--section)}
 .photo{position:relative;overflow:hidden;background:#cfe0e7}
 .photo img{width:100%;height:100%;object-fit:cover}
 
-/* ===== Kenapa hybrid ===== */
+/* ===== Kenapa Renus ===== */
 .why{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(32px,6vw,96px);align-items:start}
 .why-points{margin:28px 0 0;padding:0;list-style:none;display:grid;gap:18px}
 .why-points li{display:grid;grid-template-columns:28px 1fr;gap:14px;align-items:start}
@@ -225,6 +225,38 @@ section{padding-block:var(--section)}
 .stat b{display:block;font-size:clamp(1.5rem,2.4vw,1.875rem);font-weight:700;letter-spacing:-.02em;line-height:1.1;font-variant-numeric:tabular-nums}
 .stat span{font-size:.9rem;color:rgb(255 255 255 / .72)}
 @media (max-width:860px){.why{grid-template-columns:1fr}}
+
+/* ===== Sistem PLTS ===== */
+.systems{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.sys{display:flex;flex-direction:column;gap:12px;border-radius:20px;background:#fff;border:1px solid #d5e4ea;padding:clamp(24px,3vw,32px)}
+.sys.rec{border-color:var(--blue-500);box-shadow:0 0 0 1px var(--blue-500)}
+.sys-tag{align-self:flex-start;font-size:.8rem;font-weight:600;color:var(--navy-900);background:var(--blue-50);padding:4px 10px;border-radius:999px}
+.sys.rec{position:relative}
+.sys-rec{position:absolute;top:24px;right:24px;font-size:.78rem;font-weight:700;color:#fff;background:var(--navy-900);padding:4px 10px;border-radius:999px}
+.sys h3{font-size:1.375rem;letter-spacing:-.015em}
+.sys > p{color:var(--color-text-muted)}
+.sys-facts{margin:4px 0 0;display:grid;gap:10px;padding-top:14px;border-top:1px solid #e3edf1}
+.sys-facts dt{font-size:.82rem;font-weight:600;color:var(--navy-900)}
+.sys-facts dd{margin:2px 0 0;font-size:.95rem}
+.sys-why{font-size:.875rem;color:var(--color-text-muted);background:var(--blue-50);border-radius:12px;padding:12px 14px}
+.sys .link-arrow{margin-top:auto;padding-top:8px}
+@media (max-width:960px){.systems{grid-template-columns:1fr}}
+.compare-wrap{margin-top:40px;overflow-x:auto;border:1px solid #d5e4ea;border-radius:20px;background:#fff}
+.compare{width:100%;min-width:560px;border-collapse:collapse;font-size:.95rem}
+.compare caption{text-align:left;padding:18px 20px 6px;font-weight:600;color:var(--navy-900)}
+.compare th,.compare td{padding:14px 20px;text-align:left;border-top:1px solid #e3edf1;vertical-align:top}
+.compare thead th{font-size:.85rem;color:var(--color-text-muted);font-weight:600;border-top:0}
+.compare tbody th{font-weight:600;color:var(--navy-900);width:22%}
+.compare td:last-child,.compare thead th:last-child{background:rgb(3 156 252 / .05)}
+.fineprint a{color:var(--blue-700);font-weight:600}
+
+/* ===== Tab paket ===== */
+.tabs{margin-top:32px;display:inline-flex;padding:4px;border-radius:999px;background:var(--blue-50);gap:4px}
+.tabs button{min-height:40px;padding:0 20px;border:0;border-radius:999px;background:transparent;font:600 .95rem var(--font);color:var(--navy-900);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--navy-900);color:#fff}
+.tab-panel .pricing{margin-top:24px}
+.price-group.ongrid{margin-top:24px;max-width:640px;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.price-group.ongrid .price-head{width:100%}
 
 /* ===== Solusi ===== */
 .sol{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -344,7 +376,7 @@ section{padding-block:var(--section)}
       <a href="/tentang-kami/">Tentang Kami</a>
       <a href="/hubungi-kami/">Hubungi Kami</a>
     </nav>
-    <a class="btn btn-ghost header-cta" href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20ingin%20konsultasi%20PLTS%20hybrid." target="_blank" rel="noopener"><span class="dot"></span>Konsultasi Gratis</a>
+    <a class="btn btn-ghost header-cta" href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20ingin%20konsultasi%20PLTS." target="_blank" rel="noopener"><span class="dot"></span>Konsultasi Gratis</a>
     <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
   </div>
 </header>
@@ -390,10 +422,10 @@ section{padding-block:var(--section)}
   <div class="hero-body">
     <div class="container">
       <div class="hero-copy">
-        <h1 id="hero-title">Kontraktor <span class="hl">PLTS Hybrid</span> di Seluruh Indonesia</h1>
-        <p class="hero-sub">Listrik tetap menyala siang, malam, bahkan saat PLN padam.</p>
+        <h1 id="hero-title">Kontraktor <span class="hl">PLTS</span> Rumah, Bisnis &amp; Industri</h1>
+        <p class="hero-sub">Pemasangan PLTS on-grid, off-grid, dan hybrid di seluruh Indonesia.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20ingin%20konsultasi%20PLTS%20hybrid." target="_blank" rel="noopener">Konsultasi via WhatsApp</a>
+          <a class="btn btn-primary" href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20ingin%20konsultasi%20PLTS." target="_blank" rel="noopener">Konsultasi via WhatsApp</a>
         </div>
       </div>
     </div>
@@ -412,7 +444,7 @@ section{padding-block:var(--section)}
         <span class="sr-only" id="mode-label-hero">Pilih kondisi</span>
         <div class="mode-switch" role="group" aria-labelledby="mode-label-hero" data-mode-switch></div>
         <p class="mode-caption" data-mode-caption></p>
-        <p class="mode-note">Angka ilustrasi sistem hybrid 5 kW.</p>
+        <p class="mode-note">Contoh cara kerja PLTS hybrid · angka ilustrasi sistem 5 kW</p>
       </div>
     </div>
     <div class="trust-wrap">
@@ -433,27 +465,61 @@ section{padding-block:var(--section)}
   </div>
 </section>
 
-<!-- ========== 2. KENAPA HYBRID ========== -->
-<section id="kenapa-hybrid">
-  <div class="container why">
-    <div>
-      <p class="eyebrow">Kenapa hybrid, kenapa sekarang</p>
-      <h2 class="h2">Listrik surya yang tidak terpakai sebaiknya disimpan, bukan dikirim.</h2>
-      <ul class="why-points">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="16" height="10" rx="2"/><path d="M21 11v2M7 10v4M11 10v4"/></svg><div><b>Dipakai sendiri, siang dan malam</b><span>Kelebihan energi siang disimpan di baterai untuk malam hari.</span></div></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><div><b>Cadangan saat PLN padam</b><span>Inverter beralih otomatis ke baterai, tanpa genset dan tanpa bising.</span></div></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><div><b>Tagihan listrik turun</b><span>Makin banyak energi surya terpakai, makin sedikit listrik PLN yang dibeli.</span></div></li>
-      </ul>
+<!-- ========== 2. SISTEM PLTS ========== -->
+<section id="sistem">
+  <div class="container">
+    <div class="sec-head">
+      <div><p class="eyebrow">Sistem PLTS</p><h2 class="h2">Tiga sistem, dipilih sesuai kebutuhan listrik Anda.</h2></div>
     </div>
-    <div class="why-card">
-      <p class="rule">Permen ESDM No. 2/2024</p>
-      <p class="big">Kelebihan listrik PLTS atap yang mengalir ke PLN tidak lagi mengurangi tagihan.</p>
-      <p class="small">Karena itu sistem yang tepat sekarang adalah PLTS yang menyimpan energinya sendiri: PLTS hybrid dengan baterai.</p>
-      <div class="stats">
-        <div class="stat"><b>14,3 juta+ kWh</b><span>energi bersih dihasilkan sistem Renus tiap tahun</span></div>
-        <div class="stat"><b>5+ tahun</b><span>pengalaman di bidang energi surya</span></div>
-      </div>
+    <p class="lede">Kami merancang dan memasang ketiganya. Sistem yang tepat kami rekomendasikan setelah melihat tagihan listrik, kondisi atap, dan seberapa sering listrik di lokasi Anda padam.</p>
+    <div class="systems">
+      <article class="sys">
+        <span class="sys-tag">Terhubung PLN</span>
+        <h3>PLTS On-Grid</h3>
+        <p>Panel memasok listrik langsung ke bangunan pada siang hari. Malam hari listrik kembali diambil dari PLN. Biaya awal paling rendah karena tanpa baterai.</p>
+        <dl class="sys-facts">
+          <div><dt>Cocok untuk</dt><dd>Kantor, pabrik, dan sekolah yang banyak memakai listrik di siang hari</dd></div>
+          <div><dt>Saat PLN padam</dt><dd>Ikut berhenti demi keamanan jaringan</dd></div>
+        </dl>
+        <a class="link-arrow" href="/biaya-plts-on-grid/">Pelajari PLTS on-grid →</a>
+      </article>
+      <article class="sys">
+        <span class="sys-tag">Tanpa PLN</span>
+        <h3>PLTS Off-Grid</h3>
+        <p>Panel mengisi baterai, lalu baterai memasok seluruh kebutuhan listrik. Sistem berdiri sendiri tanpa sambungan PLN.</p>
+        <dl class="sys-facts">
+          <div><dt>Cocok untuk</dt><dd>Lokasi yang belum terjangkau PLN: kebun, villa, pos jaga, menara</dd></div>
+          <div><dt>Saat PLN padam</dt><dd>Tidak terpengaruh</dd></div>
+        </dl>
+        <a class="link-arrow" href="/plts-off-grid/">Pelajari PLTS off-grid →</a>
+      </article>
+      <article class="sys rec">
+        <span class="sys-tag">PLN + baterai</span><span class="sys-rec">Direkomendasikan</span>
+        <h3>PLTS Hybrid</h3>
+        <p>Siang hari panel memasok bangunan dan mengisi baterai. Malam hari baterai dipakai lebih dulu dan PLN menjadi cadangan.</p>
+        <dl class="sys-facts">
+          <div><dt>Cocok untuk</dt><dd>Rumah dan usaha yang ingin tagihan turun sekaligus punya listrik cadangan</dd></div>
+          <div><dt>Saat PLN padam</dt><dd>Tetap menyala dari baterai</dd></div>
+        </dl>
+        <p class="sys-why">Kenapa direkomendasikan: sejak Permen ESDM No. 2/2024, kelebihan listrik yang mengalir ke PLN tidak lagi mengurangi tagihan, jadi energi berlebih lebih baik disimpan di baterai untuk dipakai sendiri.</p>
+        <a class="link-arrow" href="/plts-hybrid/">Pelajari PLTS hybrid →</a>
+      </article>
     </div>
+
+    <div class="compare-wrap">
+      <table class="compare">
+        <caption>Perbandingan singkat tiga sistem PLTS</caption>
+        <thead><tr><th scope="col"></th><th scope="col">On-grid</th><th scope="col">Off-grid</th><th scope="col">Hybrid</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Sambungan PLN</th><td>Perlu</td><td>Tidak perlu</td><td>Perlu</td></tr>
+          <tr><th scope="row">Baterai</th><td>Tidak ada</td><td>Ada</td><td>Ada</td></tr>
+          <tr><th scope="row">Malam hari</th><td>Listrik PLN</td><td>Baterai</td><td>Baterai, lalu PLN</td></tr>
+          <tr><th scope="row">Saat PLN padam</th><td>Ikut berhenti</td><td>Tidak terpengaruh</td><td>Tetap menyala</td></tr>
+          <tr><th scope="row">Biaya awal</th><td>Paling rendah</td><td>Lebih tinggi (baterai)</td><td>Lebih tinggi (baterai + inverter hybrid)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fineprint">Kelebihan listrik on-grid yang mengalir ke PLN tidak mengurangi tagihan (Permen ESDM No. 2/2024), jadi kapasitas on-grid kami sesuaikan dengan pemakaian siang hari Anda. <a href="/sistem-plts-terbaik-2026/">Baca perbandingan lengkapnya</a>.</p>
   </div>
 </section>
 
@@ -461,21 +527,21 @@ section{padding-block:var(--section)}
 <section class="soft" id="solusi">
   <div class="container">
     <div class="sec-head">
-      <div><p class="eyebrow">Solusi</p><h2 class="h2">Untuk rumah, bisnis, dan pabrik.</h2></div>
+      <div><p class="eyebrow">Untuk siapa</p><h2 class="h2">Rumah, bisnis, dan pabrik.</h2></div>
       <a class="link-arrow" href="/layanan/">Semua layanan →</a>
     </div>
     <div class="sol">
       <a class="sol-card" href="/plts-hybrid/">
         <div class="photo"><img loading="lazy" src="https://renergynusantara.com/wp-content/uploads/2022/09/DJI_0034-scaled.jpg" alt="Foto udara PLTS atap rumah tinggal hasil pemasangan Renus"></div>
-        <div class="sol-body"><span class="sol-tag">Residensial</span><h3>PLTS hybrid untuk rumah</h3><p>Panel surya + baterai untuk rumah tinggal, 1 phase dan 3 phase.</p><span class="go">Selengkapnya</span></div>
+        <div class="sol-body"><span class="sol-tag">Residensial</span><h3>PLTS untuk rumah</h3><p>On-grid, off-grid, atau hybrid untuk rumah tinggal dengan sambungan 1 phase maupun 3 phase.</p><span class="go">Selengkapnya</span></div>
       </a>
       <a class="sol-card" href="/pasang-plts-untuk-bisnis/">
         <div class="photo"><img loading="lazy" src="https://renergynusantara.com/wp-content/uploads/2023/03/DJI_0441-2-scaled.jpg" alt="Foto udara PLTS atap gedung komersial hasil pemasangan Renus"></div>
-        <div class="sol-body"><span class="sol-tag">Komersial</span><h3>PLTS untuk bisnis</h3><p>Kantor, ruko, sekolah, dan instansi yang ingin menekan biaya operasional.</p><span class="go">Selengkapnya</span></div>
+        <div class="sol-body"><span class="sol-tag">Komersial</span><h3>PLTS untuk bisnis</h3><p>Kantor, ruko, hotel, sekolah, dan instansi yang ingin menekan biaya listrik operasional.</p><span class="go">Selengkapnya</span></div>
       </a>
       <a class="sol-card" href="/plts-industri-manufaktur/">
         <div class="photo"><img loading="lazy" src="https://renergynusantara.com/wp-content/uploads/2024/10/DJI_0017-scaled.jpg" alt="Foto udara PLTS atap pabrik hasil pemasangan Renus"></div>
-        <div class="sol-body"><span class="sol-tag">Industrial</span><h3>PLTS industri &amp; manufaktur</h3><p>Sistem skala besar dengan pasokan daya andal untuk pabrik dan kawasan industri.</p><span class="go">Selengkapnya</span></div>
+        <div class="sol-body"><span class="sol-tag">Industrial</span><h3>PLTS industri &amp; manufaktur</h3><p>Sistem skala besar di atap pabrik, gudang, dan kawasan industri.</p><span class="go">Selengkapnya</span></div>
       </a>
     </div>
   </div>
@@ -485,27 +551,65 @@ section{padding-block:var(--section)}
 <section id="paket">
   <div class="container">
     <div class="sec-head">
-      <div><p class="eyebrow">Paket PLTS hybrid</p><h2 class="h2">Harga paket yang jelas sejak awal.</h2></div>
-      <a class="link-arrow" href="/plts-hybrid/">Detail spesifikasi paket →</a>
+      <div><p class="eyebrow">Paket &amp; harga</p><h2 class="h2">Harga paket yang jelas sejak awal.</h2></div>
     </div>
-    <div class="pricing">
-      <div class="price-group">
-        <div class="price-head"><h3>Hybrid 1 phase</h3><span class="badge">Rumah tinggal</span></div>
-        <p class="sub">Untuk sambungan PLN 1 phase, umumnya 2.200–7.700 VA.</p>
-        <ul class="price-rows">
-          <li><span class="kw">5 kW</span><span class="rp">Rp 84 jt</span><a href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20tertarik%20paket%20PLTS%20hybrid%205%20kW." target="_blank" rel="noopener">Tanya paket</a></li>
-          <li><span class="kw">6 kW</span><span class="rp">Rp 98 jt</span><a href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20tertarik%20paket%20PLTS%20hybrid%206%20kW." target="_blank" rel="noopener">Tanya paket</a></li>
-          <li><span class="kw">8 kW</span><span class="rp">Rp 131 jt</span><a href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20tertarik%20paket%20PLTS%20hybrid%208%20kW." target="_blank" rel="noopener">Tanya paket</a></li>
-        </ul>
+    <div class="tabs" role="tablist" aria-label="Pilih sistem">
+      <button type="button" role="tab" id="tab-hybrid" aria-controls="pan-hybrid" aria-selected="true">Hybrid</button>
+      <button type="button" role="tab" id="tab-offgrid" aria-controls="pan-offgrid" aria-selected="false" tabindex="-1">Off-grid</button>
+      <button type="button" role="tab" id="tab-ongrid" aria-controls="pan-ongrid" aria-selected="false" tabindex="-1">On-grid</button>
+    </div>
+
+    <div class="tab-panel" role="tabpanel" id="pan-hybrid" aria-labelledby="tab-hybrid">
+      <div class="pricing">
+        <div class="price-group">
+          <div class="price-head"><h3>Hybrid 1 phase</h3><span class="badge">Rumah tinggal</span></div>
+          <p class="sub">Untuk sambungan PLN 1 phase.</p>
+          <ul class="price-rows">
+            <li><span class="kw">5 kW</span><span class="rp">Rp 84 jt</span><a href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20tertarik%20paket%20PLTS%20hybrid%205%20kW." target="_blank" rel="noopener">Tanya paket</a></li>
+            <li><span class="kw">6 kW</span><span class="rp">Rp 98 jt</span><a href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20tertarik%20paket%20PLTS%20hybrid%206%20kW." target="_blank" rel="noopener">Tanya paket</a></li>
+            <li><span class="kw">8 kW</span><span class="rp">Rp 131 jt</span><a href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20tertarik%20paket%20PLTS%20hybrid%208%20kW." target="_blank" rel="noopener">Tanya paket</a></li>
+          </ul>
+        </div>
+        <div class="price-group">
+          <div class="price-head"><h3>Hybrid 3 phase</h3><span class="badge">Rumah besar &amp; usaha</span></div>
+          <p class="sub">Untuk sambungan PLN 3 phase: rumah besar, ruko, dan bisnis.</p>
+          <ul class="price-rows">
+            <li><span class="kw">10 kW</span><span class="rp">Rp 159 jt</span><a href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20tertarik%20paket%20PLTS%20hybrid%2010%20kW." target="_blank" rel="noopener">Tanya paket</a></li>
+            <li><span class="kw">12 kW</span><span class="rp">Rp 174 jt</span><a href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20tertarik%20paket%20PLTS%20hybrid%2012%20kW." target="_blank" rel="noopener">Tanya paket</a></li>
+            <li><span class="kw">20 kW</span><span class="rp">Rp 287 jt</span><a href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20tertarik%20paket%20PLTS%20hybrid%2020%20kW." target="_blank" rel="noopener">Tanya paket</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="price-group">
-        <div class="price-head"><h3>Hybrid 3 phase</h3><span class="badge">Rumah besar &amp; usaha</span></div>
-        <p class="sub">Untuk sambungan PLN 3 phase: rumah besar, ruko, dan bisnis.</p>
-        <ul class="price-rows">
-          <li><span class="kw">10 kW</span><span class="rp">Rp 159 jt</span><a href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20tertarik%20paket%20PLTS%20hybrid%2010%20kW." target="_blank" rel="noopener">Tanya paket</a></li>
-          <li><span class="kw">12 kW</span><span class="rp">Rp 174 jt</span><a href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20tertarik%20paket%20PLTS%20hybrid%2012%20kW." target="_blank" rel="noopener">Tanya paket</a></li>
-          <li><span class="kw">20 kW</span><span class="rp">Rp 287 jt</span><a href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20tertarik%20paket%20PLTS%20hybrid%2020%20kW." target="_blank" rel="noopener">Tanya paket</a></li>
-        </ul>
+    </div>
+
+    <div class="tab-panel" role="tabpanel" id="pan-offgrid" aria-labelledby="tab-offgrid" hidden>
+      <div class="pricing">
+        <div class="price-group">
+          <div class="price-head"><h3>Off-grid baterai VRLA</h3><span class="badge">Harga awal lebih rendah</span></div>
+          <p class="sub">Umur pakai baterai sekitar 3 tahun.</p>
+          <ul class="price-rows">
+            <li><span class="kw">1 kW</span><span class="rp">Rp 23 jt</span><a href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20tertarik%20paket%20PLTS%20off-grid%20VRLA%201%20kW." target="_blank" rel="noopener">Tanya paket</a></li>
+            <li><span class="kw">2 kW</span><span class="rp">Rp 36 jt</span><a href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20tertarik%20paket%20PLTS%20off-grid%20VRLA%202%20kW." target="_blank" rel="noopener">Tanya paket</a></li>
+            <li><span class="kw">3 kW</span><span class="rp">Rp 49 jt</span><a href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20tertarik%20paket%20PLTS%20off-grid%20VRLA%203%20kW." target="_blank" rel="noopener">Tanya paket</a></li>
+            <li><span class="kw">5 kW</span><span class="rp">Rp 65 jt</span><a href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20tertarik%20paket%20PLTS%20off-grid%20VRLA%205%20kW." target="_blank" rel="noopener">Tanya paket</a></li>
+          </ul>
+        </div>
+        <div class="price-group">
+          <div class="price-head"><h3>Off-grid baterai lithium</h3><span class="badge">Umur pakai lebih panjang</span></div>
+          <p class="sub">Umur pakai baterai hingga sekitar 10 tahun.</p>
+          <ul class="price-rows">
+            <li><span class="kw">5 kW</span><span class="rp">Rp 77 jt</span><a href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20tertarik%20paket%20PLTS%20off-grid%20lithium%205%20kW." target="_blank" rel="noopener">Tanya paket</a></li>
+            <li><span class="kw">10 kW</span><span class="rp">Rp 138 jt</span><a href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20tertarik%20paket%20PLTS%20off-grid%20lithium%2010%20kW." target="_blank" rel="noopener">Tanya paket</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" role="tabpanel" id="pan-ongrid" aria-labelledby="tab-ongrid" hidden>
+      <div class="price-group ongrid">
+        <div class="price-head"><h3>PLTS on-grid</h3><span class="badge">Harga per proyek</span></div>
+        <p class="sub">Kapasitas on-grid dihitung dari pemakaian listrik siang hari dan luas atap Anda, jadi harganya kami susun per proyek setelah survei gratis.</p>
+        <a class="btn btn-primary" href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20ingin%20penawaran%20PLTS%20on-grid." target="_blank" rel="noopener">Minta penawaran on-grid</a>
       </div>
     </div>
     <p class="fineprint">Harga material sesuai katalog Agustus 2026, belum termasuk pemasangan. Biaya akhir ditentukan setelah survei lokasi gratis.</p>
@@ -803,8 +907,32 @@ function rnSubmit(){
   </div>
 </section>
 
+<!-- ========== 7. KENAPA RENUS ========== -->
+<section class="soft" id="kenapa-renus">
+  <div class="container why">
+    <div>
+      <p class="eyebrow">Kenapa Renus</p>
+      <h2 class="h2">Kontraktor PLTS bersertifikat dengan rekam jejak proyek.</h2>
+      <ul class="why-points">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><div><b>Badan usaha ketenagalistrikan terdaftar</b><span>Terdaftar di Ditjen Ketenagalistrikan (DJK) Kementerian ESDM.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg><div><b>ISO 9001:2015</b><span>Survei, desain, dan instalasi mengikuti sistem manajemen mutu yang tersertifikasi.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/></svg><div><b>Proyek pemerintah, BUMN, kampus, hingga rumah tinggal</b><span>Klien kami antara lain Kementerian PUPR, WIKA, Medco Energi, dan ITS.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>Melayani seluruh Indonesia</b><span>Kantor di Surabaya dan Jabodetabek, survei atap gratis sebelum penawaran.</span></div></li>
+      </ul>
+    </div>
+    <div class="why-card">
+      <p class="rule">Rekam jejak</p>
+      <p class="big">Sistem kami terpasang di atap rumah tinggal, gedung kantor, kampus, hingga pabrik.</p>
+      <div class="stats">
+        <div class="stat"><b>14,3 juta+ kWh</b><span>energi bersih dihasilkan sistem Renus tiap tahun</span></div>
+        <div class="stat"><b>5+ tahun</b><span>pengalaman di bidang energi surya</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ========== 7. PROSES ========== -->
-<section class="soft" id="proses">
+<section id="proses">
   <div class="container">
     <p class="eyebrow">Proses kerja</p>
     <h2 class="h2">Dari survei sampai purna jual.</h2>
@@ -818,7 +946,7 @@ function rnSubmit(){
 </section>
 
 <!-- ========== 8. FAQ ========== -->
-<section id="faq">
+<section class="soft" id="faq">
   <div class="container faq-grid">
     <div>
       <p class="eyebrow">Pertanyaan umum</p>
@@ -827,26 +955,27 @@ function rnSubmit(){
       <a class="btn btn-outline" style="margin-top:24px" href="https://wa.me/6281412250644" target="_blank" rel="noopener">Tanya via WhatsApp</a>
     </div>
     <div class="faq">
-      <details><summary>Apakah PLTS hybrid tetap menyala saat PLN padam?</summary><p>Ya. Saat PLN padam, inverter hybrid otomatis memutus sambungan ke PLN dan memasok rumah dari baterai, serta dari panel jika masih ada sinar matahari.</p></details>
-      <details><summary>Bisakah kelebihan listrik dikirim ke PLN untuk mengurangi tagihan?</summary><p>Tidak lagi. Sejak Permen ESDM No. 2/2024, kelebihan listrik PLTS atap yang mengalir ke PLN tidak mengurangi tagihan. Karena itu sistem hybrid menyimpan kelebihannya di baterai untuk dipakai sendiri.</p></details>
-      <details><summary>Berapa lama baterai bisa memasok rumah?</summary><p>Tergantung kapasitas baterai dan beban yang menyala. Kapasitas dihitung saat desain sistem berdasarkan pemakaian malam hari dan kebutuhan cadangan Anda.</p></details>
+      <details><summary>Sistem PLTS mana yang cocok untuk saya?</summary><p>Tergantung pola pemakaian dan kondisi listrik di lokasi Anda. On-grid cocok bila pemakaian siang hari tinggi dan PLN jarang padam. Off-grid untuk lokasi tanpa sambungan PLN. Hybrid bila Anda ingin tagihan turun sekaligus punya cadangan saat padam. Tim kami memberi rekomendasi setelah survei gratis.</p></details>
+      <details><summary>Apakah PLTS on-grid masih menghemat setelah Permen ESDM No. 2/2024?</summary><p>Masih, selama kapasitasnya disesuaikan dengan pemakaian siang hari. Listrik dari panel yang langsung terpakai mengurangi listrik yang Anda beli dari PLN. Kelebihan yang mengalir ke PLN tidak lagi mengurangi tagihan, jadi kami tidak merancang on-grid lebih besar dari kebutuhan siang Anda.</p></details>
+      <details><summary>Apa yang terjadi saat PLN padam?</summary><p>PLTS on-grid ikut berhenti demi keamanan petugas di jaringan PLN. PLTS hybrid beralih otomatis ke baterai sehingga bangunan tetap menyala. PLTS off-grid tidak terpengaruh karena memang tidak tersambung ke PLN.</p></details>
+      <details><summary>Bisakah PLTS dipasang di lokasi tanpa listrik PLN?</summary><p>Bisa, dengan PLTS off-grid. Panel mengisi baterai dan baterai memasok seluruh kebutuhan listrik. Kapasitas panel dan baterai dihitung dari peralatan yang akan dipakai setiap hari.</p></details>
       <details><summary>Apakah harga paket sudah termasuk pemasangan?</summary><p>Belum. Harga paket adalah harga material. Biaya pemasangan dihitung setelah survei lokasi.</p></details>
-      <details><summary>Apakah Renus melayani di luar Surabaya dan Jabodetabek?</summary><p>Ya. Kantor kami ada di Surabaya dan Jabodetabek, dan kami melayani proyek di seluruh Indonesia.</p></details>
+      <details><summary>Apakah Renus melayani di luar Surabaya dan Jabodetabek?</summary><p>Ya. Kantor kami ada di Surabaya dan Jabodetabek, dan kami mengerjakan proyek di seluruh Indonesia.</p></details>
     </div>
   </div>
 </section>
 
 <!-- ========== 9. ARTIKEL ========== -->
-<section class="soft" id="artikel">
+<section id="artikel">
   <div class="container">
     <div class="sec-head">
-      <div><p class="eyebrow">Artikel</p><h2 class="h2">Panduan PLTS hybrid.</h2></div>
+      <div><p class="eyebrow">Artikel</p><h2 class="h2">Panduan memilih dan memasang PLTS.</h2></div>
       <a class="link-arrow" href="/artikel/">Semua artikel →</a>
     </div>
     <div class="posts">
+      <a class="post" href="/sistem-plts-terbaik-2026/"><time datetime="2026-07-06">6 Jul 2026</time><h3>PLTS On-Grid, Off-Grid, atau Hybrid: Sistem Mana yang Paling Tepat untuk Anda di 2026?</h3><p>Perbandingan cara kerja, biaya, dan kondisi yang cocok untuk tiap sistem PLTS, supaya Anda bisa memilih sebelum survei.</p><span class="go">Baca artikel</span></a>
       <a class="post" href="/inverter-hybrid/"><time datetime="2026-10-23">23 Okt 2026</time><h3>Inverter Hybrid: Cara Memilih Kapasitas 5–12 kW untuk Rumah &amp; Usaha (2026)</h3><p>Inverter hybrid adalah "otak" PLTS hybrid: perangkat yang mengatur aliran listrik antara panel surya, baterai, jaringan PLN, dan peralatan di rumah atau tempat usaha.</p><span class="go">Baca artikel</span></a>
       <a class="post" href="/baterai-panel-surya/"><time datetime="2026-10-23">23 Okt 2026</time><h3>Baterai Panel Surya untuk Rumah: Jenis, Kapasitas &amp; Harga Paket 2026</h3><p>Baterai panel surya menyimpan kelebihan listrik dari panel di siang hari agar bisa dipakai saat sore, malam, atau ketika PLN padam.</p><span class="go">Baca artikel</span></a>
-      <a class="post" href="/plts-hybrid-vs-genset-rumah/"><time datetime="2026-10-23">23 Okt 2026</time><h3>PLTS Hybrid vs Genset untuk Rumah: Mana Lebih Hemat sebagai Listrik Cadangan?</h3><p>Genset lebih murah di awal, tetapi memakan bahan bakar, berisik, dan hanya berguna saat listrik padam. PLTS hybrid bekerja setiap hari.</p><span class="go">Baca artikel</span></a>
     </div>
   </div>
 </section>
@@ -870,7 +999,7 @@ function rnSubmit(){
 
 <footer class="site-footer"><div class="container">© 2026 PT Renus Global Indonesia. Seluruh hak dilindungi.</div></footer>
 
-<a class="btn btn-primary wa-float hidden" href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20ingin%20konsultasi%20PLTS%20hybrid." target="_blank" rel="noopener" aria-label="Chat WhatsApp Renus"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.2-1.2-.2-.2-.4-.3z"/></svg><span class="txt">Konsultasi Gratis</span></a>
+<a class="btn btn-primary wa-float hidden" href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20ingin%20konsultasi%20PLTS." target="_blank" rel="noopener" aria-label="Chat WhatsApp Renus"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.2-1.2-.2-.2-.4-.3z"/></svg><span class="txt">Konsultasi Gratis</span></a>
 
 <script>
 (() => {
@@ -1036,6 +1165,20 @@ function rnSubmit(){
   // Tombol WA mengambang baru muncul setelah hero terlewati (hero sudah punya CTA sendiri).
   const wa = document.querySelector('.wa-float');
   new IntersectionObserver(([e]) => wa.classList.toggle('hidden', e.isIntersecting), {threshold:.15}).observe(hero);
+
+  // Tab paket harga (pola tablist WAI-ARIA, panah kiri/kanan berpindah tab).
+  const tabs = [...document.querySelectorAll('#paket [role="tab"]')];
+  const selectTab = t => tabs.forEach(x => {
+    const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1;
+    document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
+  });
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => selectTab(t));
+    t.addEventListener('keydown', e => {
+      const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (d) { const n = tabs[(i + d + tabs.length) % tabs.length]; selectTab(n); n.focus(); }
+    });
+  });
 
   const menuBtn = document.querySelector('.menu-btn'), nav = document.getElementById('nav');
   menuBtn.addEventListener('click', () => { const open = nav.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', open); });

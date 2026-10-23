@@ -6,7 +6,7 @@ Gunakan Bahasa Indonesia untuk komunikasi dan konten.
 ## Tujuan redesain
 - Lepas Elementor + seluruh addon-nya; bangun ulang halaman dengan **blok Gutenberg (core blocks)** agar bisa dikelola AI lewat MCP.
 - Tetap memakai tema **Kadence 1.5.2** (sudah aktif, ramah Gutenberg). Header/footer via header builder Kadence.
-- Fokus pesan: **PLTS hybrid + baterai** sebagai kategori utama (sejak Permen ESDM No. 2/2024, kelebihan listrik on-grid yang diekspor tidak lagi mengurangi tagihan).
+- Fokus pesan (diperbarui 23 Okt 2026): Renus adalah **kontraktor PLTS umum** (on-grid, off-grid, hybrid) untuk rumah, bisnis, dan industri. Hybrid tampil setara dengan label "Direkomendasikan" karena sejak Permen ESDM No. 2/2024 kelebihan listrik on-grid yang diekspor tidak lagi mengurangi tagihan.
 - Kerjakan di **staging** dulu, baru dipindah ke live.
 
 ## Akses
@@ -43,9 +43,9 @@ Plugin Elementor/addon yang akan dinonaktifkan setelah migrasi: Elementor, Eleme
 ## Keputusan SEO yang TIDAK boleh dirusak oleh redesain
 1. **Jangan ubah URL/slug** halaman mana pun.
 2. **Title & meta description Yoast** sudah diperbarui (jangan ditimpa):
-   - Homepage: "Kontraktor PLTS Surabaya & Jabodetabek - Renus Global Indonesia" → **diputuskan 23 Okt 2026 diganti** jadi "Kontraktor PLTS Hybrid Seluruh Indonesia - Renus Global Indonesia" (layanan nasional). Diterapkan ke Yoast saat migrasi homepage, bukan sebelumnya.
+   - Homepage: "Kontraktor PLTS Surabaya & Jabodetabek - Renus Global Indonesia" → **diputuskan 23 Okt 2026 diganti** jadi "Kontraktor PLTS Rumah, Bisnis & Industri - Renus Global Indonesia" (layanan umum & nasional). Diterapkan ke Yoast saat migrasi homepage, bukan sebelumnya.
    - /pasang-plts/, /biaya-pasang-plts-5000-watt-2026/, /biaya-pasang-plts-2200-watt/, /biaya-pasang-plts-di-surabaya/, /mengenal-pembangkit-listrik-tenaga-surya-plts/, /biaya-plts-on-grid/, /tentang-kami/, /plts-hybrid/, /plts-off-grid/
-3. **Homepage harus punya tepat satu H1** berisi kata kunci: "Kontraktor PLTS Hybrid di Seluruh Indonesia" (H1 lama "Renewable Energy Solutions" belum diganti).
+3. **Homepage harus punya tepat satu H1** berisi kata kunci: "Kontraktor PLTS Rumah, Bisnis & Industri" (H1 lama "Renewable Energy Solutions" belum diganti).
 4. Angka counter kWh harus tertulis di HTML (bukan hanya animasi JS yang terbaca "0").
 5. Kartu Residensial / Komersial / Industrial harus menautkan ke: `/plts-hybrid/`, `/pasang-plts-untuk-bisnis/`, `/plts-industri-manufaktur/`. Tombol "Artikel" → `/artikel/` (bukan Instagram).
 6. Deskripsi PLTS On-Grid **tidak boleh** menjanjikan ekspor/kompensasi kelebihan listrik ke PLN.
