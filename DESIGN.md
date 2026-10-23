@@ -6,7 +6,7 @@ Status: **disetujui pengguna 23 Okt 2026** (warna brand biru muda, aksen kuning 
 ## Arah visual
 - Acuan: landing page Mersol (hero foto rumah full-bleed, judul sans besar rata kiri, tombol kapsul, baris bukti di dasar hero).
 - Cerita utama: **PLTS hybrid + baterai** — listrik tetap menyala siang, malam, dan saat PLN padam.
-- Hero punya 3 kondisi foto (siang / malam / PLN padam) yang tersinkron dengan diagram aliran energi.
+- Hero punya 3 kondisi foto (siang / malam / PLN padam). Animasi aliran energi digambar langsung di atas foto (SVG terkunci ke koordinat foto 1920×1072); tidak ada section diagram terpisah.
 - Foto hero = render AI (disetujui pengguna). Galeri proyek wajib memakai foto proyek asli.
 
 ## Aset
