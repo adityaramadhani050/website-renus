@@ -15,6 +15,7 @@ Aturan:
 """
 import json
 import re
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -440,3 +441,23 @@ def slim_html_block(m):
 blocks = re.sub(r"<!-- wp:html -->\n(.*?)\n<!-- /wp:html -->", slim_html_block, blocks, flags=re.S)
 (OUT / "homepage.blocks.html").write_text(blocks + "\n", encoding="utf-8")
 print("blocks:", len(blocks), "bytes · css:", len(css) + len(wp_css), "bytes")
+
+
+# --chunks DIR: pecah per section untuk dikirim bertahap (wp_update_page untuk 00, lalu
+# wp_insert_blocks at=inside_end path=0 untuk 01..). Satu panggilan MCP penuh terlalu besar.
+if "--chunks" in sys.argv:
+    d = Path(sys.argv[sys.argv.index("--chunks") + 1]); d.mkdir(parents=True, exist_ok=True)
+    ls = blocks.rstrip("\n").split("\n")
+    parts, depth, cur = [], 0, []
+    for l in ls[2:-2]:
+        cur.append(l)
+        for m in re.finditer(r"<!-- (/?)wp:[a-z/-]+(?: \{.*?\})?( /)? -->", l):
+            if not m.group(2):
+                depth += -1 if m.group(1) else 1
+        if depth == 0 and re.search(r"<!-- /wp:[a-z-]+ -->$", l):
+            parts.append("\n".join(cur)); cur = []
+    assert not cur and depth == 0
+    (d / "00.html").write_text("\n".join(ls[:2]) + "\n" + parts[0] + "\n" + "\n".join(ls[-2:]), encoding="utf-8")
+    for i, part in enumerate(parts[1:], 1):
+        (d / f"{i:02d}.html").write_text(part, encoding="utf-8")
+    print("chunks:", len(parts))
