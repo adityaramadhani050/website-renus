@@ -475,3 +475,6 @@ body.home.transparent-header #masthead .header-navigation .header-menu-container
 /* Tombol header (setelah ditambahkan di Customizer): kapsul ghost seperti prototipe */
 #masthead .header-button-wrap .header-button{border-radius:999px;font-weight:600;padding:10px 18px;border:1.5px solid rgb(255 255 255 / .45);background:rgb(255 255 255 / .04);color:#fff}
 #masthead .header-button-wrap .header-button:hover{border-color:#fff;background:rgb(255 255 255 / .12)}
+/* Kartu "Untuk siapa": semua kartu satu baris selalu sama tinggi (di situs kartu Industrial sempat lebih tinggi) */
+body .rn .sol{grid-auto-rows:1fr;align-items:stretch}
+body .rn .sol .sol-card{align-self:stretch;height:auto;margin:0}
