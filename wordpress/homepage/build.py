@@ -140,7 +140,7 @@ def wp_assets(raw):
 # ---------- 1. Hero ----------
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
-         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">')
+         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media=\'all\'">')
 hero = html(FONTS + "\n" + wp_assets(between(r'<section class="hero"', r"^</section>")))
 
 # ---------- 2. Proyek ----------
