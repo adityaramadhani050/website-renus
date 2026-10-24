@@ -89,7 +89,7 @@ body .rn .tag.r{left:18px;top:-20px}
 body .rn .tag.l{right:18px;top:-20px}
 body .rn .tag.b{left:50%;top:16px;transform:translateX(-50%)}
 body .rn .tag.tl{right:-6px;bottom:16px}
-body .rn .tag.inv{left:calc(var(--w) * 80 / 1920);top:4px}
+body .rn .tag.inv{left:calc(var(--w) * 30 / 1920);top:calc(var(--w) * 30 / 1920)}
 body .rn .tag.inv.shift{top:calc(var(--w) * 92 / 1920)}
 body .rn .hero-body{flex:1;display:flex;align-items:center;padding-top:112px;padding-bottom:32px}
 body .rn .hero-copy{max-width:520px}
