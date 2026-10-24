@@ -142,7 +142,7 @@ body .rn .energy-strip dt{font-size:.7rem;line-height:1.2;color:rgb(255 255 255 
 body .rn .energy-strip dd{margin:2px 0 0;font-size:.82rem;font-weight:700;color:#fff;font-variant-numeric:tabular-nums}
 body .rn .mode-note{margin-left:0}
 body .rn .spot[data-spot="rumah"] .tag{display:none}
-body .rn .spot[data-spot="inverter"] .tag{left:auto;bottom:auto;top:34px;right:-20px}
+body .rn .spot[data-spot="inverter"] .tag{left:auto;bottom:auto;top:54px;right:-74px}
 body .rn .hero-foot{order:3;padding-top:12px}
 body .rn .mode-bar{flex-direction:column;align-items:flex-start;padding-bottom:20px}
 body .rn .mode-switch button{padding:0 10px;font-size:.78rem}
