@@ -1,0 +1,4 @@
+/* Reset margin bawaan Kadence (.single-content p/address/.wp-block-group … { margin-bottom }, kecuali :last-child).
+   Margin itu membuat item terakhir di grid lebih tinggi & tombol tidak sejajar. Spesifisitas (0,2,1) mengalahkan
+   Kadence; dipasang SEBELUM CSS komponen sehingga margin komponen (spesifisitas sama, posisi lebih akhir) tetap berlaku. */
+body .rn.rn :where(p,h1,h2,h3,h4,h5,figure,ul,ol,li,dl,dd,details,summary,table,address,blockquote,.wp-block-group,.wp-block-buttons,.wp-block-button,.wp-block-image,.wp-block-table,.wp-block-list,.wp-block-details,.wp-block-latest-posts){margin:0}
