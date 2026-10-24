@@ -455,6 +455,10 @@ body .rn .posts .wp-block-latest-posts__post-date{order:1;font-size:.85rem;color
 body .rn .posts .wp-block-latest-posts__post-excerpt{order:3;margin-top:10px;color:var(--color-text-muted);font-size:.95rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 @media (max-width:900px){body .rn .posts{grid-template-columns:1fr}}
 
+/* Tema klasik (Kadence): WordPress membungkus isi setiap blok Group dengan .wp-block-group__inner-container,
+   sehingga grid/flex di Group hanya melihat satu anak. Pembungkus dibuat transparan untuk layout. */
+body .rn .wp-block-group > .wp-block-group__inner-container{display:contents}
+
 /* Layout flow WordPress: core memberi margin-atas 24px ke setiap anak non-pertama (termasuk isi blok HTML
    seperti <section class="hero"> setelah <link>, .contact-side di grid). Jarak diatur komponen sendiri. */
 body .rn :where(.is-layout-flow) > *{margin-block:0}
