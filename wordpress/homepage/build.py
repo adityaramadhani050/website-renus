@@ -230,7 +230,7 @@ def stat(num, unit, label):
 
 kenapa = section("kenapa-renus", [group([
     group([
-        group([p("Kenapa Renus", "eyebrow"), h("Kontraktor PLTS bersertifikat dengan rekam jejak yang bisa dicek.", 2, "h2")]),
+        group([p("Kenapa Renus", "eyebrow"), h("Penyedia PLTS bersertifikat dengan rekam jejak yang bisa dicek.", 2, "h2")]),
         group([buttons(button("Jadwalkan survei gratis", f"{WA}?text=Halo%20Renus%2C%20saya%20ingin%20survei%20atap%20gratis.", "rn-btn-primary", True)),
                more("Lihat paket &amp; harga", "#paket")], cls_="band-cta"),
     ], cls_="band-head"),
