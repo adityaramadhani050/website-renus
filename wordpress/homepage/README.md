@@ -6,7 +6,9 @@ Sumber kebenaran: `prototypes/landing-plts-hybrid.html`. File di folder ini diha
 |---|---|
 | `build.py` | Generator. `python3 build.py` → `homepage.blocks.html` + `rn.css`. `--chunks DIR` memecah per section untuk dikirim lewat MCP. |
 | `wp-overrides.css` | CSS tambahan khusus WordPress (reset Kadence/core, tombol, gambar, tabel, latest-posts). Diedit manual. |
-| `rn.css` | CSS lengkap (prototipe di-scope ke `body .rn` + overrides). Disisipkan sebagai `<style id="rn-css">` di blok HTML pertama. |
+| `rn.css` | CSS lengkap yang mudah dibaca (prototipe di-scope ke `body .rn` + overrides). |
+| `legacy-additional.css` | CSS lama di Additional CSS (sebelum redesain), dipertahankan. |
+| `../additional-css.css` | Isi Additional CSS Kadence yang terpasang: CSS lama + `rn.css` versi ringkas. `--inline-css` menaruh CSS di blok HTML sebagai cadangan. |
 | `homepage.blocks.html` | Isi halaman (markup blok) yang dikirim ke WordPress. |
 
 ## Status (24 Okt 2026) — LIVE
