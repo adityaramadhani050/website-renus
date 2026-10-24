@@ -36,7 +36,9 @@ Elemen homepage yang wajib dipertahankan/dipindahkan:
 - **Kalkulator PLTS** (widget HTML, 4 langkah: tipe properti → konsumsi → kontak → estimasi) → pindah ke blok Custom HTML.
 - Logo klien (WIKA, Medco, PUPR, ITS, Perpustakaan Jatim, dll.), galeri proyek, daftar artikel terbaru.
 - Popup "Alokasi Kuota Terbatas" (Elementor Pro) → perlu pengganti ringan atau CTA WhatsApp sticky.
-- Dua kantor & WhatsApp: Surabaya 0853-8555-8025, Jabodetabek 0814-1225-0644, sales@renergynusantara.com.
+- Kontak (diperbarui 24 Okt 2026): **satu nomor WhatsApp 0814-1225-0644** untuk semua wilayah (nomor Surabaya 0853-8555-8025 tidak dipakai lagi di website), sales@renergynusantara.com.
+- Alamat kantor Surabaya: Jl. Penjaringan Asri X Blok PS 1H No.5, Penjaringan Sari, Kec. Rungkut, Surabaya, Jawa Timur 60293.
+- Alamat kantor Jabodetabek: Jl. Grand Residence Boulevard No.230, Cijengkol, Kec. Setu, Kabupaten Bekasi, Jawa Barat 17320.
 
 Plugin Elementor/addon yang akan dinonaktifkan setelah migrasi: Elementor, Elementor Pro, Element Pack Lite, ElementsKit Lite, Essential Addons, Essential Classy Addons, Premium Addons, Prime Slider, Unlimited Elements, Envato Elements.
 

@@ -431,16 +431,23 @@ section{padding-block:var(--section)}
 @media (max-width:860px){.proc{grid-template-columns:1fr}.proc-photo{aspect-ratio:16/10}}
 
 /* ===== Kontak & footer ===== */
-.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(32px,6vw,96px);align-items:center}
+.contact{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(32px,6vw,96px);align-items:center}
+.contact-side{display:grid;gap:16px}
+.contact-wa{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px;padding:20px 24px;border-radius:20px;background:var(--color-action);color:#fff;text-decoration:none;transition:background .2s}
+.contact-wa:hover{background:#0b4a63}
+.contact-wa svg{width:32px;height:32px}
+.contact-wa small{display:block;font-size:.85rem;color:rgb(255 255 255 / .8)}
+.contact-wa b{font-size:1.5rem;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.contact-wa-go{font-weight:600;white-space:nowrap}
 .offices{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.office{border-radius:20px;padding:28px;background:rgb(255 255 255 / .06);border:1px solid rgb(255 255 255 / .14)}
-.office h3{font-size:1.25rem}
-.office p{margin-top:6px;color:rgb(255 255 255 / .75);font-variant-numeric:tabular-nums}
-.office .btn{margin-top:20px;width:100%;justify-content:center;line-height:1.25;padding-block:12px;text-align:center}
+.office{font-style:normal;border-radius:20px;padding:24px;background:rgb(255 255 255 / .06);border:1px solid rgb(255 255 255 / .14)}
+.office h3{font-size:1.05rem;letter-spacing:.02em}
+.office p{margin-top:10px;display:grid;grid-template-columns:22px 1fr;gap:10px;color:rgb(255 255 255 / .78);font-size:.95rem;line-height:1.55}
+.office svg{width:22px;height:22px;color:var(--blue-300);margin-top:1px}
 .contact-mail{margin-top:20px;color:rgb(255 255 255 / .75)}
 .contact-mail a{color:var(--blue-300)}
 @media (max-width:860px){.contact{grid-template-columns:1fr}}
-@media (max-width:560px){.offices{grid-template-columns:1fr}}
+@media (max-width:560px){.offices{grid-template-columns:1fr}.contact-wa{grid-template-columns:auto 1fr}.contact-wa-go{display:none}}
 .site-footer{background:var(--navy-950);color:rgb(255 255 255 / .6);font-size:.9rem;padding:28px 0}
 
 /* ===== WA sticky ===== */
@@ -547,9 +554,9 @@ section{padding-block:var(--section)}
       <div class="container">
         <div class="trust">
           <div class="trust-certs">
-            <div><strong>4 sertifikasi ISO</strong>9001 · 14001 · 45001 · 37001</div>
             <div><strong>Badan Usaha ESDM</strong>Terdaftar di DJK</div>
             <div><strong>Tenaga ahli bersertifikat ESDM</strong>Sertifikat kompetensi ketenagalistrikan</div>
+            <div><strong>4 sertifikasi ISO</strong>9001 · 14001 · 45001 · 37001</div>
           </div>
           <div class="trust-stats">
             <div><strong>500+</strong>proyek terpasang</div>
@@ -1002,8 +1009,7 @@ function rnSubmit(){
   if(!rnS.tagihan)rnS.tagihan='3jt';if(!rnS.tipe)rnS.tipe='residensial';if(!rnS.sistem)rnS.sistem='hybrid';
   var r=rnCalc(),tLbl={residensial:'Residensial',komersial:'Komersial',industrial:'Industrial'},sLbl={'on-grid':'PLTS On-Grid','off-grid':'PLTS Off-Grid','hybrid':'PLTS Hybrid'};
   var waMsg=encodeURIComponent('Halo Renus! Saya '+rnS.nama+' ingin mendapatkan proposal PLTS.\n\nHasil kalkulator:\n• Tipe: '+tLbl[rnS.tipe]+'\n• Sistem: '+sLbl[rnS.sistem]+'\n• Kapasitas estimasi: '+r.kwp+' kWp\n• Estimasi penghematan: '+rnIdr(r.hemBulan)+'/bulan\n• Lokasi: '+(rnS.kota||'—')+'\n\nMohon dihubungi. Terima kasih!');
-  var isJabo=['jakarta','bekasi','depok','bogor','tangerang','cikarang','karawang','bandung'].some(function(c){return rnS.kota.toLowerCase().indexOf(c)>-1;});
-  var waNum=isJabo?'6281412250644':'6285385558025';
+  var waNum='6281412250644'; // satu nomor WhatsApp untuk semua wilayah
   var ic=function(d){return'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+d+'</svg>';};
   document.getElementById('rn-result-slot').innerHTML=
     '<div class="rn-result-top"><p class="kicker">Estimasi selesai</p><h4>Halo, '+rnEsc(rnS.nama)+'. Ini hasil estimasi Anda.</h4><p>Berdasarkan data yang Anda masukkan · akurasi ±15–20%</p></div>'+
@@ -1079,9 +1085,16 @@ function rnSubmit(){
       <p class="lede">Ceritakan kebutuhan listrik Anda. Tim kami menghubungi Anda dalam 1×24 jam.</p>
       <p class="contact-mail">Email: <a href="mailto:sales@renergynusantara.com">sales@renergynusantara.com</a></p>
     </div>
-    <div class="offices">
-      <div class="office"><h3>Jabodetabek</h3><p>WhatsApp 0814-1225-0644</p><a class="btn btn-primary" href="https://wa.me/6281412250644" target="_blank" rel="noopener">Chat kantor Jabodetabek</a></div>
-      <div class="office"><h3>Surabaya</h3><p>WhatsApp 0853-8555-8025</p><a class="btn btn-ghost" href="https://wa.me/6285385558025" target="_blank" rel="noopener">Chat kantor Surabaya</a></div>
+    <div class="contact-side">
+      <a class="contact-wa" href="https://wa.me/6281412250644?text=Halo%20Renus%2C%20saya%20ingin%20konsultasi%20PLTS." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.2-1.2-.2-.2-.4-.3z"/></svg>
+        <span><small>WhatsApp</small><b>0814-1225-0644</b></span>
+        <span class="contact-wa-go">Chat sekarang</span>
+      </a>
+      <div class="offices">
+        <address class="office"><h3>Surabaya</h3><p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M11 21v-3h2v3"/></svg><span>Jl. Penjaringan Asri X Blok PS 1H No.5, Penjaringan Sari, Kec. Rungkut, Surabaya, Jawa Timur 60293</span></p></address>
+        <address class="office"><h3>Jabodetabek</h3><p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M11 21v-3h2v3"/></svg><span>Jl. Grand Residence Boulevard No.230, Cijengkol, Kec. Setu, Kabupaten Bekasi, Jawa Barat 17320</span></p></address>
+      </div>
     </div>
   </div>
 </section>

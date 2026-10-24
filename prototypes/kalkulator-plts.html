@@ -215,8 +215,7 @@ function rnSubmit(){
   if(!rnS.tagihan)rnS.tagihan='3jt';if(!rnS.tipe)rnS.tipe='residensial';if(!rnS.sistem)rnS.sistem='hybrid';
   var r=rnCalc(),tLbl={residensial:'Residensial',komersial:'Komersial',industrial:'Industrial'},sLbl={'on-grid':'PLTS On-Grid','off-grid':'PLTS Off-Grid','hybrid':'PLTS Hybrid'};
   var waMsg=encodeURIComponent('Halo Renus! Saya '+rnS.nama+' ingin mendapatkan proposal PLTS.\n\nHasil kalkulator:\n• Tipe: '+tLbl[rnS.tipe]+'\n• Sistem: '+sLbl[rnS.sistem]+'\n• Kapasitas estimasi: '+r.kwp+' kWp\n• Estimasi penghematan: '+rnIdr(r.hemBulan)+'/bulan\n• Lokasi: '+(rnS.kota||'—')+'\n\nMohon dihubungi. Terima kasih!');
-  var isJabo=['jakarta','bekasi','depok','bogor','tangerang','cikarang','karawang','bandung'].some(function(c){return rnS.kota.toLowerCase().indexOf(c)>-1;});
-  var waNum=isJabo?'6281412250644':'6285385558025';
+  var waNum='6281412250644'; // satu nomor WhatsApp untuk semua wilayah
   var ic=function(d){return'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+d+'</svg>';};
   document.getElementById('rn-result-slot').innerHTML=
     '<div class="rn-result-top"><p class="kicker">Estimasi selesai</p><h4>Halo, '+rnEsc(rnS.nama)+'. Ini hasil estimasi Anda.</h4><p>Berdasarkan data yang Anda masukkan · akurasi ±15–20%</p></div>'+
