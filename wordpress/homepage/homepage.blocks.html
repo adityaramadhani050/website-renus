@@ -627,7 +627,7 @@ body .rn .rn-bd-label{color:var(--rn-muted)}
 body .rn .rn-bd-val{font-weight:700;text-align:right}
 body .rn .rn-bd-val.hl{color:#0277c0}
 body .rn .rn-cta-box{background:var(--rn-navy);border-radius:16px;padding:28px;text-align:center;color:#fff}
-body .rn .rn-cta-box h5{font-size:1.0625rem;font-weight:700;margin-bottom:8px}
+body .rn .rn-cta-box h5{font-size:1.0625rem;font-weight:700;margin-bottom:8px;color:#fff}
 body .rn .rn-cta-box p{font-size:.9rem;color:rgb(255 255 255 / .8);margin-bottom:20px}
 body .rn .rn-cta-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
 body .rn .rn-btn-wa,body .rn .rn-btn-email{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;font:700 .925rem "Plus Jakarta Sans",sans-serif;text-decoration:none;transition:background .2s}
@@ -640,7 +640,7 @@ body .rn .rn-footer{background:var(--rn-bg-gray);border-top:1px solid var(--rn-b
 body .rn .rn-header,body .rn .rn-panel,body .rn .rn-result-body,body .rn .rn-result-top,body .rn .rn-footer{padding-left:20px;padding-right:20px}
 body .rn .rn-stepbar{padding:0 20px}
 body .rn .rn-opt-grid.col3,body .rn .rn-opt-grid.col5{grid-template-columns:1fr 1fr}
-body .rn .rn-opt-grid.col5 .rn-opt:last-child{grid-column:1/-1}
+body .rn .rn-opt-grid .rn-opt:last-child:nth-child(odd){grid-column:1/-1}
 body .rn .rn-form-row{grid-template-columns:1fr}
 body .rn .rn-metrics{grid-template-columns:1fr 1fr}
 body .rn .rn-metric{border-bottom:1px solid var(--rn-border)}
@@ -709,7 +709,7 @@ body .rn .rn-cta-btns a{justify-content:center}
 <div class="rn-form-row">
 <div class="rn-fg"><label for="rn-nama">Nama lengkap *</label><input type="text" id="rn-nama" autocomplete="name"><span class="rn-err" id="e-nama">Nama wajib diisi</span></div>
 <div class="rn-fg"><label for="rn-wa">Nomor WhatsApp *</label><input type="tel" id="rn-wa" placeholder="+62" autocomplete="tel"><span class="rn-err" id="e-wa">Nomor WhatsApp wajib diisi</span></div>
-<div class="rn-fg"><label for="rn-email">Email *</label><input type="email" id="rn-email" autocomplete="email"><span class="rn-err" id="e-email">Email wajib diisi</span></div>
+<div class="rn-fg"><label for="rn-email">Email</label><input type="email" id="rn-email" autocomplete="email"></div>
 <div class="rn-fg"><label for="rn-jabatan">Jabatan / posisi</label><input type="text" id="rn-jabatan" placeholder="Pemilik, manajer, dll."></div>
 <div class="rn-fg"><label for="rn-perusahaan">Nama perusahaan / properti</label><input type="text" id="rn-perusahaan" placeholder="opsional"></div>
 <div class="rn-fg"><label for="rn-waktu">Kapan bisa dihubungi?</label><select id="rn-waktu"><option value="">Pilih waktu</option><option>Pagi (08.00–12.00)</option><option>Siang (12.00–15.00)</option><option>Sore (15.00–18.00)</option><option>Kapan saja</option></select></div>
@@ -753,7 +753,7 @@ if(box.top<0||box.top>innerHeight*.5)window.scrollTo({top:scrollY+box.top-96,beh
 }
 function rnVal(){
 var ok=true;
-['nama','wa','email'].forEach(function(id){
+['nama','wa'].forEach(function(id){
 var el=document.getElementById('rn-'+id),er=document.getElementById('e-'+id),bad=!el.value.trim();
 el.classList.toggle('err',bad);el.setAttribute('aria-invalid',bad);er.style.display=bad?'block':'none';if(bad)ok=false;
 });
