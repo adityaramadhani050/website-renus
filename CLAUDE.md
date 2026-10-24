@@ -47,7 +47,7 @@ Plugin Elementor/addon yang akan dinonaktifkan setelah migrasi: Elementor, Eleme
 2. **Title & meta description Yoast** sudah diperbarui (jangan ditimpa):
    - Homepage: "Kontraktor PLTS Surabaya & Jabodetabek - Renus Global Indonesia" → **diputuskan 23 Okt 2026 diganti** jadi "Kontraktor PLTS Rumah, Bisnis & Industri - Renus Global Indonesia" (layanan umum & nasional). Sudah diterapkan ke Yoast 24 Okt 2026.
    - /pasang-plts/, /biaya-pasang-plts-5000-watt-2026/, /biaya-pasang-plts-2200-watt/, /biaya-pasang-plts-di-surabaya/, /mengenal-pembangkit-listrik-tenaga-surya-plts/, /biaya-plts-on-grid/, /tentang-kami/, /plts-hybrid/, /plts-off-grid/
-3. **Homepage harus punya tepat satu H1** berisi kata kunci: "Kontraktor PLTS Rumah, Bisnis & Industri" (sudah diterapkan 24 Okt 2026).
+3. **Homepage harus punya tepat satu H1**: "Penyedia PLTS Rumah, Bisnis & Industri" (diubah dari "Kontraktor" atas keputusan pengguna 24 Okt 2026; kata kunci "kontraktor PLTS" tetap di title Yoast).
 4. Angka counter kWh harus tertulis di HTML (bukan hanya animasi JS yang terbaca "0").
 5. Kartu Residensial / Komersial / Industrial harus menautkan ke: `/plts-hybrid/`, `/pasang-plts-untuk-bisnis/`, `/plts-industri-manufaktur/`. Tombol "Artikel" → `/artikel/` (bukan Instagram).
 6. Deskripsi PLTS On-Grid **tidak boleh** menjanjikan ekspor/kompensasi kelebihan listrik ke PLN.
@@ -67,7 +67,7 @@ Plugin Elementor/addon yang akan dinonaktifkan setelah migrasi: Elementor, Eleme
 ## Lainnya
 - Subdomain stairlift.renergynusantara.com ikut terindeks dengan konten default ("Hello world") — perlu dirapikan atau di-noindex.
 - Sertifikasi untuk trust signals: ISO 9001:2015, ISO 14001:2015, ISO 45001:2018, ISO 37001:2025, badan usaha ESDM DJK, tenaga ahli bersertifikat ESDM.
-- Istilah (24 Okt 2026): teks tampilan homepage memakai "Penyedia PLTS"; H1 homepage & title Yoast tetap "Kontraktor PLTS ..." demi SEO.
+- Istilah (24 Okt 2026): teks tampilan homepage, termasuk H1, memakai "Penyedia PLTS"; title Yoast tetap "Kontraktor PLTS ..." demi SEO.
 - Rekam jejak (dari pengguna, 23 Okt 2026): 500+ proyek terpasang, 10 MWp+ kapasitas terpasang, 6+ tahun pengalaman. Energi bersih ditampilkan sebagai estimasi 10 MWp × 4 kWh/kWp = 40.000+ kWh per hari (angka lama "14.375K+ kWh" tidak dipakai).
 
 ## Pembagian skill desain (wajib diikuti)
