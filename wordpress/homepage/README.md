@@ -18,6 +18,8 @@ Sumber kebenaran: `prototypes/landing-plts-hybrid.html`. File di folder ini diha
 - Yoast 3280: title "Kontraktor PLTS Rumah, Bisnis & Industri - Renus Global Indonesia", description "Pemasangan PLTS on-grid, off-grid, dan hybrid untuk rumah, bisnis, dan industri di seluruh Indonesia. Badan usaha ESDM, 4 sertifikasi ISO, 500+ proyek terpasang."
 - Verifikasi render live (1×): status 200, title & description Yoast baru, H1 pertama "Kontraktor PLTS Rumah, Bisnis & Industri", `.rn-home` ada.
 - Meta Kadence 3280 (sudah ada): layout fullwidth, judul disembunyikan, unboxed, tanpa padding vertikal.
+- 24 Okt (lanjutan): snippet Code Snippets ID 9 "Fitur Popup Website" (popup global) **dinonaktifkan**; meta `_kad_post_transparent=enable` di 3280 (header transparan); CSS: reset margin layout flow WordPress, footer widget lama disembunyikan (`.site-middle-footer-wrap`), gaya header homepage.
+- Header/footer builder Kadence (`header_desktop_items`, `footer_items`, `footer_html_content`) **tidak bisa ditulis via Royal MCP** (bukan allowlist) → diubah manual di Customizer.
 - Draft uji **15450** "Beranda (redesain)" masih ada (berisi CSS inline) — boleh dihapus.
 
 ### Media yang diunggah (2026/10)

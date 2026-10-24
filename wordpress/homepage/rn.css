@@ -454,3 +454,20 @@ body .rn .posts .wp-block-latest-posts__post-title:hover{color:var(--blue-700)}
 body .rn .posts .wp-block-latest-posts__post-date{order:1;font-size:.85rem;color:var(--color-text-muted)}
 body .rn .posts .wp-block-latest-posts__post-excerpt{order:3;margin-top:10px;color:var(--color-text-muted);font-size:.95rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 @media (max-width:900px){body .rn .posts{grid-template-columns:1fr}}
+
+/* Layout flow WordPress: core memberi margin-atas 24px ke setiap anak non-pertama (termasuk isi blok HTML
+   seperti <section class="hero"> setelah <link>, .contact-side di grid). Jarak diatur komponen sendiri. */
+body .rn :where(.is-layout-flow) > *{margin-block:0}
+body .rn :where(link,script,style){display:none}
+
+/* ===== Header & footer Kadence (seluruh situs) ===== */
+/* Footer lama (3 widget, latar biru muda) disembunyikan; baris copyright tetap. Bersihkan juga di Customizer. */
+.site-middle-footer-wrap{display:none}
+/* Header transparan di homepage: tanpa latar navy, font desain, menu putih */
+body.home.transparent-header #masthead{font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+body.home.transparent-header #masthead .site-main-header-wrap:not(.item-is-stuck) .site-header-row-container-inner{background:transparent}
+body.home.transparent-header #masthead .header-navigation .header-menu-container > ul > li.menu-item > a{font-weight:500;font-size:.975rem;color:rgb(255 255 255 / .88)}
+body.home.transparent-header #masthead .header-navigation .header-menu-container > ul > li.menu-item > a:hover{color:#fff}
+/* Tombol header (setelah ditambahkan di Customizer): kapsul ghost seperti prototipe */
+#masthead .header-button-wrap .header-button{border-radius:999px;font-weight:600;padding:10px 18px;border:1.5px solid rgb(255 255 255 / .45);background:rgb(255 255 255 / .04);color:#fff}
+#masthead .header-button-wrap .header-button:hover{border-color:#fff;background:rgb(255 255 255 / .12)}
