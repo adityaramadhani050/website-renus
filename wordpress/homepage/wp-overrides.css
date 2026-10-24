@@ -1,0 +1,81 @@
+/* ===== Penyesuaian WordPress: blok inti + Kadence di dalam .rn ===== */
+/* Reset margin bawaan Kadence (.single-content) & layout flow core; komponen di atas menimpa dengan spesifisitas lebih tinggi */
+body .rn :where(p,h1,h2,h3,h4,figure,ul,ol,li,details,summary,table){margin:0}
+body .rn :where(.wp-block-group,.wp-block-buttons,.wp-block-button,.wp-block-image,.wp-block-table,.wp-block-list,.wp-block-details,.wp-block-latest-posts){margin:0}
+body .rn :where(h1,h2,h3,h4){color:inherit;font-family:var(--font);font-weight:600;text-transform:none}
+body .rn.alignfull{width:100%;max-width:none;margin:0}
+body .rn a:where(:not(.wp-block-button__link)){text-decoration:none}
+body .rn section{padding-inline:0}
+body .rn .hero{padding-block:0}
+
+/* Tombol (blok Buttons) */
+body .rn .wp-block-buttons{display:flex;flex-wrap:wrap;gap:12px}
+body .rn .wp-block-button__link{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 24px;border-radius:var(--radius-pill);font:600 1rem/1 var(--font);text-decoration:none;border:1.5px solid transparent;box-shadow:none;transition:background .2s,color .2s,border-color .2s}
+body .rn .rn-btn-primary .wp-block-button__link{background:var(--color-action);color:var(--color-on-action)}
+body .rn .rn-btn-primary .wp-block-button__link:hover{background:var(--navy-900);color:#fff}
+body .rn .band .rn-btn-primary .wp-block-button__link:hover{background:var(--blue-500)}
+body .rn .rn-btn-outline .wp-block-button__link{color:var(--navy-900);border-color:#b9cdd6;background:#fff}
+body .rn .rn-btn-outline .wp-block-button__link:hover{border-color:var(--navy-900)}
+body .rn .faq-grid .wp-block-buttons{margin-top:24px}
+
+/* Tautan panah ("Lihat semua …") */
+body .rn .more a{display:inline-block;padding-block:10px;font-weight:600;color:var(--blue-700);white-space:nowrap}
+body .rn .more a:hover{text-decoration:underline;text-underline-offset:4px}
+body .rn .soft .more a{color:var(--navy-900)}
+body .rn .band .more a,body .rn .deep .more a{color:var(--blue-300)}
+
+/* Gambar */
+body .rn .wp-block-image img{border-radius:0}
+body .rn .photo{margin:0}
+body .rn .photo img{width:100%;height:100%;max-width:none;object-fit:cover}
+body .rn .wp-element-caption{margin:0;text-align:left}
+
+/* Galeri proyek */
+body .rn .proj-grid figure{overflow:hidden}
+body .rn .proj-grid figcaption{font-size:.85rem;color:rgb(255 255 255 / .75)}
+body .rn .proj-grid figcaption strong{display:block;color:#fff;font-weight:600}
+body .rn .proj-grid figcaption strong{font-size:1.05rem}
+body .rn .proj-grid .proj-main figcaption strong{font-size:1.4rem}
+body .rn .clients-head{margin-top:72px}
+body .rn .client img{height:auto;max-width:100%}
+
+/* Kartu "Untuk siapa": seluruh kartu bisa diklik lewat tautan di judul */
+body .rn .sol-card .photo{position:absolute;inset:0;z-index:-2}
+body .rn .sol-card h3 a{color:#fff}
+body .rn .sol-card h3 a::after{content:"";position:absolute;inset:0;z-index:1}
+body .rn .sol-card:focus-within{outline:3px solid var(--blue-300);outline-offset:3px}
+body .rn .sol-card h3 a:focus-visible{outline:0}
+body .rn .sol-tag{display:inline-block}
+
+/* Tabel perbandingan (blok Table) */
+body .rn .compare-wrap{margin-top:12px}
+body .rn .compare-wrap thead{border-bottom:0}
+body .rn .compare-wrap th,body .rn .compare-wrap td{border:0;border-top:1px solid #e3edf1}
+body .rn .compare-wrap thead th{border-top:0}
+body .rn .compare-wrap tbody td:first-child{font-weight:600;color:var(--navy-900);width:22%}
+body .rn .fineprint{margin-top:18px}
+
+/* Angka besar (band navy) */
+body .rn .big-stats .wp-block-group{flex-direction:column}
+body .rn .big-stats .num sub{vertical-align:baseline;line-height:1;position:static}
+
+/* ISO & kredensial */
+body .rn .iso strong,body .rn .cred-list strong{font-weight:600}
+body .rn .iso li,body .rn .cred-list li{margin:0}
+
+/* Langkah proses (blok List bernomor) */
+body .rn .steps li{color:var(--color-text-muted);font-size:.975rem;margin:0}
+body .rn .steps strong{display:block;color:var(--color-text);font-size:1.25rem;font-weight:600;line-height:1.3;margin-bottom:6px}
+body .rn .proc-photo figcaption{margin:0}
+
+/* FAQ (blok Details) */
+body .rn .faq .wp-block-details{margin:0}
+
+/* Artikel terbaru (blok Latest Posts) */
+body .rn .posts{margin-top:40px;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+body .rn .posts li{display:flex;flex-direction:column;margin:0;padding-top:20px;border-top:2px solid var(--navy-900)}
+body .rn .posts .wp-block-latest-posts__post-title{order:2;margin-top:10px;font-size:1.1875rem;font-weight:600;line-height:1.35;letter-spacing:-.01em;color:var(--color-text)}
+body .rn .posts .wp-block-latest-posts__post-title:hover{color:var(--blue-700)}
+body .rn .posts .wp-block-latest-posts__post-date{order:1;font-size:.85rem;color:var(--color-text-muted)}
+body .rn .posts .wp-block-latest-posts__post-excerpt{order:3;margin-top:10px;color:var(--color-text-muted);font-size:.95rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+@media (max-width:900px){body .rn .posts{grid-template-columns:1fr}}
