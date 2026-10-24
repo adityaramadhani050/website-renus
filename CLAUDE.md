@@ -30,7 +30,7 @@ Gunakan Bahasa Indonesia untuk komunikasi dan konten.
 | Produk | 4120 |
 | Proyek | 3164 |
 | Hubungi Kami | 48 |
-| Artikel (arsip) | 10131 |
+| Artikel (arsip) | 10131 — **sudah Gutenberg (24 Okt 2026)**, lihat `wordpress/artikel/README.md` |
 
 Elemen homepage yang wajib dipertahankan/dipindahkan:
 - **Kalkulator PLTS** (widget HTML, 4 langkah: tipe properti → konsumsi → kontak → estimasi) → pindah ke blok Custom HTML.
