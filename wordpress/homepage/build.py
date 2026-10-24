@@ -311,7 +311,8 @@ kontak = section("kontak", [group([
 
 # ---------- 11. Artikel (dinamis: 3 artikel terbaru) ----------
 latest = ('<!-- wp:latest-posts {"postsToShow":3,"displayPostContent":true,"excerptLength":24,'
-          '"displayPostDate":true,"className":"posts"} /-->')
+          '"displayPostDate":true,"displayFeaturedImage":true,"featuredImageSizeSlug":"medium_large",'
+          '"addLinkToFeaturedImage":true,"className":"posts"} /-->')
 artikel = section("artikel", [group([
     sec_head("Artikel", "Panduan memilih dan memasang PLTS.", ("Semua artikel →", "/artikel/")),
     latest,
