@@ -120,3 +120,11 @@ Aturan tambahan:
 - **Klaim harus bisa dibuktikan** (sertifikasi, jumlah proyek, angka penghematan berlabel estimasi). Jangan mengarang testimoni, statistik, atau logo klien.
 - **Plugin yang tidak dipakai kecuali diminta**: `marketing:*` (seo-audit, content-creation, draft-content, campaign-plan, competitive-brief, email-sequence, performance-report, brand-review), `searchfit-seo:seo-audit`, `searchfit-seo:technical-seo`, `searchfit-seo:on-page-seo`, `searchfit-seo:content-strategy`, `searchfit-seo:schema-markup`, `searchfit-seo:generate-schema`, `searchfit-seo:ai-visibility`, `searchfit-seo:internal-linking`.
 - Dokumen integrasi pendamping marketingskills ada di `.claude/marketingskills/tools/` (rujukan `tools/...` di skill mengarah ke sana).
+
+## Skill efisiensi (caveman, ponytail) — hanya jika diminta
+Terpasang dari `JuliusBrussee/caveman` (b4531df) dan `DietrichGebert/ponytail` (09c434a), tanpa hook/binary.
+- **Tidak aktif otomatis.** Pakai hanya bila pengguna memanggilnya (`/caveman`, `/ultracave`, `/ponytail`, `/ponytail-review`, dll.).
+- **Balasan ke pengguna tetap Bahasa Indonesia lengkap dan jelas**; gaya caveman/ultracave tidak dipakai untuk penjelasan ke pengguna kecuali diminta eksplisit.
+- Konten website tidak pernah ditulis dengan gaya caveman.
+- Tidak dipasang (butuh Caveman Cloud / mengirim file ke layanan luar): caveman-setup, -discover, -evidence-review, -manage, -optimize, -learn, -compress, -stats.
+- `rtk` (Rust Token Killer) belum dipasang: berupa binary + hook PreToolUse yang menulis ulang semua perintah bash.
