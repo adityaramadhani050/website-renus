@@ -33,6 +33,12 @@ Sumber kebenaran: `prototypes/landing-plts-hybrid.html`. File di folder ini diha
 
 Foto proyek & logo klien memakai media lama dengan `wp-image-ID`, sehingga WordPress menambahkan `srcset` otomatis.
 
+### Performa (25 Okt 2026)
+- Hummingbird aktif (page cache, Speedy minify, Brotli). LiteSpeed Cache tidak dipakai: server bukan LiteSpeed, page cache tidak tersedia.
+- Site Kit: AdSense auto ads & kode GTM ganda (Site Kit + GTM4WP) dimatikan oleh pemilik situs.
+- Foto besar di homepage diganti ukuran `large` (1024 px) langsung di halaman live: 3289 (1,18 MB → 190 KB), 3180 (793 → 149 KB), 15473 (668 → 123 KB), 15474 (715 → 140 KB). Saat build ulang, pakai `sizeSlug:"large"` + URL `-1024x576` untuk ID ini.
+- Galeri proyek live sudah diganti pengguna (15479, 15475, 15473, 15474); `homepage.blocks.html` belum disinkronkan untuk galeri.
+
 ## Cara deploy ulang
 1. `python3 build.py` → `homepage.blocks.html` dan `../additional-css.css`.
 2. CSS berubah → `wp_update_custom_css` dengan isi `wordpress/additional-css.css`.
