@@ -1,0 +1,30 @@
+.sosmed {
+	list-style-type: none;
+}
+
+.sosmed .fa{
+	margin-left: -30px;
+	margin-right: 10px;
+}
+
+.sosmed a {
+	color: #00b5ff;
+}
+
+#custom_html-3 .widget-title {
+	color: #00384F;
+}
+
+#nav_menu-3 .widget-title {
+	color: #00384F;
+}
+
+#client-carousel img{
+	height: 100px;
+	width: 100px;
+	object-fit: contain;
+}
+
+.bdt-pagepiling-slider .pp-tableCell{
+	background-color: rgba(0, 0, 0, .5);
+}

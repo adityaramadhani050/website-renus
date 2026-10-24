@@ -424,11 +424,15 @@ def minify(c):
     return c.replace(";}", "}")
 
 
-# Additional CSS di Kadence belum bisa ditulis lewat MCP (toggle "Allow AI to modify theme appearance"
-# nonaktif), jadi CSS ikut di blok Custom HTML pertama: hanya dimuat di halaman ini.
-STYLE_ID = "rn-css"
-blocks = blocks.replace("<!-- wp:html -->\n" + FONTS, "<!-- wp:html -->\n" + FONTS + f'\n<style id="{STYLE_ID}">' + minify(full_css) + "</style>", 1)
-assert f'id="{STYLE_ID}"' in blocks
+# CSS tinggal di Additional CSS Kadence (wordpress/additional-css.css). --inline-css menaruhnya
+# di blok HTML pertama sebagai cadangan bila Additional CSS tidak bisa ditulis.
+LEGACY_CSS = (OUT / "legacy-additional.css").read_text(encoding="utf-8")
+(OUT.parent / "additional-css.css").write_text(
+    "/* ===== CSS lama (sebelum redesain) ===== */\n" + LEGACY_CSS
+    + "\n/* ===== Renus redesign: token + komponen (.rn). Sumber: repo website-renus wordpress/homepage/ ===== */\n"
+    + minify(full_css) + "\n", encoding="utf-8")
+if "--inline-css" in sys.argv:
+    blocks = blocks.replace("<!-- wp:html -->\n" + FONTS, "<!-- wp:html -->\n" + FONTS + '\n<style id="rn-css">' + minify(full_css) + "</style>", 1)
 
 
 def slim_html_block(m):

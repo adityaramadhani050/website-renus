@@ -9,11 +9,14 @@ Sumber kebenaran: `prototypes/landing-plts-hybrid.html`. File di folder ini diha
 | `rn.css` | CSS lengkap (prototipe di-scope ke `body .rn` + overrides). Disisipkan sebagai `<style id="rn-css">` di blok HTML pertama. |
 | `homepage.blocks.html` | Isi halaman (markup blok) yang dikirim ke WordPress. |
 
-## Status (24 Okt 2026)
-- **Draft**: halaman ID **15450** "Beranda (redesain)" — belum dipublish, homepage live (ID 3280) belum disentuh.
-  Edit: https://renergynusantara.com/wp-admin/post.php?post=15450&action=edit
-- Meta Kadence disalin dari 3280: `_kad_post_layout=fullwidth`, `_kad_post_title=hide`, `_kad_post_content_style=unboxed`, `_kad_post_vertical_padding=hide`, `_kad_post_feature=hide`. Template: default.
-- Verifikasi render (1×, lewat preview): status 200, H1 pertama "Kontraktor PLTS Rumah, Bisnis & Industri", `#rn-css` ada.
+## Status (24 Okt 2026) — LIVE
+- **Homepage live = halaman 3280** (URL `/` tidak berubah), isi = `homepage.blocks.html` (diverifikasi identik setelah disimpan).
+- `_elementor_edit_mode` di 3280 **dihapus** agar WordPress merender blok Gutenberg. `_elementor_data` lama masih tersimpan; untuk rollback: kembalikan meta `_elementor_edit_mode=builder` (atau undo token Royal MCP / revisi halaman).
+- CSS di **Additional CSS Kadence** (post 3699) = `wordpress/additional-css.css` (CSS lama + blok `.rn`).
+- Yoast 3280: title "Kontraktor PLTS Rumah, Bisnis & Industri - Renus Global Indonesia", description "Pemasangan PLTS on-grid, off-grid, dan hybrid untuk rumah, bisnis, dan industri di seluruh Indonesia. Badan usaha ESDM, 4 sertifikasi ISO, 500+ proyek terpasang."
+- Verifikasi render live (1×): status 200, title & description Yoast baru, H1 pertama "Kontraktor PLTS Rumah, Bisnis & Industri", `.rn-home` ada.
+- Meta Kadence 3280 (sudah ada): layout fullwidth, judul disembunyikan, unboxed, tanpa padding vertikal.
+- Draft uji **15450** "Beranda (redesain)" masih ada (berisi CSS inline) — boleh dihapus.
 
 ### Media yang diunggah (2026/10)
 | ID | File |
@@ -24,14 +27,14 @@ Sumber kebenaran: `prototypes/landing-plts-hybrid.html`. File di folder ini diha
 | 15445 / 15446 | hero-plts-hybrid-pln-padam.webp / -hp.webp |
 | 15447 / 15448 / 15449 | isometrik-plts-on-grid / off-grid / hybrid.webp |
 
-Foto proyek & logo klien memakai media lama dengan `wp-image-ID`, sehingga WordPress menambahkan `srcset` otomatis (mengatasi temuan audit "gambar terlalu besar").
+Foto proyek & logo klien memakai media lama dengan `wp-image-ID`, sehingga WordPress menambahkan `srcset` otomatis.
 
 ## Cara deploy ulang
-1. `python3 build.py --chunks <dir>`
-2. `wp_update_page` id 15450 dengan `<dir>/00.html` (wrapper `.rn` + CSS + hero).
-3. `wp_insert_blocks` id 15450, `at: inside_end`, `path: "0"` untuk `01.html` … `11.html`, **satu per satu** (shared hosting).
+1. `python3 build.py` → `homepage.blocks.html` dan `../additional-css.css`.
+2. CSS berubah → `wp_update_custom_css` dengan isi `wordpress/additional-css.css`.
+3. Isi berubah → `wp_update_page` id 3280 dengan `homepage.blocks.html` utuh (satu panggilan), atau `wp_insert_blocks` / `wp_replace_in_page` untuk perubahan kecil. `--chunks DIR` memecah per section bila perlu kirim bertahap.
 
-## Belum dikerjakan (perlu keputusan/izin)
-- CSS ke Additional CSS: diblokir — aktifkan **Royal MCP → Settings → "Allow AI to modify theme appearance"**. Setelah itu `rn.css` bisa dipindah ke Additional CSS (dipakai ulang di halaman lain) dan `<style id="rn-css">` dihapus dari halaman.
-- Menjadikan homepage: salin isi 15450 ke halaman 3280 (slug/URL tetap) lalu ganti Yoast title/description sesuai CLAUDE.md. Belum dilakukan sampai pengguna menyetujui preview.
-- Font Plus Jakarta Sans masih dimuat dari blok HTML; idealnya diset di Typography Kadence saat semua halaman sudah dimigrasi.
+## Belum dikerjakan
+- Menonaktifkan Elementor & addon: **tunggu** halaman 44, 1315, 4120, 3164, 48, 10131 selesai dimigrasi (masih Elementor).
+- Font Plus Jakarta Sans masih dimuat dari blok HTML hero; pindahkan ke Typography Kadence saat semua halaman sudah dimigrasi.
+- Aktifkan salah satu plugin cache (LiteSpeed/Hummingbird) setelah redesain selesai.

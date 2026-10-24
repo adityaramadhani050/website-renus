@@ -24,7 +24,7 @@ Gunakan Bahasa Indonesia untuk komunikasi dan konten.
 ## Halaman yang perlu dibangun ulang (saat ini Elementor)
 | Halaman | ID |
 |---|---|
-| Homepage (`/`) | 3280 |
+| Homepage (`/`) | 3280 — **sudah Gutenberg (24 Okt 2026)**, lihat `wordpress/homepage/README.md` |
 | Tentang Kami | 44 |
 | Layanan | 1315 |
 | Produk | 4120 |
@@ -45,9 +45,9 @@ Plugin Elementor/addon yang akan dinonaktifkan setelah migrasi: Elementor, Eleme
 ## Keputusan SEO yang TIDAK boleh dirusak oleh redesain
 1. **Jangan ubah URL/slug** halaman mana pun.
 2. **Title & meta description Yoast** sudah diperbarui (jangan ditimpa):
-   - Homepage: "Kontraktor PLTS Surabaya & Jabodetabek - Renus Global Indonesia" → **diputuskan 23 Okt 2026 diganti** jadi "Kontraktor PLTS Rumah, Bisnis & Industri - Renus Global Indonesia" (layanan umum & nasional). Diterapkan ke Yoast saat migrasi homepage, bukan sebelumnya.
+   - Homepage: "Kontraktor PLTS Surabaya & Jabodetabek - Renus Global Indonesia" → **diputuskan 23 Okt 2026 diganti** jadi "Kontraktor PLTS Rumah, Bisnis & Industri - Renus Global Indonesia" (layanan umum & nasional). Sudah diterapkan ke Yoast 24 Okt 2026.
    - /pasang-plts/, /biaya-pasang-plts-5000-watt-2026/, /biaya-pasang-plts-2200-watt/, /biaya-pasang-plts-di-surabaya/, /mengenal-pembangkit-listrik-tenaga-surya-plts/, /biaya-plts-on-grid/, /tentang-kami/, /plts-hybrid/, /plts-off-grid/
-3. **Homepage harus punya tepat satu H1** berisi kata kunci: "Kontraktor PLTS Rumah, Bisnis & Industri" (H1 lama "Renewable Energy Solutions" belum diganti).
+3. **Homepage harus punya tepat satu H1** berisi kata kunci: "Kontraktor PLTS Rumah, Bisnis & Industri" (sudah diterapkan 24 Okt 2026).
 4. Angka counter kWh harus tertulis di HTML (bukan hanya animasi JS yang terbaca "0").
 5. Kartu Residensial / Komersial / Industrial harus menautkan ke: `/plts-hybrid/`, `/pasang-plts-untuk-bisnis/`, `/plts-industri-manufaktur/`. Tombol "Artikel" → `/artikel/` (bukan Instagram).
 6. Deskripsi PLTS On-Grid **tidak boleh** menjanjikan ekspor/kompensasi kelebihan listrik ke PLN.
