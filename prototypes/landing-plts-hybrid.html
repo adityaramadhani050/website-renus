@@ -1161,7 +1161,7 @@ function rnSubmit(){
       v: {pv:0, load:1.2, soc:60, batt:-1.2, grid:0},
       lines: {surya:['off'], rumah:['on',C.battery], pln:['cut']},
       spots: {panel:[C.grid,1], inverter:C.battery, baterai:C.battery, rumah:C.battery, meter:C.off},
-      battText: v => `Memasok ${kw(-v.batt)}`, meterText: () => 'Padam · diputus otomatis'
+      battText: v => `Memasok ${kw(-v.batt)}`, meterText: () => 'Padam'
     }
   };
   const ICON = {
@@ -1250,7 +1250,7 @@ function rnSubmit(){
     const switchToGrid = () => {
       if (current !== 'malam') return;
       v.soc = BATT_MIN; v.batt = 0; v.grid = v.load;
-      m.battText = () => `Cadangan ${BATT_MIN}% disimpan`;
+      m.battText = () => 'Cadangan';
       m.meterText = vv => `${kw(vv.grid)} dari PLN`;
       setLine('rumah', 'on', C.grid);
       setLine('pln', 'on', C.grid);
