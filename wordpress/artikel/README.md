@@ -6,3 +6,4 @@
 - Grid memakai class `.posts` yang sama dengan section Artikel homepage; gaya blok lain lewat atribut blok (tanpa CSS tambahan).
 - Deploy ulang: `wp_update_page` id 10131 dengan isi `artikel.blocks.html`.
 - Belum: meta description Yoast untuk /artikel/ masih kosong.
+- 26 Okt 2026 (setelah Elementor nonaktif): desain ulang. Hero foto + kotak pencarian (blok Search), 6 kartu "Panduan utama" ke halaman pilar, Query Loop 13 artikel (artikel pertama tampil besar di desktop, sisanya kartu 3 kolom) + paginasi, band CTA. Gaya di `pages/pages.css` bagian "Artikel". Meta Kadence: header transparan, judul disembunyikan. Meta description Yoast diisi.
