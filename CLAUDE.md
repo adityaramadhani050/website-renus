@@ -51,7 +51,7 @@ Plugin Elementor/addon yang akan dinonaktifkan setelah migrasi: Elementor, Eleme
 4. Angka counter kWh harus tertulis di HTML (bukan hanya animasi JS yang terbaca "0").
 5. Kartu Residensial / Komersial / Industrial harus menautkan ke: `/plts-hybrid/`, `/pasang-plts-untuk-bisnis/`, `/plts-industri-manufaktur/`. Tombol "Artikel" → `/artikel/` (bukan Instagram).
 6. Deskripsi PLTS On-Grid **tidak boleh** menjanjikan ekspor/kompensasi kelebihan listrik ke PLN.
-7. /plts-hybrid/ (ID 394) dan /plts-off-grid/ (ID 372) sudah ditulis ulang sebagai konten Gutenberg biasa dengan H1 di dalam konten (template Elementor Full Width tidak menampilkan judul). Saat ganti template ke default Kadence, **hapus H1 manual di konten** agar tidak dobel.
+7. /plts-hybrid/ (ID 394) dan /plts-off-grid/ (ID 372) sudah ditulis ulang sebagai konten Gutenberg biasa dengan H1 di dalam konten (template Elementor Full Width tidak menampilkan judul). Saat ganti template ke default Kadence, **hapus H1 manual di konten** agar tidak dobel. → **Selesai 26 Okt 2026**: template keduanya ternyata sudah default (judul Kadence tampil sebagai H1), H1 manual di konten sudah dihapus.
 8. **12 redirect 301** konsolidasi (ID 13–24 di Redirection) + artikel sumbernya di-draft. Jangan dipublish ulang.
 9. Atur `lang` situs ke Bahasa Indonesia (saat ini en_US).
 10. Gambar: alt text deskriptif, nama file deskriptif, prioritaskan foto proyek asli (bukan gambar AI).
