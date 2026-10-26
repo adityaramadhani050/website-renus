@@ -406,7 +406,109 @@ def layanan():
     return page([head, siapa, sistem, lain, manfaat, cta])
 
 
-PAGES = {"tentang-kami": tentang_kami, "hubungi-kami": hubungi_kami, "layanan": layanan}
+# ---------- Proyek (ID 3164, /proyek/) ----------
+def fig(id_, path, alt, cap=None, cls_=None, size="large"):
+    """Foto galeri dengan keterangan overlay (gaya .proj-grid homepage)."""
+    a = {"id": id_, "sizeSlug": size, "linkDestination": "none", "className": cls(cls_, "photo")}
+    fc = f'<figcaption class="wp-element-caption">{cap}</figcaption>' if cap else ""
+    return (f"<!-- wp:image{attrs(a)} -->\n<figure class=\"{cls('wp-block-image size-' + size, cls_, 'photo')}\">"
+            f"<img src=\"{UP}{path}\" alt=\"{alt}\" class=\"wp-image-{id_}\"/>{fc}</figure>\n<!-- /wp:image -->")
+
+
+def client(id_, path, alt):
+    return img(id_, path, alt, "client", size="full")
+
+
+def proyek():
+    head = section([
+        img(4572, "2024/01/DJI_0368-1024x576.jpg", "Foto udara PLTS atap hasil pemasangan Renus", "hero-bg"),
+        group([
+            p("Proyek kami", "eyebrow"),
+            h("Proyek PLTS yang sudah kami kerjakan.", 1, "page-title"),
+            p("Lebih dari 500 proyek dengan total kapasitas 10 MWp lebih, dari atap rumah tinggal sampai pabrik "
+              "dan kawasan industri.", "lede"),
+            buttons(button("Konsultasi gratis", wa_text("pemasangan PLTS"), "rn-btn-primary", external=True),
+                    button("Lihat layanan", "/layanan/", "rn-btn-outline")),
+        ]),
+    ], cls_="page-hero")
+
+    stats = group([group([
+        group([p("500+", "num"), p("proyek terpasang", "lbl")]),
+        group([p("10 MWp+", "num"), p("kapasitas terpasang", "lbl")]),
+        group([p("6+ tahun", "num"), p("pengalaman di energi surya", "lbl")]),
+        group([p("40.000+ kWh", "num"), p("estimasi energi bersih per hari", "lbl")]),
+    ], cls_="big-stats")], cls_="container")
+    band = group([stats], tag="section", cls_="band band-stats")
+
+    galeri = section([
+        group([group([p("Galeri proyek", "eyebrow"), h("Dari rumah tinggal sampai kawasan industri.", 2, "h2")])],
+              cls_="sec-head"),
+        group([
+            fig(4810, "2024/10/DJI_0017-1024x576.jpg", "Foto udara PLTS atap pabrik hasil pemasangan Renus",
+                "<strong>PLTS atap industri</strong>Industrial", "g-main"),
+            fig(3487, "2023/03/JIIPe-e1680162481413.jpg", "PLTS atap di kawasan industri JIIPe",
+                "<strong>Kawasan industri JIIPe</strong>Industrial", size="full"),
+            fig(3289, "2023/03/DJI_0441-2-1024x576.jpg", "Foto udara deretan panel surya di atap gedung komersial",
+                "<strong>Gedung komersial</strong>Komersial"),
+            fig(4304, "2024/01/20231122_164307-1024x472.jpg", "Deretan panel surya terpasang di atap bangunan",
+                cls_="g-wide"),
+            fig(3180, "2022/09/DJI_0034-1024x576.jpg", "Foto udara PLTS atap rumah tinggal hasil pemasangan Renus",
+                "<strong>Rumah tinggal</strong>Residensial"),
+            fig(3831, "2023/09/20230724-DJI_0706-1024x576.jpg", "Foto udara PLTS 2.200 watt di atap rumah",
+                "<strong>PLTS 2.200 watt</strong>Residensial"),
+            fig(3835, "2023/09/20230507-DJI_0479-1024x576.jpg", "Foto udara instalasi panel surya proyek Renus",
+                cls_="g-wide-d"),
+            fig(3294, "2023/03/DJI_0204-2-1024x576.jpg", "Foto udara susunan panel surya di atap proyek Renus",
+                cls_="g-wide-d"),
+            fig(4579, "2024/01/DJI_0615-1024x576.jpg", "Foto udara panel surya di atap bangunan proyek Renus"),
+        ], cls_="gallery"),
+    ])
+
+    klien = section([
+        group([group([p("Klien kami", "eyebrow"), h("Dipercaya instansi, kampus, dan perusahaan.", 2, "h2")])],
+              cls_="sec-head"),
+        group([
+            client(4063, "2024/01/Untitled-3-01-3.png", "WIKA"),
+            client(4060, "2024/01/Untitled-3-01.png", "Medco Energi"),
+            client(3856, "2023/10/Logo_PU_RGB-scaled.jpg", "Kementerian PUPR"),
+            client(3814, "2023/09/lambang-its-png-v2.png", "Institut Teknologi Sepuluh Nopember (ITS)"),
+            client(3796, "2023/09/JATIM-1-e1695633415190.png", "Perpustakaan Jawa Timur"),
+            client(4064, "2024/01/Untitled-3-01-4.png", "Minarta"),
+            client(4066, "2024/01/Untitled-3-01-6.png", "Politeknik Negeri Madiun"),
+            client(4067, "2024/01/Untitled-3-01-7.png", "Poltera"),
+            client(4065, "2024/01/Untitled-3-01-5.png", "YSUN"),
+            client(3784, "2023/09/Logo-Biru-Muda.png", "UHT"),
+            client(4061, "2024/01/Untitled-3-01-1.png", "PJU"),
+            client(4062, "2024/01/Untitled-3-01-2.png", "PJUC"),
+            client(4072, "2024/01/Untitled-3-01-8.png", "Logo klien Renus"),
+            client(4073, "2024/01/Untitled-3-01-9.png", "Logo klien Renus"),
+        ], cls_="clients"),
+    ], cls_="soft")
+
+    # Testimoni asli dari halaman lama (ElementsKit), teks dikutip apa adanya.
+    testi = section([
+        p("Testimoni", "eyebrow"),
+        "<!-- wp:quote {\"className\":\"testi\"} -->\n<blockquote class=\"wp-block-quote testi\">\n"
+        + p("Baru saja pasang pembangkit listrik tenaga surya di villa kami oleh tim Renus. Mantap banget hasilnya! "
+            "Prosesnya cepat, pelayanannya ramah, dan yang paling penting, sekarang listrik villa jadi lebih hemat. "
+            "Puas banget deh! Pasti rekomen buat yang lagi cari solusi energi terbarukan.")
+        + "<cite><strong>Jean-Noël Khaladi</strong>PT Ajna Pantai Indonesia</cite></blockquote>\n<!-- /wp:quote -->",
+    ])
+
+    cta = section([
+        group([
+            group([p("Proyek berikutnya", "eyebrow"),
+                   h("Rencanakan PLTS untuk bangunan Anda.", 2, "h2"),
+                   p("Tim Renus menghitung kapasitas, biaya, dan estimasi penghematan, lalu menjadwalkan survei atap gratis.", "lede")]),
+            buttons(button("Chat WhatsApp", wa_text("pemasangan PLTS"), "rn-btn-primary", external=True),
+                    button("Hubungi kami", "/hubungi-kami/", "rn-btn-outline")),
+        ], cls_="band-head"),
+    ], cls_="band cta-band")
+
+    return page([head, band, galeri, klien, testi, cta])
+
+
+PAGES = {"tentang-kami": tentang_kami, "hubungi-kami": hubungi_kami, "layanan": layanan, "proyek": proyek}
 
 if __name__ == "__main__":
     for slug in (sys.argv[1:] or PAGES):
