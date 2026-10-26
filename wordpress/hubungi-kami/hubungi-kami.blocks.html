@@ -1,0 +1,214 @@
+<!-- wp:group {"align":"full","className":"rn rn-page","layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull rn rn-page">
+<!-- wp:html -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+<!-- /wp:html -->
+<!-- wp:group {"tagName":"section","className":"page-hero","layout":{"type":"default"}} -->
+<section class="wp-block-group page-hero">
+<!-- wp:group {"className":"container","layout":{"type":"default"}} -->
+<div class="wp-block-group container">
+<!-- wp:image {"id":4747,"sizeSlug":"full","linkDestination":"none","className":"hero-bg"} -->
+<figure class="wp-block-image size-full hero-bg"><img src="https://renergynusantara.com/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-02-at-09.35.08-3-scaled.jpeg" alt="Panel surya terpasang di atap rumah pelanggan Renus di Surabaya" class="wp-image-4747"/></figure>
+<!-- /wp:image -->
+<!-- wp:group {"layout":{"type":"default"}} -->
+<div class="wp-block-group">
+<!-- wp:paragraph {"className":"eyebrow"} -->
+<p class="eyebrow">Hubungi kami</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":1,"className":"page-title"} -->
+<h1 class="wp-block-heading page-title">Konsultasi PLTS gratis, langsung dengan tim kami.</h1>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"className":"lede"} -->
+<p class="lede">Ceritakan kebutuhan listrik rumah atau bisnis Anda. Tim Renus membalas dalam 1×24 jam dan bisa menjadwalkan survei atap tanpa biaya.</p>
+<!-- /wp:paragraph -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons">
+<!-- wp:button {"className":"rn-btn-primary","linkTarget":"_blank","rel":"noreferrer noopener"} -->
+<div class="wp-block-button rn-btn-primary"><a class="wp-block-button__link wp-element-button" href="https://wa.me/6281412250644" target="_blank" rel="noreferrer noopener">Chat WhatsApp</a></div>
+<!-- /wp:button -->
+<!-- wp:button {"className":"rn-btn-outline"} -->
+<div class="wp-block-button rn-btn-outline"><a class="wp-block-button__link wp-element-button" href="mailto:sales@renergynusantara.com">Kirim email</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:group -->
+</section>
+<!-- /wp:group -->
+<!-- wp:group {"tagName":"section","className":"soft split contact-split","layout":{"type":"default"}} -->
+<section class="wp-block-group soft split contact-split">
+<!-- wp:group {"className":"container","layout":{"type":"default"}} -->
+<div class="wp-block-group container">
+<!-- wp:group {"layout":{"type":"default"}} -->
+<div class="wp-block-group">
+<!-- wp:paragraph {"className":"eyebrow"} -->
+<p class="eyebrow">Kontak langsung</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"className":"h2"} -->
+<h2 class="wp-block-heading h2">Satu nomor untuk seluruh Indonesia.</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"className":"lede"} -->
+<p class="lede">Surabaya, Jabodetabek, maupun kota lain dilayani dari nomor yang sama, jadi pertanyaan Anda langsung sampai ke tim yang menangani wilayah Anda.</p>
+<!-- /wp:paragraph -->
+<!-- wp:list {"className":"channels"} -->
+<ul class="wp-block-list channels">
+<!-- wp:list-item -->
+<li><strong>WhatsApp</strong><a href="https://wa.me/6281412250644" target="_blank" rel="noreferrer noopener">0814-1225-0644</a></li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Email</strong><a href="mailto:sales@renergynusantara.com">sales@renergynusantara.com</a></li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Survei atap</strong>Gratis, dijadwalkan setelah konsultasi.</li>
+<!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
+</div>
+<!-- /wp:group -->
+<!-- wp:html -->
+<form class="wa-form" id="wa-form" novalidate>
+<p class="wa-form-title">Kirim pertanyaan lewat WhatsApp</p>
+<div class="wa-row">
+<label>Nama lengkap *<input name="nama" autocomplete="name" required></label>
+<label>Kota / lokasi pemasangan *<input name="kota" autocomplete="address-level2" required></label>
+</div>
+<div class="wa-row">
+<label>Tipe properti<select name="tipe"><option value="">Pilih</option><option>Rumah tinggal</option><option>Bisnis / komersial</option><option>Industri / pabrik</option></select></label>
+<label>Sistem yang diminati<select name="sistem"><option value="">Pilih</option><option>Hybrid</option><option>On-grid</option><option>Off-grid</option><option>Belum tahu, minta saran</option></select></label>
+</div>
+<label>Pesan<textarea name="pesan" rows="4" placeholder="Contoh: tagihan listrik sekitar Rp 2 juta/bulan, daya 5.500 VA."></textarea></label>
+<p class="wa-err" id="wa-err" role="alert" hidden>Isi nama dan kota terlebih dahulu.</p>
+<button type="submit">Kirim via WhatsApp</button>
+<p class="wa-note">Tombol ini membuka WhatsApp dengan pesan yang sudah terisi. Data tidak disimpan di situs.</p>
+</form>
+<script>
+document.getElementById('wa-form').addEventListener('submit',function(e){
+e.preventDefault();var f=e.target,v=function(n){return f.elements[n].value.trim()};
+if(!v('nama')||!v('kota')){document.getElementById('wa-err').hidden=false;(v('nama')?f.elements.kota:f.elements.nama).focus();return}
+var t='Halo Renus, saya '+v('nama')+' dari '+v('kota')+'.';
+if(v('tipe'))t+='\nTipe properti: '+v('tipe');if(v('sistem'))t+='\nSistem: '+v('sistem');if(v('pesan'))t+='\n\n'+v('pesan');
+window.open('https://wa.me/6281412250644?text='+encodeURIComponent(t),'_blank','noopener');
+});
+</script>
+<!-- /wp:html -->
+</div>
+<!-- /wp:group -->
+</section>
+<!-- /wp:group -->
+<!-- wp:group {"tagName":"section","layout":{"type":"default"}} -->
+<section class="wp-block-group">
+<!-- wp:group {"className":"container","layout":{"type":"default"}} -->
+<div class="wp-block-group container">
+<!-- wp:group {"className":"sec-head","layout":{"type":"default"}} -->
+<div class="wp-block-group sec-head">
+<!-- wp:group {"layout":{"type":"default"}} -->
+<div class="wp-block-group">
+<!-- wp:paragraph {"className":"eyebrow"} -->
+<p class="eyebrow">Kantor</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"className":"h2"} -->
+<h2 class="wp-block-heading h2">Kunjungi kantor kami.</h2>
+<!-- /wp:heading -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:group -->
+<!-- wp:group {"className":"offices-grid","layout":{"type":"default"}} -->
+<div class="wp-block-group offices-grid">
+<!-- wp:group {"className":"office-card","layout":{"type":"default"}} -->
+<div class="wp-block-group office-card">
+<!-- wp:html -->
+<iframe class="map" title="Peta kantor Renus Surabaya" src="https://maps.google.com/maps?q=PT+Renus+Global+Indonesia+Penjaringan+Asri+Rungkut+Surabaya&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<!-- /wp:html -->
+<!-- wp:group {"className":"office-body","layout":{"type":"default"}} -->
+<div class="wp-block-group office-body">
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Kantor Surabaya</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"className":"addr"} -->
+<p class="addr">Jl. Penjaringan Asri X Blok PS 1H No.5, Penjaringan Sari, Kec. Rungkut, Surabaya, Jawa Timur 60293</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"region"} -->
+<p class="region">Melayani Jawa Timur, Bali, Nusa Tenggara, dan sekitarnya.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"more"} -->
+<p class="more"><a href="https://www.google.com/maps/search/?api=1&query=PT+Renus+Global+Indonesia+Penjaringan+Asri+Rungkut+Surabaya" target="_blank" rel="noreferrer noopener">Buka di Google Maps →</a></p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:group -->
+<!-- wp:group {"className":"office-card","layout":{"type":"default"}} -->
+<div class="wp-block-group office-card">
+<!-- wp:html -->
+<iframe class="map" title="Peta kantor Renus Jabodetabek" src="https://maps.google.com/maps?q=Grand+Residence+Boulevard+No.230+Cijengkol+Setu+Bekasi&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<!-- /wp:html -->
+<!-- wp:group {"className":"office-body","layout":{"type":"default"}} -->
+<div class="wp-block-group office-body">
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Kantor Jabodetabek</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"className":"addr"} -->
+<p class="addr">Jl. Grand Residence Boulevard No.230, Cijengkol, Kec. Setu, Kabupaten Bekasi, Jawa Barat 17320</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"region"} -->
+<p class="region">Melayani Jabodetabek, Jawa Barat, dan sekitarnya.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"more"} -->
+<p class="more"><a href="https://www.google.com/maps/search/?api=1&query=Grand+Residence+Boulevard+No.230+Cijengkol+Setu+Bekasi" target="_blank" rel="noreferrer noopener">Buka di Google Maps →</a></p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:group -->
+</section>
+<!-- /wp:group -->
+<!-- wp:group {"tagName":"section","className":"band cta-band","layout":{"type":"default"}} -->
+<section class="wp-block-group band cta-band">
+<!-- wp:group {"className":"container","layout":{"type":"default"}} -->
+<div class="wp-block-group container">
+<!-- wp:group {"className":"band-head","layout":{"type":"default"}} -->
+<div class="wp-block-group band-head">
+<!-- wp:group {"layout":{"type":"default"}} -->
+<div class="wp-block-group">
+<!-- wp:paragraph {"className":"eyebrow"} -->
+<p class="eyebrow">Media sosial</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"className":"h2"} -->
+<h2 class="wp-block-heading h2">Lihat proyek terbaru kami.</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"className":"lede"} -->
+<p class="lede">Dokumentasi pemasangan, tips hemat listrik, dan kabar terbaru dari tim Renus.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons">
+<!-- wp:button {"className":"rn-btn-outline","linkTarget":"_blank","rel":"noreferrer noopener"} -->
+<div class="wp-block-button rn-btn-outline"><a class="wp-block-button__link wp-element-button" href="https://www.instagram.com/renergynusantara" target="_blank" rel="noreferrer noopener">Instagram</a></div>
+<!-- /wp:button -->
+<!-- wp:button {"className":"rn-btn-outline","linkTarget":"_blank","rel":"noreferrer noopener"} -->
+<div class="wp-block-button rn-btn-outline"><a class="wp-block-button__link wp-element-button" href="https://www.facebook.com/renergynusantara" target="_blank" rel="noreferrer noopener">Facebook</a></div>
+<!-- /wp:button -->
+<!-- wp:button {"className":"rn-btn-outline","linkTarget":"_blank","rel":"noreferrer noopener"} -->
+<div class="wp-block-button rn-btn-outline"><a class="wp-block-button__link wp-element-button" href="https://www.linkedin.com/company/renus-global-indonesia" target="_blank" rel="noreferrer noopener">LinkedIn</a></div>
+<!-- /wp:button -->
+<!-- wp:button {"className":"rn-btn-outline","linkTarget":"_blank","rel":"noreferrer noopener"} -->
+<div class="wp-block-button rn-btn-outline"><a class="wp-block-button__link wp-element-button" href="https://www.youtube.com/@renergynusantara" target="_blank" rel="noreferrer noopener">YouTube</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:group -->
+</section>
+<!-- /wp:group -->
+</div>
+<!-- /wp:group -->

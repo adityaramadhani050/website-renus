@@ -199,7 +199,108 @@ def tentang_kami():
     return page([head, band, visi, kenapa, legal, cta])
 
 
-PAGES = {"tentang-kami": tentang_kami}
+# ---------- Hubungi Kami (ID 48, /hubungi-kami/) ----------
+# Form tanpa plugin: isian disusun jadi pesan lalu membuka WhatsApp (data tidak disimpan di server).
+WA_FORM = """
+<form class="wa-form" id="wa-form" novalidate>
+<p class="wa-form-title">Kirim pertanyaan lewat WhatsApp</p>
+<div class="wa-row">
+<label>Nama lengkap *<input name="nama" autocomplete="name" required></label>
+<label>Kota / lokasi pemasangan *<input name="kota" autocomplete="address-level2" required></label>
+</div>
+<div class="wa-row">
+<label>Tipe properti<select name="tipe"><option value="">Pilih</option><option>Rumah tinggal</option><option>Bisnis / komersial</option><option>Industri / pabrik</option></select></label>
+<label>Sistem yang diminati<select name="sistem"><option value="">Pilih</option><option>Hybrid</option><option>On-grid</option><option>Off-grid</option><option>Belum tahu, minta saran</option></select></label>
+</div>
+<label>Pesan<textarea name="pesan" rows="4" placeholder="Contoh: tagihan listrik sekitar Rp 2 juta/bulan, daya 5.500 VA."></textarea></label>
+<p class="wa-err" id="wa-err" role="alert" hidden>Isi nama dan kota terlebih dahulu.</p>
+<button type="submit">Kirim via WhatsApp</button>
+<p class="wa-note">Tombol ini membuka WhatsApp dengan pesan yang sudah terisi. Data tidak disimpan di situs.</p>
+</form>
+<script>
+document.getElementById('wa-form').addEventListener('submit',function(e){
+e.preventDefault();var f=e.target,v=function(n){return f.elements[n].value.trim()};
+if(!v('nama')||!v('kota')){document.getElementById('wa-err').hidden=false;(v('nama')?f.elements.kota:f.elements.nama).focus();return}
+var t='Halo Renus, saya '+v('nama')+' dari '+v('kota')+'.';
+if(v('tipe'))t+='\\nTipe properti: '+v('tipe');if(v('sistem'))t+='\\nSistem: '+v('sistem');if(v('pesan'))t+='\\n\\n'+v('pesan');
+window.open('https://wa.me/6281412250644?text='+encodeURIComponent(t),'_blank','noopener');
+});
+</script>
+"""
+
+
+def office(title, addr, maps_q, region):
+    q = maps_q.replace(" ", "+")
+    return group([
+        html(f'<iframe class="map" title="Peta kantor Renus {title}" src="https://maps.google.com/maps?q={q}&output=embed" '
+             f'loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'),
+        group([
+            h(f"Kantor {title}", 3),
+            p(addr, "addr"),
+            p(region, "region"),
+            p(f'<a href="https://www.google.com/maps/search/?api=1&query={q}" target="_blank" rel="noreferrer noopener">'
+              f"Buka di Google Maps →</a>", "more"),
+        ], cls_="office-body"),
+    ], cls_="office-card")
+
+
+def hubungi_kami():
+    head = section([
+        img(4747, "2024/09/WhatsApp-Image-2024-09-02-at-09.35.08-3-scaled.jpeg",
+            "Panel surya terpasang di atap rumah pelanggan Renus di Surabaya", "hero-bg", size="full"),
+        group([
+            p("Hubungi kami", "eyebrow"),
+            h("Konsultasi PLTS gratis, langsung dengan tim kami.", 1, "page-title"),
+            p("Ceritakan kebutuhan listrik rumah atau bisnis Anda. Tim Renus membalas dalam 1×24 jam "
+              "dan bisa menjadwalkan survei atap tanpa biaya.", "lede"),
+            buttons(button("Chat WhatsApp", WA, "rn-btn-primary", external=True),
+                    button("Kirim email", "mailto:sales@renergynusantara.com", "rn-btn-outline")),
+        ]),
+    ], cls_="page-hero")
+
+    kontak = section([
+        group([
+            p("Kontak langsung", "eyebrow"),
+            h("Satu nomor untuk seluruh Indonesia.", 2, "h2"),
+            p("Surabaya, Jabodetabek, maupun kota lain dilayani dari nomor yang sama, jadi pertanyaan Anda "
+              "langsung sampai ke tim yang menangani wilayah Anda.", "lede"),
+            ul([
+                f'<strong>WhatsApp</strong><a href="{WA}" target="_blank" rel="noreferrer noopener">0814-1225-0644</a>',
+                '<strong>Email</strong><a href="mailto:sales@renergynusantara.com">sales@renergynusantara.com</a>',
+                "<strong>Survei atap</strong>Gratis, dijadwalkan setelah konsultasi.",
+            ], "channels"),
+        ]),
+        html(WA_FORM),
+    ], cls_="soft split contact-split")
+
+    kantor = section([
+        group([group([p("Kantor", "eyebrow"), h("Kunjungi kantor kami.", 2, "h2")])], cls_="sec-head"),
+        group([
+            office("Surabaya", "Jl. Penjaringan Asri X Blok PS 1H No.5, Penjaringan Sari, Kec. Rungkut, "
+                   "Surabaya, Jawa Timur 60293", "PT Renus Global Indonesia Penjaringan Asri Rungkut Surabaya",
+                   "Melayani Jawa Timur, Bali, Nusa Tenggara, dan sekitarnya."),
+            office("Jabodetabek", "Jl. Grand Residence Boulevard No.230, Cijengkol, Kec. Setu, Kabupaten Bekasi, "
+                   "Jawa Barat 17320", "Grand Residence Boulevard No.230 Cijengkol Setu Bekasi",
+                   "Melayani Jabodetabek, Jawa Barat, dan sekitarnya."),
+        ], cls_="offices-grid"),
+    ])
+
+    sosial = section([
+        group([
+            group([p("Media sosial", "eyebrow"),
+                   h("Lihat proyek terbaru kami.", 2, "h2"),
+                   p("Dokumentasi pemasangan, tips hemat listrik, dan kabar terbaru dari tim Renus.", "lede")]),
+            buttons(button("Instagram", "https://www.instagram.com/renergynusantara", "rn-btn-outline", external=True),
+                    button("Facebook", "https://www.facebook.com/renergynusantara", "rn-btn-outline", external=True),
+                    button("LinkedIn", "https://www.linkedin.com/company/renus-global-indonesia", "rn-btn-outline", external=True),
+                    button("YouTube", "https://www.youtube.com/@renergynusantara", "rn-btn-outline", external=True)),
+        ], cls_="band-head"),
+    ], cls_="band cta-band")
+
+    return page([head, kontak, kantor, sosial])
+
+
+PAGES = {"tentang-kami": tentang_kami, "hubungi-kami": hubungi_kami}
 
 if __name__ == "__main__":
     for slug in (sys.argv[1:] or PAGES):

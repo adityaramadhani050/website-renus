@@ -56,3 +56,32 @@ body .rn .cta-band .wp-block-buttons{flex-shrink:0}
   body .rn .band-stats .big-stats .num{font-size:2rem}
   body .rn .cta-band .wp-block-buttons{flex-shrink:1}
 }
+
+/* ===== Hubungi Kami ===== */
+body .rn .contact-split > .container,body .rn .contact-split > .wp-block-group__inner-container > .container{align-items:start}
+body .rn .channels{margin:28px 0 0;padding:0;list-style:none;display:grid;gap:16px}
+body .rn .channels li{margin:0;padding:16px 20px;border-radius:14px;background:#fff;border:1px solid #d5e4ea;color:var(--color-text-muted)}
+body .rn .channels strong{display:block;font-size:.85rem;font-weight:600;color:var(--color-text-muted);margin-bottom:2px}
+body .rn .channels a{font-size:1.125rem;font-weight:600;color:var(--navy-900)}
+/* Form → WhatsApp */
+body .rn .wa-form{display:grid;gap:16px;padding:clamp(24px,3vw,36px);border-radius:20px;background:#fff;border:1px solid #d5e4ea;box-shadow:0 20px 40px -24px rgb(4 33 46 / .25)}
+body .rn .wa-form-title{font-size:1.25rem;font-weight:600;color:var(--color-text)}
+body .rn .wa-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+body .rn .wa-form label{display:grid;gap:6px;font-size:.9rem;font-weight:600;color:var(--color-text)}
+body .rn .wa-form input,body .rn .wa-form select,body .rn .wa-form textarea{width:100%;min-height:48px;padding:10px 14px;border:1.5px solid #c7d8df;border-radius:10px;background:#fff;font:400 1rem/1.4 var(--font);color:var(--color-text)}
+body .rn .wa-form textarea{min-height:110px;resize:vertical}
+body .rn .wa-form :is(input,select,textarea):focus{outline:0;border-color:var(--blue-700);box-shadow:0 0 0 3px rgb(3 156 252 / .18)}
+body .rn .wa-form button{justify-self:start;min-height:48px;padding:0 28px;border:0;border-radius:var(--radius-pill);background:var(--color-action);color:#fff;font:600 1rem/1 var(--font);cursor:pointer}
+body .rn .wa-form button:hover{background:var(--navy-900)}
+body .rn .wa-err{color:#b42318;font-size:.9rem;font-weight:600}
+body .rn .wa-note{font-size:.85rem;color:var(--color-text-muted)}
+@media (max-width:560px){body .rn .wa-row{grid-template-columns:1fr}body .rn .wa-form button{justify-self:stretch}}
+/* Kartu kantor + peta */
+body .rn .offices-grid{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+body .rn .office-card{border-radius:20px;overflow:hidden;border:1px solid #d5e4ea;background:#fff;display:flex;flex-direction:column}
+body .rn .office-card .map{display:block;width:100%;height:280px;border:0;background:#e1f0f5}
+body .rn .office-body{padding:24px;display:flex;flex-direction:column;gap:8px}
+body .rn .office-body h3{font-size:1.25rem}
+body .rn .office-body .addr{color:var(--color-text)}
+body .rn .office-body .region{color:var(--color-text-muted);font-size:.95rem}
+@media (max-width:860px){body .rn .offices-grid{grid-template-columns:1fr}}
