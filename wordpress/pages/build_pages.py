@@ -100,6 +100,8 @@ def point(title, text):
 # ---------- Tentang Kami (ID 44, /tentang-kami/) ----------
 def tentang_kami():
     head = section([
+        img(3529, "2023/04/WhatsApp-Image-2023-04-03-at-00.22.45.jpeg",
+            "Tim teknisi Renus memasang panel surya di atap", "hero-bg", size="full"),
         group([
             p("Tentang kami", "eyebrow"),
             h("Renus Global Indonesia, penyedia PLTS untuk rumah, bisnis, dan industri.", 1, "page-title"),
@@ -109,9 +111,7 @@ def tentang_kami():
             buttons(button("Konsultasi gratis", WA, "rn-btn-primary", external=True),
                     button("Lihat proyek kami", "/proyek/", "rn-btn-outline")),
         ]),
-        img(3529, "2023/04/WhatsApp-Image-2023-04-03-at-00.22.45-1024x576.jpeg",
-            "Tim teknisi Renus memasang panel surya di atap", "photo split-photo"),
-    ], cls_="page-head soft split")
+    ], cls_="page-hero")
 
     stats = group([group([
         group([p("500+", "num"), p("proyek terpasang", "lbl")]),

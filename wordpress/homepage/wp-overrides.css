@@ -92,11 +92,11 @@ body .rn :where(link,script,style){display:none}
 /* ===== Header & footer Kadence (seluruh situs) ===== */
 /* Footer lama (3 widget, latar biru muda) disembunyikan; baris copyright tetap. Bersihkan juga di Customizer. */
 .site-middle-footer-wrap{display:none}
-/* Header transparan di homepage: tanpa latar navy, font desain, menu putih */
-body.home.transparent-header #masthead{font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
-body.home.transparent-header #masthead .site-main-header-wrap:not(.item-is-stuck) .site-header-row-container-inner{background:transparent}
-body.home.transparent-header #masthead .header-navigation .header-menu-container > ul > li.menu-item > a{font-weight:500;font-size:.975rem;color:rgb(255 255 255 / .88)}
-body.home.transparent-header #masthead .header-navigation .header-menu-container > ul > li.menu-item > a:hover{color:#fff}
+/* Header transparan (homepage & halaman dalam dengan hero foto): tanpa latar navy, font desain, menu putih */
+body.transparent-header #masthead{font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+body.transparent-header #masthead .site-main-header-wrap:not(.item-is-stuck) .site-header-row-container-inner{background:transparent}
+body.transparent-header #masthead .header-navigation .header-menu-container > ul > li.menu-item > a{font-weight:500;font-size:.975rem;color:rgb(255 255 255 / .88)}
+body.transparent-header #masthead .header-navigation .header-menu-container > ul > li.menu-item > a:hover{color:#fff}
 /* Tombol header (setelah ditambahkan di Customizer): kapsul ghost seperti prototipe */
 #masthead .header-button-wrap .header-button{border-radius:999px;font-weight:600;padding:10px 18px;border:1.5px solid rgb(255 255 255 / .45);background:rgb(255 255 255 / .04);color:#fff}
 #masthead .header-button-wrap .header-button:hover{border-color:#fff;background:rgb(255 255 255 / .12)}

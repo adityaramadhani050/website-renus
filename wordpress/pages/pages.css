@@ -1,14 +1,23 @@
 /* ===== Komponen halaman dalam (Tentang Kami, Layanan, Produk, Proyek, Hubungi Kami) ===== */
-/* Judul halaman (H1) — header Kadence tidak transparan di halaman dalam */
-body .rn .page-head{padding-block:clamp(48px,7vw,96px)}
-body .rn .page-title{font-size:clamp(2rem,4vw,3.25rem);line-height:1.08;letter-spacing:-.03em;max-width:18ch}
-body .rn .page-head .wp-block-buttons{margin-top:28px}
+/* Hero halaman dalam: foto penuh + scrim gelap, header Kadence transparan di atasnya */
+body .rn .page-hero{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:flex-end;min-height:min(620px,82svh);padding:clamp(128px,14vw,168px) 0 clamp(48px,7vw,88px);background:var(--navy-950);color:#fff}
+body .rn .page-hero > .wp-block-group__inner-container,body .rn .page-hero > .container{width:100%}
+body .rn .page-hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgb(4 33 46 / .88) 0%,rgb(4 33 46 / .6) 45%,rgb(4 33 46 / .15) 100%),linear-gradient(180deg,rgb(4 33 46 / .75) 0%,rgb(4 33 46 / 0) 28%)}
+body .rn .page-hero .hero-bg{position:absolute;inset:0;z-index:-2;margin:0}
+body .rn .page-hero .hero-bg img{width:100%;height:100%;max-width:none;object-fit:cover;object-position:center}
+body .rn .page-hero .eyebrow{color:var(--sun-400)}
+body .rn .page-hero .lede{color:rgb(255 255 255 / .86);max-width:56ch}
+body .rn .page-hero .wp-block-buttons{margin-top:28px}
+body .rn .page-hero .rn-btn-outline .wp-block-button__link{background:rgb(255 255 255 / .06);color:#fff;border-color:rgb(255 255 255 / .45)}
+body .rn .page-hero .rn-btn-outline .wp-block-button__link:hover{background:rgb(255 255 255 / .14);border-color:#fff}
+body .rn .page-title{font-size:clamp(2rem,4.2vw,3.5rem);line-height:1.06;letter-spacing:-.03em;max-width:20ch}
+@media (max-width:720px){body .rn .page-hero::before{background:linear-gradient(180deg,rgb(4 33 46 / .8) 0%,rgb(4 33 46 / .55) 40%,rgb(4 33 46 / .85) 100%)}}
 
 /* Dua kolom: teks + foto */
-body .rn .split > .container{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:center}
+body .rn .split > .container,body .rn .split > .wp-block-group__inner-container > .container{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:center}
 body .rn .split-photo{aspect-ratio:4/3;border-radius:12px}
 body .rn .split-photo.tall{aspect-ratio:4/5}
-@media (max-width:860px){body .rn .split > .container{grid-template-columns:1fr}body .rn .split-photo.tall{aspect-ratio:4/3}}
+@media (max-width:860px){body .rn .split > .container,body .rn .split > .wp-block-group__inner-container > .container{grid-template-columns:1fr}body .rn .split-photo.tall{aspect-ratio:4/3}}
 
 /* Band angka di halaman dalam: tanpa garis atas & jarak atas */
 body .rn .band-stats{padding-block:clamp(40px,6vw,64px)}
