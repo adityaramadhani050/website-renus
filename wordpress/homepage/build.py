@@ -411,6 +411,7 @@ def scope_calc(block):
 blocks = blocks.replace(calc, scope_calc(calc))
 (OUT / "homepage.blocks.html").write_text(blocks + "\n", encoding="utf-8")
 wp_css = (OUT / "wp-overrides.css").read_text(encoding="utf-8")
+wp_css += "\n" + (OUT.parent / "pages" / "pages.css").read_text(encoding="utf-8")  # komponen halaman dalam
 full_css = "html{scroll-behavior:smooth}\n" + (OUT / "wp-reset.css").read_text(encoding="utf-8") + css + "\n" + wp_css
 (OUT / "rn.css").write_text(
     "/* ===== Renus redesign: token + komponen (.rn). Sumber: repo website-renus wordpress/homepage/ ===== */\n"

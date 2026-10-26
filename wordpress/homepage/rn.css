@@ -488,3 +488,53 @@ body .rn .posts .wp-block-latest-posts__featured-image img{width:100%;height:100
 body .rn .posts li:hover .wp-block-latest-posts__featured-image img{transform:scale(1.03)}
 /* Galeri & kartu: gambar selalu menutup kotak, fokus tengah — walau di editor gambar di-resize (width/aspectRatio inline) */
 body .rn .proj-grid .wp-block-image img,body .rn .sol-card .photo img{width:100%!important;height:100%!important;aspect-ratio:auto!important;object-fit:cover;object-position:center}
+
+/* ===== Komponen halaman dalam (Tentang Kami, Layanan, Produk, Proyek, Hubungi Kami) ===== */
+/* Judul halaman (H1) — header Kadence tidak transparan di halaman dalam */
+body .rn .page-head{padding-block:clamp(48px,7vw,96px)}
+body .rn .page-title{font-size:clamp(2rem,4vw,3.25rem);line-height:1.08;letter-spacing:-.03em;max-width:18ch}
+body .rn .page-head .wp-block-buttons{margin-top:28px}
+
+/* Dua kolom: teks + foto */
+body .rn .split > .container{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:center}
+body .rn .split-photo{aspect-ratio:4/3;border-radius:12px}
+body .rn .split-photo.tall{aspect-ratio:4/5}
+@media (max-width:860px){body .rn .split > .container{grid-template-columns:1fr}body .rn .split-photo.tall{aspect-ratio:4/3}}
+
+/* Band angka di halaman dalam: tanpa garis atas & jarak atas */
+body .rn .band-stats{padding-block:clamp(40px,6vw,64px)}
+body .rn .band-stats .big-stats{margin-top:0;border-top:0}
+body .rn .band-stats .big-stats div{padding-top:0}
+
+/* Daftar poin berjudul (visi/misi) */
+body .rn .points{margin:28px 0 0;padding:0;list-style:none;display:grid;gap:20px}
+body .rn .points li{margin:0;padding-left:18px;border-left:3px solid var(--blue-500);color:var(--color-text-muted)}
+body .rn .points strong{display:block;color:var(--color-text);font-size:1.1rem;font-weight:600;margin-bottom:4px}
+
+/* Kartu */
+body .rn .cards{margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+body .rn .card{border-radius:16px;background:#fff;border:1px solid #d5e4ea;padding:24px}
+body .rn .card h3{font-size:1.125rem;letter-spacing:-.01em}
+body .rn .card p{margin-top:8px;color:var(--color-text-muted);font-size:.95rem}
+@media (max-width:560px){body .rn .cards{grid-template-columns:1fr}}
+
+/* Dokumen legalitas */
+body .rn .docs{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+body .rn .doc{display:flex;flex-direction:column;gap:12px}
+body .rn .doc .cert{aspect-ratio:4/3;border-radius:12px;border:1px solid #e3edf1;background:#fff;padding:12px;overflow:hidden}
+body .rn .doc .cert img{width:100%;height:100%;object-fit:contain}
+body .rn .doc h3{margin-top:8px;font-size:1.125rem}
+body .rn .doc p{color:var(--color-text-muted);font-size:.95rem}
+body .rn .checks{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+body .rn .checks li{margin:0;position:relative;padding-left:26px;color:var(--color-text-muted);font-size:.95rem}
+body .rn .checks li::before{content:"";position:absolute;left:2px;top:.45em;width:12px;height:7px;border:solid var(--blue-700);border-width:0 0 2px 2px;transform:rotate(-45deg)}
+body .rn .checks strong{color:var(--color-text);font-weight:600}
+@media (max-width:900px){body .rn .docs{grid-template-columns:1fr}}
+
+/* Band CTA di halaman dalam */
+body .rn .cta-band .lede{color:rgb(255 255 255 / .78)}
+body .rn .cta-band .wp-block-buttons{flex-shrink:0}
+@media (max-width:600px){
+  body .rn .band-stats .big-stats .num{font-size:2rem}
+  body .rn .cta-band .wp-block-buttons{flex-shrink:1}
+}
