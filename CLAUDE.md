@@ -28,7 +28,7 @@ Gunakan Bahasa Indonesia untuk komunikasi dan konten.
 | Tentang Kami | 44 — **sudah Gutenberg (26 Okt 2026)**, lihat `wordpress/tentang-kami/README.md` |
 | Layanan | 1315 — **sudah Gutenberg (26 Okt 2026)**, sumber `wordpress/layanan/` |
 | Produk | 4120 |
-| Proyek | 3164 |
+| Proyek | 3164 — **sudah Gutenberg (26 Okt 2026)**, sumber `wordpress/proyek/` |
 | Hubungi Kami | 48 — **sudah Gutenberg (26 Okt 2026)**, lihat `wordpress/hubungi-kami/README.md` |
 | Artikel (arsip) | 10131 — **sudah Gutenberg (24 Okt 2026)**, lihat `wordpress/artikel/README.md` |
 
