@@ -347,7 +347,7 @@ body .rn .contact-side{display:grid;gap:16px}
 body .rn .contact-wa{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px;padding:20px 24px;border-radius:20px;background:var(--color-action);color:#fff;text-decoration:none;transition:background .2s}
 body .rn .contact-wa:hover{background:#0b4a63}
 body .rn .contact-wa svg{width:32px;height:32px}
-body .rn .contact-wa small{display:block;font-size:.85rem;color:rgb(255 255 255 / .8)}
+body .rn .contact-wa small{display:block;font-size:.85rem;color:#fff}
 body .rn .contact-wa b{font-size:1.5rem;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
 body .rn .contact-wa-go{font-weight:600;white-space:nowrap}
 body .rn .offices{display:grid;grid-template-columns:1fr 1fr;gap:16px}
