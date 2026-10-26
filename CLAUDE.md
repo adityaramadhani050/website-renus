@@ -29,7 +29,7 @@ Gunakan Bahasa Indonesia untuk komunikasi dan konten.
 | Layanan | 1315 |
 | Produk | 4120 |
 | Proyek | 3164 |
-| Hubungi Kami | 48 |
+| Hubungi Kami | 48 — **sudah Gutenberg (26 Okt 2026)**, lihat `wordpress/hubungi-kami/README.md` |
 | Artikel (arsip) | 10131 — **sudah Gutenberg (24 Okt 2026)**, lihat `wordpress/artikel/README.md` |
 
 Elemen homepage yang wajib dipertahankan/dipindahkan:
