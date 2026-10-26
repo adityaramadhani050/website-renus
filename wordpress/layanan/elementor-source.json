@@ -1,0 +1,2590 @@
+[
+ {
+  "id": "604825ad",
+  "elType": "section",
+  "settings": {
+   "_ob_glider_nav_pos_y_alt": "50% - 25px",
+   "_ob_glider_nav_pos_x_prev_alt": "0%",
+   "_ob_glider_nav_pos_x_next_alt": "0%",
+   "structure": "20",
+   "background_background": "classic",
+   "background_overlay_background": "classic",
+   "background_overlay_image": {
+    "id": 4304,
+    "url": "https://renergynusantara.com/wp-content/uploads/2024/01/20231122_164307-768x354.jpg",
+    "alt": "",
+    "source": "library",
+    "size": "medium_large"
+   },
+   "background_overlay_position": "center center",
+   "background_overlay_repeat": "no-repeat",
+   "background_overlay_size": "cover",
+   "padding": {
+    "unit": "em",
+    "top": "15",
+    "right": "0",
+    "bottom": "10",
+    "left": "0",
+    "isLinked": false
+   },
+   "padding_mobile": {
+    "unit": "em",
+    "top": "9",
+    "right": "0",
+    "bottom": "7",
+    "left": "0",
+    "isLinked": false
+   },
+   "__globals__": {
+    "background_color": "globals/colors?id=dea41e4"
+   },
+   "element_pack_agbg_color_list": [
+    {
+     "_id": "78bdfc5"
+    },
+    {
+     "start_color": "#567445",
+     "end_color": "#1D1BE0",
+     "_id": "2d6f664"
+    }
+   ],
+   "pa_condition_repeater": [],
+   "premium_tooltip_text": "Hi, I'm a global tooltip.",
+   "premium_tooltip_position": "top,bottom",
+   "background_image": {
+    "url": "",
+    "id": "",
+    "size": "",
+    "alt": "",
+    "source": "library"
+   }
+  },
+  "elements": [
+   {
+    "id": "196b07f9",
+    "elType": "column",
+    "settings": {
+     "_column_size": 50,
+     "_inline_size": 50,
+     "padding": {
+      "unit": "em",
+      "top": "3",
+      "right": "0",
+      "bottom": "0",
+      "left": "0",
+      "isLinked": false
+     },
+     "pa_condition_repeater": [],
+     "premium_tooltip_text": "Hi, I'm a global tooltip.",
+     "premium_tooltip_position": "top,bottom",
+     "content_position": "top"
+    },
+    "elements": [
+     {
+      "id": "20aa3e3e",
+      "elType": "widget",
+      "settings": {
+       "title": "Layanan kami",
+       "header_size": "h6",
+       "pa_condition_repeater": [],
+       "premium_tooltip_text": "Hi, I'm a global tooltip.",
+       "premium_tooltip_position": "top,bottom",
+       "element_pack_widget_tooltip_text": "This is Tooltip",
+       "element_pack_widget_effect_transition_duration": "300",
+       "element_pack_widget_effect_transition_easing": "ease-out",
+       "eael_vto_writing_gradient_color_repeater": [
+        {
+         "eael_vto_writing_gradient_color": "#7C62FF",
+         "eael_vto_writing_gradient_color_location": {
+          "unit": "%",
+          "size": 50
+         },
+         "_id": "54c9c21"
+        },
+        {
+         "eael_vto_writing_gradient_color": "#FF6464",
+         "eael_vto_writing_gradient_color_location": {
+          "unit": "%",
+          "size": 90
+         },
+         "_id": "15f1959"
+        }
+       ]
+      },
+      "elements": [],
+      "widgetType": "heading"
+     },
+     {
+      "id": "5fca3255",
+      "elType": "widget",
+      "settings": {
+       "title": "Layanan Terbaik untuk Kebutuhan Energi Anda",
+       "header_size": "h1",
+       "__globals__": {
+        "title_color": "globals/colors?id=a291686"
+       },
+       "pa_condition_repeater": [],
+       "premium_tooltip_text": "Hi, I'm a global tooltip.",
+       "premium_tooltip_position": "top,bottom",
+       "element_pack_widget_tooltip_text": "This is Tooltip",
+       "element_pack_widget_effect_transition_duration": "300",
+       "element_pack_widget_effect_transition_easing": "ease-out",
+       "eael_vto_writing_gradient_color_repeater": [
+        {
+         "eael_vto_writing_gradient_color": "#7C62FF",
+         "eael_vto_writing_gradient_color_location": {
+          "unit": "%",
+          "size": 50
+         },
+         "_id": "d8005a1"
+        },
+        {
+         "eael_vto_writing_gradient_color": "#FF6464",
+         "eael_vto_writing_gradient_color_location": {
+          "unit": "%",
+          "size": 90
+         },
+         "_id": "bfb3f1e"
+        }
+       ]
+      },
+      "elements": [],
+      "widgetType": "heading"
+     }
+    ],
+    "isInner": false
+   },
+   {
+    "id": "2f244d46",
+    "elType": "column",
+    "settings": {
+     "_column_size": 50,
+     "_inline_size": 49.956,
+     "content_position": "center",
+     "background_background": "classic",
+     "padding": {
+      "unit": "em",
+      "top": "0",
+      "right": "0",
+      "bottom": "4",
+      "left": "4",
+      "isLinked": false
+     },
+     "__globals__": {
+      "background_color": ""
+     },
+     "pa_condition_repeater": [],
+     "premium_tooltip_text": "Hi, I'm a global tooltip.",
+     "premium_tooltip_position": "top,bottom"
+    },
+    "elements": [],
+    "isInner": false
+   }
+  ],
+  "isInner": false
+ },
+ {
+  "id": "714c004b",
+  "elType": "section",
+  "settings": {
+   "_ob_glider_nav_pos_y_alt": "50% - 25px",
+   "_ob_glider_nav_pos_x_prev_alt": "0%",
+   "_ob_glider_nav_pos_x_next_alt": "0%",
+   "padding": {
+    "unit": "em",
+    "top": "0",
+    "right": "0",
+    "bottom": "7",
+    "left": "0",
+    "isLinked": false
+   },
+   "animation": "fadeInUp",
+   "padding_mobile": {
+    "unit": "em",
+    "top": "0",
+    "right": "0",
+    "bottom": "2",
+    "left": "0",
+    "isLinked": false
+   },
+   "element_pack_agbg_color_list": [
+    {
+     "_id": "4487711"
+    },
+    {
+     "start_color": "#567445",
+     "end_color": "#1D1BE0",
+     "_id": "27fc735"
+    }
+   ],
+   "pa_condition_repeater": [],
+   "premium_tooltip_text": "Hi, I'm a global tooltip.",
+   "premium_tooltip_position": "top,bottom"
+  },
+  "elements": [
+   {
+    "id": "46a9927a",
+    "elType": "column",
+    "settings": {
+     "_column_size": 100,
+     "_inline_size": null,
+     "margin": {
+      "unit": "em",
+      "top": "-7",
+      "right": "0",
+      "bottom": "0",
+      "left": "0",
+      "isLinked": false
+     },
+     "pa_condition_repeater": [],
+     "premium_tooltip_text": "Hi, I'm a global tooltip.",
+     "premium_tooltip_position": "top,bottom"
+    },
+    "elements": [
+     {
+      "id": "8c00a46",
+      "elType": "section",
+      "settings": {
+       "_ob_bbad_inner_width": "100%",
+       "_ob_glider_nav_pos_y_alt": "50% - 25px",
+       "_ob_glider_nav_pos_x_prev_alt": "0%",
+       "_ob_glider_nav_pos_x_next_alt": "0%",
+       "structure": "30",
+       "pa_condition_repeater": [],
+       "element_pack_agbg_color_list": [
+        {
+         "_id": "2be8276"
+        },
+        {
+         "start_color": "#567445",
+         "end_color": "#1D1BE0",
+         "_id": "902baf8"
+        }
+       ],
+       "premium_tooltip_text": "Hi, I'm a global tooltip.",
+       "premium_tooltip_position": "top,bottom",
+       "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": 0,
+        "bottom": "0",
+        "left": 0,
+        "isLinked": false
+       }
+      },
+      "elements": [
+       {
+        "id": "407f605",
+        "elType": "column",
+        "settings": {
+         "_column_size": 33,
+         "_inline_size": null,
+         "pa_condition_repeater": [],
+         "premium_tooltip_text": "Hi, I'm a global tooltip.",
+         "premium_tooltip_position": "top,bottom"
+        },
+        "elements": [
+         {
+          "id": "d5bc9c3",
+          "elType": "widget",
+          "settings": {
+           "ekit_image_box_image": {
+            "id": 3180,
+            "url": "https://renergynusantara.com/wp-content/uploads/2022/09/DJI_0034-scaled.jpg",
+            "alt": "",
+            "source": "library",
+            "size": ""
+           },
+           "ekit_image_box_title_text": "Residensial",
+           "ekit_image_box_description_text": "Gunakan energi surya untuk kebutuhan sehari-hari di rumah Anda dan nikmati manfaat energi terbarukan yang ramah lingkungan dan hemat biaya listrik.",
+           "ekit_image_box_btn_text": "Selengkapnya",
+           "ekit_image_box_border_radius": {
+            "unit": "px",
+            "top": "10",
+            "right": "10",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": false
+           },
+           "body_radius": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "10",
+            "left": "10",
+            "isLinked": false
+           },
+           "ekit_imagebox_container_spacing": {
+            "unit": "em",
+            "top": "2",
+            "right": "2",
+            "bottom": "2",
+            "left": "2",
+            "isLinked": true
+           },
+           "ekit_imagebox_container_spacing_tablet": {
+            "unit": "em",
+            "top": "1",
+            "right": "1",
+            "bottom": "1",
+            "left": "1",
+            "isLinked": true
+           },
+           "ekit_image_box_shadow_group_box_shadow_type": "yes",
+           "ekit_image_box_shadow_group_box_shadow": {
+            "horizontal": 0,
+            "vertical": 10,
+            "blur": 30,
+            "spread": 0,
+            "color": "rgba(0, 0, 0, 0.15)"
+           },
+           "ekit_image_box_text_padding": {
+            "unit": "px",
+            "top": "10",
+            "right": "25",
+            "bottom": "10",
+            "left": "25",
+            "isLinked": false
+           },
+           "ekit_image_box_btn_background_group_background": "classic",
+           "ekit_image_box_btn_border_radius": {
+            "unit": "px",
+            "top": "30",
+            "right": "30",
+            "bottom": "30",
+            "left": "30",
+            "isLinked": true
+           },
+           "ekit_image_box_btn_background_hover_group_background": "classic",
+           "__globals__": {
+            "ekit_image_box_title_typography_typography": "globals/typography?id=83682a1",
+            "ekit_image_box_heading_color": "globals/colors?id=dea41e4",
+            "ekit_image_box_title_typography_description_typography": "globals/typography?id=b2ce6af",
+            "ekit_image_box_heading_color_description": "globals/colors?id=secondary",
+            "ekit_image_box_typography_group_typography": "globals/typography?id=69c152f",
+            "ekit_image_box_button_text_color": "globals/colors?id=a291686",
+            "ekit_image_box_btn_background_group_color": "globals/colors?id=a185853",
+            "ekit_image_box_btn_hover_color": "globals/colors?id=a291686",
+            "ekit_image_box_btn_background_hover_group_color": "globals/colors?id=dea41e4",
+            "ekit_image_box_heading_color_hover": "globals/colors?id=a185853"
+           },
+           "pa_condition_repeater": [],
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "element_pack_widget_tooltip_text": "This is Tooltip",
+           "element_pack_widget_effect_transition_duration": "300",
+           "element_pack_widget_effect_transition_easing": "ease-out",
+           "premium_tooltip_text": "Hi, I'm a global tooltip.",
+           "premium_tooltip_position": "top,bottom",
+           "ekit_image_box_thumbnail_size": "medium_large",
+           "ekit_image_box_btn_url": {
+            "url": "https://api.whatsapp.com/send/?phone=6285385558025&text=Haloo%20Renus,%20Saya%20ingin%20mengetahui%20lebih%20lanjut%20mengenai%20PLTS%20Residensial&type=phone_number&app_absent=0",
+            "is_external": "",
+            "nofollow": "",
+            "custom_attributes": ""
+           }
+          },
+          "elements": [],
+          "widgetType": "elementskit-image-box"
+         }
+        ],
+        "isInner": true
+       },
+       {
+        "id": "d7337a8",
+        "elType": "column",
+        "settings": {
+         "_column_size": 33,
+         "_inline_size": null,
+         "pa_condition_repeater": [],
+         "premium_tooltip_text": "Hi, I'm a global tooltip.",
+         "premium_tooltip_position": "top,bottom"
+        },
+        "elements": [
+         {
+          "id": "ca170b9",
+          "elType": "widget",
+          "settings": {
+           "ekit_image_box_image": {
+            "id": 3289,
+            "url": "https://renergynusantara.com/wp-content/uploads/2023/03/DJI_0441-2-scaled.jpg",
+            "alt": "",
+            "source": "library",
+            "size": ""
+           },
+           "ekit_image_box_title_text": "Komersial",
+           "ekit_image_box_description_text": "Solusi hemat energi dan ramah lingkungan untuk bisnis atau instansi Anda serta dapat meningkatkan citra sebagai perusahaan atau instansi yang peduli terhadap lingkungan.",
+           "ekit_image_box_btn_text": "Selengkapnya",
+           "ekit_image_box_border_radius": {
+            "unit": "px",
+            "top": "10",
+            "right": "10",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": false
+           },
+           "body_radius": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "10",
+            "left": "10",
+            "isLinked": false
+           },
+           "ekit_imagebox_container_spacing": {
+            "unit": "em",
+            "top": "2",
+            "right": "2",
+            "bottom": "2",
+            "left": "2",
+            "isLinked": true
+           },
+           "ekit_imagebox_container_spacing_tablet": {
+            "unit": "em",
+            "top": "1",
+            "right": "1",
+            "bottom": "1",
+            "left": "1",
+            "isLinked": true
+           },
+           "ekit_image_box_shadow_group_box_shadow_type": "yes",
+           "ekit_image_box_shadow_group_box_shadow": {
+            "horizontal": 0,
+            "vertical": 10,
+            "blur": 30,
+            "spread": 0,
+            "color": "rgba(0, 0, 0, 0.15)"
+           },
+           "ekit_image_box_text_padding": {
+            "unit": "px",
+            "top": "10",
+            "right": "25",
+            "bottom": "10",
+            "left": "25",
+            "isLinked": false
+           },
+           "ekit_image_box_btn_background_group_background": "classic",
+           "ekit_image_box_btn_border_radius": {
+            "unit": "px",
+            "top": "30",
+            "right": "30",
+            "bottom": "30",
+            "left": "30",
+            "isLinked": true
+           },
+           "ekit_image_box_btn_background_hover_group_background": "classic",
+           "__globals__": {
+            "ekit_image_box_title_typography_typography": "globals/typography?id=83682a1",
+            "ekit_image_box_heading_color": "globals/colors?id=dea41e4",
+            "ekit_image_box_title_typography_description_typography": "globals/typography?id=b2ce6af",
+            "ekit_image_box_heading_color_description": "globals/colors?id=secondary",
+            "ekit_image_box_typography_group_typography": "globals/typography?id=69c152f",
+            "ekit_image_box_button_text_color": "globals/colors?id=a291686",
+            "ekit_image_box_btn_background_group_color": "globals/colors?id=a185853",
+            "ekit_image_box_btn_hover_color": "globals/colors?id=a291686",
+            "ekit_image_box_btn_background_hover_group_color": "globals/colors?id=dea41e4",
+            "ekit_image_box_heading_color_hover": "globals/colors?id=a185853"
+           },
+           "pa_condition_repeater": [],
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "element_pack_widget_tooltip_text": "This is Tooltip",
+           "element_pack_widget_effect_transition_duration": "300",
+           "element_pack_widget_effect_transition_easing": "ease-out",
+           "premium_tooltip_text": "Hi, I'm a global tooltip.",
+           "premium_tooltip_position": "top,bottom",
+           "ekit_image_box_thumbnail_size": "medium_large",
+           "ekit_image_box_btn_url": {
+            "url": "https://api.whatsapp.com/send/?phone=6285385558025&text=Haloo%20Renus,%20Saya%20ingin%20mengetahui%20lebih%20lanjut%20mengenai%20PLTS%20Komersial&type=phone_number&app_absent=0",
+            "is_external": "",
+            "nofollow": "",
+            "custom_attributes": ""
+           }
+          },
+          "elements": [],
+          "widgetType": "elementskit-image-box"
+         }
+        ],
+        "isInner": true
+       },
+       {
+        "id": "c6b413b",
+        "elType": "column",
+        "settings": {
+         "_column_size": 33,
+         "_inline_size": null,
+         "pa_condition_repeater": [],
+         "premium_tooltip_text": "Hi, I'm a global tooltip.",
+         "premium_tooltip_position": "top,bottom"
+        },
+        "elements": [
+         {
+          "id": "f9bd8de",
+          "elType": "widget",
+          "settings": {
+           "ekit_image_box_image": {
+            "id": 4810,
+            "url": "https://renergynusantara.com/wp-content/uploads/2024/10/DJI_0017-scaled.jpg",
+            "alt": "",
+            "source": "library",
+            "size": ""
+           },
+           "ekit_image_box_title_text": "Industrial",
+           "ekit_image_box_description_text": "Optimalkan operasional perusahaan dengan energi surya tidak hanya mengurangi beban biaya listrik secara signifikan, tetapi juga memberikan keandalan pasokan daya yang tinggi.",
+           "ekit_image_box_btn_text": "Selengkapnya",
+           "ekit_image_box_border_radius": {
+            "unit": "px",
+            "top": "10",
+            "right": "10",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": false
+           },
+           "body_radius": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "10",
+            "left": "10",
+            "isLinked": false
+           },
+           "ekit_imagebox_container_spacing": {
+            "unit": "em",
+            "top": "2",
+            "right": "2",
+            "bottom": "2",
+            "left": "2",
+            "isLinked": true
+           },
+           "ekit_imagebox_container_spacing_tablet": {
+            "unit": "em",
+            "top": "1",
+            "right": "1",
+            "bottom": "1",
+            "left": "1",
+            "isLinked": true
+           },
+           "ekit_image_box_shadow_group_box_shadow_type": "yes",
+           "ekit_image_box_shadow_group_box_shadow": {
+            "horizontal": 0,
+            "vertical": 10,
+            "blur": 30,
+            "spread": 0,
+            "color": "rgba(0, 0, 0, 0.15)"
+           },
+           "ekit_image_box_text_padding": {
+            "unit": "px",
+            "top": "10",
+            "right": "25",
+            "bottom": "10",
+            "left": "25",
+            "isLinked": false
+           },
+           "ekit_image_box_btn_background_group_background": "classic",
+           "ekit_image_box_btn_border_radius": {
+            "unit": "px",
+            "top": "30",
+            "right": "30",
+            "bottom": "30",
+            "left": "30",
+            "isLinked": true
+           },
+           "ekit_image_box_btn_background_hover_group_background": "classic",
+           "__globals__": {
+            "ekit_image_box_title_typography_typography": "globals/typography?id=83682a1",
+            "ekit_image_box_heading_color": "globals/colors?id=dea41e4",
+            "ekit_image_box_title_typography_description_typography": "globals/typography?id=b2ce6af",
+            "ekit_image_box_heading_color_description": "globals/colors?id=secondary",
+            "ekit_image_box_typography_group_typography": "globals/typography?id=69c152f",
+            "ekit_image_box_button_text_color": "globals/colors?id=a291686",
+            "ekit_image_box_btn_background_group_color": "globals/colors?id=a185853",
+            "ekit_image_box_btn_hover_color": "globals/colors?id=a291686",
+            "ekit_image_box_btn_background_hover_group_color": "globals/colors?id=dea41e4",
+            "ekit_image_box_heading_color_hover": "globals/colors?id=a185853"
+           },
+           "pa_condition_repeater": [],
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "element_pack_widget_tooltip_text": "This is Tooltip",
+           "element_pack_widget_effect_transition_duration": "300",
+           "element_pack_widget_effect_transition_easing": "ease-out",
+           "premium_tooltip_text": "Hi, I'm a global tooltip.",
+           "premium_tooltip_position": "top,bottom",
+           "ekit_image_box_thumbnail_size": "medium_large",
+           "ekit_image_box_btn_url": {
+            "url": "https://api.whatsapp.com/send/?phone=6285385558025&text=Haloo%20Renus,%20Saya%20ingin%20mengetahui%20lebih%20lanjut%20mengenai%20PLTS%20Industrial&type=phone_number&app_absent=0",
+            "is_external": "",
+            "nofollow": "",
+            "custom_attributes": ""
+           }
+          },
+          "elements": [],
+          "widgetType": "elementskit-image-box"
+         }
+        ],
+        "isInner": true
+       }
+      ],
+      "isInner": true
+     }
+    ],
+    "isInner": false
+   }
+  ],
+  "isInner": false
+ },
+ {
+  "id": "282a6c15",
+  "elType": "section",
+  "settings": {
+   "content_width": {
+    "unit": "px",
+    "size": 840,
+    "sizes": []
+   },
+   "_ob_glider_nav_pos_y_alt": "50% - 25px",
+   "_ob_glider_nav_pos_x_prev_alt": "0%",
+   "_ob_glider_nav_pos_x_next_alt": "0%",
+   "background_background": "classic",
+   "background_overlay_background": "classic",
+   "background_overlay_image": {
+    "id": 4374,
+    "url": "https://renergynusantara.com/wp-content/uploads/2024/01/20220305_180436-scaled-e1705381418513-768x433.jpg",
+    "alt": "",
+    "source": "library",
+    "size": "medium_large"
+   },
+   "background_overlay_position": "center center",
+   "background_overlay_repeat": "no-repeat",
+   "background_overlay_size": "cover",
+   "padding": {
+    "unit": "em",
+    "top": "3",
+    "right": "5",
+    "bottom": "3",
+    "left": "5",
+    "isLinked": false
+   },
+   "animation": "fadeInUp",
+   "__globals__": {
+    "background_color": "globals/colors?id=dea41e4"
+   },
+   "element_pack_agbg_color_list": [
+    {
+     "_id": "8fb7173"
+    },
+    {
+     "start_color": "#567445",
+     "end_color": "#1D1BE0",
+     "_id": "d8c3dcc"
+    }
+   ],
+   "pa_condition_repeater": [],
+   "premium_tooltip_text": "Hi, I'm a global tooltip.",
+   "premium_tooltip_position": "top,bottom",
+   "background_overlay_attachment": "fixed",
+   "layout": "full_width",
+   "structure": "20"
+  },
+  "elements": [
+   {
+    "id": "1683128c",
+    "elType": "column",
+    "settings": {
+     "_column_size": 50,
+     "_inline_size": 50,
+     "padding": {
+      "unit": "em",
+      "top": "0",
+      "right": "8",
+      "bottom": "0",
+      "left": "12",
+      "isLinked": false
+     },
+     "pa_condition_repeater": [],
+     "premium_tooltip_text": "Hi, I'm a global tooltip.",
+     "premium_tooltip_position": "top,bottom"
+    },
+    "elements": [
+     {
+      "id": "8e18824",
+      "elType": "widget",
+      "settings": {
+       "image": {
+        "url": "https://renergynusantara.com/wp-content/uploads/2024/01/scs-default-removebg-preview.png",
+        "id": 4378,
+        "size": "",
+        "alt": "",
+        "source": "library"
+       },
+       "pa_condition_repeater": [],
+       "premium_tooltip_text": "Hi, I'm a global tooltip.",
+       "premium_tooltip_position": "top,bottom",
+       "element_pack_widget_tooltip_text": "This is Tooltip",
+       "element_pack_widget_effect_transition_duration": "300",
+       "element_pack_widget_effect_transition_easing": "ease-out",
+       "image_size": "medium_large"
+      },
+      "elements": [],
+      "widgetType": "image"
+     }
+    ],
+    "isInner": false
+   },
+   {
+    "id": "7972f07",
+    "elType": "column",
+    "settings": {
+     "_column_size": 50,
+     "_inline_size": 50,
+     "content_position": "center",
+     "pa_condition_repeater": [],
+     "premium_tooltip_text": "Hi, I'm a global tooltip.",
+     "premium_tooltip_position": "top,bottom"
+    },
+    "elements": [
+     {
+      "id": "62457fd1",
+      "elType": "widget",
+      "settings": {
+       "title": "Solar Charging Station",
+       "align": "left",
+       "__globals__": {
+        "title_color": "globals/colors?id=a291686"
+       },
+       "pa_condition_repeater": [],
+       "premium_tooltip_text": "Hi, I'm a global tooltip.",
+       "premium_tooltip_position": "top,bottom",
+       "element_pack_widget_tooltip_text": "This is Tooltip",
+       "element_pack_widget_effect_transition_duration": "300",
+       "element_pack_widget_effect_transition_easing": "ease-out",
+       "eael_vto_writing_gradient_color_repeater": [
+        {
+         "eael_vto_writing_gradient_color": "#7C62FF",
+         "eael_vto_writing_gradient_color_location": {
+          "unit": "%",
+          "size": 50
+         },
+         "_id": "5c76391"
+        },
+        {
+         "eael_vto_writing_gradient_color": "#FF6464",
+         "eael_vto_writing_gradient_color_location": {
+          "unit": "%",
+          "size": 90
+         },
+         "_id": "33bce6e"
+        }
+       ]
+      },
+      "elements": [],
+      "widgetType": "heading"
+     },
+     {
+      "id": "6f688e1e",
+      "elType": "widget",
+      "settings": {
+       "align": "center",
+       "__globals__": {
+        "text_color": "globals/colors?id=a291686"
+       },
+       "pa_condition_repeater": [],
+       "premium_tooltip_text": "Hi, I'm a global tooltip.",
+       "premium_tooltip_position": "top,bottom",
+       "element_pack_widget_tooltip_text": "This is Tooltip",
+       "element_pack_widget_effect_transition_duration": "300",
+       "element_pack_widget_effect_transition_easing": "ease-out",
+       "editor": "<p style=\"text-align: left;\">Sebuah Inovasi yang memanfaatkan energi terbarukan serta ramah lingkungan untuk memberikan layanan publik agar dapat mengisi ulang daya gadget mereka dimanapun.</p>",
+       "_margin": {
+        "unit": "px",
+        "top": "-20",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": false
+       },
+       "_padding": {
+        "unit": "px",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": false
+       },
+       "eael_vto_writing_gradient_color_repeater": [
+        {
+         "eael_vto_writing_gradient_color": "#7C62FF",
+         "eael_vto_writing_gradient_color_location": {
+          "unit": "%",
+          "size": 50
+         },
+         "_id": "104ad4b"
+        },
+        {
+         "eael_vto_writing_gradient_color": "#FF6464",
+         "eael_vto_writing_gradient_color_location": {
+          "unit": "%",
+          "size": 90
+         },
+         "_id": "899e051"
+        }
+       ]
+      },
+      "elements": [],
+      "widgetType": "text-editor"
+     },
+     {
+      "id": "7665c685",
+      "elType": "widget",
+      "settings": {
+       "text": "Selengkapnya",
+       "align": "left",
+       "size": "md",
+       "pa_condition_repeater": [],
+       "premium_tooltip_text": "Hi, I'm a global tooltip.",
+       "premium_tooltip_position": "top,bottom",
+       "element_pack_widget_tooltip_text": "This is Tooltip",
+       "element_pack_widget_effect_transition_duration": "300",
+       "element_pack_widget_effect_transition_easing": "ease-out",
+       "link": {
+        "url": "https://api.whatsapp.com/send/?phone=6285385558025&text=Haloo%20Renus,%20Saya%20ingin%20mengetahui%20lebih%20lanjut%20mengenai%20Solar%20Charging%20Station&type=phone_number&app_absent=0",
+        "is_external": "",
+        "nofollow": "",
+        "custom_attributes": ""
+       }
+      },
+      "elements": [],
+      "widgetType": "button"
+     }
+    ],
+    "isInner": false
+   }
+  ],
+  "isInner": false
+ },
+ {
+  "id": "552b5e0b",
+  "elType": "section",
+  "settings": {
+   "_ob_glider_nav_pos_y_alt": "50% - 25px",
+   "_ob_glider_nav_pos_x_prev_alt": "0%",
+   "_ob_glider_nav_pos_x_next_alt": "0%",
+   "padding": {
+    "unit": "em",
+    "top": "7",
+    "right": "0",
+    "bottom": "7",
+    "left": "0",
+    "isLinked": false
+   },
+   "padding_tablet": {
+    "unit": "em",
+    "top": "3",
+    "right": "0",
+    "bottom": "3",
+    "left": "0",
+    "isLinked": false
+   },
+   "padding_mobile": {
+    "unit": "em",
+    "top": "2",
+    "right": "0",
+    "bottom": "2",
+    "left": "0",
+    "isLinked": false
+   },
+   "element_pack_agbg_color_list": [
+    {
+     "_id": "5f09496"
+    },
+    {
+     "start_color": "#567445",
+     "end_color": "#1D1BE0",
+     "_id": "92648cf"
+    }
+   ],
+   "pa_condition_repeater": [],
+   "premium_tooltip_text": "Hi, I'm a global tooltip.",
+   "premium_tooltip_position": "top,bottom"
+  },
+  "elements": [
+   {
+    "id": "2c3a7849",
+    "elType": "column",
+    "settings": {
+     "_column_size": 100,
+     "_inline_size": null,
+     "pa_condition_repeater": [],
+     "premium_tooltip_text": "Hi, I'm a global tooltip.",
+     "premium_tooltip_position": "top,bottom"
+    },
+    "elements": [
+     {
+      "id": "7cc0c30d",
+      "elType": "widget",
+      "settings": {
+       "title": "LAYANAN kami",
+       "header_size": "h6",
+       "align": "center",
+       "pa_condition_repeater": [],
+       "premium_tooltip_text": "Hi, I'm a global tooltip.",
+       "premium_tooltip_position": "top,bottom",
+       "element_pack_widget_tooltip_text": "This is Tooltip",
+       "element_pack_widget_effect_transition_duration": "300",
+       "element_pack_widget_effect_transition_easing": "ease-out",
+       "eael_vto_writing_gradient_color_repeater": [
+        {
+         "eael_vto_writing_gradient_color": "#7C62FF",
+         "eael_vto_writing_gradient_color_location": {
+          "unit": "%",
+          "size": 50
+         },
+         "_id": "97f275b"
+        },
+        {
+         "eael_vto_writing_gradient_color": "#FF6464",
+         "eael_vto_writing_gradient_color_location": {
+          "unit": "%",
+          "size": 90
+         },
+         "_id": "c7c2e86"
+        }
+       ]
+      },
+      "elements": [],
+      "widgetType": "heading"
+     },
+     {
+      "id": "3fed19e5",
+      "elType": "widget",
+      "settings": {
+       "title": "Smart Solar Power System",
+       "align": "center",
+       "pa_condition_repeater": [],
+       "premium_tooltip_text": "Hi, I'm a global tooltip.",
+       "premium_tooltip_position": "top,bottom",
+       "element_pack_widget_tooltip_text": "This is Tooltip",
+       "element_pack_widget_effect_transition_duration": "300",
+       "element_pack_widget_effect_transition_easing": "ease-out",
+       "eael_vto_writing_gradient_color_repeater": [
+        {
+         "eael_vto_writing_gradient_color": "#7C62FF",
+         "eael_vto_writing_gradient_color_location": {
+          "unit": "%",
+          "size": 50
+         },
+         "_id": "4ebcc4c"
+        },
+        {
+         "eael_vto_writing_gradient_color": "#FF6464",
+         "eael_vto_writing_gradient_color_location": {
+          "unit": "%",
+          "size": 90
+         },
+         "_id": "fb6881c"
+        }
+       ]
+      },
+      "elements": [],
+      "widgetType": "heading"
+     },
+     {
+      "id": "ccf0746",
+      "elType": "section",
+      "settings": {
+       "_ob_bbad_inner_width": "100%",
+       "_ob_glider_nav_pos_y_alt": "50% - 25px",
+       "_ob_glider_nav_pos_x_prev_alt": "0%",
+       "_ob_glider_nav_pos_x_next_alt": "0%",
+       "structure": "30",
+       "animation": "fadeInDown",
+       "element_pack_agbg_color_list": [
+        {
+         "_id": "8ea197c"
+        },
+        {
+         "start_color": "#567445",
+         "end_color": "#1D1BE0",
+         "_id": "1ccf044"
+        }
+       ],
+       "pa_condition_repeater": [],
+       "premium_tooltip_text": "Hi, I'm a global tooltip.",
+       "premium_tooltip_position": "top,bottom"
+      },
+      "elements": [
+       {
+        "id": "3951e5c0",
+        "elType": "column",
+        "settings": {
+         "_column_size": 33,
+         "_inline_size": null,
+         "pa_condition_repeater": [],
+         "premium_tooltip_text": "Hi, I'm a global tooltip.",
+         "premium_tooltip_position": "top,bottom"
+        },
+        "elements": [
+         {
+          "id": "60b7722",
+          "elType": "widget",
+          "settings": {
+           "ekit_image_box_image": {
+            "id": 4423,
+            "url": "https://renergynusantara.com/wp-content/uploads/2024/01/20220530_132107-scaled-e1705389799940.jpg",
+            "alt": "",
+            "source": "library",
+            "size": ""
+           },
+           "ekit_image_box_title_text": "PLTS On-Grid",
+           "ekit_image_box_description_text": "Berintegrasi dengan jaringan listrik utama. kekurangan atau kelebihan energi akan disupply dari atau ke listrik utama.",
+           "ekit_image_box_btn_text": "Selengkapnya",
+           "ekit_image_box_border_radius": {
+            "unit": "px",
+            "top": "10",
+            "right": "10",
+            "bottom": "10",
+            "left": "10",
+            "isLinked": true
+           },
+           "body_radius": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "ekit_imagebox_container_spacing": {
+            "unit": "em",
+            "top": "2",
+            "right": "2",
+            "bottom": "2",
+            "left": "2",
+            "isLinked": true
+           },
+           "ekit_imagebox_container_spacing_tablet": {
+            "unit": "em",
+            "top": "1",
+            "right": "1",
+            "bottom": "1",
+            "left": "1",
+            "isLinked": true
+           },
+           "ekit_image_box_shadow_group_box_shadow_type": "yes",
+           "ekit_image_box_shadow_group_box_shadow": {
+            "horizontal": 0,
+            "vertical": 10,
+            "blur": 30,
+            "spread": 0,
+            "color": "rgba(0, 0, 0, 0.15)"
+           },
+           "ekit_image_box_text_padding": {
+            "unit": "px",
+            "top": "10",
+            "right": "25",
+            "bottom": "10",
+            "left": "25",
+            "isLinked": false
+           },
+           "ekit_image_box_btn_background_group_background": "classic",
+           "ekit_image_box_btn_border_radius": {
+            "unit": "px",
+            "top": "30",
+            "right": "30",
+            "bottom": "30",
+            "left": "30",
+            "isLinked": true
+           },
+           "ekit_image_box_btn_background_hover_group_background": "classic",
+           "__globals__": {
+            "ekit_image_box_title_typography_typography": "globals/typography?id=83682a1",
+            "ekit_image_box_heading_color": "globals/colors?id=dea41e4",
+            "ekit_image_box_title_typography_description_typography": "globals/typography?id=b2ce6af",
+            "ekit_image_box_heading_color_description": "globals/colors?id=secondary",
+            "ekit_image_box_typography_group_typography": "globals/typography?id=69c152f",
+            "ekit_image_box_button_text_color": "globals/colors?id=a291686",
+            "ekit_image_box_btn_background_group_color": "globals/colors?id=a185853",
+            "ekit_image_box_btn_hover_color": "globals/colors?id=a291686",
+            "ekit_image_box_btn_background_hover_group_color": "globals/colors?id=dea41e4",
+            "ekit_image_box_heading_color_hover": "globals/colors?id=a185853"
+           },
+           "pa_condition_repeater": [],
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "element_pack_widget_tooltip_text": "This is Tooltip",
+           "element_pack_widget_effect_transition_duration": "300",
+           "element_pack_widget_effect_transition_easing": "ease-out",
+           "premium_tooltip_text": "Hi, I'm a global tooltip.",
+           "premium_tooltip_position": "top,bottom",
+           "ekit_image_box_thumbnail_size": "medium_large",
+           "ekit_image_box_content_text_align": "left",
+           "ekit_image_box_image_floating_box_width": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+           },
+           "ekit_image_box_title_bottom_space": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "5",
+            "left": "0",
+            "isLinked": false
+           },
+           "ekit_image_box_title_bottom_space_description": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": "true"
+           },
+           "enable_equal_height": "enable",
+           "_element_width": "initial",
+           "_element_custom_width": {
+            "unit": "%",
+            "size": 99.721
+           },
+           "ekit_image_box_btn_url": {
+            "url": "https://api.whatsapp.com/send/?phone=6285385558025&text=Haloo%20Renus,%20Saya%20ingin%20mengetahui%20lebih%20lanjut%20mengenai%20PLTS%20On-Grid&type=phone_number&app_absent=0",
+            "is_external": "",
+            "nofollow": "",
+            "custom_attributes": ""
+           }
+          },
+          "elements": [],
+          "widgetType": "elementskit-image-box"
+         }
+        ],
+        "isInner": true
+       },
+       {
+        "id": "3b648b58",
+        "elType": "column",
+        "settings": {
+         "_column_size": 33,
+         "_inline_size": null,
+         "pa_condition_repeater": [],
+         "premium_tooltip_text": "Hi, I'm a global tooltip.",
+         "premium_tooltip_position": "top,bottom"
+        },
+        "elements": [
+         {
+          "id": "6d55834",
+          "elType": "widget",
+          "settings": {
+           "ekit_image_box_image": {
+            "id": 3832,
+            "url": "https://renergynusantara.com/wp-content/uploads/2023/09/20230624-20230624_152545-scaled-e1705381634458.jpg",
+            "alt": "",
+            "source": "library",
+            "size": ""
+           },
+           "ekit_image_box_title_text": "PLTS Off-Grid",
+           "ekit_image_box_description_text": "Sistem bekerja secara independent dan menggunakan baterai sebagai cadangan energi untuk digunakan pada malam hari.",
+           "ekit_image_box_btn_text": "Selengkapnya",
+           "ekit_image_box_border_radius": {
+            "unit": "px",
+            "top": "10",
+            "right": "10",
+            "bottom": "10",
+            "left": "10",
+            "isLinked": true
+           },
+           "body_radius": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "ekit_imagebox_container_spacing": {
+            "unit": "em",
+            "top": "2",
+            "right": "2",
+            "bottom": "2",
+            "left": "2",
+            "isLinked": true
+           },
+           "ekit_imagebox_container_spacing_tablet": {
+            "unit": "em",
+            "top": "1",
+            "right": "1",
+            "bottom": "1",
+            "left": "1",
+            "isLinked": true
+           },
+           "ekit_image_box_shadow_group_box_shadow_type": "yes",
+           "ekit_image_box_shadow_group_box_shadow": {
+            "horizontal": 0,
+            "vertical": 10,
+            "blur": 30,
+            "spread": 0,
+            "color": "rgba(0, 0, 0, 0.15)"
+           },
+           "ekit_image_box_text_padding": {
+            "unit": "px",
+            "top": "10",
+            "right": "25",
+            "bottom": "10",
+            "left": "25",
+            "isLinked": false
+           },
+           "ekit_image_box_btn_background_group_background": "classic",
+           "ekit_image_box_btn_border_radius": {
+            "unit": "px",
+            "top": "30",
+            "right": "30",
+            "bottom": "30",
+            "left": "30",
+            "isLinked": true
+           },
+           "ekit_image_box_btn_background_hover_group_background": "classic",
+           "__globals__": {
+            "ekit_image_box_title_typography_typography": "globals/typography?id=83682a1",
+            "ekit_image_box_heading_color": "globals/colors?id=dea41e4",
+            "ekit_image_box_title_typography_description_typography": "globals/typography?id=b2ce6af",
+            "ekit_image_box_heading_color_description": "globals/colors?id=secondary",
+            "ekit_image_box_typography_group_typography": "globals/typography?id=69c152f",
+            "ekit_image_box_button_text_color": "globals/colors?id=a291686",
+            "ekit_image_box_btn_background_group_color": "globals/colors?id=a185853",
+            "ekit_image_box_btn_hover_color": "globals/colors?id=a291686",
+            "ekit_image_box_btn_background_hover_group_color": "globals/colors?id=dea41e4",
+            "ekit_image_box_heading_color_hover": "globals/colors?id=a185853"
+           },
+           "pa_condition_repeater": [],
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "element_pack_widget_tooltip_text": "This is Tooltip",
+           "element_pack_widget_effect_transition_duration": "300",
+           "element_pack_widget_effect_transition_easing": "ease-out",
+           "premium_tooltip_text": "Hi, I'm a global tooltip.",
+           "premium_tooltip_position": "top,bottom",
+           "ekit_image_box_thumbnail_size": "medium_large",
+           "ekit_image_box_content_text_align": "left",
+           "ekit_image_box_image_floating_box_width": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+           },
+           "ekit_image_box_title_bottom_space": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "5",
+            "left": "0",
+            "isLinked": false
+           },
+           "ekit_image_box_title_bottom_space_description": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": "true"
+           },
+           "enable_equal_height": "enable",
+           "_element_width": "initial",
+           "_element_custom_width": {
+            "unit": "%",
+            "size": 99.721
+           },
+           "ekit_image_box_btn_url": {
+            "url": "https://api.whatsapp.com/send/?phone=6285385558025&text=Haloo%20Renus,%20Saya%20ingin%20mengetahui%20lebih%20lanjut%20mengenai%20PLTS%20Off-Grid&type=phone_number&app_absent=0",
+            "is_external": "",
+            "nofollow": "",
+            "custom_attributes": ""
+           }
+          },
+          "elements": [],
+          "widgetType": "elementskit-image-box"
+         }
+        ],
+        "isInner": true
+       },
+       {
+        "id": "3eb4155b",
+        "elType": "column",
+        "settings": {
+         "_column_size": 33,
+         "_inline_size": null,
+         "pa_condition_repeater": [],
+         "premium_tooltip_text": "Hi, I'm a global tooltip.",
+         "premium_tooltip_position": "top,bottom"
+        },
+        "elements": [
+         {
+          "id": "694f318",
+          "elType": "widget",
+          "settings": {
+           "ekit_image_box_image": {
+            "id": 4426,
+            "url": "https://renergynusantara.com/wp-content/uploads/2024/01/Screenshot_20240116_155750_Video-Player-e1705395657644.jpg",
+            "alt": "",
+            "source": "library",
+            "size": ""
+           },
+           "ekit_image_box_title_text": "PLTS Hybrid",
+           "ekit_image_box_description_text": "Sistem yang menggabungkan kedua sistem dan menggunakan jaringan listrik utama dan baterai sebagai daya tambahan.",
+           "ekit_image_box_btn_text": "Selengkapnya",
+           "ekit_image_box_border_radius": {
+            "unit": "px",
+            "top": "10",
+            "right": "10",
+            "bottom": "10",
+            "left": "10",
+            "isLinked": true
+           },
+           "body_radius": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "ekit_imagebox_container_spacing": {
+            "unit": "em",
+            "top": "2",
+            "right": "2",
+            "bottom": "2",
+            "left": "2",
+            "isLinked": true
+           },
+           "ekit_imagebox_container_spacing_tablet": {
+            "unit": "em",
+            "top": "1",
+            "right": "1",
+            "bottom": "1",
+            "left": "1",
+            "isLinked": true
+           },
+           "ekit_image_box_shadow_group_box_shadow_type": "yes",
+           "ekit_image_box_shadow_group_box_shadow": {
+            "horizontal": 0,
+            "vertical": 10,
+            "blur": 30,
+            "spread": 0,
+            "color": "rgba(0, 0, 0, 0.15)"
+           },
+           "ekit_image_box_text_padding": {
+            "unit": "px",
+            "top": "10",
+            "right": "25",
+            "bottom": "10",
+            "left": "25",
+            "isLinked": false
+           },
+           "ekit_image_box_btn_background_group_background": "classic",
+           "ekit_image_box_btn_border_radius": {
+            "unit": "px",
+            "top": "30",
+            "right": "30",
+            "bottom": "30",
+            "left": "30",
+            "isLinked": true
+           },
+           "ekit_image_box_btn_background_hover_group_background": "classic",
+           "__globals__": {
+            "ekit_image_box_title_typography_typography": "globals/typography?id=83682a1",
+            "ekit_image_box_heading_color": "globals/colors?id=dea41e4",
+            "ekit_image_box_title_typography_description_typography": "globals/typography?id=b2ce6af",
+            "ekit_image_box_heading_color_description": "globals/colors?id=secondary",
+            "ekit_image_box_typography_group_typography": "globals/typography?id=69c152f",
+            "ekit_image_box_button_text_color": "globals/colors?id=a291686",
+            "ekit_image_box_btn_background_group_color": "globals/colors?id=a185853",
+            "ekit_image_box_btn_hover_color": "globals/colors?id=a291686",
+            "ekit_image_box_btn_background_hover_group_color": "globals/colors?id=dea41e4",
+            "ekit_image_box_heading_color_hover": "globals/colors?id=a185853"
+           },
+           "pa_condition_repeater": [],
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "element_pack_widget_tooltip_text": "This is Tooltip",
+           "element_pack_widget_effect_transition_duration": "300",
+           "element_pack_widget_effect_transition_easing": "ease-out",
+           "premium_tooltip_text": "Hi, I'm a global tooltip.",
+           "premium_tooltip_position": "top,bottom",
+           "ekit_image_box_thumbnail_size": "medium_large",
+           "ekit_image_box_content_text_align": "left",
+           "ekit_image_box_image_floating_box_width": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+           },
+           "ekit_image_box_title_bottom_space": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "5",
+            "left": "0",
+            "isLinked": false
+           },
+           "ekit_image_box_title_bottom_space_description": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": "true"
+           },
+           "enable_equal_height": "enable",
+           "_element_width": "initial",
+           "_element_custom_width": {
+            "unit": "%",
+            "size": 99.721
+           },
+           "ekit_image_box_btn_url": {
+            "url": "https://api.whatsapp.com/send/?phone=6285385558025&text=Haloo%20Renus,%20Saya%20ingin%20mengetahui%20lebih%20lanjut%20mengenai%20PLTS%20Hybrid&type=phone_number&app_absent=0",
+            "is_external": "",
+            "nofollow": "",
+            "custom_attributes": ""
+           }
+          },
+          "elements": [],
+          "widgetType": "elementskit-image-box"
+         }
+        ],
+        "isInner": true
+       }
+      ],
+      "isInner": true
+     },
+     {
+      "id": "67eec07",
+      "elType": "section",
+      "settings": {
+       "_ob_bbad_inner_width": "100%",
+       "_ob_glider_nav_pos_y_alt": "50% - 25px",
+       "_ob_glider_nav_pos_x_prev_alt": "0%",
+       "_ob_glider_nav_pos_x_next_alt": "0%",
+       "structure": "30",
+       "animation": "fadeInDown",
+       "element_pack_agbg_color_list": [
+        {
+         "_id": "8ea197c"
+        },
+        {
+         "start_color": "#567445",
+         "end_color": "#1D1BE0",
+         "_id": "1ccf044"
+        }
+       ],
+       "pa_condition_repeater": [],
+       "premium_tooltip_text": "Hi, I'm a global tooltip.",
+       "premium_tooltip_position": "top,bottom"
+      },
+      "elements": [
+       {
+        "id": "a856481",
+        "elType": "column",
+        "settings": {
+         "_column_size": 33,
+         "_inline_size": null,
+         "pa_condition_repeater": [],
+         "premium_tooltip_text": "Hi, I'm a global tooltip.",
+         "premium_tooltip_position": "top,bottom"
+        },
+        "elements": [
+         {
+          "id": "00cbcf9",
+          "elType": "widget",
+          "settings": {
+           "ekit_image_box_image": {
+            "id": 4417,
+            "url": "https://renergynusantara.com/wp-content/uploads/2024/01/20220124_183959-scaled-e1705381343275.jpg",
+            "alt": "",
+            "source": "library",
+            "size": ""
+           },
+           "ekit_image_box_title_text": "Smart Powerwall",
+           "ekit_image_box_description_text": "Mengoptimalkan energi secara otomatis dan memberikan cadangan saat diperlukan. Desain futuristik cocok untuk digunakan di dalam rumah.",
+           "ekit_image_box_btn_text": "Selengkapnya",
+           "ekit_image_box_border_radius": {
+            "unit": "px",
+            "top": "10",
+            "right": "10",
+            "bottom": "10",
+            "left": "10",
+            "isLinked": true
+           },
+           "body_radius": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "ekit_imagebox_container_spacing": {
+            "unit": "em",
+            "top": "2",
+            "right": "2",
+            "bottom": "2",
+            "left": "2",
+            "isLinked": true
+           },
+           "ekit_imagebox_container_spacing_tablet": {
+            "unit": "em",
+            "top": "1",
+            "right": "1",
+            "bottom": "1",
+            "left": "1",
+            "isLinked": true
+           },
+           "ekit_image_box_shadow_group_box_shadow_type": "yes",
+           "ekit_image_box_shadow_group_box_shadow": {
+            "horizontal": 0,
+            "vertical": 10,
+            "blur": 30,
+            "spread": 0,
+            "color": "rgba(0, 0, 0, 0.15)"
+           },
+           "ekit_image_box_text_padding": {
+            "unit": "px",
+            "top": "10",
+            "right": "25",
+            "bottom": "10",
+            "left": "25",
+            "isLinked": false
+           },
+           "ekit_image_box_btn_background_group_background": "classic",
+           "ekit_image_box_btn_border_radius": {
+            "unit": "px",
+            "top": "30",
+            "right": "30",
+            "bottom": "30",
+            "left": "30",
+            "isLinked": true
+           },
+           "ekit_image_box_btn_background_hover_group_background": "classic",
+           "__globals__": {
+            "ekit_image_box_title_typography_typography": "globals/typography?id=83682a1",
+            "ekit_image_box_heading_color": "globals/colors?id=dea41e4",
+            "ekit_image_box_title_typography_description_typography": "globals/typography?id=b2ce6af",
+            "ekit_image_box_heading_color_description": "globals/colors?id=secondary",
+            "ekit_image_box_typography_group_typography": "globals/typography?id=69c152f",
+            "ekit_image_box_button_text_color": "globals/colors?id=a291686",
+            "ekit_image_box_btn_background_group_color": "globals/colors?id=a185853",
+            "ekit_image_box_btn_hover_color": "globals/colors?id=a291686",
+            "ekit_image_box_btn_background_hover_group_color": "globals/colors?id=dea41e4",
+            "ekit_image_box_heading_color_hover": "globals/colors?id=a185853"
+           },
+           "pa_condition_repeater": [],
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "element_pack_widget_tooltip_text": "This is Tooltip",
+           "element_pack_widget_effect_transition_duration": "300",
+           "element_pack_widget_effect_transition_easing": "ease-out",
+           "premium_tooltip_text": "Hi, I'm a global tooltip.",
+           "premium_tooltip_position": "top,bottom",
+           "ekit_image_box_thumbnail_size": "medium_large",
+           "ekit_image_box_content_text_align": "left",
+           "ekit_image_box_image_floating_box_width": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+           },
+           "ekit_image_box_title_bottom_space": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "5",
+            "left": "0",
+            "isLinked": false
+           },
+           "ekit_image_box_title_bottom_space_description": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": "true"
+           },
+           "enable_equal_height": "enable",
+           "_element_width": "initial",
+           "_element_custom_width": {
+            "unit": "%",
+            "size": 99.721
+           },
+           "ekit_image_box_btn_url": {
+            "url": "https://api.whatsapp.com/send/?phone=6285385558025&text=Haloo%20Renus,%20Saya%20ingin%20mengetahui%20lebih%20lanjut%20mengenai%20Smart%20Powerwall&type=phone_number&app_absent=0",
+            "is_external": "",
+            "nofollow": "",
+            "custom_attributes": ""
+           }
+          },
+          "elements": [],
+          "widgetType": "elementskit-image-box"
+         }
+        ],
+        "isInner": true
+       },
+       {
+        "id": "07bb455",
+        "elType": "column",
+        "settings": {
+         "_column_size": 33,
+         "_inline_size": null,
+         "pa_condition_repeater": [],
+         "premium_tooltip_text": "Hi, I'm a global tooltip.",
+         "premium_tooltip_position": "top,bottom"
+        },
+        "elements": [
+         {
+          "id": "859bc90",
+          "elType": "widget",
+          "settings": {
+           "ekit_image_box_image": {
+            "id": 3210,
+            "url": "https://renergynusantara.com/wp-content/uploads/2022/09/6D01E153-2D68-4205-B022-1CC583C9F311-4038-0000016A76F4AEE6-678x381-1-e1705381481974.jpg",
+            "alt": "",
+            "source": "library",
+            "size": ""
+           },
+           "ekit_image_box_title_text": "Solar Charging Station",
+           "ekit_image_box_description_text": "Inovasi yang memanfaatkan energi terbarukan untuk memberikan layanan publik agar dapat mengisi ulang daya gadget mereka dimanapun.",
+           "ekit_image_box_btn_text": "Selengkapnya",
+           "ekit_image_box_border_radius": {
+            "unit": "px",
+            "top": "10",
+            "right": "10",
+            "bottom": "10",
+            "left": "10",
+            "isLinked": true
+           },
+           "body_radius": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "ekit_imagebox_container_spacing": {
+            "unit": "em",
+            "top": "2",
+            "right": "2",
+            "bottom": "2",
+            "left": "2",
+            "isLinked": true
+           },
+           "ekit_imagebox_container_spacing_tablet": {
+            "unit": "em",
+            "top": "1",
+            "right": "1",
+            "bottom": "1",
+            "left": "1",
+            "isLinked": true
+           },
+           "ekit_image_box_shadow_group_box_shadow_type": "yes",
+           "ekit_image_box_shadow_group_box_shadow": {
+            "horizontal": 0,
+            "vertical": 10,
+            "blur": 30,
+            "spread": 0,
+            "color": "rgba(0, 0, 0, 0.15)"
+           },
+           "ekit_image_box_text_padding": {
+            "unit": "px",
+            "top": "10",
+            "right": "25",
+            "bottom": "10",
+            "left": "25",
+            "isLinked": false
+           },
+           "ekit_image_box_btn_background_group_background": "classic",
+           "ekit_image_box_btn_border_radius": {
+            "unit": "px",
+            "top": "30",
+            "right": "30",
+            "bottom": "30",
+            "left": "30",
+            "isLinked": true
+           },
+           "ekit_image_box_btn_background_hover_group_background": "classic",
+           "__globals__": {
+            "ekit_image_box_title_typography_typography": "globals/typography?id=83682a1",
+            "ekit_image_box_heading_color": "globals/colors?id=dea41e4",
+            "ekit_image_box_title_typography_description_typography": "globals/typography?id=b2ce6af",
+            "ekit_image_box_heading_color_description": "globals/colors?id=secondary",
+            "ekit_image_box_typography_group_typography": "globals/typography?id=69c152f",
+            "ekit_image_box_button_text_color": "globals/colors?id=a291686",
+            "ekit_image_box_btn_background_group_color": "globals/colors?id=a185853",
+            "ekit_image_box_btn_hover_color": "globals/colors?id=a291686",
+            "ekit_image_box_btn_background_hover_group_color": "globals/colors?id=dea41e4",
+            "ekit_image_box_heading_color_hover": "globals/colors?id=a185853"
+           },
+           "pa_condition_repeater": [],
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "element_pack_widget_tooltip_text": "This is Tooltip",
+           "element_pack_widget_effect_transition_duration": "300",
+           "element_pack_widget_effect_transition_easing": "ease-out",
+           "premium_tooltip_text": "Hi, I'm a global tooltip.",
+           "premium_tooltip_position": "top,bottom",
+           "ekit_image_box_thumbnail_size": "medium_large",
+           "ekit_image_box_content_text_align": "left",
+           "ekit_image_box_image_floating_box_width": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+           },
+           "ekit_image_box_title_bottom_space": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "5",
+            "left": "0",
+            "isLinked": false
+           },
+           "ekit_image_box_title_bottom_space_description": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": "true"
+           },
+           "enable_equal_height": "enable",
+           "_element_width": "initial",
+           "_element_custom_width": {
+            "unit": "%",
+            "size": 99.721
+           },
+           "ekit_image_box_btn_url": {
+            "url": "https://api.whatsapp.com/send/?phone=6285385558025&text=Haloo%20Renus,%20Saya%20ingin%20mengetahui%20lebih%20lanjut%20mengenai%20Solar%20Charging%20Station&type=phone_number&app_absent=0",
+            "is_external": "",
+            "nofollow": "",
+            "custom_attributes": ""
+           }
+          },
+          "elements": [],
+          "widgetType": "elementskit-image-box"
+         }
+        ],
+        "isInner": true
+       },
+       {
+        "id": "82f4780",
+        "elType": "column",
+        "settings": {
+         "_column_size": 33,
+         "_inline_size": null,
+         "pa_condition_repeater": [],
+         "premium_tooltip_text": "Hi, I'm a global tooltip.",
+         "premium_tooltip_position": "top,bottom"
+        },
+        "elements": [
+         {
+          "id": "267dec4",
+          "elType": "widget",
+          "settings": {
+           "ekit_image_box_image": {
+            "id": 105,
+            "url": "https://renergynusantara.com/wp-content/uploads/2019/07/vehicle-e1705381545540.jpg",
+            "alt": "",
+            "source": "library",
+            "size": ""
+           },
+           "ekit_image_box_title_text": "EV Charging Station",
+           "ekit_image_box_description_text": "Pengisian daya kendaaraan listrik yang energi surya. Inovasi mendukung promosi penggunaan energi terbarukan dalam transportasi.",
+           "ekit_image_box_btn_text": "Selengkapnya",
+           "ekit_image_box_border_radius": {
+            "unit": "px",
+            "top": "10",
+            "right": "10",
+            "bottom": "10",
+            "left": "10",
+            "isLinked": true
+           },
+           "body_radius": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "ekit_imagebox_container_spacing": {
+            "unit": "em",
+            "top": "2",
+            "right": "2",
+            "bottom": "2",
+            "left": "2",
+            "isLinked": true
+           },
+           "ekit_imagebox_container_spacing_tablet": {
+            "unit": "em",
+            "top": "1",
+            "right": "1",
+            "bottom": "1",
+            "left": "1",
+            "isLinked": true
+           },
+           "ekit_image_box_shadow_group_box_shadow_type": "yes",
+           "ekit_image_box_shadow_group_box_shadow": {
+            "horizontal": 0,
+            "vertical": 10,
+            "blur": 30,
+            "spread": 0,
+            "color": "rgba(0, 0, 0, 0.15)"
+           },
+           "ekit_image_box_text_padding": {
+            "unit": "px",
+            "top": "10",
+            "right": "25",
+            "bottom": "10",
+            "left": "25",
+            "isLinked": false
+           },
+           "ekit_image_box_btn_background_group_background": "classic",
+           "ekit_image_box_btn_border_radius": {
+            "unit": "px",
+            "top": "30",
+            "right": "30",
+            "bottom": "30",
+            "left": "30",
+            "isLinked": true
+           },
+           "ekit_image_box_btn_background_hover_group_background": "classic",
+           "__globals__": {
+            "ekit_image_box_title_typography_typography": "globals/typography?id=83682a1",
+            "ekit_image_box_heading_color": "globals/colors?id=dea41e4",
+            "ekit_image_box_title_typography_description_typography": "globals/typography?id=b2ce6af",
+            "ekit_image_box_heading_color_description": "globals/colors?id=secondary",
+            "ekit_image_box_typography_group_typography": "globals/typography?id=69c152f",
+            "ekit_image_box_button_text_color": "globals/colors?id=a291686",
+            "ekit_image_box_btn_background_group_color": "globals/colors?id=a185853",
+            "ekit_image_box_btn_hover_color": "globals/colors?id=a291686",
+            "ekit_image_box_btn_background_hover_group_color": "globals/colors?id=dea41e4",
+            "ekit_image_box_heading_color_hover": "globals/colors?id=a185853"
+           },
+           "pa_condition_repeater": [],
+           "_margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": true
+           },
+           "element_pack_widget_tooltip_text": "This is Tooltip",
+           "element_pack_widget_effect_transition_duration": "300",
+           "element_pack_widget_effect_transition_easing": "ease-out",
+           "premium_tooltip_text": "Hi, I'm a global tooltip.",
+           "premium_tooltip_position": "top,bottom",
+           "ekit_image_box_thumbnail_size": "medium_large",
+           "ekit_image_box_content_text_align": "left",
+           "ekit_image_box_image_floating_box_width": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+           },
+           "ekit_image_box_title_bottom_space": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "5",
+            "left": "0",
+            "isLinked": false
+           },
+           "ekit_image_box_title_bottom_space_description": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": "true"
+           },
+           "enable_equal_height": "enable",
+           "_element_width": "initial",
+           "_element_custom_width": {
+            "unit": "%",
+            "size": 99.721
+           },
+           "ekit_image_box_btn_url": {
+            "url": "https://api.whatsapp.com/send/?phone=6285385558025&text=Haloo%20Renus,%20Saya%20ingin%20mengetahui%20lebih%20lanjut%20mengenai%20EV%20Charging%20Station&type=phone_number&app_absent=0",
+            "is_external": "",
+            "nofollow": "",
+            "custom_attributes": ""
+           }
+          },
+          "elements": [],
+          "widgetType": "elementskit-image-box"
+         }
+        ],
+        "isInner": true
+       }
+      ],
+      "isInner": true
+     }
+    ],
+    "isInner": false
+   }
+  ],
+  "isInner": false
+ },
+ {
+  "id": "5ce01c2",
+  "elType": "section",
+  "settings": {
+   "_ob_glider_nav_pos_y_alt": "50% - 25px",
+   "_ob_glider_nav_pos_x_prev_alt": "0%",
+   "_ob_glider_nav_pos_x_next_alt": "0%",
+   "structure": "20",
+   "background_background": "classic",
+   "margin": {
+    "unit": "em",
+    "top": "7",
+    "right": 0,
+    "bottom": "0",
+    "left": 0,
+    "isLinked": false
+   },
+   "padding": {
+    "unit": "em",
+    "top": "2",
+    "right": "0",
+    "bottom": "7",
+    "left": "0",
+    "isLinked": false
+   },
+   "padding_tablet": {
+    "unit": "em",
+    "top": "0",
+    "right": "0",
+    "bottom": "5",
+    "left": "1",
+    "isLinked": false
+   },
+   "padding_mobile": {
+    "unit": "em",
+    "top": "2",
+    "right": "1",
+    "bottom": "2",
+    "left": "1",
+    "isLinked": false
+   },
+   "__globals__": {
+    "background_color": "globals/colors?id=dea41e4"
+   },
+   "pa_condition_repeater": [],
+   "layout": "full_width",
+   "background_image": {
+    "url": "",
+    "id": "",
+    "size": "",
+    "alt": "",
+    "source": "library"
+   },
+   "element_pack_agbg_color_list": [
+    {
+     "_id": "be4ff31"
+    },
+    {
+     "start_color": "#567445",
+     "end_color": "#1D1BE0",
+     "_id": "f9f40fb"
+    }
+   ],
+   "premium_tooltip_text": "Hi, I'm a global tooltip.",
+   "premium_tooltip_position": "top,bottom"
+  },
+  "elements": [
+   {
+    "id": "b22cd65",
+    "elType": "column",
+    "settings": {
+     "_column_size": 50,
+     "_inline_size": 50,
+     "background_background": "classic",
+     "border_radius": {
+      "unit": "px",
+      "top": "30",
+      "right": "30",
+      "bottom": "30",
+      "left": "30",
+      "isLinked": true
+     },
+     "box_shadow_box_shadow_type": "yes",
+     "box_shadow_box_shadow": {
+      "horizontal": 0,
+      "vertical": -10,
+      "blur": 30,
+      "spread": 0,
+      "color": "rgba(0, 0, 0, 0.15)"
+     },
+     "margin": {
+      "unit": "em",
+      "top": "-9",
+      "right": "0",
+      "bottom": "0",
+      "left": "3",
+      "isLinked": false
+     },
+     "margin_tablet": {
+      "unit": "em",
+      "top": "-5",
+      "right": "0",
+      "bottom": "0",
+      "left": "0",
+      "isLinked": false
+     },
+     "padding": {
+      "unit": "em",
+      "top": "3",
+      "right": "3",
+      "bottom": "3",
+      "left": "3",
+      "isLinked": true
+     },
+     "padding_tablet": {
+      "unit": "em",
+      "top": "2",
+      "right": "2",
+      "bottom": "2",
+      "left": "2",
+      "isLinked": true
+     },
+     "padding_mobile": {
+      "unit": "em",
+      "top": "7",
+      "right": "7",
+      "bottom": "7",
+      "left": "7",
+      "isLinked": true
+     },
+     "animation": "bounceInDown",
+     "__globals__": {
+      "background_color": "globals/colors?id=a291686"
+     },
+     "pa_condition_repeater": [],
+     "background_image": {
+      "url": "https://renergynusantara.com/wp-content/uploads/2023/03/DJI_0444-3-768x768.jpg",
+      "id": 3324,
+      "size": "medium_large",
+      "alt": "",
+      "source": "library"
+     },
+     "background_position": "center center",
+     "background_repeat": "no-repeat",
+     "background_size": "cover",
+     "premium_tooltip_text": "Hi, I'm a global tooltip.",
+     "premium_tooltip_position": "top,bottom"
+    },
+    "elements": [
+     {
+      "id": "4ceea74",
+      "elType": "section",
+      "settings": {
+       "structure": "20",
+       "pa_condition_repeater": [],
+       "element_pack_agbg_color_list": [
+        {
+         "_id": "a8ee44a"
+        },
+        {
+         "start_color": "#567445",
+         "end_color": "#1D1BE0",
+         "_id": "9a3e848"
+        }
+       ],
+       "premium_tooltip_text": "Hi, I'm a global tooltip.",
+       "premium_tooltip_position": "top,bottom"
+      },
+      "elements": [
+       {
+        "id": "ffc97e0",
+        "elType": "column",
+        "settings": {
+         "_column_size": 50,
+         "_inline_size": null,
+         "pa_condition_repeater": [],
+         "premium_tooltip_text": "Hi, I'm a global tooltip.",
+         "premium_tooltip_position": "top,bottom"
+        },
+        "elements": [],
+        "isInner": true
+       },
+       {
+        "id": "603dbfa",
+        "elType": "column",
+        "settings": {
+         "_column_size": 50,
+         "_inline_size": null,
+         "pa_condition_repeater": [],
+         "premium_tooltip_text": "Hi, I'm a global tooltip.",
+         "premium_tooltip_position": "top,bottom"
+        },
+        "elements": [],
+        "isInner": true
+       }
+      ],
+      "isInner": true
+     }
+    ],
+    "isInner": false
+   },
+   {
+    "id": "1c3c670",
+    "elType": "column",
+    "settings": {
+     "_column_size": 50,
+     "_inline_size": 50,
+     "padding": {
+      "unit": "em",
+      "top": "3",
+      "right": "3",
+      "bottom": "3",
+      "left": "3",
+      "isLinked": true
+     },
+     "padding_tablet": {
+      "unit": "em",
+      "top": "2",
+      "right": "2",
+      "bottom": "2",
+      "left": "2",
+      "isLinked": true
+     },
+     "padding_mobile": {
+      "unit": "em",
+      "top": "2",
+      "right": "1",
+      "bottom": "2",
+      "left": "1",
+      "isLinked": false
+     },
+     "animation": "fadeInRight",
+     "pa_condition_repeater": [],
+     "premium_tooltip_text": "Hi, I'm a global tooltip.",
+     "premium_tooltip_position": "top,bottom"
+    },
+    "elements": [
+     {
+      "id": "92bf15d",
+      "elType": "widget",
+      "settings": {
+       "title": "dapatkan manfaat",
+       "header_size": "h6",
+       "pa_condition_repeater": [],
+       "element_pack_widget_tooltip_text": "This is Tooltip",
+       "element_pack_widget_effect_transition_duration": "300",
+       "element_pack_widget_effect_transition_easing": "ease-out",
+       "premium_tooltip_text": "Hi, I'm a global tooltip.",
+       "premium_tooltip_position": "top,bottom",
+       "eael_vto_writing_gradient_color_repeater": [
+        {
+         "eael_vto_writing_gradient_color": "#7C62FF",
+         "eael_vto_writing_gradient_color_location": {
+          "unit": "%",
+          "size": 50
+         },
+         "_id": "cee98db"
+        },
+        {
+         "eael_vto_writing_gradient_color": "#FF6464",
+         "eael_vto_writing_gradient_color_location": {
+          "unit": "%",
+          "size": 90
+         },
+         "_id": "7acc2f7"
+        }
+       ]
+      },
+      "elements": [],
+      "widgetType": "heading"
+     },
+     {
+      "id": "eaf222c",
+      "elType": "widget",
+      "settings": {
+       "title": "Penggunaan PLTS di Rumah Anda!",
+       "__globals__": {
+        "title_color": "globals/colors?id=a291686"
+       },
+       "pa_condition_repeater": [],
+       "element_pack_widget_tooltip_text": "This is Tooltip",
+       "element_pack_widget_effect_transition_duration": "300",
+       "element_pack_widget_effect_transition_easing": "ease-out",
+       "premium_tooltip_text": "Hi, I'm a global tooltip.",
+       "premium_tooltip_position": "top,bottom",
+       "eael_vto_writing_gradient_color_repeater": [
+        {
+         "eael_vto_writing_gradient_color": "#7C62FF",
+         "eael_vto_writing_gradient_color_location": {
+          "unit": "%",
+          "size": 50
+         },
+         "_id": "d742819"
+        },
+        {
+         "eael_vto_writing_gradient_color": "#FF6464",
+         "eael_vto_writing_gradient_color_location": {
+          "unit": "%",
+          "size": 90
+         },
+         "_id": "708fb1d"
+        }
+       ]
+      },
+      "elements": [],
+      "widgetType": "heading"
+     },
+     {
+      "id": "e2c7693",
+      "elType": "widget",
+      "settings": {
+       "editor": "<p>Dapatkan manfaat luar biasa menggunakan energi bersih di rumah anda:</p>",
+       "__globals__": {
+        "text_color": "globals/colors?id=a291686"
+       },
+       "pa_condition_repeater": [],
+       "element_pack_widget_tooltip_text": "This is Tooltip",
+       "element_pack_widget_effect_transition_duration": "300",
+       "element_pack_widget_effect_transition_easing": "ease-out",
+       "premium_tooltip_text": "Hi, I'm a global tooltip.",
+       "premium_tooltip_position": "top,bottom",
+       "eael_vto_writing_gradient_color_repeater": [
+        {
+         "eael_vto_writing_gradient_color": "#7C62FF",
+         "eael_vto_writing_gradient_color_location": {
+          "unit": "%",
+          "size": 50
+         },
+         "_id": "eed716d"
+        },
+        {
+         "eael_vto_writing_gradient_color": "#FF6464",
+         "eael_vto_writing_gradient_color_location": {
+          "unit": "%",
+          "size": 90
+         },
+         "_id": "f797f51"
+        }
+       ]
+      },
+      "elements": [],
+      "widgetType": "text-editor"
+     },
+     {
+      "id": "2d4b204",
+      "elType": "widget",
+      "settings": {
+       "icon_list": [
+        {
+         "text": "Energi bersih yang tidak terbatas",
+         "_id": "5797188"
+        },
+        {
+         "text": "Hemat biaya listrik",
+         "_id": "bf5c2f1"
+        },
+        {
+         "text": "Bebas dari pemadaman listrik",
+         "_id": "ed2795b"
+        },
+        {
+         "text": "Mengurangi emisi karbon",
+         "_id": "a95dd1e"
+        },
+        {
+         "_id": "5eb2efa",
+         "text": "Meningkatkan nilai properti"
+        },
+        {
+         "_id": "db7b874",
+         "text": "Kesempatan mendapat insetif pemerintah"
+        },
+        {
+         "_id": "c8c7fb4",
+         "text": "Memberikan edukasi untuk lingkungan sekitar"
+        }
+       ],
+       "space_between": {
+        "unit": "px",
+        "size": 6,
+        "sizes": []
+       },
+       "__globals__": {
+        "icon_color": "globals/colors?id=a185853",
+        "icon_typography_typography": "globals/typography?id=b2ce6af",
+        "text_color": "globals/colors?id=a291686"
+       },
+       "pa_condition_repeater": [],
+       "element_pack_widget_tooltip_text": "This is Tooltip",
+       "element_pack_widget_effect_transition_duration": "300",
+       "element_pack_widget_effect_transition_easing": "ease-out",
+       "premium_tooltip_text": "Hi, I'm a global tooltip.",
+       "premium_tooltip_position": "top,bottom"
+      },
+      "elements": [],
+      "widgetType": "icon-list"
+     }
+    ],
+    "isInner": false
+   }
+  ],
+  "isInner": false
+ },
+ {
+  "id": "39d392a",
+  "elType": "section",
+  "settings": {
+   "content_width": {
+    "unit": "px",
+    "size": 1265,
+    "sizes": []
+   },
+   "_ob_glider_nav_pos_y_alt": "50% - 25px",
+   "_ob_glider_nav_pos_x_prev_alt": "0%",
+   "_ob_glider_nav_pos_x_next_alt": "0%",
+   "background_background": "classic",
+   "background_overlay_background": "classic",
+   "background_overlay_image": {
+    "id": 4105,
+    "url": "https://renergynusantara.com/wp-content/uploads/2024/01/solar-energy-panels-clean-energy-background.jpg",
+    "alt": "",
+    "source": "library",
+    "size": ""
+   },
+   "background_overlay_position": "center center",
+   "background_overlay_repeat": "no-repeat",
+   "background_overlay_size": "cover",
+   "padding": {
+    "unit": "em",
+    "top": "3",
+    "right": "9",
+    "bottom": "3",
+    "left": "9",
+    "isLinked": false
+   },
+   "animation": "fadeInUp",
+   "__globals__": {
+    "background_color": "globals/colors?id=dea41e4"
+   },
+   "element_pack_agbg_color_list": [
+    {
+     "_id": "549165b"
+    },
+    {
+     "start_color": "#567445",
+     "end_color": "#1D1BE0",
+     "_id": "2b227c9"
+    }
+   ],
+   "pa_condition_repeater": [],
+   "layout": "full_width",
+   "premium_tooltip_text": "Hi, I'm a global tooltip.",
+   "premium_tooltip_position": "top,bottom",
+   "background_overlay_attachment": "fixed",
+   "background_image": {
+    "url": "https://renergynusantara.com/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-02-at-09.35.08-768x355.jpeg",
+    "id": 4739,
+    "size": "medium_large",
+    "alt": "",
+    "source": "library"
+   },
+   "background_position": "initial",
+   "background_ypos": {
+    "unit": "px",
+    "size": -290,
+    "sizes": []
+   },
+   "background_size": "cover"
+  },
+  "elements": [
+   {
+    "id": "9346c05",
+    "elType": "column",
+    "settings": {
+     "_column_size": 100,
+     "_inline_size": null,
+     "padding": {
+      "unit": "em",
+      "top": "3",
+      "right": "3",
+      "bottom": "3",
+      "left": "3",
+      "isLinked": true
+     },
+     "pa_condition_repeater": [],
+     "premium_tooltip_text": "Hi, I'm a global tooltip.",
+     "premium_tooltip_position": "top,bottom"
+    },
+    "elements": [
+     {
+      "id": "95525e7",
+      "elType": "widget",
+      "settings": {
+       "title": "Hubungi kami untuk mendapatkan penawaran terbaik!!",
+       "align": "center",
+       "__globals__": {
+        "title_color": ""
+       },
+       "pa_condition_repeater": [],
+       "title_color": "#FFFFFF",
+       "typography_typography": "custom",
+       "typography_font_size": {
+        "unit": "px",
+        "size": 34,
+        "sizes": []
+       },
+       "premium_tooltip_text": "Hi, I'm a global tooltip.",
+       "premium_tooltip_position": "top,bottom",
+       "element_pack_widget_tooltip_text": "This is Tooltip",
+       "element_pack_widget_effect_transition_duration": "300",
+       "element_pack_widget_effect_transition_easing": "ease-out",
+       "eael_vto_writing_gradient_color_repeater": [
+        {
+         "eael_vto_writing_gradient_color": "#7C62FF",
+         "eael_vto_writing_gradient_color_location": {
+          "unit": "%",
+          "size": 50
+         },
+         "_id": "a6dbc4c"
+        },
+        {
+         "eael_vto_writing_gradient_color": "#FF6464",
+         "eael_vto_writing_gradient_color_location": {
+          "unit": "%",
+          "size": 90
+         },
+         "_id": "d6352fd"
+        }
+       ]
+      },
+      "elements": [],
+      "widgetType": "heading"
+     },
+     {
+      "id": "efaea5d",
+      "elType": "widget",
+      "settings": {
+       "text": "Contact Us",
+       "align": "center",
+       "size": "md",
+       "pa_condition_repeater": [],
+       "link": {
+        "url": "https://api.whatsapp.com/send/?phone=6281412250644&text&type=phone_number&app_absent=0",
+        "is_external": "",
+        "nofollow": "",
+        "custom_attributes": ""
+       },
+       "premium_tooltip_text": "Hi, I'm a global tooltip.",
+       "premium_tooltip_position": "top,bottom",
+       "element_pack_widget_tooltip_text": "This is Tooltip",
+       "element_pack_widget_effect_transition_duration": "300",
+       "element_pack_widget_effect_transition_easing": "ease-out"
+      },
+      "elements": [],
+      "widgetType": "button"
+     }
+    ],
+    "isInner": false
+   }
+  ],
+  "isInner": false
+ },
+ {
+  "id": "7faafd4",
+  "elType": "section",
+  "settings": {
+   "premium_tooltip_text": "Hi, I'm a global tooltip.",
+   "premium_tooltip_position": "top,bottom",
+   "element_pack_agbg_color_list": [
+    {
+     "_id": "b28a01a"
+    },
+    {
+     "start_color": "#567445",
+     "end_color": "#1D1BE0",
+     "_id": "76665aa"
+    }
+   ],
+   "pa_condition_repeater": []
+  },
+  "elements": [
+   {
+    "id": "31fff31",
+    "elType": "column",
+    "settings": {
+     "_column_size": 100,
+     "_inline_size": null,
+     "pa_condition_repeater": [],
+     "premium_tooltip_text": "Hi, I'm a global tooltip.",
+     "premium_tooltip_position": "top,bottom"
+    },
+    "elements": [
+     {
+      "id": "17573b1",
+      "elType": "widget",
+      "settings": {
+       "html": "<div id=\"renus-premium-popup\" style=\"display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(15, 52, 96, 0.4); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); z-index: 999999; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.4s ease;\">\r\n  \r\n  <div style=\"background-color: #ffffff; width: 90%; max-width: 520px; border-radius: 14px; padding: 35px 30px; position: relative; box-shadow: 0 15px 40px rgba(15, 52, 96, 0.2); border-top: 5px solid #0f3460; box-sizing: border-box; transform: scale(0.92); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.155);\">\r\n    \r\n    <button onclick=\"closeRenusPopup()\" style=\"position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 24px; color: #a0aec0; cursor: pointer; line-height: 1; padding: 5px; outline: none; transition: color 0.2s;\" onmouseover=\"this.style.color='#0f3460'\" onmouseout=\"this.style.color='#a0aec0'\">&times;</button>\r\n\r\n    <div style=\"text-align: center; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;\">\r\n      \r\n      <span style=\"display: inline-block; background-color: #ebf8ff; color: #2b6cb0; font-size: 11px; font-weight: 700; padding: 5px 12px; border-radius: 20px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 15px;\">\r\n        ✨ Alokasi Kuota Terbatas\r\n      </span>\r\n\r\n      <h3 style=\"margin: 0 0 10px 0; color: #0f3460; font-size: 22px; font-weight: 800; line-height: 1.3;\">\r\n        Wujudkan Kemandirian Energi &amp; Pangkas Tagihan Listrik Rumah Anda\r\n      </h3>\r\n      \r\n      <p style=\"margin: 0 0 25px 0; color: #4a5568; font-size: 14px; line-height: 1.6;\">\r\n        Dapatkan simulasi finansial dan perencanaan sistem PLTS khusus untuk periode bulan ini bersama tim engineer RENUS.\r\n      </p>\r\n\r\n      <div style=\"text-align: left; background-color: #f7fafc; border-radius: 8px; padding: 18px 20px; margin-bottom: 25px; box-sizing: border-box;\">\r\n        <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px; font-size: 13.5px; color: #2d3748; line-height: 1.5;\">\r\n          <span style=\"color: #2b6cb0; margin-right: 10px; font-weight: bold;\">✓</span>\r\n          <span><strong>Konsultasi &amp; Studi Kelayakan Gratis</strong> dengan tim ahli Renus berlisensi.</span>\r\n        </div>\r\n        <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px; font-size: 13.5px; color: #2d3748; line-height: 1.5;\">\r\n          <span style=\"color: #2b6cb0; margin-right: 10px; font-weight: bold;\">✓</span>\r\n          <span><strong>Simulasi Perhitungan ROI Akurat</strong> berdasarkan tagihan daya listrik saat ini.</span>\r\n        </div>\r\n        <div style=\"display: flex; align-items: flex-start; font-size: 13.5px; color: #2d3748; line-height: 1.5;\">\r\n          <span style=\"color: #2b6cb0; margin-right: 10px; font-weight: bold;\">✓</span>\r\n          <span><strong>Fasilitas Survei Lokasi Atap Tanpa Biaya</strong> untuk peninjauan struktur teknis.</span>\r\n        </div>\r\n      </div>\r\n\r\n      <p style=\"margin: 0 0 20px 0; color: #e53e3e; font-size: 13px; font-weight: 600; font-style: italic; line-height: 1.4;\">\r\n        ⚡ Kuota perencanaan gratis harian dibatasi demi menjaga kualitas pelayanan maksimal.\r\n      </p>\r\n\r\n      <div style=\"display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-bottom: 25px;\">\r\n        <a href=\"https://wa.me/6285385558025?text=Halo%20Renus%20Surabaya,%20saya%20ingin%20konsultasi%20gratis%20mengenai%20pemasangan%20PLTS%20di.\" \r\n           target=\"_blank\" \r\n           onclick=\"disablePopupTemporarily()\"\r\n           style=\"flex: 1; min-width: 210px; background-color: #25D366; color: #ffffff; text-decoration: none; padding: 12px 15px; font-size: 13.5px; font-weight: 700; border-radius: 6px; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2); transition: background-color 0.2s;\"\r\n           onmouseover=\"this.style.backgroundColor='#20ba5a'\" onmouseout=\"this.style.backgroundColor='#25D366'\">\r\n          Hubungi Sales Surabaya 💬\r\n        </a>\r\n        <a href=\"https://wa.me/6281412250644?text=Halo%20Renus%20Jakarta,%20saya%20ingin%20konsultasi%20gratis%20mengenai%20pemasangan%20PLTS%20di.\" \r\n           target=\"_blank\" \r\n           onclick=\"disablePopupTemporarily()\"\r\n           style=\"flex: 1; min-width: 210px; background-color: #25D366; color: #ffffff; text-decoration: none; padding: 12px 15px; font-size: 13.5px; font-weight: 700; border-radius: 6px; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2); transition: background-color 0.2s;\"\r\n           onmouseover=\"this.style.backgroundColor='#20ba5a'\" onmouseout=\"this.style.backgroundColor='#25D366'\">\r\n          Hubungi Sales Jakarta 💬\r\n        </a>\r\n      </div>\r\n\r\n      <div style=\"border-top: 1px solid #edf2f7; padding-top: 15px; font-size: 12px; color: #a0aec0;\">\r\n        Ikuti Media Sosial Renus Global Indonesia:<br>\r\n        <div style=\"margin-top: 8px;\">\r\n          <a href=\"https://www.instagram.com/renergynusantara/?hl=en\" target=\"_blank\" style=\"color: #4a5568; text-decoration: none; margin: 0 8px; font-weight: 600;\">Instagram</a> • \r\n          <a href=\"https://www.facebook.com/renergynusantara/\" target=\"_blank\" style=\"color: #4a5568; text-decoration: none; margin: 0 8px; font-weight: 600;\">Facebook</a> • \r\n          <a href=\"https://www.tiktok.com/@renergynusantara\" target=\"_blank\" style=\"color: #4a5568; text-decoration: none; margin: 0 8px; font-weight: 600;\">TikTok</a>\r\n        </div>\r\n      </div>\r\n\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<script>\r\n  // Fungsi untuk mengecek apakah popup boleh ditampilkan\r\n  function shouldShowPopup() {\r\n    const closedTime = localStorage.getItem('renusPopupClosedAt');\r\n    if (!closedTime) return true; // Belum pernah ditutup, boleh tampil\r\n    \r\n    const now = new Date().getTime();\r\n    const timePassed = now - parseInt(closedTime, 10);\r\n    const twentyFourHours = 24 * 60 * 60 * 1000; // 24 jam dalam milidetik\r\n    \r\n    // Tampilkan jika sudah lewat 24 jam\r\n    return timePassed > twentyFourHours;\r\n  }\r\n\r\n  // Fungsi untuk menyimpan data ke browser saat popup ditutup/diklik\r\n  function disablePopupTemporarily() {\r\n    const now = new Date().getTime();\r\n    localStorage.setItem('renusPopupClosedAt', now);\r\n  }\r\n\r\n  function openRenusPopup() {\r\n    const overlay = document.getElementById('renus-premium-popup');\r\n    if (!overlay) return;\r\n    const contentBox = overlay.querySelector('div');\r\n    overlay.style.display = 'flex';\r\n    setTimeout(() => {\r\n      overlay.style.opacity = '1';\r\n      contentBox.style.transform = 'scale(1)';\r\n    }, 20);\r\n  }\r\n\r\n  function closeRenusPopup() {\r\n    const overlay = document.getElementById('renus-premium-popup');\r\n    if (!overlay) return;\r\n    \r\n    disablePopupTemporarily(); // Catat waktu penutupan ke LocalStorage\r\n\r\n    const contentBox = overlay.querySelector('div');\r\n    overlay.style.opacity = '0';\r\n    contentBox.style.transform = 'scale(0.92)';\r\n    setTimeout(() => { overlay.style.display = 'none'; }, 400);\r\n  }\r\n\r\n  // Event Listener dengan validasi LocalStorage\r\n  document.addEventListener('DOMContentLoaded', () => {\r\n    if (shouldShowPopup()) {\r\n      // Waktu jeda (delay) diubah menjadi 5000ms (5 detik) agar tidak terlalu agresif\r\n      setTimeout(openRenusPopup, 5000);\r\n\r\n      // Backup trigger disesuaikan waktunya\r\n      setTimeout(() => {\r\n        const overlay = document.getElementById('renus-premium-popup');\r\n        if (overlay && overlay.style.display === 'none' && overlay.style.opacity === '0') {\r\n          openRenusPopup();\r\n        }\r\n      }, 6000);\r\n    }\r\n  });\r\n\r\n  // Menutup popup jika mengklik area gelap (overlay)\r\n  document.getElementById('renus-premium-popup').addEventListener('click', function(e) {\r\n    if (e.target === this) { \r\n      closeRenusPopup(); \r\n    }\r\n  });\r\n</script>",
+       "pa_condition_repeater": [],
+       "premium_tooltip_text": "Hi, I'm a global tooltip.",
+       "premium_tooltip_position": "top,bottom",
+       "element_pack_widget_tooltip_text": "This is Tooltip",
+       "element_pack_widget_effect_transition_duration": "300",
+       "element_pack_widget_effect_transition_easing": "ease-out"
+      },
+      "elements": [],
+      "widgetType": "html"
+     }
+    ],
+    "isInner": false
+   }
+  ],
+  "isInner": false
+ }
+]

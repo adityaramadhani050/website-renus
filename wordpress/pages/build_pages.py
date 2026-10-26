@@ -300,7 +300,113 @@ def hubungi_kami():
     return page([head, kontak, kantor, sosial])
 
 
-PAGES = {"tentang-kami": tentang_kami, "hubungi-kami": hubungi_kami}
+# ---------- Layanan (ID 1315, /layanan/) ----------
+def wa_text(topic):
+    return WA + "?text=" + ("Halo Renus, saya ingin konsultasi tentang " + topic).replace(" ", "%20")
+
+
+def sol_card(id_, path, alt, tag, title, href, text):
+    """Kartu foto "untuk siapa" (gaya .sol-card homepage)."""
+    return group([
+        img(id_, path, alt, "photo"),
+        group([p(tag, "sol-tag"), h(f'<a href="{href}">{title}</a>', 3), p(text), p("Selengkapnya →", "go")], cls_="sol-body"),
+    ], cls_="sol-card")
+
+
+def svc(id_, path, alt, title, text, href, link, badge=None):
+    kids = [img(id_, path, alt, "photo svc-img")]
+    if badge:
+        kids.append(p(badge, "svc-badge"))
+    kids += [h(title, 3), p(text), p(f'<a href="{href}">{link}</a>', "more")]
+    return group(kids, cls_="svc")
+
+
+def layanan():
+    head = section([
+        img(3289, "2023/03/DJI_0441-2-1024x576.jpg", "Foto udara PLTS atap gedung komersial hasil pemasangan Renus",
+            "hero-bg"),
+        group([
+            p("Layanan kami", "eyebrow"),
+            h("Layanan PLTS untuk rumah, bisnis, dan industri.", 1, "page-title"),
+            p("Dari survei atap, desain sistem, pemasangan, sampai perawatan. Renus mengerjakan PLTS on-grid, "
+              "off-grid, dan hybrid dengan tim bersertifikat ESDM.", "lede"),
+            buttons(button("Konsultasi gratis", wa_text("layanan PLTS"), "rn-btn-primary", external=True),
+                    button("Lihat paket & harga", "/#paket", "rn-btn-outline")),
+        ]),
+    ], cls_="page-hero")
+
+    siapa = section([
+        group([group([p("Untuk siapa", "eyebrow"), h("Pilih sesuai jenis bangunan Anda.", 2, "h2")])], cls_="sec-head"),
+        group([
+            sol_card(3180, "2022/09/DJI_0034-1024x576.jpg", "Foto udara PLTS atap rumah tinggal hasil pemasangan Renus",
+                     "Residensial", "PLTS untuk Rumah", "/plts-hybrid/",
+                     "Tekan tagihan listrik rumah dan tetap menyala saat PLN padam dengan sistem hybrid."),
+            sol_card(3289, "2023/03/DJI_0441-2-1024x576.jpg", "Foto udara PLTS atap gedung komersial hasil pemasangan Renus",
+                     "Komersial", "PLTS untuk Bisnis", "/pasang-plts-untuk-bisnis/",
+                     "Kantor, ruko, hotel, sekolah, dan instansi yang ingin menekan biaya listrik operasional."),
+            sol_card(4810, "2024/10/DJI_0017-1024x576.jpg", "Foto udara PLTS atap pabrik skala industri",
+                     "Industrial", "PLTS untuk Industri", "/plts-industri-manufaktur/",
+                     "Sistem skala besar untuk atap pabrik dan gudang dengan perhitungan beban siang hari."),
+        ], cls_="sol"),
+    ], cls_="soft")
+
+    sistem = section([
+        group([group([p("Sistem PLTS", "eyebrow"), h("Tiga sistem, satu tim yang sama.", 2, "h2")])], cls_="sec-head"),
+        group([
+            svc(15449, "2026/10/isometrik-plts-hybrid.webp", "Ilustrasi sistem PLTS hybrid dengan panel, inverter, baterai, dan PLN",
+                "PLTS Hybrid", "Terhubung PLN dan dilengkapi baterai. Listrik siang disimpan untuk malam hari, "
+                "dan rumah tetap menyala saat PLN padam.", "/plts-hybrid/", "Pelajari PLTS hybrid →", "Direkomendasikan"),
+            svc(15447, "2026/10/isometrik-plts-on-grid.webp", "Ilustrasi sistem PLTS on-grid yang terhubung ke jaringan PLN",
+                "PLTS On-Grid", "Terhubung langsung ke PLN tanpa baterai. Paling hemat biaya awal, cocok bila "
+                "pemakaian listrik terbesar terjadi di siang hari.", "/biaya-plts-on-grid/", "Biaya PLTS on-grid →"),
+            svc(15448, "2026/10/isometrik-plts-off-grid.webp", "Ilustrasi sistem PLTS off-grid mandiri dengan baterai",
+                "PLTS Off-Grid", "Berdiri sendiri tanpa PLN. Baterai menyimpan energi untuk malam hari, cocok "
+                "untuk lokasi yang belum terjangkau listrik.", "/plts-off-grid/", "Pelajari PLTS off-grid →"),
+        ], cls_="svc-grid"),
+    ])
+
+    lain = section([
+        group([group([p("Solusi lain", "eyebrow"), h("Produk energi surya untuk kebutuhan khusus.", 2, "h2")])], cls_="sec-head"),
+        group([
+            card("Smart Powerwall", "Baterai rumah yang mengatur penyimpanan energi otomatis dan memberi cadangan saat "
+                 "diperlukan. Desainnya ringkas untuk dipasang di dalam rumah."),
+            card("Solar Charging Station", "Stasiun pengisian daya gadget bertenaga surya untuk ruang publik, kampus, "
+                 "dan taman kota."),
+            card("EV Charging Station", "Pengisian kendaraan listrik yang dipasok energi surya, untuk kantor, "
+                 "fasilitas umum, maupun rumah."),
+        ], cls_="cards c3"),
+        p(f'<a href="{wa_text("produk energi surya khusus")}" target="_blank" rel="noreferrer noopener">'
+          "Tanyakan produk ini via WhatsApp →</a>", "more"),
+    ], cls_="soft")
+
+    manfaat = section([
+        img(3324, "2023/03/DJI_0444-3-768x768.jpg", "Foto udara rumah dengan panel surya terpasang di atap",
+            "photo split-photo", size="medium_large"),
+        group([
+            p("Manfaat", "eyebrow"),
+            h("Yang Anda dapat dari PLTS di rumah.", 2, "h2"),
+            ul(["Tagihan listrik bulanan lebih rendah",
+                "Listrik tetap menyala saat PLN padam (sistem hybrid dan off-grid)",
+                "Energi bersih yang mengurangi emisi karbon",
+                "Nilai properti bertambah",
+                "Komponen bergaransi dengan umur pakai panjang"], "checks"),
+        ]),
+    ], cls_="split")
+
+    cta = section([
+        group([
+            group([p("Mulai dari konsultasi", "eyebrow"),
+                   h("Ceritakan kebutuhan listrik Anda.", 2, "h2"),
+                   p("Tim Renus menghitung kapasitas, biaya, dan estimasi penghematan, lalu menjadwalkan survei atap gratis.", "lede")]),
+            buttons(button("Chat WhatsApp", wa_text("layanan PLTS"), "rn-btn-primary", external=True),
+                    button("Hubungi kami", "/hubungi-kami/", "rn-btn-outline")),
+        ], cls_="band-head"),
+    ], cls_="band cta-band")
+
+    return page([head, siapa, sistem, lain, manfaat, cta])
+
+
+PAGES = {"tentang-kami": tentang_kami, "hubungi-kami": hubungi_kami, "layanan": layanan}
 
 if __name__ == "__main__":
     for slug in (sys.argv[1:] or PAGES):

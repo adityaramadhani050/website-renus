@@ -576,3 +576,19 @@ body .rn .office-body h3{font-size:1.25rem}
 body .rn .office-body .addr{color:var(--color-text)}
 body .rn .office-body .region{color:var(--color-text-muted);font-size:.95rem}
 @media (max-width:860px){body .rn .offices-grid{grid-template-columns:1fr}}
+
+/* ===== Layanan ===== */
+body .rn .cards.c3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){body .rn .cards.c3{grid-template-columns:1fr}}
+body .rn .soft > .container > .more,body .rn .soft > .wp-block-group__inner-container > .container > .more{margin-top:20px}
+body .rn .svc-grid{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+body .rn .svc{position:relative;display:flex;flex-direction:column;gap:10px;padding:0 0 24px;border-radius:20px;border:1px solid #d5e4ea;background:#fff;overflow:hidden}
+body .rn .svc :is(h3,p){padding-inline:24px}
+body .rn .split .checks{margin-top:24px}
+body .rn .svc-img{aspect-ratio:800/661;background:#eaedf1}
+body .rn .svc-img img{object-fit:contain}
+body .rn .svc h3{margin-top:8px;font-size:1.3rem;letter-spacing:-.015em}
+body .rn .svc p{color:var(--color-text-muted)}
+body .rn .svc .more{margin-top:auto}
+body .rn .svc-badge{position:absolute;top:16px;right:16px;padding:4px 10px!important;border-radius:999px;background:var(--navy-900);color:#fff!important;font-size:.78rem;font-weight:700}
+@media (max-width:960px){body .rn .svc-grid{grid-template-columns:1fr}}
