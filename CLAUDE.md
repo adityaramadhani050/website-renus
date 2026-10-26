@@ -25,7 +25,7 @@ Gunakan Bahasa Indonesia untuk komunikasi dan konten.
 | Halaman | ID |
 |---|---|
 | Homepage (`/`) | 3280 — **sudah Gutenberg (24 Okt 2026)**, lihat `wordpress/homepage/README.md` |
-| Tentang Kami | 44 |
+| Tentang Kami | 44 — **sudah Gutenberg (26 Okt 2026)**, lihat `wordpress/tentang-kami/README.md` |
 | Layanan | 1315 |
 | Produk | 4120 |
 | Proyek | 3164 |
