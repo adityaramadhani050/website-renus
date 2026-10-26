@@ -508,7 +508,103 @@ def proyek():
     return page([head, band, galeri, klien, testi, cta])
 
 
-PAGES = {"tentang-kami": tentang_kami, "hubungi-kami": hubungi_kami, "layanan": layanan, "proyek": proyek}
+# ---------- Produk (ID 4120, /produk/) ----------
+TOKO = "https://www.tokopedia.com/renus-global-indonesia/product"
+
+
+def ext(text, href):
+    return f'<a href="{href}" target="_blank" rel="noreferrer noopener">{text}</a>'
+
+
+def produk():
+    head = section([
+        img(4423, "2024/01/20220530_132107-scaled-e1705389799940-1024x683.jpg",
+            "Panel surya terpasang di atap bangunan klien Renus", "hero-bg"),
+        group([
+            p("Produk kami", "eyebrow"),
+            h("Komponen dan paket PLTS yang kami pasang.", 1, "page-title"),
+            p("Panel surya, inverter, dan baterai dari merek yang kami pakai sendiri di proyek. Tersedia juga paket "
+              "siap pasang untuk sistem off-grid dan hybrid.", "lede"),
+            buttons(button("Konsultasi gratis", wa_text("produk PLTS"), "rn-btn-primary", external=True),
+                    button("Belanja di Tokopedia", TOKO, "rn-btn-outline", external=True)),
+        ]),
+    ], cls_="page-hero")
+
+    def prod(id_, path, alt, title, text, link_text, href, badge=None):
+        kids = [img(id_, path, alt, "photo svc-img prod-img", size="full")]
+        if badge:
+            kids.append(p(badge, "svc-badge"))
+        kids += [h(title, 3), p(text), p(ext(link_text, href), "more")]
+        return group(kids, cls_="svc")
+
+    komponen = section([
+        group([group([p("Komponen utama", "eyebrow"), h("Merek yang kami percaya di atap klien.", 2, "h2")])],
+              cls_="sec-head"),
+        group([
+            prod(7650, "2025/03/pvlongi.avif", "Panel surya LONGi Hi-MO 5m", "Panel surya LONGi",
+                 "Produsen panel surya tier 1 dengan teknologi monocrystalline. Seri Hi-MO 5m memakai sel PERC "
+                 "half-cut 9 busbar dengan efisiensi tinggi, dipakai dari rumah sampai pembangkit skala besar.",
+                 "Lihat di Tokopedia →",
+                 "https://www.tokopedia.com/renus-global-indonesia/panel-surya-longi-555-wp-mono-perc-halfcut-solar-module-pv-af62c"),
+            prod(7647, "2025/03/batrehinaess.avif", "Baterai lithium HinaESS", "Baterai lithium HinaESS",
+                 "Baterai LFP (lithium ferro phosphate) untuk penyimpanan energi. Kimia LFP aman dan berumur panjang, "
+                 "tersedia dalam beberapa kapasitas sesuai kebutuhan.", "Lihat di Tokopedia →", TOKO),
+            prod(7850, "2025/03/inverter-goodwe.avif", "Inverter GoodWe", "Inverter GoodWe",
+                 "Inverter on-grid dan hybrid untuk sistem rumah dan bisnis. Kami pilih tipe dan kapasitasnya "
+                 "berdasarkan hasil survei beban listrik Anda.", "Tanyakan via WhatsApp →", wa_text("inverter GoodWe")),
+        ], cls_="svc-grid"),
+    ])
+
+    paket = section([
+        group([group([p("Paket PLTS", "eyebrow"), h("Paket siap pasang.", 2, "h2"),
+                      p("Komponen sudah dipadukan sesuai sistemnya. Harga paket hybrid dan off-grid bisa dilihat "
+                        'di <a href="/#paket">daftar harga</a>.', "lede")])], cls_="sec-head"),
+        group([
+            prod(7816, "2025/03/paket-hybrid-e1743048754286.avif", "Paket PLTS hybrid on-grid siap pasang",
+                 "Hybrid on-grid", "Terhubung PLN dengan baterai cadangan. Listrik tetap menyala saat PLN padam.",
+                 "Lihat paket →",
+                 "https://www.tokopedia.com/renus-global-indonesia/paket-plts-hybrid-ongrid-10000w-siap-pasang",
+                 "Direkomendasikan"),
+            prod(7817, "2025/03/paket-hybrid-offgrid.avif", "Paket PLTS hybrid off-grid siap pasang",
+                 "Hybrid off-grid", "Mengutamakan energi surya dan baterai, dengan PLN atau genset sebagai cadangan.",
+                 "Lihat paket →",
+                 "https://www.tokopedia.com/renus-global-indonesia/paket-plts-hybrid-offgrid-10000w-siap-pasang"),
+            prod(7818, "2025/03/paket-offgrid-portable.avif", "Paket PLTS off-grid portable",
+                 "Off-grid portable", "Sistem mandiri yang ringkas untuk lokasi tanpa listrik PLN, kebun, atau "
+                 "kebutuhan darurat.", "Lihat paket →",
+                 "https://www.tokopedia.com/renus-global-indonesia/paket-plts-offgrid-portable-2000w-3000w-5000w-3000w-18c9e"),
+        ], cls_="svc-grid"),
+    ], cls_="soft")
+
+    thumbs = [
+        (7650, "pvlongi", "Panel surya LONGi"), (7647, "batrehinaess", "Baterai lithium HinaESS"),
+        (7843, "baterai", "Baterai lithium"), (7844, "powergem", "Produk PowerGem"),
+        (7850, "inverter-goodwe", "Inverter GoodWe"), (7851, "modul", "Modul panel surya"),
+        (7852, "pure-sine-wave", "Inverter pure sine wave"), (7853, "goodwe", "Produk GoodWe"),
+        (7854, "terminal-battery", "Terminal baterai"), (7855, "vrla", "Baterai VRLA"),
+    ]
+    katalog = section([
+        group([group([p("Katalog", "eyebrow"), h("Komponen lain yang tersedia.", 2, "h2")]),
+               p(ext("Semua produk di Tokopedia →", TOKO), "more")], cls_="sec-head"),
+        group([img(i, f"2025/03/{n}.avif", a, "prod-thumb", size="full") for i, n, a in thumbs], cls_="prod-thumbs"),
+    ])
+
+    cta = section([
+        group([
+            group([p("Bingung memilih?", "eyebrow"),
+                   h("Kami bantu pilih komponen yang pas.", 2, "h2"),
+                   p("Ceritakan kebutuhan listrik Anda. Tim Renus menghitung kapasitas dan merekomendasikan "
+                     "komponen yang sesuai.", "lede")]),
+            buttons(button("Chat WhatsApp", wa_text("produk PLTS"), "rn-btn-primary", external=True),
+                    button("Hubungi kami", "/hubungi-kami/", "rn-btn-outline")),
+        ], cls_="band-head"),
+    ], cls_="band cta-band")
+
+    return page([head, komponen, paket, katalog, cta])
+
+
+PAGES = {"tentang-kami": tentang_kami, "hubungi-kami": hubungi_kami, "layanan": layanan, "proyek": proyek,
+         "produk": produk}
 
 if __name__ == "__main__":
     for slug in (sys.argv[1:] or PAGES):
